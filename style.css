@@ -1,0 +1,12 @@
+/*course-mainbar lecture-content full-width-content */
+.lecture-content.course-mainbar {
+	background: grey;
+}
+
+.course-mainbar {
+    margin-left: 0;
+}
+
+.course-sidebar {
+	display: none;
+}
