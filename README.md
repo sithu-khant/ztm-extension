@@ -7,6 +7,14 @@ Official extension for Zero To Mastery Academy students.
 * Toggle sidebar (responsive)
 * Toggle dark mode
 
+
+## Versions
+
+* 2023.12.12
+	* New feature `Toggle sidebar`
+	* New feature `Toggle dark mode`
+
+
 ## Download and install it locally?
 
 1. Download/clone this repo
@@ -32,13 +40,6 @@ Feel free to create a new issue here -> [GitHub Issue](https://github.com/sithu-
 ## Want to contribue?
 
 If you added any new features, make a pull request. I will review, and merge into the extension if it is fun to have.
-
-
-## Versions
-
-* 2023.12.12
-	* Toggle sidebar
-	* Toggle dark mode
 
 
 ## Demos
