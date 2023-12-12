@@ -37,12 +37,18 @@ lectureLeft.parentNode.insertBefore(addZtmToggleCheckbox, lectureLeft.nextSiblin
 var ztmToggleCheckbox = document.getElementById('ztm-toggle-hide');
 var courseSidebar = document.getElementById('courseSidebar');
 
+// check if darkmode is enabled in localStorage
+var isSidebarToggleEnabled = localStorage.getItem('ztmToggleSidebarkMode') === 'true';
+
+// store darkmode checkbox status
+ztmToggleCheckbox.checked = isSidebarToggleEnabled;
+
 function ztmToggleSidebar() {
     var lectureVideo = document.querySelector('.course-mainbar.lecture-content');
 
     // if checked, hide sidebar
     if (ztmToggleCheckbox.checked) {
-        courseSidebar.style.transition = "transform 0.3s";
+        // courseSidebar.style.transition = "transform 0.3s";
         courseSidebar.style.transform = 'translateX(-100%)'
 
         lectureVideo.style.marginLeft = '0';
@@ -54,6 +60,9 @@ function ztmToggleSidebar() {
         lectureVideo.style.marginLeft = '';
         lectureVideo.style.transition = "all 0.3s";
     };
+
+    // store darkmode checkbox status
+    localStorage.setItem('ztmToggleSidebarkMode', ztmToggleCheckbox.checked);
 };
 
 // hide sidebar
@@ -77,6 +86,7 @@ var observer = new MutationObserver(function (mutations) {
 // Configure and start the observer
 var observerConfig = { childList: true, subtree: true };
 observer.observe(document.body, observerConfig);
+ztmToggleSidebar();
 
 // ----------
 // End Togglebar Section
@@ -85,7 +95,6 @@ observer.observe(document.body, observerConfig);
 // ----------
 // Start Darkmode Section
 // ----------
-
 
 var dropdownMenuUl = document.querySelector('.dropdown-menu');
 var addZtmDrakmodeLi = document.createElement('span');
@@ -120,6 +129,12 @@ addZtmDrakmodeStyle.innerHTML = `
         color: #fff !important;
     }
 
+    header.half-height .lecture-left .nav-icon-back svg use {
+        background-color: #fff !important;
+        color: #fff !important;
+        fill: #fff !important;
+    }
+
     input.custom-toggle-round:checked+label:before {
         background: #4e4e4e !important;
         border: 1px solid #4e4e4e;
@@ -143,12 +158,21 @@ addZtmDrakmodeStyle.innerHTML = `
         background-color: #4e4e4e !important;
     }
 
+    .course-section ul.section-list .section-item.incomplete .status-icon {
+        box-shadow: inset 0 0 0 2px #b8b8b8 !important;
+    }
+
     .course-sidebar .course-progress.lecture-page.sticky {
         background: #1E1E1E !important;
     }
 
     .course-sidebar .row.lecture-sidebar .course-section .item:hover,
     .course-sidebar .row.lecture-sidebar .course-section .section-item .title-container:hover {
+        background-color: #4e4e4e !important;
+    }
+
+    .lecture-content .lecture-attachment .video-options a,
+    .download-icon {
         background-color: #4e4e4e !important;
     }
 
@@ -162,6 +186,12 @@ dropdownMenuUl.appendChild(addZtmDrakmodeLi);
 
 var ztmToggleDarkmodeCheckbox = document.getElementById('ztm-darkmode');
 
+// check if darkmode is enabled in localStorage
+var isDarkModeEnabled = localStorage.getItem('ztmDarkMode') === 'true';
+
+// store darkmode checkbox status
+ztmToggleDarkmodeCheckbox.checked = isDarkModeEnabled;
+
 function ztmToggleDarkmode() {
     if (ztmToggleDarkmodeCheckbox.checked) {
         // append the darkmode style li to ul
@@ -169,14 +199,17 @@ function ztmToggleDarkmode() {
     } else {
        dropdownMenuUl.removeChild(addZtmDrakmodeStyle);
     };
+
+    // store darkmode checkbox status
+    localStorage.setItem('ztmDarkMode', ztmToggleDarkmodeCheckbox.checked);
 };
 
 ztmToggleDarkmodeCheckbox.addEventListener('change', ztmToggleDarkmode);
+ztmToggleDarkmode();
 
 // ----------
 // End Darkmode Section
 // ----------
-
 
 
 
