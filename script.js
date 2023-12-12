@@ -12,7 +12,7 @@ addZtmToggleCheckbox.innerHTML = `
     .ztm-toggle-hide {
         position: absolute;
         top: 50%;
-        left: 50px;
+        left: 60px;
         transform: translateY(-50%);
     }
 
@@ -129,10 +129,8 @@ addZtmDrakmodeStyle.innerHTML = `
         color: #fff !important;
     }
 
-    header.half-height .lecture-left .nav-icon-back svg use {
-        background-color: #fff !important;
-        color: #fff !important;
-        fill: #fff !important;
+    header.half-height .lecture-left .nav-icon-back {
+        background-color: #4e4e4e !important;
     }
 
     input.custom-toggle-round:checked+label:before {
