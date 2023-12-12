@@ -6,6 +6,8 @@
 	"author": "Sithu Khant",
 	"homepage_url": "https://zerotomastery.io/",
 
+	"host_permissions": ["https://*.zerotomastery.io/*"],
+
 	"content_scripts": [
 		{
 			"js": ["script.js"],
