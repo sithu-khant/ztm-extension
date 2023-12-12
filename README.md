@@ -11,7 +11,7 @@ Official extension for Zero To Mastery Academy students.
 
 Any new suggestions are welcome. You can suggest here -> [GitHub Suggestion](https://github.com/sithu-khant/ztm-extension/issues)
 
-Feel free to create a new issue here -> [GitHub Isuse](https://github.com/sithu-khant/ztm-extension/issues)
+Feel free to create a new issue here -> [GitHub Issue](https://github.com/sithu-khant/ztm-extension/issues)
 
 (If you are currently a member of the ZTM discord server, you can also suggest/issue there)
 
@@ -27,7 +27,7 @@ If you added any new features, make a pull request. I will review, and merge int
 	* Toggle dark mode
 
 
-## Demo
+## Demos
 
 * Toggle sidebar
 ![](assets/sidebar-demo.gif)
