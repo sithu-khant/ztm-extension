@@ -7,6 +7,20 @@ Official extension for Zero To Mastery Academy students.
 * Toggle sidebar (responsive)
 * Toggle dark mode
 
+## Download and install it locally?
+
+1. Download/clone this repo
+2. Go to the `Manage Extensions` tab from Chrome
+![](assets/steps/step-1.png)
+3. Check `Developer Mode` from the right-up side
+![](assets/steps/step-2.png)
+4. Click the `Load unpacked` button from the left-top side
+![](assets/steps/step-3.png)
+5. Choose your downloaded repo and click `Select`
+6. Go back to your `Zero To Mastery` tab and reload the page
+7. Now, you will see our extension loaded
+
+
 ## Suggestions or Issues?
 
 Any new suggestions are welcome. You can suggest here -> [GitHub Suggestion](https://github.com/sithu-khant/ztm-extension/issues)
@@ -30,10 +44,10 @@ If you added any new features, make a pull request. I will review, and merge int
 ## Demos
 
 * Toggle sidebar
-![](assets/sidebar-demo.gif)
+![](assets/demo-gifs/sidebar-demo.gif)
 
 * Toggle dark mode
-![](assets/darkmode-demo.gif)
+![](assets/demo-gifs/darkmode-demo.gif)
 
 
 ## License
