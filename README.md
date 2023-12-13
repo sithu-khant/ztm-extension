@@ -5,7 +5,7 @@
 Official extension for Zero To Mastery Academy students.
 
 ![Extension Current Version](https://img.shields.io/github/manifest-json/v/sithu-khant/ztm-extension)
-![Total Downloads](https://img.shields.io/github/downloads/sithu-khant/ztm-extension/total)
+[![Github All Releases](https://img.shields.io/github/downloads/sithu-khant/ztm-extension/total.svg)]()
 ![License](https://img.shields.io/github/license/sithu-khant/ztm-extension)
 ![Code File Size](https://img.shields.io/github/languages/code-size/sithu-khant/ztm-extension)
 ![GitHub Repo stars](https://img.shields.io/github/stars/sithu-khant/ztm-extension)
