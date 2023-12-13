@@ -1,6 +1,6 @@
 # Installing extension on Google Chrome locally
 
-**Author:** Sithu Khant
+**Authors:** Sithu Khant
 
 **Last update:** Wed Dec 13, 2023
 

@@ -1,6 +1,6 @@
 # Installing extension on Firefox locally
 
-**Author:** Sithu Khant
+**Authors:** Sithu Khant
 
 **Last update:** Wed Dec 13, 2023
 
