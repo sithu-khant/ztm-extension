@@ -1,6 +1,19 @@
 # Zero To Mastery - Extension
 
+<img align="right" width="100" height="100" src="./assets/ztm-logo.png">
+
 Official extension for Zero To Mastery Academy students.
+
+![Extension Current Version](https://img.shields.io/github/manifest-json/v/sithu-khant/ztm-extension)
+
+![Total Downloads](https://img.shields.io/github/downloads/sithu-khant/ztm-extension/total)
+
+![License](https://img.shields.io/github/license/sithu-khant/ztm-extension)
+
+![Code File Size](https://img.shields.io/github/languages/code-size/sithu-khant/ztm-extension)
+
+![GitHub Repo stars](https://img.shields.io/github/stars/sithu-khant/ztm-extension)
+
 
 ## Features
 
@@ -10,10 +23,10 @@ Official extension for Zero To Mastery Academy students.
 
 ## Versions
 
-* 2023.12.13
-	* Added `underline` in the lecture attachement links
+* v23.12.13
+	* Added `underline` in the lecture attachment links
 	* Fixed `nav-icon-list:hover` background color in mobile view.
-* 2023.12.12
+* v23.12.12
 	* New feature `Toggle sidebar`
 	* New feature `Toggle dark mode`
 
@@ -61,6 +74,6 @@ MIT License
 
 ## Logs
 
-* Wed Dec 13, 2023 - Version (2023.12.13).
-* Tue Dec 12, 2023 - Launched first version (2023.12.12).
+* Wed Dec 13, 2023 - Version (v23.12.13).
+* Tue Dec 12, 2023 - Launched first version (v23.12.12).
 * Sun Dec 10, 2023 - Started the project.

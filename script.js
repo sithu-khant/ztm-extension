@@ -170,6 +170,11 @@ addZtmDrakmodeStyle.innerHTML = `
         background-color: #4e4e4e !important;
     }
 
+    header.half-height .lecture-left .nav-icon-list.nav-icon-list,
+    header.half-height .lecture-left .nav-icon-list:hover {
+        background-color: #4e4e4e !important;
+    }
+
     .lecture-content .lecture-attachment a {
         text-decoration: underline;
     }
