@@ -61,6 +61,6 @@ MIT License
 
 ## Logs
 
-* Wed Dec 13, 20023 - Version (2023.12.13).
+* Wed Dec 13, 2023 - Version (2023.12.13).
 * Tue Dec 12, 2023 - Launched first version (2023.12.12).
 * Sun Dec 10, 2023 - Started the project.
