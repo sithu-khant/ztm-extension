@@ -7,27 +7,27 @@
 
 1. Click `Releases` from the right-center
 
-![](./steps/f-steps/f-step-1.png)
+![](./images/f-steps/f-step-1.png)
 
 2. Choose the latest version
 
-![](./steps/f-steps/f-step-2.png)
+![](./images/f-steps/f-step-2.png)
 
 3. Click the `ztm-extension-firefox-<version>.xpi` to download
 
-![](./steps/f-steps/f-step-3.png)
+![](./images/f-steps/f-step-3.png)
 
 4. Go to the `Add-ons and themes` tab from Firefox
 
-![](./steps/f-steps/f-step-4.png)
+![](./images/f-steps/f-step-4.png)
 
 5. Click `Debug Add-ons` from the setting icon
 
-![](./steps/f-steps/f-step-5.png)
+![](./images/f-steps/f-step-5.png)
 
 6. Click `Load Temporary Add-on..`
 
-![](./steps/f-steps/f-step-6.png)
+![](./images/f-steps/f-step-6.png)
 
 7. Choose your downloaded `ztm-extension-firefox-<version>.xpi` file and click `open`
 
@@ -35,7 +35,7 @@
 
 9. Click the extension icon from the top-right side and click setting icon from the Zero To Mastery extension.
 
-![](./steps/f-steps/f-step-9.png)
+![](./images/f-steps/f-step-9.png)
 
 10. Click `Always Allow on academy.zerotomastery.io`
 
