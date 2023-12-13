@@ -8,6 +8,7 @@ Official extension for Zero To Mastery Academy students.
 [![Github All Releases](https://img.shields.io/github/downloads/sithu-khant/ztm-extension/total.svg)]()
 ![License](https://img.shields.io/github/license/sithu-khant/ztm-extension)
 ![Code File Size](https://img.shields.io/github/languages/code-size/sithu-khant/ztm-extension)
+![GitHub forks](https://img.shields.io/github/forks/sithu-khant/ztm-extension)
 ![GitHub Repo stars](https://img.shields.io/github/stars/sithu-khant/ztm-extension)
 
 
@@ -25,6 +26,13 @@ Official extension for Zero To Mastery Academy students.
 * v23.12.12
 	* New feature `Toggle sidebar`
 	* New feature `Toggle dark mode`
+
+| Versions  | Chrome | Firefox | Safari | Edge |
+|-----------|--------|---------|--------|------|
+| v23.12.13 | ✅      | ✅       | N/A    | ✅    |
+| v23.12.12 | ✅      | ✅       | N/A    | ✅    |
+
+**Not found your favorite browser?** Feel free to test that, and contribute to this.
 
 
 ## Download and install it locally?
