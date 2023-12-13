@@ -29,10 +29,10 @@ Official extension for Zero To Mastery Academy students.
 
 ### Version list
 
-* v23.12.13
+* 23.12.13
 	* Added `underline` in the lecture attachment links
 	* Fixed `nav-icon-list:hover` background color in mobile view.
-* v23.12.12
+* 23.12.12
 	* New feature `Toggle sidebar`
 	* New feature `Toggle dark mode`
 
