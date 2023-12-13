@@ -22,8 +22,8 @@ Official extension for Zero To Mastery Academy students.
 
 | Versions  | Chrome | Firefox | Safari | Edge |
 |-----------|--------|---------|--------|------|
-| v23.12.13 | ✅      | ✅       | N/A    | ✅    |
-| v23.12.12 | ✅      | ✅       | N/A    | ✅    |
+| 23.12.13 | ✅      | ✅       | N/A    | ✅    |
+| 23.12.12 | ✅      | ✅       | N/A    | ✅    |
 
 **Not found your favorite browser?** Feel free to test that, and contribute to this.
 
