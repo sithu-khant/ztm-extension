@@ -5,7 +5,6 @@
 Official extension for Zero To Mastery Academy students.
 
 ![Extension Current Version](https://img.shields.io/github/manifest-json/v/sithu-khant/ztm-extension)
-[![Github All Releases](https://img.shields.io/github/downloads/sithu-khant/ztm-extension/total.svg)]()
 ![License](https://img.shields.io/github/license/sithu-khant/ztm-extension)
 ![Code File Size](https://img.shields.io/github/languages/code-size/sithu-khant/ztm-extension)
 ![GitHub forks](https://img.shields.io/github/forks/sithu-khant/ztm-extension)
@@ -42,15 +41,18 @@ Official extension for Zero To Mastery Academy students.
 
 ### Version list
 
-* 23.12.13
+* 2023.12.13
+* 23.12.13 (pre-release)
 	* Added `underline` in the lecture attachment links
 	* Fixed `nav-icon-list:hover` background color in mobile view.
-* 23.12.12
+* 2023.12.12
 	* New feature `Toggle sidebar`
 	* New feature `Toggle dark mode`
 
 
 ## Download and install it locally?
+
+[![Downloads](https://img.shields.io/github/downloads/sithu-khant/ztm-extension/total.svg)]()
 
 * For Chrome -> [Installing extension on Google Chrome locally](./docs/install-on-chrome.md)
 * For Firefox -> [Installing extension on Firefox locally](./docs/install-on-firefox.md)
