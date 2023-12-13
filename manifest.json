@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "Zero To Mastery",
-	"version": "v23.12.13",
+	"version": "23.12.13",
 	"description": "Official extension for Zero To Mastery Academy students",
 	"author": "Sithu Khant",
 	"homepage_url": "https://zerotomastery.io/",
