@@ -11,19 +11,30 @@ Official extension for Zero To Mastery Academy students.
 ![GitHub forks](https://img.shields.io/github/forks/sithu-khant/ztm-extension)
 ![GitHub Repo stars](https://img.shields.io/github/stars/sithu-khant/ztm-extension)
 
+## Downloads
+
+<a href="https://chromewebstore.google.com/detail/zero-to-mastery/hbcijdniocfclnfmjldkhjdepijfoeim" target="_blank">[Available in the Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png)</a>
+
 
 ## Features
 
 * Toggle sidebar (responsive)
 * Toggle dark mode
 
+## To do
+
+* Dark mode in all Zero To Mastery pages (not just in lecture page)
+* Keep the lecture video resolution the same
+* To keep the favourite courses at top
+
 
 ## Versions
 
 | Versions  | Chrome | Firefox | Safari | Edge |
 |-----------|--------|---------|--------|------|
+| 2023.12.13 | ✅      | ✅       | N/A    | ✅    |
 | 23.12.13 | ✅      | ✅       | N/A    | ✅    |
-| 23.12.12 | ✅      | ✅       | N/A    | ✅    |
+| 20223.12.12 | ✅      | ✅       | N/A    | ✅    |
 
 **Not found your favorite browser?** Feel free to test that, and contribute to this.
 
@@ -72,6 +83,6 @@ MIT License
 
 ## Logs
 
-* Wed Dec 13, 2023 - Version (23.12.13).
-* Tue Dec 12, 2023 - Launched first version (23.12.12).
+* Wed Dec 13, 2023 - Version (23.12.13) pre-release and version (2023.12.13)
+* Tue Dec 12, 2023 - Launched first version (2023.12.12).
 * Sun Dec 10, 2023 - Started the project.
