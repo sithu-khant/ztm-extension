@@ -1,17 +1,13 @@
 # Zero To Mastery - Extension
 
-<img align="right" width="100" height="100" src="./assets/ztm-logo.png">
+<img align="right" width="150" height="150" src="./assets/ztm-logo.png">
 
 Official extension for Zero To Mastery Academy students.
 
 ![Extension Current Version](https://img.shields.io/github/manifest-json/v/sithu-khant/ztm-extension)
-
 ![Total Downloads](https://img.shields.io/github/downloads/sithu-khant/ztm-extension/total)
-
 ![License](https://img.shields.io/github/license/sithu-khant/ztm-extension)
-
 ![Code File Size](https://img.shields.io/github/languages/code-size/sithu-khant/ztm-extension)
-
 ![GitHub Repo stars](https://img.shields.io/github/stars/sithu-khant/ztm-extension)
 
 
