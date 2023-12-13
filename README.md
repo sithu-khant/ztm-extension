@@ -1,6 +1,6 @@
-# Zero To Mastery - Extension
-
 <img align="right" width="150" height="150" src="./assets/ztm-logo.png">
+
+# Zero To Mastery - Extension
 
 Official extension for Zero To Mastery Academy students.
 
