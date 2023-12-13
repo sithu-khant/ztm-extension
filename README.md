@@ -20,13 +20,6 @@ Official extension for Zero To Mastery Academy students.
 
 ## Versions
 
-* v23.12.13
-	* Added `underline` in the lecture attachment links
-	* Fixed `nav-icon-list:hover` background color in mobile view.
-* v23.12.12
-	* New feature `Toggle sidebar`
-	* New feature `Toggle dark mode`
-
 | Versions  | Chrome | Firefox | Safari | Edge |
 |-----------|--------|---------|--------|------|
 | v23.12.13 | ✅      | ✅       | N/A    | ✅    |
@@ -34,19 +27,20 @@ Official extension for Zero To Mastery Academy students.
 
 **Not found your favorite browser?** Feel free to test that, and contribute to this.
 
+### Version list
+
+* v23.12.13
+	* Added `underline` in the lecture attachment links
+	* Fixed `nav-icon-list:hover` background color in mobile view.
+* v23.12.12
+	* New feature `Toggle sidebar`
+	* New feature `Toggle dark mode`
+
 
 ## Download and install it locally?
 
-1. Download/clone this repo
-2. Go to the `Manage Extensions` tab from Chrome
-![](assets/steps/step-1.png)
-3. Check `Developer Mode` from the right-up side
-![](assets/steps/step-2.png)
-4. Click the `Load unpacked` button from the left-top side
-![](assets/steps/step-3.png)
-5. Choose your downloaded repo and click `Select`
-6. Go back to your `Zero To Mastery` tab and reload the page
-7. Now, you will see our extension loaded
+* For Chrome -> [Installing extension on Google Chrome locally](./docs/install-on-chrome.md)
+* For Firefox -> [Installing extension on Firefox locally](./docs/install-on-firefox.md)
 
 
 ## Suggestions or Issues?
