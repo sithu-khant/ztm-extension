@@ -36,7 +36,7 @@ Official extension for Zero To Mastery Academy students.
 
 | Versions  | Chrome | Firefox | Safari | Edge |
 |-----------|--------|---------|--------|------|
-| 2023.12.14 | ✅      | ✅       | ✅   | ✅    |
+| 2023.12.14.01 | ✅      | ✅       | ✅   | ✅    |
 | 2023.12.13 | ✅      | ✅       | ✅   | ✅    |
 | 23.12.13 | ✅      | ✅       | ✅    | ✅    |
 | 2023.12.12 | ✅      | ✅       | ✅    | ✅    |
@@ -45,7 +45,7 @@ Official extension for Zero To Mastery Academy students.
 
 ### Version list
 
-* 2023.12.14 
+* 2023.12.14.01
 	* Fixed bugs
 * 2023.12.13
 * 23.12.13 (pre-release)
@@ -93,7 +93,7 @@ MIT License
 
 ## Logs
 
-* Thu Dec 14, 2023 - fixed all the `<a>` tags that are not underlined in dark mode. Fixed a lot of bugs. Released version (2023.12.14).
+* Thu Dec 14, 2023 - fixed all the `<a>` tags that are not underlined in dark mode. Fixed a lot of bugs. Released version (2023.12.14.01).
 * Wed Dec 13, 2023 - Version (23.12.13) pre-release and version (2023.12.13)
 * Tue Dec 12, 2023 - Launched first version (2023.12.12).
 * Sun Dec 10, 2023 - Started the project.

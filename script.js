@@ -2,7 +2,7 @@
 // Start Togglebar Section
 // ----------
 
-var lectureLeft = document.querySelector('.lecture-left');
+var lectureLeft = document.querySelector('.nav-icon-back');
 var addZtmToggleCheckbox = document.createElement('div');
 
 addZtmToggleCheckbox.innerHTML = `
@@ -48,11 +48,9 @@ function ztmToggleSidebar() {
 
     // if checked, hide sidebar
     if (ztmToggleCheckbox.checked) {
-        // courseSidebar.style.transition = "transform 0.3s";
         courseSidebar.style.transform = 'translateX(-100%)'
 
         lectureVideo.style.marginLeft = '0';
-        // lectureVideo.style.transition = "all 0.3s";
     } else {
         courseSidebar.style.transition = "transform 0.3s";
         courseSidebar.style.transform = 'translateX(0%)';
@@ -187,6 +185,10 @@ addZtmDrakmodeStyle.innerHTML = `
         color: #fff !important;
     }
 
+    .course-mainbar.lecture-content.full-width-content code {
+        border: 0.5px solid #fff;
+    }
+
     .lecture-content .lecture-attachment a {
         text-decoration: underline;
     }
@@ -229,6 +231,3 @@ ztmToggleDarkmode();
 // ----------
 // End Darkmode Section
 // ----------
-
-
-
