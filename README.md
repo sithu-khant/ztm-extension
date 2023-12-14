@@ -37,7 +37,7 @@ Official extension for Zero To Mastery Academy students.
 |-----------|--------|---------|--------|------|
 | 2023.12.13 | ✅      | ✅       | ✅   | ✅    |
 | 23.12.13 | ✅      | ✅       | ✅    | ✅    |
-| 20223.12.12 | ✅      | ✅       | ✅    | ✅    |
+| 2023.12.12 | ✅      | ✅       | ✅    | ✅    |
 
 **Not found your favorite browser?** Feel free to test that, and contribute to this.
 
