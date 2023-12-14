@@ -170,8 +170,8 @@ addZtmDrakmodeStyle.innerHTML = `
         background-color: #000 !important;
     }
 
-    .course-sidebar .row.lecture-sidebar .course-section .item:hover,
-    .course-sidebar .row.lecture-sidebar .course-section .section-item .title-container:hover {
+    .course-sidebar .row.lecture-sidebar .course-section .item:hover, 
+    .course-sidebar .row.lecture-sidebar .course-section .item:hover div {
         background-color: #4e4e4e !important;
     }
 
@@ -185,7 +185,8 @@ addZtmDrakmodeStyle.innerHTML = `
         color: #fff !important;
     }
 
-    .course-mainbar.lecture-content.full-width-content code {
+    .course-mainbar.lecture-content.full-width-content code,
+    .course-mainbar.lecture-content.full-width-content pre {
         border: 0.5px solid #fff;
     }
 
