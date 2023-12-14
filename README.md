@@ -24,11 +24,11 @@ Official extension for Zero To Mastery Academy students.
 
 
 ## Feature requests
-(*plans to add*)
+*(plans to add)*
 
-[ ] Dark mode in all Zero To Mastery pages (not just in lecture page)
-[ ] Keep the lecture video resolution the same
-[ ] To keep the favourite courses at top
+* [ ] Dark mode in all Zero To Mastery pages (not just in lecture page)
+* [ ] Keep the lecture video resolution the same
+* [ ] To keep the favourite courses at top
 
 
 ## Versions
