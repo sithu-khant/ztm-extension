@@ -29,6 +29,7 @@ Official extension for Zero To Mastery Academy students.
 * [ ] Dark mode in all Zero To Mastery pages (not just in lecture page)
 * [ ] Keep the lecture video resolution the same
 * [ ] To keep the favourite courses at top
+* [ ] Showing total amount of time in each section
 
 
 ## Versions
