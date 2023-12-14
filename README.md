@@ -22,11 +22,13 @@ Official extension for Zero To Mastery Academy students.
 * Toggle sidebar (responsive)
 * Toggle dark mode
 
-## To do
 
-* Dark mode in all Zero To Mastery pages (not just in lecture page)
-* Keep the lecture video resolution the same
-* To keep the favourite courses at top
+## Feature requests
+(*plans to add*)
+
+[ ] Dark mode in all Zero To Mastery pages (not just in lecture page)
+[ ] Keep the lecture video resolution the same
+[ ] To keep the favourite courses at top
 
 
 ## Versions
@@ -87,6 +89,7 @@ MIT License
 
 ## Logs
 
+* Thu Dec 14, 2023 - fixed all the `<a>` tags that are not underlined in dark mode.
 * Wed Dec 13, 2023 - Version (23.12.13) pre-release and version (2023.12.13)
 * Tue Dec 12, 2023 - Launched first version (2023.12.12).
 * Sun Dec 10, 2023 - Started the project.

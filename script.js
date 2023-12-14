@@ -120,12 +120,8 @@ addZtmDrakmodeStyle.innerHTML = `
 <style type="text/css">
     body,
     div,
-    ul, li, .item, strong {
+    ul, li, .item, strong, a {
         background-color: #1E1E1E !important;
-        color: #fff !important;
-    }
-
-    a {
         color: #fff !important;
     }
 
