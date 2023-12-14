@@ -2,7 +2,7 @@
 // Start Togglebar Section
 // ----------
 
-var lectureLeft = document.querySelector('.nav-icon-back');
+var lectureLeft = document.querySelector('.lecture-left');
 var addZtmToggleCheckbox = document.createElement('div');
 
 addZtmToggleCheckbox.innerHTML = `
@@ -120,13 +120,15 @@ addZtmDrakmodeStyle.innerHTML = `
 <style type="text/css">
     body,
     div,
-    ul, li, .item, strong, a {
+    ul, li, strong, a {
         background-color: #1E1E1E !important;
         color: #fff !important;
     }
 
     header.half-height .lecture-left .nav-icon-back {
-        background-color: #4e4e4e !important;
+        background-color: #fff !important;
+        color: #fff !important;
+        fill: #fff !important;
     }
 
     input.custom-toggle-round:checked+label:before {
@@ -148,6 +150,10 @@ addZtmDrakmodeStyle.innerHTML = `
         background-color: #4e4e4e !important;
     }
 
+    .progressbar {
+        border: 0.5px solid #4e4e4e !important;
+    }
+
     .nav-btn.complete,
     .progressbar .progressbar-fill {
         background-color: #4e4e4e !important;
@@ -161,6 +167,11 @@ addZtmDrakmodeStyle.innerHTML = `
         background: #1E1E1E !important;
     }
 
+    .course-section ul.section-list .section-item.next-lecture .item,
+    .course-section ul.section-list .section-item.next-lecture .item div {
+        background-color: #000 !important;
+    }
+
     .course-sidebar .row.lecture-sidebar .course-section .item:hover,
     .course-sidebar .row.lecture-sidebar .course-section .section-item .title-container:hover {
         background-color: #4e4e4e !important;
@@ -171,12 +182,16 @@ addZtmDrakmodeStyle.innerHTML = `
         background-color: #4e4e4e !important;
     }
 
+    .course-mainbar.lecture-content.full-width-content * {
+        background-color: #1E1E1E !important;
+        color: #fff !important;
+    }
+
     .lecture-content .lecture-attachment a {
         text-decoration: underline;
     }
 
-    .lecture-content .lecture-attachment .video-options a,
-    .download-icon {
+    .lecture-content .lecture-attachment .video-options * {
         background-color: #4e4e4e !important;
     }
 
