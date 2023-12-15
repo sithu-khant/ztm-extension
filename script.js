@@ -2,17 +2,19 @@
 // Start Togglebar Section
 // ----------
 
-var lectureLeft = document.querySelector('.nav-icon-back');
-var addZtmToggleCheckbox = document.createElement('div');
+var lectureLeft = document.querySelector(".nav-icon-back");
+var addZtmToggleCheckbox = document.createElement("div");
 
 addZtmToggleCheckbox.innerHTML = `
 <!-- ZTM Toggle Bar by Sithu Khant -->
 
 <style type="text/css">
+
     .ztm-toggle-hide {
         position: absolute;
         top: 50%;
         left: 60px;
+        text-align: center;
         transform: translateY(-50%);
     }
 
@@ -21,12 +23,37 @@ addZtmToggleCheckbox.innerHTML = `
             display: none;
         }
     }
-</style>
 
-<div class="switch ztm-toggle-hide">
-    <input id="ztm-toggle-hide" class="custom-toggle custom-toggle-round" type="checkbox">
-    <label for="ztm-toggle-hide"></label>
-</div> 
+    .custom-tooltip {
+        display: none;
+        width: 101px;
+        font-size: 12px;
+        position: absolute;
+        top: 88%;
+        left: 71%;
+        background-color: #FFFFFF;
+        padding: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+    
+      .ztm-toggle-hide:hover .custom-tooltip {
+        display: block;
+      }
+
+      @media screen and (max-width: 1025px) {
+        .ztm-toggle-hide:hover .custom-tooltip {
+            display: none;
+        }
+    }
+</style>
+    <div class="switch ztm-toggle-hide">
+        <input id="ztm-toggle-hide" class="custom-toggle custom-toggle-round" type="checkbox">
+        <label for="ztm-toggle-hide"></label>
+
+        <div class="custom-tooltip">Toggle sidebar</div>
+    </div> 
+
 
 <!-- ZTM Toggle Bar by Sithu Khant -->
 `;
@@ -34,51 +61,55 @@ addZtmToggleCheckbox.innerHTML = `
 // add toggle checkbox after back-to-home icon
 lectureLeft.parentNode.insertBefore(addZtmToggleCheckbox, lectureLeft.nextSibling);
 
-var ztmToggleCheckbox = document.getElementById('ztm-toggle-hide');
-var courseSidebar = document.getElementById('courseSidebar');
+var ztmToggleCheckbox = document.getElementById("ztm-toggle-hide");
+var courseSidebar = document.getElementById("courseSidebar");
 
 // check if darkmode is enabled in localStorage
-var isSidebarToggleEnabled = localStorage.getItem('ztmToggleSidebarkMode') === 'true';
+var isSidebarToggleEnabled = localStorage.getItem("ztmToggleSidebarkMode") === "true";
 
 // store darkmode checkbox status
 ztmToggleCheckbox.checked = isSidebarToggleEnabled;
 
 function ztmToggleSidebar() {
-    var lectureVideo = document.querySelector('.course-mainbar.lecture-content');
+   var lectureVideo = document.querySelector(".course-mainbar.lecture-content");
 
-    // if checked, hide sidebar
-    if (ztmToggleCheckbox.checked) {
-        courseSidebar.style.transform = 'translateX(-100%)'
+   // if checked, hide sidebar
+   if (ztmToggleCheckbox.checked) {
+      courseSidebar.style.transform = "translateX(-100%)";
 
-        lectureVideo.style.marginLeft = '0';
-    } else {
-        courseSidebar.style.transition = "transform 0.3s";
-        courseSidebar.style.transform = 'translateX(0%)';
+      lectureVideo.style.marginLeft = "0";
+   } else {
+      courseSidebar.style.transition = "transform 0.3s";
+      courseSidebar.style.transform = "translateX(0%)";
 
-        lectureVideo.style.marginLeft = '';
-        lectureVideo.style.transition = "all 0.3s";
-    };
+      lectureVideo.style.marginLeft = "";
+      lectureVideo.style.transition = "all 0.3s";
+   }
 
-    // store darkmode checkbox status
-    localStorage.setItem('ztmToggleSidebarkMode', ztmToggleCheckbox.checked);
-};
+   // store darkmode checkbox status
+   localStorage.setItem("ztmToggleSidebarkMode", ztmToggleCheckbox.checked);
+}
 
 // hide sidebar
-ztmToggleCheckbox.addEventListener('change', ztmToggleSidebar);
+ztmToggleCheckbox.addEventListener("change", ztmToggleSidebar);
 
 // Use MutationObserver to detect changes and apply styles
 var observer = new MutationObserver(function (mutations) {
-    mutations.forEach(function (mutation) {
-        // Check if a new node with the target class is added
-        if (mutation.addedNodes) {
-            mutation.addedNodes.forEach(function (node) {
-                if (node.classList && node.classList.contains('course-mainbar') && node.classList.contains('lecture-content')) {
-                    // Apply styles to the new node
-                    ztmToggleSidebar();
-                }
-            });
-        }
-    });
+   mutations.forEach(function (mutation) {
+      // Check if a new node with the target class is added
+      if (mutation.addedNodes) {
+         mutation.addedNodes.forEach(function (node) {
+            if (
+               node.classList &&
+               node.classList.contains("course-mainbar") &&
+               node.classList.contains("lecture-content")
+            ) {
+               // Apply styles to the new node
+               ztmToggleSidebar();
+            }
+         });
+      }
+   });
 });
 
 // Configure and start the observer
@@ -94,9 +125,9 @@ ztmToggleSidebar();
 // Start Darkmode Section
 // ----------
 
-var dropdownMenuUl = document.querySelector('.dropdown-menu');
-var addZtmDrakmodeLi = document.createElement('span');
-var addZtmDrakmodeStyle = document.createElement('div');
+var dropdownMenuUl = document.querySelector(".dropdown-menu");
+var addZtmDrakmodeLi = document.createElement("span");
+var addZtmDrakmodeStyle = document.createElement("div");
 
 addZtmDrakmodeLi.innerHTML = `
 <!-- ZTM Darkmode by Sithu Khant -->
@@ -206,27 +237,27 @@ addZtmDrakmodeStyle.innerHTML = `
 // append the darkmode style li to ul
 dropdownMenuUl.appendChild(addZtmDrakmodeLi);
 
-var ztmToggleDarkmodeCheckbox = document.getElementById('ztm-darkmode');
+var ztmToggleDarkmodeCheckbox = document.getElementById("ztm-darkmode");
 
 // check if darkmode is enabled in localStorage
-var isDarkModeEnabled = localStorage.getItem('ztmDarkMode') === 'true';
+var isDarkModeEnabled = localStorage.getItem("ztmDarkMode") === "true";
 
 // store darkmode checkbox status
 ztmToggleDarkmodeCheckbox.checked = isDarkModeEnabled;
 
 function ztmToggleDarkmode() {
-    if (ztmToggleDarkmodeCheckbox.checked) {
-        // append the darkmode style li to ul
-        dropdownMenuUl.appendChild(addZtmDrakmodeStyle);
-    } else {
-       dropdownMenuUl.removeChild(addZtmDrakmodeStyle);
-    };
+   if (ztmToggleDarkmodeCheckbox.checked) {
+      // append the darkmode style li to ul
+      dropdownMenuUl.appendChild(addZtmDrakmodeStyle);
+   } else {
+      dropdownMenuUl.removeChild(addZtmDrakmodeStyle);
+   }
 
-    // store darkmode checkbox status
-    localStorage.setItem('ztmDarkMode', ztmToggleDarkmodeCheckbox.checked);
-};
+   // store darkmode checkbox status
+   localStorage.setItem("ztmDarkMode", ztmToggleDarkmodeCheckbox.checked);
+}
 
-ztmToggleDarkmodeCheckbox.addEventListener('change', ztmToggleDarkmode);
+ztmToggleDarkmodeCheckbox.addEventListener("change", ztmToggleDarkmode);
 ztmToggleDarkmode();
 
 // ----------
