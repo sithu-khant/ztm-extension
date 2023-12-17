@@ -95,10 +95,10 @@ ztmToggleSidebar();
 // ----------
 
 var dropdownMenuUl = document.querySelector('.dropdown-menu');
-var addZtmDrakmodeLi = document.createElement('span');
-var addZtmDrakmodeStyle = document.createElement('div');
+var addZtmDarkmodeLi = document.createElement('span');
+var addZtmDarkmodeStyle = document.createElement('div');
 
-addZtmDrakmodeLi.innerHTML = `
+addZtmDarkmodeLi.innerHTML = `
 <!-- ZTM Darkmode by Sithu Khant -->
 
 <li class="nav-focus" aria-label="menuitem">
@@ -112,7 +112,7 @@ addZtmDrakmodeLi.innerHTML = `
 <!-- ZTM Darkmode by Sithu Khant -->
 `;
 
-addZtmDrakmodeStyle.innerHTML = `
+addZtmDarkmodeStyle.innerHTML = `
 <!-- ZTM Darkmode Style by Sithu Khant -->
 
 <style type="text/css">
@@ -204,7 +204,7 @@ addZtmDrakmodeStyle.innerHTML = `
 `;
 
 // append the darkmode style li to ul
-dropdownMenuUl.appendChild(addZtmDrakmodeLi);
+dropdownMenuUl.appendChild(addZtmDarkmodeLi);
 
 var ztmToggleDarkmodeCheckbox = document.getElementById('ztm-darkmode');
 
@@ -217,9 +217,9 @@ ztmToggleDarkmodeCheckbox.checked = isDarkModeEnabled;
 function ztmToggleDarkmode() {
     if (ztmToggleDarkmodeCheckbox.checked) {
         // append the darkmode style li to ul
-        dropdownMenuUl.appendChild(addZtmDrakmodeStyle);
+        dropdownMenuUl.appendChild(addZtmDarkmodeStyle);
     } else {
-       dropdownMenuUl.removeChild(addZtmDrakmodeStyle);
+       dropdownMenuUl.removeChild(addZtmDarkmodeStyle);
     };
 
     // store darkmode checkbox status
