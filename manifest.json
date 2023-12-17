@@ -10,7 +10,7 @@
 
 	"content_scripts": [
 		{
-			"js": ["script.js"],
+			"js": ["scripts/script.js"],
 			"matches": ["https://academy.zerotomastery.io/*"]
 		}
 	],
@@ -20,5 +20,10 @@
 		"32": "icons/icon32.png",
 		"48": "icons/icon48.png",
 		"128": "icons/icon128.png"
+    },
+
+    "action": {
+    	"default_title": "Zero To Mastery",
+    	"default_popup": "popup/popup.html"
     }
 }

@@ -80,10 +80,10 @@ If you added any new features, make a pull request. I will review, and merge int
 ## Demos
 
 * Toggle sidebar
-![](assets/demo-gifs/sidebar-demo.gif)
+![](utils/assets/demo-gifs/sidebar-demo.gif)
 
 * Toggle dark mode
-![](assets/demo-gifs/darkmode-demo.gif)
+![](utils/assets/demo-gifs/darkmode-demo.gif)
 
 
 ## License
@@ -93,6 +93,8 @@ MIT License
 
 ## Logs
 
+* Sun Dec 17, 2023 - Added `popup`.
+* Fri Dec 15, 2023 - Made official announcement in the ZTM discord server.
 * Thu Dec 14, 2023 - fixed all the `<a>` tags that are not underlined in dark mode. Fixed a lot of bugs. Released version (2023.12.14.01).
 * Wed Dec 13, 2023 - Version (23.12.13) pre-release and version (2023.12.13)
 * Tue Dec 12, 2023 - Launched first version (2023.12.12).
