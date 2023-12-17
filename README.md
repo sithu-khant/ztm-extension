@@ -1,4 +1,4 @@
-<img align="right" width="150" height="150" src="./assets/ztm-logo.png">
+<img align="right" width="150" height="150" src="./utils/assets/ztm-logo.png">
 
 # Zero To Mastery - Extension
 
