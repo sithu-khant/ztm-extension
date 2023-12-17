@@ -1,3 +1,15 @@
+
+// Example: Retrieving the value from storage
+chrome.storage.sync.get('ztmDarkmodeCheckboxIsChecked', function (data) {
+  var isChecked = data.ztmDarkmodeCheckboxIsChecked || false;
+  console.log('Checkbox state in content script:', isChecked);
+
+  // Now you can use the checkbox state as needed
+});
+console.log('Content script is running');
+
+
+
 // ----------
 // Start Togglebar Section
 // ----------
@@ -37,10 +49,10 @@ lectureLeft.parentNode.insertBefore(addZtmToggleCheckbox, lectureLeft.nextSiblin
 var ztmToggleCheckbox = document.getElementById('ztm-toggle-hide');
 var courseSidebar = document.getElementById('courseSidebar');
 
-// check if darkmode is enabled in localStorage
+// check if dark mode is enabled in localStorage
 var isSidebarToggleEnabled = localStorage.getItem('ztmToggleSidebarkMode') === 'true';
 
-// store darkmode checkbox status
+// store dark mode checkbox status
 ztmToggleCheckbox.checked = isSidebarToggleEnabled;
 
 function ztmToggleSidebar() {
@@ -59,7 +71,7 @@ function ztmToggleSidebar() {
         lectureVideo.style.transition = "all 0.3s";
     };
 
-    // store darkmode checkbox status
+    // store dark mode checkbox status
     localStorage.setItem('ztmToggleSidebarkMode', ztmToggleCheckbox.checked);
 };
 
@@ -97,6 +109,9 @@ ztmToggleSidebar();
 var dropdownMenuUl = document.querySelector('.dropdown-menu');
 var addZtmDarkmodeLi = document.createElement('span');
 var addZtmDarkmodeStyle = document.createElement('div');
+var darkModeContainer = document.createElement('div');
+
+darkModeContainer.appendChild(addZtmDarkmodeStyle);
 
 addZtmDarkmodeLi.innerHTML = `
 <!-- ZTM Darkmode by Sithu Khant -->
@@ -203,28 +218,30 @@ addZtmDarkmodeStyle.innerHTML = `
 <!-- ZTM Darkmode Style by Sithu Khant -->
 `;
 
-// append the darkmode style li to ul
+// append the dark mode style container to ul
 dropdownMenuUl.appendChild(addZtmDarkmodeLi);
+dropdownMenuUl.appendChild(darkModeContainer);
 
 var ztmToggleDarkmodeCheckbox = document.getElementById('ztm-darkmode');
 
-// check if darkmode is enabled in localStorage
+// check if dark mode is enabled in localStorage
 var isDarkModeEnabled = localStorage.getItem('ztmDarkMode') === 'true';
 
-// store darkmode checkbox status
+// store dark mode checkbox status
 ztmToggleDarkmodeCheckbox.checked = isDarkModeEnabled;
 
 function ztmToggleDarkmode() {
     if (ztmToggleDarkmodeCheckbox.checked) {
-        // append the darkmode style li to ul
-        dropdownMenuUl.appendChild(addZtmDarkmodeStyle);
+        // append the dark mode style container to ul
+        dropdownMenuUl.appendChild(darkModeContainer);
     } else {
-       dropdownMenuUl.removeChild(addZtmDarkmodeStyle);
-    };
+        // remove the dark mode style container from ul
+        dropdownMenuUl.removeChild(darkModeContainer);
+    }
 
-    // store darkmode checkbox status
+    // store dark mode checkbox status
     localStorage.setItem('ztmDarkMode', ztmToggleDarkmodeCheckbox.checked);
-};
+}
 
 ztmToggleDarkmodeCheckbox.addEventListener('change', ztmToggleDarkmode);
 ztmToggleDarkmode();
