@@ -39,6 +39,7 @@ html, body {
 
 .feature-list .feature-title {
     font-size: 0.9rem;
+    color: #646d76;
 }
 
 .toggle-switch .switch {
