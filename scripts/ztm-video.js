@@ -1,102 +1,103 @@
-
-// Example: Retrieving the value from storage
-chrome.storage.sync.get('ztmDarkmodeCheckboxIsChecked', function (data) {
-  var isChecked = data.ztmDarkmodeCheckboxIsChecked || false;
-  console.log('Checkbox state in content script:', isChecked);
-
-  // Now you can use the checkbox state as needed
-});
-console.log('Content script is running');
-
-
-
 // ----------
 // Start Togglebar Section
 // ----------
 
-var lectureLeft = document.querySelector('.nav-icon-back');
-var addZtmToggleCheckbox = document.createElement('div');
+chrome.storage.sync.get('ztmSidebarCheckboxIsChecked', function (data) {
+    const ztmSidebarCheckboxIsChecked = data.ztmSidebarCheckboxIsChecked || false;
 
-addZtmToggleCheckbox.innerHTML = `
-<!-- ZTM Toggle Bar by Sithu Khant -->
+    if (ztmSidebarCheckboxIsChecked) {
+        const lectureLeft = document.querySelector('.nav-icon-back');
+        const addZtmToggleCheckbox = document.createElement('div');
 
-<style type="text/css">
-    .ztm-toggle-hide {
-        position: absolute;
-        top: 50%;
-        left: 60px;
-        transform: translateY(-50%);
-    }
+        addZtmToggleCheckbox.innerHTML = `
+        <!-- ZTM Toggle Bar by Sithu Khant -->
 
-    @media screen and (max-width: 765px) {
-        .ztm-toggle-hide {
-            display: none;
+        <style type="text/css">
+            .ztm-toggle-hide {
+                position: absolute;
+                top: 50%;
+                left: 60px;
+                transform: translateY(-50%);
+            }
+
+            @media screen and (max-width: 765px) {
+                .ztm-toggle-hide {
+                    display: none;
+                }
+            }
+        </style>
+
+        <div class="switch ztm-toggle-hide">
+            <input id="ztm-toggle-hide" class="custom-toggle custom-toggle-round" type="checkbox">
+            <label for="ztm-toggle-hide"></label>
+        </div> 
+
+        <!-- ZTM Toggle Bar by Sithu Khant -->
+        `;
+
+        // add toggle checkbox after back-to-home icon
+        // lectureLeft.parentNode.insertBefore(addZtmToggleCheckbox, lectureLeft.nextSibling);
+        if (lectureLeft.nextSibling) {
+            lectureLeft.parentNode.insertBefore(addZtmToggleCheckbox, lectureLeft.nextSibling);
+        } else {
+            lectureLeft.parentNode.appendChild(addZtmToggleCheckbox);
         }
-    }
-</style>
 
-<div class="switch ztm-toggle-hide">
-    <input id="ztm-toggle-hide" class="custom-toggle custom-toggle-round" type="checkbox">
-    <label for="ztm-toggle-hide"></label>
-</div> 
+        const ztmToggleCheckbox = document.getElementById('ztm-toggle-hide');
+        const courseSidebar = document.getElementById('courseSidebar');
 
-<!-- ZTM Toggle Bar by Sithu Khant -->
-`;
+        // check if dark mode is enabled in localStorage
+        const isSidebarToggleEnabled = localStorage.getItem('ztmToggleSidebarkMode') === 'true';
 
-// add toggle checkbox after back-to-home icon
-lectureLeft.parentNode.insertBefore(addZtmToggleCheckbox, lectureLeft.nextSibling);
+        // store dark mode checkbox status
+        ztmToggleCheckbox.checked = isSidebarToggleEnabled;
 
-var ztmToggleCheckbox = document.getElementById('ztm-toggle-hide');
-var courseSidebar = document.getElementById('courseSidebar');
+        function ztmToggleSidebar() {
+            const lectureVideo = document.querySelector('.course-mainbar.lecture-content');
 
-// check if dark mode is enabled in localStorage
-var isSidebarToggleEnabled = localStorage.getItem('ztmToggleSidebarkMode') === 'true';
+            // if checked, hide sidebar
+            if (ztmToggleCheckbox.checked) {
+                courseSidebar.style.transform = 'translateX(-100%)'
 
-// store dark mode checkbox status
-ztmToggleCheckbox.checked = isSidebarToggleEnabled;
+                lectureVideo.style.marginLeft = '0';
+            } else {
+                courseSidebar.style.transition = "transform 0.3s";
+                courseSidebar.style.transform = 'translateX(0%)';
 
-function ztmToggleSidebar() {
-    var lectureVideo = document.querySelector('.course-mainbar.lecture-content');
+                lectureVideo.style.marginLeft = '';
+                lectureVideo.style.transition = "all 0.3s";
+            };
 
-    // if checked, hide sidebar
-    if (ztmToggleCheckbox.checked) {
-        courseSidebar.style.transform = 'translateX(-100%)'
+            // store dark mode checkbox status
+            localStorage.setItem('ztmToggleSidebarkMode', ztmToggleCheckbox.checked);
+        };
 
-        lectureVideo.style.marginLeft = '0';
-    } else {
-        courseSidebar.style.transition = "transform 0.3s";
-        courseSidebar.style.transform = 'translateX(0%)';
+        // hide sidebar
+        ztmToggleCheckbox.addEventListener('change', ztmToggleSidebar);
 
-        lectureVideo.style.marginLeft = '';
-        lectureVideo.style.transition = "all 0.3s";
-    };
-
-    // store dark mode checkbox status
-    localStorage.setItem('ztmToggleSidebarkMode', ztmToggleCheckbox.checked);
-};
-
-// hide sidebar
-ztmToggleCheckbox.addEventListener('change', ztmToggleSidebar);
-
-// Use MutationObserver to detect changes and apply styles
-var observer = new MutationObserver(function (mutations) {
-    mutations.forEach(function (mutation) {
-        // Check if a new node with the target class is added
-        if (mutation.addedNodes) {
-            mutation.addedNodes.forEach(function (node) {
-                if (node.classList && node.classList.contains('course-mainbar') && node.classList.contains('lecture-content')) {
-                    // Apply styles to the new node
-                    ztmToggleSidebar();
+        // Use MutationObserver to detect changes and apply styles
+        const observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                // Check if a new node with the target class is added
+                if (mutation.addedNodes) {
+                    mutation.addedNodes.forEach(function (node) {
+                        if (node.classList && node.classList.contains('course-mainbar') && node.classList.contains('lecture-content')) {
+                            // Apply styles to the new node
+                            ztmToggleSidebar();
+                        }
+                    });
                 }
             });
-        }
-    });
+        });
+
+        // Configure and start the observer
+        const observerConfig = { childList: true, subtree: true };
+        observer.observe(document.body, observerConfig);
+        ztmToggleSidebar();
+    };
 });
 
-// Configure and start the observer
-var observerConfig = { childList: true, subtree: true };
-observer.observe(document.body, observerConfig);
-ztmToggleSidebar();
+
 
 // ----------
 // End Togglebar Section
@@ -106,10 +107,10 @@ ztmToggleSidebar();
 // Start Darkmode Section
 // ----------
 
-var dropdownMenuUl = document.querySelector('.dropdown-menu');
-var addZtmDarkmodeLi = document.createElement('span');
-var addZtmDarkmodeStyle = document.createElement('div');
-var darkModeContainer = document.createElement('div');
+const dropdownMenuUl = document.querySelector('.dropdown-menu');
+const addZtmDarkmodeLi = document.createElement('span');
+const addZtmDarkmodeStyle = document.createElement('div');
+const darkModeContainer = document.createElement('div');
 
 darkModeContainer.appendChild(addZtmDarkmodeStyle);
 
@@ -222,10 +223,10 @@ addZtmDarkmodeStyle.innerHTML = `
 dropdownMenuUl.appendChild(addZtmDarkmodeLi);
 dropdownMenuUl.appendChild(darkModeContainer);
 
-var ztmToggleDarkmodeCheckbox = document.getElementById('ztm-darkmode');
+const ztmToggleDarkmodeCheckbox = document.getElementById('ztm-darkmode');
 
 // check if dark mode is enabled in localStorage
-var isDarkModeEnabled = localStorage.getItem('ztmDarkMode') === 'true';
+const isDarkModeEnabled = localStorage.getItem('ztmDarkMode') === 'true';
 
 // store dark mode checkbox status
 ztmToggleDarkmodeCheckbox.checked = isDarkModeEnabled;

@@ -93,6 +93,8 @@ MIT License
 
 ## Logs
 
+* Mon Dec 18, 2023 - All the checkboxes in `popup` are now working. 
+	* Toggle Sidebar is connected to the `popup`.
 * Sun Dec 17, 2023 - Added `popup`. Started working on the content scripts. Restructure the folder directories.
 * Fri Dec 15, 2023 - Made official announcement in the ZTM discord server.
 * Thu Dec 14, 2023 - fixed all the `<a>` tags that are not underlined in dark mode. Fixed a lot of bugs. Released version (2023.12.14.01).
