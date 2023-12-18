@@ -93,7 +93,7 @@ MIT License
 
 ## Logs
 
-* Mon Dec 18, 2023 - All the checkboxes in `popup` are now working. 
+* Mon Dec 18, 2023 - All the checkboxes in `popup` can now store the check status. 
 	* Toggle Sidebar is connected to the `popup`.
 * Sun Dec 17, 2023 - Added `popup`. Started working on the content scripts. Restructure the folder directories.
 * Fri Dec 15, 2023 - Made official announcement in the ZTM discord server.

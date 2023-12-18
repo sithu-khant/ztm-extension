@@ -12,21 +12,6 @@ chrome.storage.sync.get('ztmSidebarCheckboxIsChecked', function (data) {
         addZtmToggleCheckbox.innerHTML = `
         <!-- ZTM Toggle Bar by Sithu Khant -->
 
-        <style type="text/css">
-            .ztm-toggle-hide {
-                position: absolute;
-                top: 50%;
-                left: 60px;
-                transform: translateY(-50%);
-            }
-
-            @media screen and (max-width: 765px) {
-                .ztm-toggle-hide {
-                    display: none;
-                }
-            }
-        </style>
-
         <div class="switch ztm-toggle-hide">
             <input id="ztm-toggle-hide" class="custom-toggle custom-toggle-round" type="checkbox">
             <label for="ztm-toggle-hide"></label>
@@ -97,11 +82,10 @@ chrome.storage.sync.get('ztmSidebarCheckboxIsChecked', function (data) {
     };
 });
 
-
-
 // ----------
 // End Togglebar Section
 // ----------
+
 
 // ----------
 // Start Darkmode Section
