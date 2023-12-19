@@ -21,12 +21,7 @@ chrome.storage.sync.get('ztmSidebarCheckboxIsChecked', function (data) {
         `;
 
         // add toggle checkbox after back-to-home icon
-        // lectureLeft.parentNode.insertBefore(addZtmToggleCheckbox, lectureLeft.nextSibling);
-        if (lectureLeft.nextSibling) {
-            lectureLeft.parentNode.insertBefore(addZtmToggleCheckbox, lectureLeft.nextSibling);
-        } else {
-            lectureLeft.parentNode.appendChild(addZtmToggleCheckbox);
-        }
+        lectureLeft.parentNode.insertBefore(addZtmToggleCheckbox, lectureLeft.nextSibling);
 
         const ztmToggleCheckbox = document.getElementById('ztm-toggle-hide');
         const courseSidebar = document.getElementById('courseSidebar');
