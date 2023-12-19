@@ -3,18 +3,20 @@
 // ----------
 
 function ztmAddToggleSidebar() {
-    const lectureLeft = document.querySelector('.nav-icon-back');
-    const addZtmToggleCheckbox = document.createElement('div');
+    let lectureLeft = document.querySelector('.nav-icon-back');
+    let addZtmToggleCheckbox = document.createElement('div');
+    // Add id to it
+    addZtmToggleCheckbox.id = 'addZtmToggleCheckbox';
 
     addZtmToggleCheckbox.innerHTML = `
-    <!-- ZTM Toggle Bar by Sithu Khant -->
+    <!-- Start - ZTM Toggle Bar by Sithu Khant -->
 
     <div class="switch ztm-toggle-hide">
         <input id="ztm-toggle-hide" class="custom-toggle custom-toggle-round" type="checkbox">
         <label for="ztm-toggle-hide"></label>
     </div> 
 
-    <!-- ZTM Toggle Bar by Sithu Khant -->
+    <!-- End - ZTM Toggle Bar by Sithu Khant -->
     `;
 
     // add toggle checkbox after back-to-home icon
@@ -73,6 +75,20 @@ function ztmAddToggleSidebar() {
     ztmToggleSidebarWorking();
 };
 
+
+
+function ztmRemoveToggleSidebar() {
+    let addZtmToggleCheckbox = document.getElementById('addZtmToggleCheckbox');
+
+    // Check if addZtmToggleCheckbox exists before attempting to remove
+    if (addZtmToggleCheckbox) {
+        addZtmToggleCheckbox.parentNode.removeChild(addZtmToggleCheckbox);
+    } else {
+        console.error("Element not found.");
+    }
+}
+
+
 chrome.storage.sync.get('ztmSidebarCheckboxIsChecked', function (data) {
     let ztmSidebarCheckboxIsChecked = data.ztmSidebarCheckboxIsChecked || false;
 
@@ -89,6 +105,8 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
         if (ztmSidebarCheckboxIsChecked) {
             // Add ztmAddToggleSidebar
             ztmAddToggleSidebar();
+        } else {
+            ztmRemoveToggleSidebar();
         };
     }
 });

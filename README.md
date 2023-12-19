@@ -96,6 +96,7 @@ MIT License
 * Tue Dec 19, 2023 - (12.19.01) Darkmode function works in beta but needs to be dynamic.
 	* (12.19.02) Darkmode function is now dynamic.
 	* (12.19.03) Darkmode for `popup`.
+	* (12.19.04) Toggle Sidebar linked with the `popup`.
 * Mon Dec 18, 2023 - All the checkboxes in `popup` can now store the check status. 
 	* Toggle Sidebar is connected to the `popup`.
 * Sun Dec 17, 2023 - Added `popup`. Started working on the content scripts. Restructure the folder directories.
