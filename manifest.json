@@ -31,6 +31,17 @@
 			"js": ["scripts/ztm-lectures.js"],
 			"css": ["css/ztm-lectures.css"],
 			"matches": ["https://academy.zerotomastery.io/courses/*"]
+		},
+		{
+			"js": ["scripts/ztm-darkmode.js"],
+			"matches": ["https://*.zerotomastery.io/*"]
+		}
+	],
+
+	"web_accessible_resources" : [
+		{
+			"resources": ["css/ztm-darkmode.css"],
+			"matches": ["https://*.zerotomastery.io/*"]
 		}
 	],
 	

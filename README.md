@@ -93,6 +93,7 @@ MIT License
 
 ## Logs
 
+* Tue Dec 19, 2023 - Darkmode function works in beta but needs to be dynamic.
 * Mon Dec 18, 2023 - All the checkboxes in `popup` can now store the check status. 
 	* Toggle Sidebar is connected to the `popup`.
 * Sun Dec 17, 2023 - Added `popup`. Started working on the content scripts. Restructure the folder directories.
