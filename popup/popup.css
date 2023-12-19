@@ -15,11 +15,20 @@ html, body {
     user-select: none;
 }
 
+.popup-darkmode {
+    background-color: #000;
+    color: #fff;
+}
+
 .ztm-container .ztm-title {
     text-align: center;
     background: #32de88;
     padding: 12px 0;
     color: #fff;
+}
+
+.popup-darkmode .ztm-title {
+    background-color: #1E1E1E;
 }
 
 .feature-list {
@@ -37,9 +46,18 @@ html, body {
     border-radius: 5px;
 }
 
+.popup-darkmode .feature {
+    background-color: #1E1E1E;
+    border: 1px solid #1E1E1E;
+}
+
 .feature-list .feature-title {
     font-size: 0.9rem;
     color: #646d76;
+}
+
+.popup-darkmode .feature-title {
+    color: #fff;
 }
 
 .toggle-switch .switch {
@@ -101,10 +119,21 @@ html, body {
     border-radius: 50%;
 }
 
+a {
+    color: blue;
+}
+
 .ztm-footer {
     padding: 12px;
     background-color: #f4f4f4;
 }
 
+.popup-darkmode .ztm-footer {
+    background-color: #000;
+}
+
+.popup-darkmode a {
+    color: #fff;
+}
 
 
