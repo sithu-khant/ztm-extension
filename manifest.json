@@ -34,7 +34,7 @@
 		},
 		{
 			"js": ["scripts/ztm-darkmode.js"],
-			"matches": ["https://*.zerotomastery.io/*"]
+			"matches": ["https://academy.zerotomastery.io/*"]
 		}
 	],
 
