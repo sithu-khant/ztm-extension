@@ -119,6 +119,19 @@ html, body {
     border-radius: 50%;
 }
 
+.select-box select {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+    color: #646d76;
+}
+
+.popup-darkmode select {
+    color: #ccc;
+    background-color: transparent;
+}
+
 a {
     color: blue;
 }
