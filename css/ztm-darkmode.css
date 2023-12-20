@@ -112,6 +112,7 @@ body,
 .course-sidebar ul.sidebar-nav li.selected a,
 .course-sidebar ul.sidebar-nav li.selected a * {
 	background: #393E46 !important;
+    border-right: 1px solid #393E46 !important;
 }
 
 .course-sidebar ul.sidebar-nav li a:hover,
@@ -166,14 +167,17 @@ body,
 	border-bottom: 1px solid transparent !important;
 }
 
+.course-section ul.section-list .section-item .item .btn-primary {
+	background: #32DD88 !important;
+}
+
+.course-section ul.section-list .section-item .item .btn-primary:hover {
+	background: #24d37b !important;
+}
+
 /* ----- End Course Info Page Darkmode Section ----- */
 
 /* ----- Start Lecture Page Darkmode Section ----- */
-
-.course-sidebar .course-progress.lecture-page.sticky {
-	background: #000 !important;
-	border-bottom: 1px solid transparent !important;
-}
 
 .course-sidebar .course-progress .course-progress-percentage,
 .course-sidebar .course-progress .course-progress-percentage * {
@@ -181,16 +185,16 @@ body,
 }
 
 header.half-height .lecture-left .nav-icon-settings {
-	background: #4e4e4e !important;
+	background: #393E46 !important;
 }
 
 header.half-height .lecture-left .nav-icon-settings:hover, 
 header.half-height .lecture-left .nav-icon-list:hover {
-    background: #4e4e4e !important;
+    background: #393E46 !important;
 }
 
 header.half-height .lecture-left .settings-dropdown ul {
-	border: 1px solid #000 !important;
+	border: 1px solid #393E46 !important;
 }
 
 .dropdown-backdrop {
@@ -198,7 +202,7 @@ header.half-height .lecture-left .settings-dropdown ul {
 }
 
 header.half-height .lecture-left .settings-dropdown ul.dropdown-menu li {
-	border-bottom: 1px solid #000 !important;
+	border-bottom: 1px solid #393E46 !important;
 	outline: none !important;
 }
 
@@ -207,19 +211,19 @@ header.half-height .lecture-left .nav-icon-settings * {
 }
 
 header.half-height .lecture-left .open .dropdown-toggle {
-    background: #4e4e4e !important;
+    background: #393E46 !important;
 }
 
 header.half-height .lecture-nav a.nav-btn {
-	border-left: 1px solid #1E1E1E !important;
+	border-left: 1px solid #232931 !important;
 }
 
 header.half-height .lecture-nav a.nav-btn:hover {
-	background: #4e4e4e !important;
+	background: #393E46 !important;
 }
 
 header.half-height .lecture-nav a.nav-btn.complete {
-	background: #4e4e4e !important;
+	background: #393E46 !important;
 }
 
 header.half-height .lecture-nav a.nav-btn * {
@@ -228,7 +232,7 @@ header.half-height .lecture-nav a.nav-btn * {
 
 .lecture-content.course-mainbar * {
 	background: transparent !important;
-	color: #fff !important;
+	color: #EEEEEE !important;
 }
 
 .lecture-content.course-mainbar a {
@@ -236,7 +240,8 @@ header.half-height .lecture-nav a.nav-btn * {
 }
 
 .lecture-content .lecture-attachment .video-options a {
-	background: #4e4e4e !important;
+	background: #393E46 !important;
+	text-decoration: none !important;
 }
 
 .lecture-content.course-mainbar code,
@@ -245,17 +250,19 @@ header.half-height .lecture-nav a.nav-btn * {
     background-color: #f9f2f4 !important;
 }
 
+.lecture-content.course-mainbar code strong,
+.lecture-content.course-mainbar pre strong,
 .lecture-content.course-mainbar code em,
 .lecture-content.course-mainbar pre em {
 	color: #c7254e !important;
 }
 
 .lecture-attachment .attachment {
-	border-bottom: 1px solid #4e4e4e !important;
+	border-bottom: 1px solid #393E46 !important;
 }
 
 header.half-height .lecture-left .nav-icon-list.nav-icon-list.collapsed {
-	background: #4e4e4e !important;
+	background: #393E46 !important;
 	border-bottom: 1px solid transparent !important;
 }
 
