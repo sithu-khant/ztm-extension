@@ -2,8 +2,8 @@
 
 body,
 *:not(.status-icon) {
-	background: #1E1E1E !important;
-	color: #fff !important;
+	background: #232931 !important;
+	color: #EEEEEE !important;
 }
 
 .navbar {
@@ -11,7 +11,7 @@ body,
 }
 
 .nav.navbar-nav>li .fedora-navbar-link {
-	color: #fff !important;
+	color: #EEEEEE !important;
 }
 
 .dropdown-toggle {
@@ -19,25 +19,25 @@ body,
 }
 
 .nav.navbar-nav>li .fedora-navbar-link:hover {
-	background: #4e4e4e !important;
-	color: #fff !important;
+	background: #232931 !important;
+	color: #EEEEEE !important;
 }
 
 .open>.dropdown-menu,
 .course-filter .dropdown-menu li a {
-	background: #000 !important;
+	background: #393E46 !important;
 }
 
 .course-filter .dropdown-menu li a:hover {
-	background: #4e4e4e !important;
+	background: #232931 !important;
 }
 
 .open>.dropdown-menu li a {
-	background: #000 !important;
+	background: #393E46 !important;
 }
 
 .open>.dropdown-menu li a:hover {
-	background: #4e4e4e !important;
+	background: #232931 !important;
 }
 
 .nav.navbar-nav>li .fedora-navbar-link {
@@ -46,7 +46,7 @@ body,
 
 .fedora-navbar-link.active, .nav.navbar-nav>li .fedora-navbar-link:hover, 
 .nav.navbar-nav>li .fedora-navbar-link:focus {
-	background: #4e4e4e !important;
+	background: #393E46 !important;
 }
 
 .input-group-btn:last-child>.btn:hover,
@@ -63,30 +63,33 @@ body,
 	border: 0.5px solid #32DD88 !important;
 }
 
-
 .view-directory .course-listing:hover .course-listing-title {
 	color: #32dd88 !important;
 }
 
 .progressbar {
-	background: #e3e3e3 !important;
+	background: #393E46 !important;
 }
 
 .progressbar .progressbar-fill {
-	background: #32dd88 !important;
+	background: #EEEEEE !important;
 }
 
 .pagination .previous_page, 
 .pagination .current, 
 .pagination a {
 	background: transparent; !important;
-	border: 1px solid #dee8e9 !important;
+	border: 1px solid #EEEEEE !important;
 }
 
 .pagination .current, 
 .pagination a:hover {
 	background: #32DD88 !important;
     color: #fff !important;
+}
+
+.foot-logo img {
+	opacity: 0;
 }
 
 /* ----- End Home Page Darkmode Section ----- */
