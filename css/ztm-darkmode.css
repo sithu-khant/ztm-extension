@@ -1,5 +1,151 @@
+/* ----- Start Home Page Darkmode Section ----- */
+
 body,
-* {
-	background: #000 !important;
+*:not(.status-icon) {
+	background: #1E1E1E !important;
 	color: #fff !important;
 }
+
+.navbar {
+	box-shadow: 0px 1px 1px rgba(225, 225, 225, 0.1);
+}
+
+.nav.navbar-nav>li .fedora-navbar-link {
+	color: #fff !important;
+}
+
+.nav.navbar-nav>li .fedora-navbar-link:hover {
+	background: #4e4e4e !important;
+	color: #fff !important;
+}
+
+.open>.dropdown-menu,
+.course-filter .dropdown-menu li a {
+	background: #000 !important;
+}
+
+.course-filter .dropdown-menu li a:hover {
+	background: #4e4e4e !important;
+}
+
+.open>.dropdown-menu li a {
+	background: #000 !important;
+}
+
+.open>.dropdown-menu li a:hover {
+	background: #4e4e4e !important;
+}
+
+.nav.navbar-nav>li .fedora-navbar-link {
+	background: transparent !important;
+}
+
+.fedora-navbar-link.active, .nav.navbar-nav>li .fedora-navbar-link:hover, 
+.nav.navbar-nav>li .fedora-navbar-link:focus {
+	background: #4e4e4e !important;
+}
+
+.input-group-btn:last-child>.btn:hover,
+.input-group-btn:last-child>.btn:hover * {
+	background: #4e4e4e !important;
+}
+
+.view-directory .course-listing {
+	border: 1px solid #4e4e4e !important;
+	overflow: hidden;
+}
+
+.view-directory .course-listing:hover {
+	box-shadow: none;
+}
+
+.view-directory .course-listing:hover .course-listing-title {
+	color: #32dd88 !important;
+}
+
+.progressbar {
+	background: #e3e3e3 !important;
+}
+
+.progressbar .progressbar-fill {
+	background: #32dd88 !important;
+}
+
+/* ----- End Home Page Darkmode Section ----- */
+
+
+/* ----- Start Course Info Page Darkmode Section ----- */
+
+.full-width {
+	border-bottom: 1px solid #4e4e4e !important;
+}
+
+.full-width .navbar-fedora {
+	border-bottom: 1px solid transparent !important;
+}
+
+.course-sidebar {
+	border-right: 1px solid #4e4e4e !important;
+	overflow: hidden !important;
+}
+
+.course-mainbar .next-lecture-wrapper .start-next-lecture {
+	background: #32DD88 !important;
+}
+
+.course-mainbar .next-lecture-wrapper .start-next-lecture:hover {
+	background: #24d37b !important;
+}
+
+.course-mainbar .next-lecture-wrapper .start-next-lecture svg {
+	background: transparent !important;
+}
+
+.course-mainbar .next-lecture-wrapper {
+	background: #daf3e7 !important;
+}
+
+.course-mainbar .next-lecture-wrapper span {
+	background: transparent !important;
+	color: #000 !important;
+}
+
+.course-section ul.section-list .section-item .item:hover {
+	background: #4e4e4e !important;
+}
+
+.course-section ul.section-list .section-item.next-lecture .item {
+	background: #000 !important;
+}
+
+.course-section ul.section-list .section-item .status-container,
+.course-section ul.section-list .section-item .title-container,
+.course-section ul.section-list .section-item .title-container * {
+	background: transparent !important;
+}
+
+.course-section ul.section-list .section-item .lecture-name {
+	color: #f4f4f4 !important;
+}
+
+.course-section ul.section-list .section-item {
+	border-bottom: 1px solid transparent !important;
+}
+
+/* ----- End Course Info Page Darkmode Section ----- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

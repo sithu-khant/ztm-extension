@@ -93,6 +93,7 @@ MIT License
 
 ## Logs
 
+* Wed Dec 20, 2023 - (12.20.01) Added darkmode to `course-info` page.
 * Tue Dec 19, 2023 - (12.19.01) Darkmode function works in beta but needs to be dynamic.
 	* (12.19.02) Darkmode function is now dynamic.
 	* (12.19.03) Darkmode for `popup`.

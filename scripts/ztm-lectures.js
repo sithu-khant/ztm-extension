@@ -33,18 +33,19 @@ function ztmAddToggleSidebar() {
 
     function ztmToggleSidebarWorking() {
         const lectureVideo = document.querySelector('.course-mainbar.lecture-content');
+        const sticky = document.querySelector('.sticky');
 
         // if checked, hide sidebar
         if (ztmToggleCheckbox.checked) {
-            courseSidebar.style.transform = 'translateX(-100%)'
+            courseSidebar.style.transform = 'translateX(-100%)';
 
             lectureVideo.style.marginLeft = '0';
         } else {
-            courseSidebar.style.transition = "transform 0.3s";
-            courseSidebar.style.transform = 'translateX(0%)';
+            courseSidebar.style.transition = 'transform 0.3s';
+            courseSidebar.style.transform = '';
 
             lectureVideo.style.marginLeft = '';
-            lectureVideo.style.transition = "all 0.3s";
+            lectureVideo.style.transition = 'all 0.3s';
         };
 
         // store dark mode checkbox status
