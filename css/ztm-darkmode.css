@@ -98,7 +98,7 @@ body,
 /* ----- Start Course Info Page Darkmode Section ----- */
 
 .full-width {
-	border-bottom: 1px solid #4e4e4e !important;
+	border-bottom: 1px solid #393E46 !important;
 }
 
 .full-width .navbar-fedora {
@@ -106,17 +106,17 @@ body,
 }
 
 .course-sidebar {
-	border-right: 1px solid #4e4e4e !important;
+	border-right: 1px solid #393E46 !important;
 }
 
 .course-sidebar ul.sidebar-nav li.selected a,
 .course-sidebar ul.sidebar-nav li.selected a * {
-	background: #000 !important;
+	background: #393E46 !important;
 }
 
 .course-sidebar ul.sidebar-nav li a:hover,
 .course-sidebar ul.sidebar-nav li a:hover * {
-	background: #4e4e4e !important;
+	background: #393E46 !important;
 }
 
 .course-mainbar .next-lecture-wrapper .start-next-lecture {
@@ -140,12 +140,16 @@ body,
 	color: #000 !important;
 }
 
+.course-section .section-title {
+	border-bottom: 1px solid #EEEEEE !important;
+}
+
 .course-section ul.section-list .section-item .item:hover {
-	background: #4e4e4e !important;
+	background: #393E46 !important;
 }
 
 .course-section ul.section-list .section-item.next-lecture .item {
-	background: #000 !important;
+	background: #393E46 !important;
 }
 
 .course-section ul.section-list .section-item .status-container,
