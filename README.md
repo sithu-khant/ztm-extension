@@ -26,7 +26,7 @@ Official extension for Zero To Mastery Academy students.
 ## Feature requests
 *(plans to add)*
 
-* [ ] Dark mode in all Zero To Mastery pages (not just in lecture page)
+* [x] Dark mode in all Zero To Mastery pages (not just in lecture page)
 * [ ] Keep the lecture video resolution the same
 * [ ] To keep the favourite courses at top
 * [ ] Showing total amount of time in each section
@@ -94,10 +94,11 @@ MIT License
 ## Logs
 
 * Wed Dec 20, 2023 - (12.20.01) Added darkmode to `course-info` page.
+	* (12.20.02) - Darkmode to all pages.
 * Tue Dec 19, 2023 - (12.19.01) Darkmode function works in beta but needs to be dynamic.
-	* (12.19.02) Darkmode function is now dynamic.
-	* (12.19.03) Darkmode for `popup`.
-	* (12.19.04) Toggle Sidebar linked with the `popup`.
+	* (12.19.02) - Darkmode function is now dynamic.
+	* (12.19.03) - Darkmode for `popup`.
+	* (12.19.04) - Toggle Sidebar linked with the `popup`.
 * Mon Dec 18, 2023 - All the checkboxes in `popup` can now store the check status. 
 	* Toggle Sidebar is connected to the `popup`.
 * Sun Dec 17, 2023 - Added `popup`. Started working on the content scripts. Restructure the folder directories.
