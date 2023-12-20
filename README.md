@@ -97,6 +97,7 @@ MIT License
 	* (12.20.01) - Added darkmode to `course-info` page.
 	* (12.20.02) - Darkmode to all pages.
 	* (12.20.03) - Added hover box-shadow and border. 
+	* (12.20.04) - Fixed toggle bar function.
 * Tue Dec 19, 2023 
 	* (12.19.01) - Darkmode function works in beta but needs to be dynamic.
 	* (12.19.02) - Darkmode function is now dynamic.
