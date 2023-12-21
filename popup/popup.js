@@ -45,6 +45,32 @@ popupDarkmode()
 // ----------
 
 // ----------
+// Start ztmFavoriteCourseCheckbox section
+// ----------
+
+document.addEventListener('DOMContentLoaded', function () {
+	const ztmFavoriteCourseCheckbox = document.getElementById('ztmFavoriteCourseCheckbox');
+
+	// check whether the current state is checked or not
+	chrome.storage.sync.get('ztmFavoriteCourseCheckboxIsChecked', function (data) {
+		ztmFavoriteCourseCheckbox.checked = data.ztmFavoriteCourseCheckboxIsChecked || false;
+	});
+
+	ztmFavoriteCourseCheckbox.addEventListener('change', function () {
+		chrome.storage.sync.set({'ztmFavoriteCourseCheckboxIsChecked': ztmFavoriteCourseCheckbox.checked}, function () {
+			// sends
+			chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+				chrome.tabs.sendMessage(tabs[0].id, {ztmFavoriteCourseCheckboxIsChecked: ztmFavoriteCourseCheckbox.checked})
+			});
+		});
+	});
+});
+
+// ----------
+// End ztmFavoriteCourseCheckbox section
+// ----------
+
+// ----------
 // Start ztmKeepResolution section
 // ----------
 

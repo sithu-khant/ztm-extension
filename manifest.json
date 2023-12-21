@@ -28,6 +28,11 @@
 
 	"content_scripts": [
 		{
+			"js": ["scripts/ztm-homepage.js"],
+			"css": ["css/ztm-homepage.css"],
+			"matches": ["https://academy.zerotomastery.io/*"]
+		},
+		{
 			"js": ["scripts/ztm-lectures.js"],
 			"css": ["css/ztm-lectures.css"],
 			"matches": ["https://academy.zerotomastery.io/courses/*"]
