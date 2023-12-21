@@ -43,3 +43,31 @@ popupDarkmode()
 // ----------
 // End ztmDarkmodeCheckbox section
 // ----------
+
+// ----------
+// Start ztmKeepResolution section
+// ----------
+
+document.addEventListener('DOMContentLoaded', function () {
+	const ztmKeepResolutionSelect = document.getElementById('ztmKeepResolution');
+
+	// get the current resolution
+	chrome.storage.sync.get('ztmSelectedResolution', function (data) {
+		ztmKeepResolutionSelect.value = data.ztmSelectedResolution || ztmKeepResolutionSelect[0].value;
+	});
+
+	ztmKeepResolutionSelect.addEventListener('change', function () {
+		chrome.storage.sync.set({'ztmSelectedResolution': ztmKeepResolutionSelect.value}, function () {
+			// sends
+			chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+				chrome.tabs.sendMessage(tabs[0].id, {ztmSelectedResolution: ztmKeepResolutionSelect.value})
+			});
+		});
+	});
+});
+
+// ----------
+// End ztmKeepResolution section
+// ----------
+
+
