@@ -1,9 +1,22 @@
 /* ----- Start Home Page Darkmode Section ----- */
 
 body,
-*:not(.status-icon) {
+*:not(.jsx-1998191207, .jsx-2138578525) {
 	background: #232931 !important;
 	color: #EEEEEE !important;
+}
+
+body::-webkit-scrollbar {
+	width: 0.3em;
+}
+ 
+body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+	background-color: #393E46;
+	outline: 1px solid #232931;
 }
 
 .navbar {
@@ -109,6 +122,19 @@ body,
 	border-right: 1px solid #393E46 !important;
 }
 
+.course-sidebar::-webkit-scrollbar {
+	width: 0.5em;
+}
+ 
+.course-sidebar::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.course-sidebar::-webkit-scrollbar-thumb {
+	background-color: #393E46;
+	outline: 1px solid #232931;
+}
+
 .course-sidebar ul.sidebar-nav li.selected a,
 .course-sidebar ul.sidebar-nav li.selected a * {
 	background: #393E46 !important;
@@ -176,6 +202,71 @@ body,
 }
 
 /* ----- End Course Info Page Darkmode Section ----- */
+
+/* ----- Start Darkmode for the new course info page section ----- */
+.banner.jsx-1640592643 {
+	background: #393E46 !important;
+}
+
+.primaryButton {
+	background: #32DD88 !important;
+}
+
+.primaryButton:hover {
+	background: #24d37b !important;
+}
+
+.slim-section.jsx-3137867545,
+.lectures.jsx-3137867545,
+.progress.jsx-4067157914,
+.percentComplete.jsx-4067157914,
+.progress.jsx-811214701 {
+	background: #393E46 !important;
+}
+
+.jsx-4255369697 {
+	background: #393E46 !important;
+}
+
+/*.completion.jsx-1998191207 {
+	color: #EEEEEE !important;
+}*/
+
+/*h3 {
+	color: #EEEEEE !important;
+}*/
+
+.bar.jsx-2138578525 {
+    border: 1px solid #232931 !important;
+    background: #232931 !important;
+}
+
+.active.jsx-2138578525 {
+    border-left: 8px solid #32DD88 !important; 
+}
+
+.secondaryButton {
+	background: #32DD88 !important;
+}
+
+.secondaryButton:hover {
+	background: #24d37b !important;
+}
+
+.percentComplete.jsx-811214701 {
+	background: #393E46 !important;
+}
+
+.progressBar.jsx-811214701 {
+	background: #232931 !important;
+}
+
+.finished.jsx-811214701 {
+	background: #EEEEEE !important;
+}
+
+
+/* ----- End Darkmode for the new course info page section ----- */
 
 /* ----- Start Lecture Page Darkmode Section ----- */
 
