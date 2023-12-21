@@ -93,6 +93,8 @@ MIT License
 
 ## Logs
 
+* Thu Dec 21, 2023
+	* (12.21.01) - Added dark scroll bar. (pre-release, version 2023.12.21)
 * Wed Dec 20, 2023 
 	* (12.20.01) - Added darkmode to `course-info` page.
 	* (12.20.02) - Darkmode to all pages.

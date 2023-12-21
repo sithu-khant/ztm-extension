@@ -1,7 +1,7 @@
 /* ----- Start Home Page Darkmode Section ----- */
 
 body,
-*:not(.jsx-1998191207, .jsx-2138578525) {
+*:not(.status-icon) {
 	background: #232931 !important;
 	color: #EEEEEE !important;
 }
@@ -265,7 +265,6 @@ body::-webkit-scrollbar-thumb {
 	background: #EEEEEE !important;
 }
 
-
 /* ----- End Darkmode for the new course info page section ----- */
 
 /* ----- Start Lecture Page Darkmode Section ----- */
@@ -367,19 +366,4 @@ header.half-height .lecture-left .nav-icon-list:hover * {
 }
 
 /* ----- End Lecture Page Darkmode Section ----- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
