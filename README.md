@@ -97,6 +97,7 @@ MIT License
 	* (12.21.01) - Added dark scroll bar. (pre-release, version 2023.12.21)
 	* (12.21.02) - Added KeepResolution function in popup and it is worked now.
 	* (12.21.03) - Started working for the favourite course feature.
+	* (12.21.03) - Committed to safety.
 * Wed Dec 20, 2023 
 	* (12.20.01) - Added darkmode to `course-info` page.
 	* (12.20.02) - Darkmode to all pages.

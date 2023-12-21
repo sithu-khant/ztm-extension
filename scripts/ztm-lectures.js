@@ -6,14 +6,14 @@ var lectureLeft = document.querySelector('.nav-icon-back');
 var addZtmToggleCheckbox = document.createElement('div');
 
 addZtmToggleCheckbox.innerHTML = `
-<!-- ZTM Toggle Bar by Sithu Khant -->
+<!-- ZTM Toggle Bar by Sithu Khant - Start -->
 
 <div class="switch ztm-toggle-hide">
     <input id="ztm-toggle-hide" class="custom-toggle custom-toggle-round" type="checkbox">
     <label for="ztm-toggle-hide"></label>
 </div> 
 
-<!-- ZTM Toggle Bar by Sithu Khant -->
+<!-- ZTM Toggle Bar by Sithu Khant - End -->
 `;
 
 if (lectureLeft) {
