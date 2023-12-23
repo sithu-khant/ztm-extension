@@ -35,7 +35,7 @@ Official extension for Zero To Mastery Academy students.
 
 | Versions  | Chrome | Firefox | Safari | Edge |
 |-----------|--------|---------|--------|------|
-| 2023.12.13 | ✅      | WIP       | WIP   | WIP    |
+| 2023.12.21 | ✅      | WIP       | WIP   | WIP    |
 | 2023.12.14.01 | ✅      | ✅       | ✅   | ✅    |
 | 2023.12.13 | ✅      | ✅       | ✅   | ✅    |
 | 23.12.13 | ✅      | ✅       | ✅    | ✅    |
