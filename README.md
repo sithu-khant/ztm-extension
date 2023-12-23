@@ -20,13 +20,12 @@ Official extension for Zero To Mastery Academy students.
 ## Features
 
 * Toggle sidebar (responsive)
-* Toggle dark mode
+* Toggle dark mode on all pages
 
 
 ## Feature requests
 *(plans to add)*
 
-* [x] Dark mode in all Zero To Mastery pages (not just in lecture page)
 * [ ] Keep the lecture video resolution the same
 * [ ] To keep the favourite courses at top
 * [ ] Showing total amount of time in each section
@@ -36,6 +35,7 @@ Official extension for Zero To Mastery Academy students.
 
 | Versions  | Chrome | Firefox | Safari | Edge |
 |-----------|--------|---------|--------|------|
+| 2023.12.13 | ✅      | ❌       | ❌   | ❌    |
 | 2023.12.14.01 | ✅      | ✅       | ✅   | ✅    |
 | 2023.12.13 | ✅      | ✅       | ✅   | ✅    |
 | 23.12.13 | ✅      | ✅       | ✅    | ✅    |
@@ -45,6 +45,11 @@ Official extension for Zero To Mastery Academy students.
 
 ### Version list
 
+* 2023.12.21
+	* Dark mode on all the pages
+	* Changed color theme for dark mode
+	* Added popup
+	* Improvements
 * 2023.12.14.01
 	* Fixed bugs
 * 2023.12.13
@@ -77,15 +82,6 @@ Feel free to create a new issue here -> [GitHub Issue](https://github.com/sithu-
 If you added any new features, make a pull request. I will review, and merge into the extension if it is fun to have.
 
 
-## Demos
-
-* Toggle sidebar
-![](utils/assets/demo-gifs/sidebar-demo.gif)
-
-* Toggle dark mode
-![](utils/assets/demo-gifs/darkmode-demo.gif)
-
-
 ## License
 
 MIT License
@@ -93,6 +89,7 @@ MIT License
 
 ## Logs
 
+* Fri Dec 22, 2023 - Version (2023.12.21)
 * Thu Dec 21, 2023
 	* (12.21.01) - Added dark scroll bar. (pre-release, version 2023.12.21)
 	* (12.21.02) - Added KeepResolution function in popup and it is worked now.
