@@ -2,39 +2,39 @@
 // Start Darkmode Section
 // ----------
 
-chrome.storage.sync.get('ztmDarkmodeCheckboxIsChecked', function (data) {
-    const ztmDarkmodeCheckboxIsChecked = data.ztmDarkmodeCheckboxIsChecked || false;
+chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', function (data) {
+    const ztmDarkModeCheckboxIsChecked = data.ztmDarkModeCheckboxIsChecked || false;
 
-    if (ztmDarkmodeCheckboxIsChecked) {
+    if (ztmDarkModeCheckboxIsChecked) {
         enableZtmDarkmode('css/ztm-darkmode.css');
     } else {
-        disableZtmDarkmode('css/ztm-darkmode.css');
+        disableZtmDarkMode('css/ztm-darkmode.css');
     }
 });
 
 chrome.storage.onChanged.addListener(function (changes, namespace) {
-    if (namespace === 'sync' && 'ztmDarkmodeCheckboxIsChecked' in changes) {
-        const ztmDarkmodeCheckboxIsChecked = changes.ztmDarkmodeCheckboxIsChecked.newValue || false;
+    if (namespace === 'sync' && 'ztmDarkModeCheckboxIsChecked' in changes) {
+        const ztmDarkModeCheckboxIsChecked = changes.ztmDarkModeCheckboxIsChecked.newValue || false;
 
-        if (ztmDarkmodeCheckboxIsChecked) {
+        if (ztmDarkModeCheckboxIsChecked) {
             enableZtmDarkmode('css/ztm-darkmode.css');
         } else {
-            disableZtmDarkmode('css/ztm-darkmode.css');
+            disableZtmDarkMode('css/ztm-darkmode.css');
         }
     }
 })
 
 function enableZtmDarkmode(cssFile) {
-    let link = document.createElement('link');
+    const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
     link.href = chrome.runtime.getURL(cssFile);
     document.head.appendChild(link);
 };
 
-function disableZtmDarkmode(cssFile) {
-    let links = document.head.querySelectorAll('link[rel="stylesheet"][href*="' + cssFile + '"]');
-    for (var i = 0; i < links.length; i++) {
+function disableZtmDarkMode(cssFile) {
+    const links = document.head.querySelectorAll('link[rel="stylesheet"][href*="' + cssFile + '"]');
+    for (let i = 0; i < links.length; i++) {
         links[i].parentNode.removeChild(links[i])
     }
 };

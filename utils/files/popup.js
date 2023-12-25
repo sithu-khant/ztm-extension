@@ -1,47 +1,60 @@
 // ----------
-// Start ztmDarkmodeCheckbox section
+// Start ztmDarkModeCheckbox section
 // ----------
 
+function querySendTabMessage( options ){
+	chrome.tabs.query(
+		{ active: true, currentWindow: true},
+		function (tabs) {
+			chrome.tabs.sendMessage(
+				tabs[0].id,
+				options
+			).catch( console.error )
+		});
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-	let ztmDarkmodeCheckbox = document.getElementById('ztmDarkmodeCheckbox');
+	let ztmDarkModeCheckbox = document.getElementById('ztmDarkModeCheckbox');
 
 	// check whether the current state is checked or not
-	chrome.storage.sync.get('ztmDarkmodeCheckboxIsChecked', function (data) {
-		ztmDarkmodeCheckbox.checked = data.ztmDarkmodeCheckboxIsChecked || false;
+	chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', function (data) {
+		ztmDarkModeCheckbox.checked = data.ztmDarkModeCheckboxIsChecked || false;
 	});
 
-	ztmDarkmodeCheckbox.addEventListener('change', function () {
-		chrome.storage.sync.set({'ztmDarkmodeCheckboxIsChecked': ztmDarkmodeCheckbox.checked}, function () {
+	ztmDarkModeCheckbox.addEventListener('change', function () {
+		chrome.storage.sync.set({'ztmDarkModeCheckboxIsChecked': ztmDarkModeCheckbox.checked}, 
+		function () {
 			// sends
-			chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-				chrome.tabs.sendMessage(tabs[0].id, {ztmDarkmodeCheckboxIsChecked: ztmDarkmodeCheckbox.checked})
+			querySendTabMessage({
+				ztmDarkModeCheckboxIsChecked:
+				ztmDarkModeCheckbox.checked
 			});
 		});
 	});
 });
 
 const ztmPopupContainer = document.querySelector('.ztm-container');
-let ztmDarkmodeCheckbox = document.getElementById('ztmDarkmodeCheckbox');
+let ztmDarkModeCheckbox = document.getElementById('ztmDarkModeCheckbox');
 
 // if checked, popup is still dark
-const ztmPopupsDarkmodeIsEnabled = localStorage.getItem('ztmPopuparkMode') === 'true';
-ztmDarkmodeCheckbox.checked = ztmPopupsDarkmodeIsEnabled
+const ztmPopupsDarkModeIsEnabled = localStorage.getItem('ztmPopupDarkMode') === 'true';
+ztmDarkModeCheckbox.checked = ztmPopupsDarkModeIsEnabled
 
-function popupDarkmode() {
-    if (ztmDarkmodeCheckbox.checked) {
-        ztmPopupContainer.classList.add('popup-darkmode')
+function popupDarkMode() {
+    if (ztmDarkModeCheckbox.checked) {
+        ztmPopupContainer.classList.add('popup-darkMode')
     } else {
-        ztmPopupContainer.classList.remove('popup-darkmode')
+        ztmPopupContainer.classList.remove('popup-darkMode')
     }
-    // to store the current stage of the ztm darkmode checkbox
-	localStorage.setItem('ztmPopuparkMode', ztmDarkmodeCheckbox.checked);
+    // to store the current stage of the ztm darkMode checkbox
+	localStorage.setItem('ztmPopupDarkMode', ztmDarkModeCheckbox.checked);
 };
 
-ztmDarkmodeCheckbox.addEventListener('change', popupDarkmode);
-popupDarkmode()
+ztmDarkModeCheckbox.addEventListener('change', popupDarkMode);
+popupDarkMode();
 
 // ----------
-// End ztmDarkmodeCheckbox section
+// End ztmDarkModeCheckbox section
 // ----------
 
 
@@ -60,15 +73,16 @@ document.addEventListener('DOMContentLoaded', function () {
 	ztmSidebarCheckbox.addEventListener('change', function () {
 		chrome.storage.sync.set({'ztmSidebarCheckboxIsChecked': ztmSidebarCheckbox.checked}, function () {
 			// sends
-			chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-				chrome.tabs.sendMessage(tabs[0].id, {ztmSidebarCheckboxIsChecked: ztmSidebarCheckbox.checked})
+			querySendTabMessage({
+				ztmSidebarCheckboxIsChecked:
+				ztmSidebarCheckbox.checked
 			});
 		});
 	});
 });
 
 // ----------
-// End ztmDarkmodeCheckbox section
+// End ztmDarkModeCheckbox section
 // ----------
 
 
@@ -87,9 +101,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	ztmFavouriteCourseCheckbox.addEventListener('change', function () {
 		chrome.storage.sync.set({'ztmFavouriteCourseCheckboxIsChecked': ztmFavouriteCourseCheckbox.checked}, function () {
 			// sends
-			chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-				chrome.tabs.sendMessage(tabs[0].id, {ztmFavouriteCourseCheckboxIsChecked: ztmFavouriteCourseCheckbox.checked})
-			});
+			querySendTabMessage({
+				ztmFavouriteCourseCheckboxIsChecked:
+				ztmFavouriteCourseCheckbox.checked
+			})
 		});
 	});
 });
@@ -114,9 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	ztmSameResolutionCheckbox.addEventListener('change', function () {
 		chrome.storage.sync.set({'ztmSameResolutionCheckboxIsChecked': ztmSameResolutionCheckbox.checked}, function () {
 			// sends
-			chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-				chrome.tabs.sendMessage(tabs[0].id, {ztmSameResolutionCheckboxIsChecked: ztmSameResolutionCheckbox.checked})
-			});
+			querySendTabMessage({ztmSameResolutionCheckboxIsChecked: ztmSameResolutionCheckbox.checked})
 		});
 	});
 });
@@ -139,10 +152,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	ztmTotalHoursCheckbox.addEventListener('change', function () {
-		chrome.storage.sync.set({'ztmTotalHoursCheckboxIsChecked': ztmTotalHoursCheckbox.checked}, function () {
+		chrome.storage.sync.set({'/': ztmTotalHoursCheckbox.checked },function () {
 			// sends
-			chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-				chrome.tabs.sendMessage(tabs[0].id, {ztmTotalHoursCheckboxIsChecked: ztmTotalHoursCheckbox.checked})
+			querySendTabMessage({
+				ztmTotalHoursCheckboxIsChecked: ztmTotalHoursCheckbox.checked
 			});
 		});
 	});

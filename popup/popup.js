@@ -1,45 +1,51 @@
 // ----------
-// Start ztmDarkmodeCheckbox section
+// Start ztmDarkModeCheckbox section
 // ----------
 
 document.addEventListener('DOMContentLoaded', function () {
-	let ztmDarkmodeCheckbox = document.getElementById('ztmDarkmodeCheckbox');
+	const ztmDarkModeCheckbox = document.getElementById('ztmDarkModeCheckbox');
 
 	// check whether the current state is checked or not
-	chrome.storage.sync.get('ztmDarkmodeCheckboxIsChecked', function (data) {
-		ztmDarkmodeCheckbox.checked = data.ztmDarkmodeCheckboxIsChecked || false;
+	chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', function (data) {
+		ztmDarkModeCheckbox.checked = data.ztmDarkModeCheckboxIsChecked || false;
 	});
 
-	ztmDarkmodeCheckbox.addEventListener('change', function () {
-		chrome.storage.sync.set({'ztmDarkmodeCheckboxIsChecked': ztmDarkmodeCheckbox.checked}, function () {
+	ztmDarkModeCheckbox.addEventListener('change', async function () {
+		await chrome.storage.sync.set({
+			'ztmDarkModeCheckboxIsChecked': ztmDarkModeCheckbox.checked
+		}, async function () {
 			// sends
-			chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-				chrome.tabs.sendMessage(tabs[0].id, {ztmDarkmodeCheckboxIsChecked: ztmDarkmodeCheckbox.checked})
+			await chrome.tabs.query({active: true, currentWindow: true}, async function(tabs) {
+				await chrome?.tabs?.sendMessage(tabs[0].id, {ztmDarkModeCheckboxIsChecked: ztmDarkModeCheckbox.checked})
+				.catch(error => {
+					// TODO: error to fix at some point
+					console.error('[ tabs sendMessage error ]', error)
+				})
 			});
 		});
 	});
 });
 
 const ztmPopupContainer = document.querySelector('.ztm-container');
-let ztmDarkmodeCheckbox = document.getElementById('ztmDarkmodeCheckbox');
+const ztmDarkModeCheckbox = document.getElementById('ztmDarkModeCheckbox');
 
 // if checked, popup is still dark
-const ztmPopupsDarkmodeIsEnabled = localStorage.getItem('ztmPopuparkMode') === 'true';
-ztmDarkmodeCheckbox.checked = ztmPopupsDarkmodeIsEnabled
+const ztmPopupsDarkModeIsEnabled = localStorage.getItem('ztmPopuparkMode') === 'true';
+ztmDarkModeCheckbox.checked = ztmPopupsDarkModeIsEnabled
 
-function popupDarkmode() {
-    if (ztmDarkmodeCheckbox.checked) {
+function popupDarkMode() {
+    if (ztmDarkModeCheckbox.checked) {
         ztmPopupContainer.classList.add('popup-darkmode')
     } else {
         ztmPopupContainer.classList.remove('popup-darkmode')
     }
     // to store the current stage of the ztm darkmode checkbox
-	localStorage.setItem('ztmPopuparkMode', ztmDarkmodeCheckbox.checked);
+	localStorage.setItem('ztmPopuparkMode', ztmDarkModeCheckbox.checked);
 };
 
-ztmDarkmodeCheckbox.addEventListener('change', popupDarkmode);
-popupDarkmode()
+ztmDarkModeCheckbox.addEventListener('change', popupDarkMode);
+popupDarkMode()
 
 // ----------
-// End ztmDarkmodeCheckbox section
+// End ztmDarkModeCheckbox section
 // ----------
