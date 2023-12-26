@@ -33,7 +33,7 @@ if (lectureLeft) {
 
         // if checked, hide sidebar
         if (ztmToggleCheckbox.checked) {
-            courseSidebar.style.transform = 'translateX(-100%)'
+            courseSidebar.style.transform = 'translateX(-100%)';
 
             lectureVideo.style.marginLeft = '0';
         } else {
@@ -72,6 +72,13 @@ if (lectureLeft) {
     const observerConfig = { childList: true, subtree: true };
     observer.observe(document.body, observerConfig);
     ztmToggleSidebar();
+};
+
+var courseSidebar = document.getElementById('courseSidebar');
+
+if (document.body.clientWidth >= 757) {
+    courseSidebar.classList.remove('collapse')
+    console.log('working')
 };
 
 // ----------
