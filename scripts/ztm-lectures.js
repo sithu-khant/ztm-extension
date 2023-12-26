@@ -74,12 +74,12 @@ if (lectureLeft) {
     ztmToggleSidebar();
 };
 
-var courseSidebar = document.getElementById('courseSidebar');
+// var courseSidebar = document.getElementById('courseSidebar');
 
-if (document.body.clientWidth >= 757) {
-    courseSidebar.classList.remove('collapse')
-    console.log('working')
-};
+// if (document.body.clientWidth >= 757) {
+//     courseSidebar.classList.remove('collapse')
+//     console.log('working')
+// };
 
 // ----------
 // End Togglebar Section

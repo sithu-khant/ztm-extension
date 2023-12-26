@@ -6,16 +6,16 @@ document.addEventListener('DOMContentLoaded', function () {
 	const ztmDarkModeCheckbox = document.getElementById('ztmDarkModeCheckbox');
 
 	// check whether the current state is checked or not
-	chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', function (data) {
+	browser.storage.sync.get('ztmDarkModeCheckboxIsChecked', function (data) {
 		ztmDarkModeCheckbox.checked = data.ztmDarkModeCheckboxIsChecked || false;
 	});
 
 	ztmDarkModeCheckbox.addEventListener('change', async function () {
-		await chrome.storage.sync.set({
+		await browser.storage.sync.set({
 			'ztmDarkModeCheckboxIsChecked': ztmDarkModeCheckbox.checked
 		}, async function () {
 			// sends
-			await chrome.tabs.query({active: true, currentWindow: true}, async function(tabs) {
+			await browser.tabs.query({active: true, currentWindow: true}, async function(tabs) {
 				await chrome?.tabs?.sendMessage(tabs[0].id, {ztmDarkModeCheckboxIsChecked: ztmDarkModeCheckbox.checked})
 				.catch(error => {
 					// TODO: error to fix at some point

@@ -2,7 +2,7 @@
 // Start Darkmode Section
 // ----------
 
-chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', function (data) {
+browser.storage.sync.get('ztmDarkModeCheckboxIsChecked', function (data) {
     const ztmDarkModeCheckboxIsChecked = data.ztmDarkModeCheckboxIsChecked || false;
 
     if (ztmDarkModeCheckboxIsChecked) {
@@ -12,7 +12,7 @@ chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', function (data) {
     }
 });
 
-chrome.storage.onChanged.addListener(function (changes, namespace) {
+browser.storage.onChanged.addListener(function (changes, namespace) {
     if (namespace === 'sync' && 'ztmDarkModeCheckboxIsChecked' in changes) {
         const ztmDarkModeCheckboxIsChecked = changes.ztmDarkModeCheckboxIsChecked.newValue || false;
 
@@ -28,7 +28,7 @@ function enableZtmDarkmode(cssFile) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = chrome.runtime.getURL(cssFile);
+    link.href = browser.runtime.getURL(cssFile);
     document.head.appendChild(link);
 };
 
