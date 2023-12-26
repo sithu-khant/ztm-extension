@@ -17,10 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			// sends
 			await chrome.tabs.query({active: true, currentWindow: true}, async function(tabs) {
 				await chrome?.tabs?.sendMessage(tabs[0].id, {ztmDarkModeCheckboxIsChecked: ztmDarkModeCheckbox.checked})
-				.catch(error => {
-					// TODO: error to fix at some point
-					console.error('[ tabs sendMessage error ]', error)
-				})
 			});
 		});
 	});

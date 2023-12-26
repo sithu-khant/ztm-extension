@@ -97,6 +97,7 @@ MIT License
 		* provided a bit of refacto
 		* have a catch block - to handle as you wish later on
 	* (12.26.02) - Committed for safety
+	* (12.26.03) - Fixed a bug
 * Fri Dec 22, 2023 - Version (2023.12.21)
 * Thu Dec 21, 2023
 	* (12.21.01) - Added dark scroll bar. (pre-release, version 2023.12.21)

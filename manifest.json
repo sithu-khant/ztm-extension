@@ -11,9 +11,6 @@
 		"storage",
 		"activeTab"
 	],
-	"background": {
-		"service_workder": "popup/popup.js"
-	},
 
 	"action": {
     	"default_title": "Zero To Mastery",
