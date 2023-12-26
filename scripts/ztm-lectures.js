@@ -2,8 +2,8 @@
 // Start Togglebar Section
 // ----------
 
-var lectureLeft = document.querySelector('.nav-icon-back');
-var addZtmToggleCheckbox = document.createElement('div');
+const lectureLeft = document.querySelector('.nav-icon-back');
+const addZtmToggleCheckbox = document.createElement('div');
 
 addZtmToggleCheckbox.innerHTML = `
 <!-- ZTM Toggle Bar by Sithu Khant - Start -->
@@ -19,32 +19,32 @@ addZtmToggleCheckbox.innerHTML = `
 if (lectureLeft) {
     lectureLeft.parentNode.insertBefore(addZtmToggleCheckbox, lectureLeft.nextSibling);
 
-    var ztmToggleCheckbox = document.getElementById('ztm-toggle-hide');
-    var courseSidebar = document.getElementById('courseSidebar');
+    const ztmToggleCheckbox = document.getElementById('ztm-toggle-hide');
+    const courseSidebar = document.getElementById('courseSidebar');
 
-    // check if darkmode is enabled in localStorage
-    var isSidebarToggleEnabled = localStorage.getItem('ztmToggleSidebarkMode') === 'true';
+    // check if dark mode is enabled in localStorage
+    const isSidebarToggleEnabled = localStorage.getItem('ztmToggleSidebarkMode') === 'true';
 
-    // store darkmode checkbox status
+    // store dark mode checkbox status
     ztmToggleCheckbox.checked = isSidebarToggleEnabled;
 
-    function ztmToggleSidebar() {
-        var lectureVideo = document.querySelector('.course-mainbar.lecture-content');
+    const ztmToggleSidebar = () => {
+        const lectureVideo = document.querySelector('.course-mainbar.lecture-content');
 
         // if checked, hide sidebar
         if (ztmToggleCheckbox.checked) {
-            courseSidebar.style.transform = 'translateX(-100%)'
+            courseSidebar.style.transform = 'translateX(-100%)';
 
             lectureVideo.style.marginLeft = '0';
         } else {
-            courseSidebar.style.transition = "transform 0.3s";
+            courseSidebar.style.transition = 'transform 0.3s';
             courseSidebar.style.transform = 'translateX(0%)';
 
             lectureVideo.style.marginLeft = '';
-            lectureVideo.style.transition = "all 0.3s";
+            lectureVideo.style.transition = 'all 0.3s';
         };
 
-        // store darkmode checkbox status
+        // store dark mode checkbox status
         localStorage.setItem('ztmToggleSidebarkMode', ztmToggleCheckbox.checked);
     };
 
@@ -52,12 +52,14 @@ if (lectureLeft) {
     ztmToggleCheckbox.addEventListener('change', ztmToggleSidebar);
 
     // Use MutationObserver to detect changes and apply styles
-    var observer = new MutationObserver(function (mutations) {
+    const observer = new MutationObserver(function (mutations) {
         mutations.forEach(function (mutation) {
             // Check if a new node with the target class is added
             if (mutation.addedNodes) {
                 mutation.addedNodes.forEach(function (node) {
-                    if (node.classList && node.classList.contains('course-mainbar') && node.classList.contains('lecture-content')) {
+                    const hasSideBar = node.classList?.contains('course-mainbar')
+                        && node.classList?.contains('lecture-content');
+                    if (hasSideBar) {
                         // Apply styles to the new node
                         ztmToggleSidebar();
                     }
@@ -67,9 +69,16 @@ if (lectureLeft) {
     });
 
     // Configure and start the observer
-    var observerConfig = { childList: true, subtree: true };
+    const observerConfig = { childList: true, subtree: true };
     observer.observe(document.body, observerConfig);
     ztmToggleSidebar();
+};
+
+var courseSidebar = document.getElementById('courseSidebar');
+
+if (document.body.clientWidth >= 757) {
+    courseSidebar.classList.remove('collapse')
+    console.log('working')
 };
 
 // ----------
