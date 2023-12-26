@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb {
 
 .input-group-btn:last-child>.btn:hover,
 .input-group-btn:last-child>.btn:hover * {
-	background: #4e4e4e !important;
+	background: #393E46 !important;
 }
 
 .view-directory .course-listing {

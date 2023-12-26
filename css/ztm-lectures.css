@@ -6,7 +6,7 @@
     transform: translateY(-50%);
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 767px) {
     .ztm-toggle-hide {
         display: none;
     }
