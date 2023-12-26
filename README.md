@@ -33,13 +33,13 @@ Official extension for Zero To Mastery Academy students.
 
 ## Versions
 
-| Versions  | Chrome | Firefox | Edge |
-|-----------|--------|---------| ------|
-| 2023.12.21 | ✅      | WIP       | WIP   | WIP    |
-| 2023.12.14.01 | ✅      | ✅       |  ✅    |
-| 2023.12.13 | ✅      | ✅       | ✅    |
-| 23.12.13 | ✅      | ✅       | ✅    |
-| 2023.12.12 | ✅      | ✅       | ✅    |
+| Versions  | Chrome | Firefox | Edge | Brave |
+|-----------|--------|---------| ------| ------|
+| 2023.12.21 | ✅      | ✅       | ✅   | ✅   |
+| 2023.12.14.01 | ✅      | ✅       |  ✅    | ✅   |
+| 2023.12.13 | ✅      | ✅       | ✅    | ✅   |
+| 23.12.13 | ✅      | ✅       | ✅    | ✅   |
+| 2023.12.12 | ✅      | ✅       | ✅    | ✅   |
 
 WIP - Work in progress
 
@@ -100,6 +100,7 @@ MIT License
 	* (12.26.03) - Fixed a bug
 	* (12.26.04) - Added font-family to `popup.css`
 	* (12.26.05) - Added some CSS properties to `popup.css`.
+	* (12.26.06) - Version for Firefox. Tested on Edge and Brave.
 * Fri Dec 22, 2023 - Version (2023.12.21)
 * Thu Dec 21, 2023
 	* (12.21.01) - Added dark scroll bar. (pre-release, version 2023.12.21)
