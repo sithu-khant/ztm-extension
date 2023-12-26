@@ -91,7 +91,7 @@ body::-webkit-scrollbar-thumb {
 .pagination .previous_page, 
 .pagination .current, 
 .pagination a {
-	background: transparent; !important;
+	background: transparent !important;
 	border: 1px solid #EEEEEE !important;
 }
 

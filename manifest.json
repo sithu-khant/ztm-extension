@@ -40,7 +40,14 @@
 			"matches": ["https://academy.zerotomastery.io/*"]
 		}
 	],
-	
+
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "sithu.khantht@gmail.com",
+			"strict_min_version": "42.0"
+		}
+	},
+
     "icons": {
 		"16": "icons/icon16.png",
 		"32": "icons/icon32.png",
