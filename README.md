@@ -99,6 +99,7 @@ MIT License
 	* (12.26.02) - Committed for safety
 	* (12.26.03) - Fixed a bug
 	* (12.26.04) - Added font-family to `popup.css`
+	* (12.26.05) - Added some CSS properties to `popup.css`.
 * Fri Dec 22, 2023 - Version (2023.12.21)
 * Thu Dec 21, 2023
 	* (12.21.01) - Added dark scroll bar. (pre-release, version 2023.12.21)

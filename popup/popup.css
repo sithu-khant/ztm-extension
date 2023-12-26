@@ -126,6 +126,8 @@ a {
 }
 
 .ztm-footer {
+    font-size: 12px;
+    line-height: 15px;
     padding: 12px;
     border-top: 0.5px solid #EEEEEE;
 }
