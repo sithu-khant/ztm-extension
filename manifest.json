@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "Zero To Mastery",
-	"version": "2023.12.21",
+	"version": "2023.12.27",
 	"description": "Official extension for Zero To Mastery Academy students.",
 	"author": "Sithu Khant",
 	"homepage_url": "https://zerotomastery.io/",
@@ -43,7 +43,7 @@
 
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "sithu.khantht@gmail.com",
+			"id": "sithu.khant@hotmail.com",
 			"strict_min_version": "42.0"
 		}
 	},
