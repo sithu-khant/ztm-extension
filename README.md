@@ -29,6 +29,7 @@ Official extension for Zero To Mastery Academy students.
 * [ ] Keep the lecture video resolution the same
 * [ ] To keep the favourite courses at top
 * [ ] Showing total amount of time in each section
+* [ ] Focus Video
 
 
 ## Versions
@@ -91,6 +92,8 @@ MIT License
 
 ## Logs
 
+* Wed Dec 27, 2023
+	* (12.27.01) - Added `Focus Video` feature request.
 * Tue Dec 26, 2023
 	* (12.26.01) - Merged from `LaurelineP`.
 		* fixed typos
