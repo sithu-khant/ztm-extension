@@ -2,7 +2,7 @@
 
 # Zero To Mastery - Extension
 
-Official extension for Zero To Mastery Academy students.
+Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) students.
 
 ![Extension Current Version](https://img.shields.io/github/manifest-json/v/sithu-khant/ztm-extension)
 ![License](https://img.shields.io/github/license/sithu-khant/ztm-extension)
