@@ -24,12 +24,12 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 
 ## Feature requests
-*(plans to add)*
+*(plans to add - top to bottom)*
 
-* [ ] Keep the lecture video resolution the same
 * [ ] To keep the favourite courses at top
 * [ ] Showing total amount of time in each section
 * [ ] Focus Video
+* [ ] Keep the lecture video resolution the same
 
 
 ## Versions
