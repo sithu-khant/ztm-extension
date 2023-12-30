@@ -97,7 +97,8 @@ MIT License
 ## Logs
 
 * Sat Dec 30, 2023 
-	* (12.30.01) - Added `Buy Me a Coffee` button. Added versions Firefox and other browsers.
+	* (12.30.01) - Added `Buy Me a Coffee` button.
+	* (12.30.02) - Added versions for Firefox and other browsers.
 * Wed Dec 27, 2023
 	* (12.27.01) - Added `Focus Video` feature request.
 * Tue Dec 26, 2023
