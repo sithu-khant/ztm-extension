@@ -84,6 +84,10 @@ Feel free to create a new issue here -> [GitHub Issue](https://github.com/sithu-
 
 If you added any new features, make a pull request. I will review, and merge into the extension if it is fun to have.
 
+## To support my work?
+
+<a href="https://www.buymeacoffee.com/sithukhant" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 
 ## License
 
@@ -92,6 +96,8 @@ MIT License
 
 ## Logs
 
+* Sat Dec 30, 2023 
+	* (12.30.01) - Added `Buy Me a Coffee` button. Added versions Firefox and other browsers.
 * Wed Dec 27, 2023
 	* (12.27.01) - Added `Focus Video` feature request.
 * Tue Dec 26, 2023
