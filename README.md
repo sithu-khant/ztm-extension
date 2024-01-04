@@ -21,7 +21,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 * Toggle sidebar (responsive)
 * Toggle dark mode on all pages
-* Showing total amount of time in each section
+* Showing total amount of time in each section by @MattCSmith
 
 
 ## Feature requests
@@ -102,6 +102,10 @@ MIT License
 		* Time statistics on each category/section of the course curriculum
 		* Time statistics in the sidebar for the course overall
 		* Toggle switch to enable all the statistics.
+	* (1.4.02)
+		* Changed SectionTime color to grey
+		* Added dark mode for SectionTime
+		* Added info for the codes
 * Sat Dec 30, 2023 
 	* (12.30.01) - Added `Buy Me a Coffee` button.
 	* (12.30.02) - Added versions for Firefox and other browsers.

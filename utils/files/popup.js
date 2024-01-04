@@ -42,9 +42,9 @@ ztmDarkModeCheckbox.checked = ztmPopupsDarkModeIsEnabled
 
 function popupDarkMode() {
     if (ztmDarkModeCheckbox.checked) {
-        ztmPopupContainer.classList.add('popup-darkMode')
+        ztmPopupContainer.classList.add('popup-darkmode')
     } else {
-        ztmPopupContainer.classList.remove('popup-darkMode')
+        ztmPopupContainer.classList.remove('popup-darkmode')
     }
     // to store the current stage of the ztm darkMode checkbox
 	localStorage.setItem('ztmPopupDarkMode', ztmDarkModeCheckbox.checked);

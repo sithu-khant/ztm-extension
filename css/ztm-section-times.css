@@ -21,31 +21,39 @@
 
 .badge {
   display: flex!important;
-  border: 1px solid rgb(245, 23, 103) !important;
+  border: 1px solid #EEEEEE !important;
+  background: #EEEEEE !important;
   border-radius: 20px!important;
   padding: 0!important; 
   margin-left: 15px!important;
+  overflow: hidden;
+  text-align: center;
+  color: #646d76 !important;
 }
 
- .badge .badge-prefix {
+.badge .badge-prefix {
   padding: 8px 6px 8px 12px;
-  background-color: rgba(245, 23, 103, 0.8) !important;
+  background-color: #e3e3e3 !important;
   border-radius: 20px 0 0 20px;
 }
 
 .badge .badge-text {
   padding: 8px 13px!important; 
-  background: unset!important;
+  background: unset !important;
 }
 
 .sidebar-times .badge {
   width: 70%;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .sidebar-times .badge-prefix {
   width: 50%;
-  text-align: left;
+}
+
+.sidebar-times .badge-text {
+  width: 50%;
 }
 
 .sidebar-times {

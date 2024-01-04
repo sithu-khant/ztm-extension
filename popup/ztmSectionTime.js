@@ -8,6 +8,18 @@
 // NOTE: I decided to abstract/seperate this from the popup.js file to seperate concerns.
 //       As the feature list grows, having all the code in popup.js will become hard to manage.
 
+function querySendTabMessage( options ){
+  chrome.tabs.query(
+    { active: true, currentWindow: true},
+    function (tabs) {
+      chrome.tabs.sendMessage(
+          tabs[0].id,
+          options
+      )
+    });
+}
+
+
 // Wait for the DOM content to be fully loaded before executing the code
 document.addEventListener("DOMContentLoaded", async () => {
   // Get the checkbox element from the DOM
@@ -23,19 +35,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Set the checkbox state based on the retrieved data (or default to false)
   sectionTimesCheckbox.checked = data.ztmSectionTimesCheckboxIsChecked || false;
 
-  // Add an event listener for changes in the checkbox state
-  sectionTimesCheckbox.addEventListener("change", async () => {
-    // Update the checkbox state in Chrome storage
-    await chrome.storage.sync.set({
-      ztmSectionTimesCheckboxIsChecked: sectionTimesCheckbox.checked,
-    });
-
-    // Get information about the active tab
-    const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-
-    // Send a message to the active tab with the updated checkbox state
-    await chrome?.tabs?.sendMessage(tabs[0].id, {
-      ztmSectionTimesCheckboxIsChecked: sectionTimesCheckbox.checked,
+  sectionTimesCheckbox.addEventListener('change', function () {
+    chrome.storage.sync.set({'ztmSectionTimesCheckboxIsChecked': sectionTimesCheckbox.checked}, 
+    function () {
+      // sends
+      querySendTabMessage({
+          ztmSectionTimesCheckboxIsChecked:
+          sectionTimesCheckbox.checked
+      });
     });
   });
 });
