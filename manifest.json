@@ -5,52 +5,80 @@
 	"description": "Official extension for Zero To Mastery Academy students.",
 	"author": "Sithu Khant",
 	"homepage_url": "https://zerotomastery.io/",
-
-	"host_permissions": ["https://*.zerotomastery.io/*"],
+	"host_permissions": [
+		"https://*.zerotomastery.io/*"
+	],
 	"permissions": [
 		"storage",
 		"activeTab"
 	],
-
 	"action": {
-    	"default_title": "Zero To Mastery",
-    	"default_popup": "popup/popup.html",
-    	"default_icons": {
+		"default_title": "Zero To Mastery",
+		"default_popup": "popup/popup.html",
+		"default_icons": {
 			"16": "icons/icon16.png",
 			"32": "icons/icon32.png",
 			"48": "icons/icon48.png",
 			"128": "icons/icon128.png"
-	    }
-    },
-
+		}
+	},
 	"content_scripts": [
 		{
-			"js": ["scripts/ztm-homepage.js"],
-			"css": ["css/ztm-homepage.css"],
-			"matches": ["https://academy.zerotomastery.io/*"]
+			"js": [
+				"scripts/ztm-homepage.js"
+			],
+			"css": [
+				"css/ztm-homepage.css"
+			],
+			"matches": [
+				"https://academy.zerotomastery.io/*"
+			]
 		},
 		{
-			"js": ["scripts/ztm-lectures.js"],
-			"css": ["css/ztm-lectures.css"],
-			"matches": ["https://academy.zerotomastery.io/courses/*"]
+			"js": [
+				"scripts/ztm-lectures.js"
+			],
+			"css": [
+				"css/ztm-lectures.css"
+			],
+			"matches": [
+				"https://academy.zerotomastery.io/courses/*"
+			]
 		},
 		{
-			"js": ["scripts/ztm-darkmode.js"],
-			"matches": ["https://academy.zerotomastery.io/*"]
-		}
-	],
-
-	"web_accessible_resources" : [
+			"js": [
+				"scripts/ztm-section-times.js"
+			],
+			"css": [
+				"css/ztm-section-times.css"
+			],
+			"matches": [
+				"https://academy.zerotomastery.io/courses/enrolled/*"
+			]
+		},
 		{
-			"resources": ["css/ztm-darkmode.css"],
-			"matches": ["https://academy.zerotomastery.io/*"]
+			"js": [
+				"scripts/ztm-darkmode.js"
+			],
+			"matches": [
+				"https://academy.zerotomastery.io/*"
+			]
 		}
 	],
-	
-    "icons": {
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"css/ztm-darkmode.css"
+			],
+			"matches": [
+				"https://academy.zerotomastery.io/*"
+			]
+		}
+	],
+	"icons": {
 		"16": "icons/icon16.png",
 		"32": "icons/icon32.png",
 		"48": "icons/icon48.png",
 		"128": "icons/icon128.png"
-    }
+	}
 }
