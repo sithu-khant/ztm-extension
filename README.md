@@ -21,7 +21,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 * Toggle sidebar (responsive)
 * Toggle dark mode on all pages
-* Showing total amount of time in each section by ![MathCSmith](https://github.com/mattcsmith)
+* Showing total amount of time in each section by [MathCSmith](https://github.com/mattcsmith)
 
 
 ## Feature requests
