@@ -9,7 +9,7 @@
 const statusFormatter = (status) =>
   status?.toLowerCase().includes("completed") ? "complete" : "incomplete";
 
-// Helper function to convert seconds to formatted time string
+// Helper function to convert seconds to a formatted time string
 const secondsToTime = (seconds) => {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
@@ -75,7 +75,12 @@ const updateSectionTimes = () => {
 
   // Update HTML for each container based on the calculated times
   Array.from(containers).forEach((cont) => {
-    const sectionTitle = cont.children[0].innerText;
+    const alreadyHasTitleSect = cont.children[0].querySelector(".sect-title");
+
+    const sectionTitle = alreadyHasTitleSect
+      ? alreadyHasTitleSect.innerText
+      : cont.children[0].innerText;
+
     const data = sectionTimes[sectionTitle];
     const watchedTime = secondsToTime(data?.watched || 0);
     const totalTime = secondsToTime(data?.total || 0);
@@ -96,16 +101,19 @@ const updateSectionTimes = () => {
       </div>`;
   });
 
-  // Update sidebar with overall course times
-  const sidebar = document.querySelector(".course-progress");
-  const newDiv = document.createElement("div");
-  const watchedTime = secondsToTime(sectionTimes.totalWatched || 0);
-  const totalTime = secondsToTime(sectionTimes.totalTime || 0);
-  const left = secondsToTime(
-    sectionTimes.totalTime - sectionTimes.totalWatched
-  );
+  const existingSidebar = document.querySelector(".sidebar-times");
 
-  newDiv.innerHTML = `
+  if (!existingSidebar) {
+    // Update sidebar with overall course times
+    const sidebar = document.querySelector(".course-progress");
+    const newDiv = document.createElement("div");
+    const watchedTime = secondsToTime(sectionTimes.totalWatched || 0);
+    const totalTime = secondsToTime(sectionTimes.totalTime || 0);
+    const left = secondsToTime(
+      sectionTimes.totalTime - sectionTimes.totalWatched
+    );
+
+    newDiv.innerHTML = `
     <div class="sidebar-times">
       <div class="badge">
         <span class="badge-prefix">Course Length</span>
@@ -120,7 +128,8 @@ const updateSectionTimes = () => {
         <span class="badge-text">${left}</span>
       </div>
     </div>`;
-  sidebar.insertAdjacentElement("afterend", newDiv);
+    sidebar.insertAdjacentElement("afterend", newDiv);
+  }
 };
 
 // Function to enable/disable functionality based on Chrome storage
@@ -142,13 +151,6 @@ const updateFunctionality = (isEnabled) => {
   updateSectionTimes();
 };
 
-// Retrieve the toggle state from Chrome storage
-chrome.storage.sync.get("ztmSectionTimesCheckboxIsChecked", (data) => {
-  const isEnabled = data?.ztmSectionTimesCheckboxIsChecked || false;
-  // Call the updateFunctionality with the retrieved isEnabled state
-  updateFunctionality(isEnabled);
-});
-
 // Listen for changes in Chrome storage
 chrome.storage.onChanged.addListener((changes, namespace) => {
   if (namespace === "sync" && "ztmSectionTimesCheckboxIsChecked" in changes) {
@@ -157,3 +159,20 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
     updateFunctionality(value);
   }
 });
+
+// Use arrow function for MutationObserver
+const observer = new MutationObserver((mutations) => {
+  const existingSidebarTimes = document.querySelector(".sidebar-times");
+  const existingSectCont = document.querySelector(".sect-container");
+  const isRightPage = window.location.pathname.includes("courses/enrolled");
+
+  chrome.storage.sync.get("ztmSectionTimesCheckboxIsChecked", (data) => {
+    const isEnabled = data?.ztmSectionTimesCheckboxIsChecked || false;
+    // Call the updateFunctionality with the retrieved isEnabled state
+    if (!existingSectCont && !existingSidebarTimes && isRightPage)
+      updateFunctionality(isEnabled);
+  });
+});
+
+// Use arrow function for observer.observe
+observer.observe(document.documentElement, { childList: true, subtree: true });
