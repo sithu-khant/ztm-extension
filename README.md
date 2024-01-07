@@ -96,6 +96,8 @@ MIT License
 
 ## Logs
 
+* Sun Jan 7, 2024
+	* (1.7.01) - Started working on the `Favorite course` function.
 * Thu Jan 4, 2024 
 	* Updated LICENSE
 	* (1.4.01) - Merged from `MattCSmith`
