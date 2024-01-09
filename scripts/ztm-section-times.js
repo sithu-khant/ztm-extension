@@ -166,12 +166,13 @@ const observer = new MutationObserver((mutations) => {
   const existingSectCont = document.querySelector(".sect-container");
   const isRightPage = window.location.pathname.includes("courses/enrolled");
 
-  chrome.storage.sync.get("ztmSectionTimesCheckboxIsChecked", (data) => {
-    const isEnabled = data?.ztmSectionTimesCheckboxIsChecked || false;
-    // Call the updateFunctionality with the retrieved isEnabled state
-    if (!existingSectCont && !existingSidebarTimes && isRightPage)
-      updateFunctionality(isEnabled);
-  });
+  isRightPage &&
+    chrome.storage.sync.get("ztmSectionTimesCheckboxIsChecked", (data) => {
+      const isEnabled = data?.ztmSectionTimesCheckboxIsChecked || false;
+      // Call the updateFunctionality with the retrieved isEnabled state
+      if (!existingSectCont && !existingSidebarTimes && isRightPage)
+        updateFunctionality(isEnabled);
+    });
 });
 
 // Use arrow function for observer.observe
