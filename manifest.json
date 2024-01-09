@@ -53,7 +53,7 @@
 				"css/ztm-section-times.css"
 			],
 			"matches": [
-				"https://academy.zerotomastery.io/courses/*"
+				"https://academy.zerotomastery.io/*"
 			],
 			"run_at": "document_idle"
 		},
