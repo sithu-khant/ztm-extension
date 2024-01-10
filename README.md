@@ -96,6 +96,8 @@ MIT License
 
 ## Logs
 
+* Wed Jan 10, 2024
+	* (1.10.01) - Added style to heart icon.
 * Sun Jan 7, 2024
 	* (1.7.01) - Started working on the `Favorite course` function.
 * Thu Jan 4, 2024 
