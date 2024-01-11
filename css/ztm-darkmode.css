@@ -88,6 +88,14 @@ body::-webkit-scrollbar-thumb {
     background: #EEEEEE !important;
 }
 
+#ztm-fav-course {
+    background: transparent !important;
+}
+
+#ztm-fav-course .ztm-heart-clicked {
+    color: #B01E28 !important;
+}
+
 .pagination .previous_page, 
 .pagination .current, 
 .pagination a {

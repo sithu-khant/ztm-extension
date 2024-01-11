@@ -8,7 +8,7 @@ const courseCard = document.querySelectorAll('.course-listing');
 // Add heart icon to every single course card 
 courseCard.forEach((courseDiv) => {
     // course title
-    const courseImageCover = courseDiv.querySelector('.course-box-image-container');
+    const courseCardRow = courseDiv.querySelector('.row');
     const ztmFavCourseDiv = document.createElement('div');
     ztmFavCourseDiv.id = 'ztm-fav-course'
 
@@ -19,7 +19,7 @@ courseCard.forEach((courseDiv) => {
     <!-- ZTM Favorite Course by Sithu Khant - End -->
     `
 
-    courseImageCover.parentNode.insertBefore(ztmFavCourseDiv, courseImageCover.nextSibling);
+    courseCardRow.parentNode.insertBefore(ztmFavCourseDiv, courseCardRow.nextSibling);
 });
 
 // get all the heart icons
