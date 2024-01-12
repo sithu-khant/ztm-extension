@@ -52,6 +52,7 @@ function popupDarkMode() {
 
 ztmDarkModeCheckbox.addEventListener('change', popupDarkMode);
 popupDarkMode();
+
 // ----------
 // End ztmDarkModeCheckbox section
 // ----------

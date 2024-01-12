@@ -96,6 +96,8 @@ MIT License
 
 ## Logs
 
+* Fri Jan 12, 2024
+	* (1.12.01) - Mutation is not working.
 * Wed Jan 10, 2024
 	* (1.10.01) - Added style to heart icon.
 	* (1.10.02) - Added heart click function to the page.
