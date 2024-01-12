@@ -1,5 +1,11 @@
-/* ----- Start Home Page Darkmode Section ----- */
+/* 
+ * Author: Sithu Khant
+ * GitHub: https://github.com/sithu-khant 
+ * Last Updated: Fri Jan 12, 2024
+ * Description: Adds dark mode to the academy page
+ */ 
 
+/* ----- Start Home Page Darkmode Section ----- */
 body,
 *:not(.status-icon) {
     background: #232931 !important;
