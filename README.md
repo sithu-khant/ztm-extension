@@ -96,6 +96,15 @@ MIT License
 
 ## Logs
 
+* Fri Jan 12, 2024
+	* (1.12.01) - Mutation is not working.
+	* (1.12.02) - Refectored the code base.
+	* (1.12.03) - Preparing to create the pull request.
+* Wed Jan 10, 2024
+	* (1.10.01) - Added style to heart icon.
+	* (1.10.02) - Added heart click function to the page.
+* Sun Jan 7, 2024
+	* (1.7.01) - Started working on the `Favorite course` function.
 * Thu Jan 4, 2024 
 	* Updated LICENSE
 	* (1.4.01) - Merged from `MattCSmith`

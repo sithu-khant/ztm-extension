@@ -1,0 +1,28 @@
+/*.course-box-image-container {
+	position: relative;
+}
+
+#ztm-fav-course {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+}
+
+#ztm-heart {
+	font-size: 23px;
+	padding: 5px;
+	color: grey;
+	background: #F5F5F5;
+	border: 1px solid #EEEEEE;
+	border-radius: 50%;
+	opacity: 0.8;
+}
+
+#ztm-heart:hover {
+	opacity: 1;
+}
+
+#ztm-fav-course .ztm-heart-clicked {
+	color: #B01E28;
+}
+*/

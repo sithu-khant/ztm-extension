@@ -1,0 +1,19 @@
+/* 
+ * Author: Sithu Khant
+ * GitHub: https://github.com/sithu-khant 
+ * Last Updated: Fri Jan 12, 2024
+ * Description: Adds toggle hiding sidebar to the lecture page
+ */ 
+
+.ztm-toggle-sidebar {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 767px) {
+    .ztm-toggle-sidebar {
+        display: none;
+    }
+}

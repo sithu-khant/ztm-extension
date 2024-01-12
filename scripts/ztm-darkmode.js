@@ -1,44 +1,36 @@
-// ----------
-// Start Darkmode Section
-// ----------
+/* 
+ * Author: Sithu Khant
+ * GitHub: https://github.com/sithu-khant 
+ * Last Updated: Fri Jan 12, 2024
+ * Description: Adds dark mode to the academy page
+ */ 
 
-chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', function (data) {
-    const ztmDarkModeCheckboxIsChecked = data.ztmDarkModeCheckboxIsChecked || false;
+const cssFile = 'css/ztm-darkmode.css';
 
-    if (ztmDarkModeCheckboxIsChecked) {
-        enableZtmDarkmode('css/ztm-darkmode.css');
-    } else {
-        disableZtmDarkMode('css/ztm-darkmode.css');
-    }
-});
+// Create dark mode css file
+const darkModeCssLink = document.createElement('link');
+darkModeCssLink.rel = 'stylesheet';
+darkModeCssLink.type = 'text/css';
+darkModeCssLink.href = chrome.runtime.getURL(cssFile);
 
-chrome.storage.onChanged.addListener(function (changes, namespace) {
-    if (namespace === 'sync' && 'ztmDarkModeCheckboxIsChecked' in changes) {
-        const ztmDarkModeCheckboxIsChecked = changes.ztmDarkModeCheckboxIsChecked.newValue || false;
+const enableZtmDarkMode = () => {
+    // Add dark mode css file to the head tag
+    document.head.appendChild(darkModeCssLink);
+};
 
-        if (ztmDarkModeCheckboxIsChecked) {
-            enableZtmDarkmode('css/ztm-darkmode.css');
-        } else {
-            disableZtmDarkMode('css/ztm-darkmode.css');
-        }
-    }
+const disableZtmDarkMode = () => {
+    const getDarkModeCssLink = document.head.querySelector(`link[rel="stylesheet"][href*="${cssFile}"]`);
+    
+    if (getDarkModeCssLink) {
+        // Remove the dark mode css file
+        getDarkModeCssLink.remove()
+    };
+};
+
+// Get the checkbox status and apply style
+chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', (data) => {
+    const isChecked = data.ztmDarkModeCheckboxIsChecked || false;
+
+    // Enable os disable based on the toggle check status
+    isChecked ? enableZtmDarkMode() : disableZtmDarkMode();
 })
-
-function enableZtmDarkmode(cssFile) {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = chrome.runtime.getURL(cssFile);
-    document.head.appendChild(link);
-};
-
-function disableZtmDarkMode(cssFile) {
-    const links = document.head.querySelectorAll('link[rel="stylesheet"][href*="' + cssFile + '"]');
-    for (let i = 0; i < links.length; i++) {
-        links[i].parentNode.removeChild(links[i])
-    }
-};
-
-// ----------
-// End Darkmode Section
-// ----------
