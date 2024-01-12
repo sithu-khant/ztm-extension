@@ -58,15 +58,3 @@ if (homeBackIcon) {
     ztmToggleSidebarObserver.observe(document.body, { childList: true, subtree: true });
     ztmToggleSidebar();
 }
-
-
-
-
-
-
-
-
-
-
-
-

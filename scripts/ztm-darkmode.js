@@ -20,27 +20,17 @@ const enableZtmDarkMode = () => {
 
 const disableZtmDarkMode = () => {
     const getDarkModeCssLink = document.head.querySelector(`link[rel="stylesheet"][href*="${cssFile}"]`);
-    // Remove the dark mode css file
+    
     if (getDarkModeCssLink) {
+        // Remove the dark mode css file
         getDarkModeCssLink.remove()
     };
 };
 
+// Get the checkbox status and apply style
 chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', (data) => {
     const isChecked = data.ztmDarkModeCheckboxIsChecked || false;
 
     // Enable os disable based on the toggle check status
     isChecked ? enableZtmDarkMode() : disableZtmDarkMode();
 })
-
-
-
-
-
-
-
-
-
-
-
-
