@@ -7,7 +7,7 @@ const courseCard = document.querySelectorAll('.course-listing');
 
 // Add heart icon to every single course card 
 courseCard.forEach((courseDiv) => {
-    // course title
+    // get the course 
     const courseCardRow = courseDiv.querySelector('.row');
     const ztmFavCourseDiv = document.createElement('div');
     ztmFavCourseDiv.id = 'ztm-fav-course'
