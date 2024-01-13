@@ -26,8 +26,8 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 ## Feature requests
 *(plans to add - top to bottom)*
 
-* [ ] Focus Video (WIP)
-* Showing total amount of time in each section by [MathCSmith](https://github.com/mattcsmith) (WIP)
+* [x] Focus Video (WIP)
+* [x] Showing total amount of time in each section by [MathCSmith](https://github.com/mattcsmith) (WIP)
 * [ ] To keep the favourite courses at top
 * [ ] Keep the lecture video resolution the same
 
