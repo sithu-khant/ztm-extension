@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri Jan 12, 2024
+ * Last Updated: Sat Jan 12, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
@@ -27,10 +27,21 @@ const disableZtmDarkMode = () => {
     };
 };
 
-// Get the checkbox status and apply style
-chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', (data) => {
-    const isChecked = data.ztmDarkModeCheckboxIsChecked || false;
-
-    // Enable os disable based on the toggle check status
+// Enable os disable based on the toggle check status
+const ztmToggleDarkMode = (isChecked) => {
     isChecked ? enableZtmDarkMode() : disableZtmDarkMode();
+};
+
+// Get the initial checkbox status and apply style
+chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', (data) => {
+    let isChecked = data.ztmDarkModeCheckboxIsChecked || false;
+    ztmToggleDarkMode(isChecked);
 })
+
+// Get the checkbox status dynamically and apply style
+chrome.storage.onChanged.addListener((changes, namespace) => {
+    if (namespace === 'sync' && 'ztmDarkModeCheckboxIsChecked' in changes) {
+        let isChecked = changes.ztmDarkModeCheckboxIsChecked.newValue || false;
+        ztmToggleDarkMode(isChecked);
+    }
+});

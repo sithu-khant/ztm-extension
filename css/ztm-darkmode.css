@@ -227,6 +227,11 @@ body::-webkit-scrollbar-thumb {
 
 /* ----- Start Lecture Page Darkmode Section ----- */
 
+.course-sidebar .course-progress.lecture-page.sticky {
+    background: #232931 !important;
+    border-bottom: 1px solid #232931 !important;
+}
+
 .course-sidebar .course-progress .course-progress-percentage,
 .course-sidebar .course-progress .course-progress-percentage * {
     background: transparent !important;

@@ -16,11 +16,6 @@ function querySendTabMessage( options ){
 document.addEventListener('DOMContentLoaded', function () {
     let ztmDarkModeCheckbox = document.getElementById('ztmDarkModeCheckbox');
 
-    // check whether the current state is checked or not
-    chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', function (data) {
-        ztmDarkModeCheckbox.checked = data.ztmDarkModeCheckboxIsChecked || false;
-    });
-
     ztmDarkModeCheckbox.addEventListener('change', function () {
         chrome.storage.sync.set({'ztmDarkModeCheckboxIsChecked': ztmDarkModeCheckbox.checked}, 
         function () {
