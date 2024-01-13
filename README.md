@@ -96,9 +96,11 @@ MIT License
 
 ## Logs
 
+* Sat Jan 13, 2024
+	* (1.13.01) - Fixed the dark mode function not working properly.
 * Fri Jan 12, 2024
 	* (1.12.01) - Mutation is not working.
-	* (1.12.02) - Refectored the code base.
+	* (1.12.02) - Refactored the code base.
 	* (1.12.03) - Preparing to create the pull request.
 * Wed Jan 10, 2024
 	* (1.10.01) - Added style to heart icon.
