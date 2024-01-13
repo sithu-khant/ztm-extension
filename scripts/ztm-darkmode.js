@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri Jan 12, 2024
+ * Last Updated: Sat Jan 12, 2024
  * Description: Adds dark mode to the academy page
  */ 
 

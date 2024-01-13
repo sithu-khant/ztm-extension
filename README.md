@@ -21,14 +21,14 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 * Toggle sidebar (responsive)
 * Toggle dark mode on all pages
-* Showing total amount of time in each section by [MathCSmith](https://github.com/mattcsmith)
 
 
 ## Feature requests
 *(plans to add - top to bottom)*
 
-* [ ] To keep the favourite courses at top (Works in Progress)
-* [ ] Focus Video
+* [ ] Focus Video (WIP)
+* Showing total amount of time in each section by [MathCSmith](https://github.com/mattcsmith) (WIP)
+* [ ] To keep the favourite courses at top
 * [ ] Keep the lecture video resolution the same
 
 
@@ -98,6 +98,7 @@ MIT License
 
 * Sat Jan 13, 2024
 	* (1.13.01) - Fixed the dark mode function not working properly.
+	* (1.13.02) - Refactored the popup files.
 * Fri Jan 12, 2024
 	* (1.12.01) - Mutation is not working.
 	* (1.12.02) - Refactored the code base.
