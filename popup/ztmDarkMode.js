@@ -6,7 +6,7 @@
  */ 
 
 // Send the checkbox status to the active tab and current window
-const sendCheckStatusMessage = (checkboxStatus) => {
+var sendCheckStatusMessage = (checkboxStatus) => {
     // Get the active tab and current window
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         // Send the checkbox status 
@@ -15,11 +15,11 @@ const sendCheckStatusMessage = (checkboxStatus) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const ztmCheckbox = document.getElementById('ztmDarkModeCheckbox');
+    let ztmCheckbox = document.getElementById('ztmDarkModeCheckbox');
 
     ztmCheckbox.addEventListener('change', () => {
         // Get the checkbox status
-        const checkboxStatus = { 'ztmDarkModeCheckboxIsChecked' : ztmCheckbox.checked }
+        let checkboxStatus = { 'ztmDarkModeCheckboxIsChecked' : ztmCheckbox.checked }
 
         // Set the initial checkbox status
         chrome.storage.sync.set(checkboxStatus, () => {
