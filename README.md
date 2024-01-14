@@ -99,6 +99,7 @@ MIT License
 * Sun Jan 14, 2024
 	* (1.14.01) - Converted indentations to spaces.
 	* (1.14.02) - Added `ztmHideLectureTitle` file in popup.
+	* (1.14.03) - `ztmHideLectureTitle` feature working.
 * Sat Jan 13, 2024
 	* (1.13.01) - Fixed the dark mode function not working properly.
 	* (1.13.02) - Refactored the popup files.

@@ -15,43 +15,32 @@ var sendCheckStatusMessage = (checkboxStatus) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    let ztmCheckbox = document.getElementById('ztmHideLectureTitleCheckbox');
+    let ztmHideLectureTitleCheckbox = document.getElementById('ztmHideLectureTitleCheckbox');
 
-    ztmCheckbox.addEventListener('change', () => {
+    const ztmHideLectureTitleIsEnabled = localStorage.getItem('ztmHideLectureTitle') === 'true'
+    ztmHideLectureTitleCheckbox.checked = ztmHideLectureTitleIsEnabled
+
+    ztmHideLectureTitleCheckbox.addEventListener('change', () => {
         // Get the checkbox status
-        let checkboxStatus = { 'ztmHideLectureTitleCheckboxIsChecked' : ztmCheckbox.checked }
+        let checkboxStatus = { 'ztmHideLectureTitleCheckboxIsChecked' : ztmHideLectureTitleCheckbox.checked }
 
         // Set the initial checkbox status
         chrome.storage.sync.set(checkboxStatus, () => {
             // Send the checkbox status dynamically (callback function)
             sendCheckStatusMessage(checkboxStatus);
         })
+
+        localStorage.setItem('ztmHideLectureTitle', ztmHideLectureTitleCheckbox.checked)
     })
 })
 
-const ztmHideLectureTitleCheckbox = document.getElementById('ztmHideLectureTitleCheckbox');
+// const ztmHideLectureTitleCheckbox = document.getElementById('ztmHideLectureTitleCheckbox');
 
-const ztmHideLectureTitleIsEnabled = localStorage.getItem('ztmHideLectureTitle') === 'true'
-ztmHideLectureTitleCheckbox.checked = ztmHideLectureTitleIsEnabled
+// const ztmHideLectureTitleIsEnabled = localStorage.getItem('ztmHideLectureTitle') === 'true'
+// ztmHideLectureTitleCheckbox.checked = ztmHideLectureTitleIsEnabled
 
-const ztmHideLectureTitle = () => {
-    localStorage.setItem('ztmHideLectureTitle', ztmHideLectureTitleCheckbox.checked)
-}
+// const ztmHideLectureTitle = () => {
+//     localStorage.setItem('ztmHideLectureTitle', ztmHideLectureTitleCheckbox.checked)
+// }
 
-ztmHideLectureTitleCheckbox.addEventListener('change', ztmHideLectureTitle);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ztmHideLectureTitleCheckbox.addEventListener('change', ztmHideLectureTitle);
