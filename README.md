@@ -106,6 +106,7 @@ MIT License
 	* (1.16.05) - Disabled `ztm-section-times` feature.
 	* (1.16.06) - Started working on the `fav-course` feature. Added heart icons to each course. 
 	* (1.16.07) - Phew...
+	* (1.16.08) - The favorite course feature is partically working now...
 * Sun Jan 14, 2024
 	* (1.14.01) - Converted indentations to spaces.
 	* (1.14.02) - Added `ztmHideLectureTitle` file in popup.

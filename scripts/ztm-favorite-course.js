@@ -68,43 +68,34 @@ const ztmFavoriteCourse = () => {
 
 // Sort the courses
 const ztmFavoriteSort = () => {
-    // Get course cards
-    // let courseCards = document.querySelectorAll('.course-listing');
-    let courseCards = document.querySelectorAll('.col-xs-12.col-sm-6.col-md-4');
-
-    // Create arrary from the course divs
-    const courseArray = Array.from(courseCards);
+    // Get the course lis
+    let courseList = document.querySelector('.course-list');
+    
+    // Get the courses
+    let courses = courseList.querySelectorAll('.col-xs-12.col-sm-6.col-md-4')
+    // Create an arrry form the course
+    let courseArray = Array.from(courses);
 
     // Sort the courses
-    courseArray.sort((course, none) => {
+    courseArray.sort((firstCourse, secondCourse) => {
         // Get the heart icon
-        let ztmHeartIcon = course.querySelector('.ztm-heart-icon');
-        // Get the favorited status
-        let isFavorited = ztmHeartIcon && ztmHeartIcon.classList.contains('ztm-heart-icon-clicked')
+        const firstCourseFavorited = firstCourse.querySelector('.ztm-heart-icon-clicked') !== null;
+        const secondCourseFavorited = secondCourse.querySelector('.ztm-heart-icon-clicked') !== null;
 
-        // if favrited, return 1
-        return isFavorited ? 1 : -1;
+        // Put first the courses with class
+        if (!firstCourseFavorited && secondCourseFavorited) return 1;
+        if (firstCourseFavorited && !secondCourseFavorited) return -1;
+
+        // keep the original for courses without favorited
+        return 0;
     });
 
-    // Get the course list body and replace with the sorted courses
-    const courseList = document.querySelector('.course-list');
-
-    // courseArray.forEach((course) => {
-    //     courseList.removeChild(course);
-    // });
-    // courseList.innerHTML = '';
-
-    courseArray.forEach((course) => {
-        courseList.appendChild(course);
-    });
+    // Update
+    courseArray.forEach(course => courseList.appendChild(course));
 };
 
 ztmFavoriteCourse();
 ztmFavoriteSort();
-
-
-
-
 
 
 
