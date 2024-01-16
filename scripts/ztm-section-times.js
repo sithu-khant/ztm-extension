@@ -130,19 +130,19 @@ if (sectionTimesBackLinkIcon) {
         updateSectionTimes();
     };
 
-    chrome.storage.onChanged.addListener((changes, namespace) => {
-        if (namespace === "sync" && "ztmSectionTimesCheckboxIsChecked" in changes) {
-            const value = changes.ztmSectionTimesCheckboxIsChecked.newValue || false;
-            updateFunctionality(value);
-        }
-    });
-
-    const ztmSectionTimesObserver = new MutationObserver((mutations) => {
+    const ztmSectionTimesObserver = new MutationObserver(() => {
         chrome.storage.sync.get("ztmSectionTimesCheckboxIsChecked", (data) => {
             const isEnabled = data?.ztmSectionTimesCheckboxIsChecked || false;
             updateFunctionality(isEnabled);
         });
+
+        chrome.storage.onChanged.addListener((changes, namespace) => {
+            if (namespace === "sync" && "ztmSectionTimesCheckboxIsChecked" in changes) {
+                const value = changes.ztmSectionTimesCheckboxIsChecked.newValue || false;
+                updateFunctionality(value);
+            }
+        });
     });
 
-    ztmSectionTimesObserver.observe(document.documentElement, { childList: true, subtree: true });
+    ztmSectionTimesObserver.observe(document.body, { childList: true, subtree: true });
 }

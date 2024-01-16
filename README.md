@@ -101,6 +101,7 @@ MIT License
 	* (1.16.02) - Made reindentation to `ztm-section-times` code. Added `.prettierrc` 
 	file.
 	* (1.16.03) - Improved the code efficiency.
+	* (1.16.04) - `ztm-section-times` is working but it delays when on and off.
 * Sun Jan 14, 2024
 	* (1.14.01) - Converted indentations to spaces.
 	* (1.14.02) - Added `ztmHideLectureTitle` file in popup.
