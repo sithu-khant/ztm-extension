@@ -5,23 +5,20 @@
  * Description: Hide the video lecture title 
  */ 
 
+const hideLectureTitle = (isChecked) => {
+	// Get the lecture attachement
+	const lectureAttachment = document.querySelector('.lecture-attachment');
+	// Check it is video lecture type or not
+	const isVideoLectureType =  lectureAttachment.classList.contains('lecture-attachment-type-video');
+
+	// Get the lecture title
+	const ztmVideoLectureTitle = document.getElementById('lecture_heading');
+
+	// Apply style to lecture title display
+	ztmVideoLectureTitle.style.display = isVideoLectureType && isChecked ? 'none' : 'block';
+};
+
 const ztmHideLectureTitle = () => {
-	const hideLectureTitle = (isChecked) => {
-		// Get the lecture attachement
-		const lectureAttachment = document.querySelector('.lecture-attachment');
-		// Check it is video lecture type or not
-		const isVideoLectureType =  lectureAttachment.classList.contains('lecture-attachment-type-video');
-
-		// Get the lecture title
-		const ztmVideoLectureTitle = document.getElementById('lecture_heading');
-
-		if (isVideoLectureType && isChecked) {
-			ztmVideoLectureTitle.style.display = 'none';
-		} else {
-			ztmVideoLectureTitle.style.display = 'block';
-		};
-	};
-
 	// Get the initial checkbox status and apply style
 	chrome.storage.sync.get('ztmHideLectureTitleCheckboxIsChecked', (data) => {
 	    let isChecked = data.ztmHideLectureTitleCheckboxIsChecked || false;

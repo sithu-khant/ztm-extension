@@ -96,6 +96,8 @@ MIT License
 
 ## Logs
 
+* Tue Jan 16, 2024
+	* (1.16.01) - Cleaned the `ztmHideLectureTitle` code.
 * Sun Jan 14, 2024
 	* (1.14.01) - Converted indentations to spaces.
 	* (1.14.02) - Added `ztmHideLectureTitle` file in popup.
