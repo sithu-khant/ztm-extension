@@ -9,7 +9,7 @@
  /*       However it couldn't really be avoided without making substaintial edits  */
  /*       to the darkmode theme.                                                   */
 
-.sect-container {
+/*.sect-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,4 +66,4 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-}
+}*/

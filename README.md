@@ -26,9 +26,10 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 ## Feature requests
 *(plans to add - top to bottom)*
 
-* [x] Focus Video (WIP)
+* [x] Hide Lecture Title (Done)
 * [x] Showing total amount of time in each section by [MathCSmith](https://github.com/mattcsmith) (WIP)
-* [ ] To keep the favourite courses at top
+* [x] To keep the favourite courses at top (WIP)
+* [ ] Focus Video
 * [ ] Keep the lecture video resolution the same
 
 
@@ -102,6 +103,7 @@ MIT License
 	file.
 	* (1.16.03) - Improved the code efficiency.
 	* (1.16.04) - `ztm-section-times` is working but it delays when on and off.
+	* (1.16.05) - Disabled `ztm-section-times` feature.
 * Sun Jan 14, 2024
 	* (1.14.01) - Converted indentations to spaces.
 	* (1.14.02) - Added `ztmHideLectureTitle` file in popup.

@@ -55,17 +55,6 @@
 		},
 		{
 			"js": [
-				"scripts/ztm-section-times.js"
-			],
-			"css": [
-				"css/ztm-section-times.css"
-			],
-			"matches": [
-				"https://academy.zerotomastery.io/*"
-			]
-		},
-		{
-			"js": [
 				"scripts/ztm-hide-lecture-title.js"
 			],
 			"matches": [
