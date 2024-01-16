@@ -5,35 +5,41 @@
  * Description: Hide the video lecture title 
  */ 
 
-const hideLectureTitle = (isChecked) => {
-	// Get the lecture attachement
-	const lectureAttachment = document.querySelector('.lecture-attachment');
-	// Check it is video lecture type or not
-	const isVideoLectureType =  lectureAttachment.classList.contains('lecture-attachment-type-video');
+// Get the home back icon
+const lectureTitleHomeBackIcon = document.querySelector('.nav-icon-back');
 
-	// Get the lecture title
-	const ztmVideoLectureTitle = document.getElementById('lecture_heading');
+// Only run the script if there is home back icon
+if (lectureTitleHomeBackIcon) {
+	const hideLectureTitle = (isChecked) => {
+		// Get the lecture attachement
+		const lectureAttachment = document.querySelector('.lecture-attachment');
+		// Check it is video lecture type or not
+		const isVideoLectureType =  lectureAttachment.classList.contains('lecture-attachment-type-video');
 
-	// Apply style to lecture title display
-	ztmVideoLectureTitle.style.display = isVideoLectureType && isChecked ? 'none' : 'block';
-};
+		// Get the lecture title
+		const ztmVideoLectureTitle = document.getElementById('lecture_heading');
 
-const ztmHideLectureTitle = () => {
-	// Get the initial checkbox status and apply style
-	chrome.storage.sync.get('ztmHideLectureTitleCheckboxIsChecked', (data) => {
-	    let isChecked = data.ztmHideLectureTitleCheckboxIsChecked || false;
-	    hideLectureTitle(isChecked);
-	})
+		// Apply style to lecture title display
+		ztmVideoLectureTitle.style.display = isVideoLectureType && isChecked ? 'none' : 'block';
+	};
 
-	// Get the checkbox status dynamically and apply style
-	chrome.storage.onChanged.addListener((changes, namespace) => {
-	    if (namespace === 'sync' && 'ztmHideLectureTitleCheckboxIsChecked' in changes) {
-	        let isChecked = changes.ztmHideLectureTitleCheckboxIsChecked.newValue || false;
-	        hideLectureTitle(isChecked);
-	    }
-	});
+	const ztmHideLectureTitle = () => {
+		// Get the initial checkbox status and apply style
+		chrome.storage.sync.get('ztmHideLectureTitleCheckboxIsChecked', (data) => {
+		    let isChecked = data.ztmHideLectureTitleCheckboxIsChecked || false;
+		    hideLectureTitle(isChecked);
+		})
+
+		// Get the checkbox status dynamically and apply style
+		chrome.storage.onChanged.addListener((changes, namespace) => {
+		    if (namespace === 'sync' && 'ztmHideLectureTitleCheckboxIsChecked' in changes) {
+		        let isChecked = changes.ztmHideLectureTitleCheckboxIsChecked.newValue || false;
+		        hideLectureTitle(isChecked);
+		    }
+		});
+	}
+
+	// Track the page for every new lecture  
+	const ztmHideLectureTitleObserver = new MutationObserver(() => ztmHideLectureTitle());
+	ztmHideLectureTitleObserver.observe(document.body, { childList: true, subtree: true })
 }
-
-// Track the page for every new lecture  
-const ztmHideLectureTitleObserver = new MutationObserver(() => ztmHideLectureTitle());
-ztmHideLectureTitleObserver.observe(document.body, { childList: true, subtree: true })

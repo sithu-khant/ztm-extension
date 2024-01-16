@@ -62,8 +62,7 @@
 			],
 			"matches": [
 				"https://academy.zerotomastery.io/*"
-			],
-			"run_at": "document_idle"
+			]
 		},
 		{
 			"js": [

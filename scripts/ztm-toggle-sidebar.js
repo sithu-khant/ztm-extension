@@ -14,12 +14,12 @@ createZtmToggleSidebar.innerHTML = `
     </div> 
 `;
 
-const homeBackIcon = document.querySelector('.nav-icon-back');
+const toggleSidebarHomeBackIcon = document.querySelector('.nav-icon-back');
 
-// Check the `homeBackIcon` to prevent conflix
-if (homeBackIcon) {
+// Check the `toggleSidebarHomeBackIcon` to prevent conflix
+if (toggleSidebarHomeBackIcon) {
     // Add ZTM Toggle
-    homeBackIcon.parentNode.insertBefore(createZtmToggleSidebar, homeBackIcon.nextSibling);
+    toggleSidebarHomeBackIcon.parentNode.insertBefore(createZtmToggleSidebar, toggleSidebarHomeBackIcon.nextSibling);
     // Get the ZTM Toggle Checkbox
     const ztmToggleCheckbox = document.getElementById('ztm-toggle-checkbox');
 
