@@ -33,10 +33,10 @@
 		},
 		{
 			"js": [
-				"scripts/ztm-homepage.js"
+				"scripts/ztm-favorite-course.js"
 			],
 			"css": [
-				"css/ztm-homepage.css"
+				"css/ztm-favorite-course.css"
 			],
 			"matches": [
 				"https://academy.zerotomastery.io/*"

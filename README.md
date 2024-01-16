@@ -104,6 +104,7 @@ MIT License
 	* (1.16.03) - Improved the code efficiency.
 	* (1.16.04) - `ztm-section-times` is working but it delays when on and off.
 	* (1.16.05) - Disabled `ztm-section-times` feature.
+	* (1.16.06) - Started working on the `fav-course` feature. Added heart icons to each course. 
 * Sun Jan 14, 2024
 	* (1.14.01) - Converted indentations to spaces.
 	* (1.14.02) - Added `ztmHideLectureTitle` file in popup.
