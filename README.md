@@ -28,8 +28,8 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 * [x] Hide Lecture Title (Done)
 * [x] Showing total amount of time in each section by [MathCSmith](https://github.com/mattcsmith) (WIP)
-* [x] To keep the favourite courses at top (WIP)
-* [ ] Focus Video
+* [x] To keep the favourite courses at top (Delayed) 
+	* (Temporarily paused working on this feature pending the discussed investigation for optimization and the best user experience)
 * [ ] Keep the lecture video resolution the same
 
 
@@ -87,7 +87,7 @@ If you added any new features, make a pull request. I will review, and merge int
 
 ## To support my work?
 
-<a href="https://www.buymeacoffee.com/sithukhant" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://www.buymeacoffee.com/sithukhant" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 
 ## License
@@ -97,6 +97,8 @@ MIT License
 
 ## Logs
 
+* Fri Jan 19, 2024
+	* (1.19.01) - Update README.
 * Thu Jan 18, 2024
 	* (1.18.01) - Added course title as class list for storing fav courses in the local storage. I tried to use it with index number but not working properly.
 * Tue Jan 16, 2024
