@@ -132,6 +132,10 @@ body::-webkit-scrollbar-thumb {
     border-bottom: 1px solid transparent !important;
 }
 
+.ztm-section-times-data {
+    border-left: 1px solid #646d76 !important;
+}
+
 .course-sidebar {
     border-right: 1px solid #393E46 !important;
 }

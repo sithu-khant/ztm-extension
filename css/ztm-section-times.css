@@ -4,3 +4,36 @@
  * Last Updated: Tue Jan 23, 2024
  * Description: Show lecture time data in the course info page
  */ 
+
+#ztm-section-times-container {
+/*    background: red;*/
+}
+
+.ztm-section-times-item {
+    width: 80%;
+    margin: 5px auto;
+    line-height: 30px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-size: 14px;
+    border: 1px solid #646d76;
+    background: #EEEEEE;
+    border-radius: 25px;
+
+    overflow: hidden;
+} 
+
+.ztm-section-times-text {
+    flex-basis: 50%;
+    background: #646d76;
+    color: #fff;
+}
+
+.ztm-section-times-data {
+    flex-basis: 50%; 
+    background: transparent;
+    color: #646d76;
+}

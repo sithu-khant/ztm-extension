@@ -15,18 +15,18 @@ ztmSectionTimesDiv.id = 'ztm-section-times-container'
 ztmSectionTimesDiv.innerHTML = `
     <!-- Total Times -->
     <div class='ztm-section-times-item'>
-        <p class='ztm-section-times-text'>Total Times</p>
-        <p class='ztm-section-times-data'>2hrs 3mins</p>
+        <div class='ztm-section-times-text'>Total Times</div>
+        <div class='ztm-section-times-data'>2hrs 3mins</div>
     </div>
     <!-- Total Watched -->
     <div class='ztm-section-times-item'>
-        <p class='ztm-section-times-text'>Total Watched</p>
-        <p class='ztm-section-times-data'>2hrs 3mins</p>
+        <div class='ztm-section-times-text'>Total Watched</div>
+        <div class='ztm-section-times-data'>2hrs 3mins</div>
     </div>
     <!-- Total Left -->
     <div class='ztm-section-times-item'>
-        <p class='ztm-section-times-text'>Total Left</p>
-        <p class='ztm-section-times-data'>2hrs 3mins</p>
+        <div class='ztm-section-times-text'>Total Left</div>
+        <div class='ztm-section-times-data'>2hrs 3mins</div>
     </div>
 `
 
