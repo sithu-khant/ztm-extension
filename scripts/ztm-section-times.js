@@ -32,9 +32,25 @@ ztmSectionTimesDiv.innerHTML = `
 
 progressBar.parentNode.insertBefore(ztmSectionTimesDiv, progressBar.nextSibling);
 
+// Get all the section items
+const sectionItems = document.querySelectorAll('.section-item');
+// Create a new empty array to collect lecture minutes
+const ztmMinutesArray = [];
 
+sectionItems.forEach((sectionItem) => {
+    const lectureName = sectionItem.querySelector('.lecture-name').innerText;
+    // Regex expression to extract minute from the lectureName
+    const regex = /\(([^)]*:\s*[^)]+)\)/;
+    // Get the minutes
+    const getLectureMinutes = lectureName.match(regex);
+    // Remove all white spaces
+    if (getLectureMinutes && getLectureMinutes[1]) {
+        const lectureMinutes = getLectureMinutes[1].replaceAll(/\s/g,'');
 
-
+        // Add lectureMinutes to ztmMinutesArray;
+        ztmMinutesArray.push(lectureMinutes);
+    }
+});
 
 
 
