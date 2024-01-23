@@ -12,6 +12,10 @@
     transform: translateY(-50%);
 }
 
+.sticky {
+    display: none;
+}
+
 @media screen and (max-width: 767px) {
     .ztm-toggle-sidebar {
         display: none;
