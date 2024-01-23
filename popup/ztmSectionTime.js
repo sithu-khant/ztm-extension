@@ -1,44 +1,35 @@
-/*
- * Author: Matt Smith
- * GitHub: https://github.com/mattcsmith
- * Date: 4th Jan 2024
- * Description: Adds lecture time statistics to each section and the sidebar
- */
+/* 
+ * Author: Sithu Khant
+ * GitHub: https://github.com/sithu-khant 
+ * Last Updated: Tue Jan 23, 2024
+ * Description: Show lecture time data in the course info page
+ */ 
 
-// NOTE: I decided to abstract/separate this from the popup.js file to separate concerns.
-// As the feature list grows, having all the code in popup.js will become hard to manage.
+// Send the checkbox status to the active tab and current window
+var sendCheckStatusMessage = (checkboxStatus) => {
+    // Get the active tab and current window
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        // Send the checkbox status 
+        chrome.tabs.sendMessage(tabs[0].id, checkboxStatus);
+    })
+}
 
-// Function to query and send a message to the active tab
-// function querySendTabMessage(options) {
-//   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-//     chrome.tabs.sendMessage(tabs[0].id, options);
-//   });
-// }
+document.addEventListener('DOMContentLoaded', () => {
+    let ztmSectionTimesCheckbox = document.getElementById('ztmSectionTimesCheckbox');
 
-// Wait for the DOM content to be fully loaded before executing the code
-// document.addEventListener("DOMContentLoaded", async () => {
-//   // Get the checkbox element from the DOM
-//   const sectionTimesCheckbox = document.getElementById(
-//     "ztmSectionTimesCheckbox"
-//   );
+    const ztmSectionTimesIsEnabled = localStorage.getItem('ztmSectionTimes') === 'true'
+    ztmSectionTimesCheckbox.checked = ztmSectionTimesIsEnabled
 
-//   // Retrieve the stored checkbox state from Chrome storage
-//   const data = await chrome.storage.sync.get(
-//     "ztmSectionTimesCheckboxIsChecked"
-//   );
+    ztmSectionTimesCheckbox.addEventListener('change', () => {
+        // Get the checkbox status
+        let checkboxStatus = { 'ztmSectionTimesCheckboxIsChecked' : ztmSectionTimesCheckbox.checked }
 
-//   // Set the checkbox state based on the retrieved data (or default to false)
-//   sectionTimesCheckbox.checked = data.ztmSectionTimesCheckboxIsChecked || false;
+        // Set the initial checkbox status
+        chrome.storage.sync.set(checkboxStatus, () => {
+            // Send the checkbox status dynamically (callback function)
+            sendCheckStatusMessage(checkboxStatus);
+        })
 
-//   sectionTimesCheckbox.addEventListener("change", function () {
-//     chrome.storage.sync.set(
-//       { ztmSectionTimesCheckboxIsChecked: sectionTimesCheckbox.checked },
-//       function () {
-//         // Send a message to the active tab with the updated checkbox state
-//         querySendTabMessage({
-//           ztmSectionTimesCheckboxIsChecked: sectionTimesCheckbox.checked,
-//         });
-//       }
-//     );
-//   });
-// });
+        localStorage.setItem('ztmSectionTimes', ztmSectionTimesCheckbox.checked)
+    })
+})
