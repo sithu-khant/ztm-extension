@@ -1,9 +1,9 @@
-/*
- * Author: Matt Smith
- * GitHub: https://github.com/mattcsmith
- * Date: 4th Jan 2024
- * Description: Adds lecture time statistics to each section and the sidebar
- */
+// /*
+//  * Author: Matt Smith
+//  * GitHub: https://github.com/mattcsmith
+//  * Date: 4th Jan 2024
+//  * Description: Adds lecture time statistics to each section and the sidebar
+//  */
 
 // // Get the back link icon
 // const sectionTimesBackLinkIcon = document.querySelector('.nav-back-link');

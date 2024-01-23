@@ -100,6 +100,7 @@ MIT License
 * Tue Jan 23, 2024
 	* (1.23.01) - Added display none style to `sticky` progress bar.
 	* (1.23.02) - Added `section-times` feature to popup.
+	* (1.23.03) - Added section times html codes to course info page.
 * Fri Jan 19, 2024
 	* (1.19.01) - Update README.
 * Thu Jan 18, 2024

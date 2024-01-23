@@ -55,6 +55,17 @@
 		},
 		{
 			"js": [
+				"scripts/ztm-section-times.js"
+			],
+			"css": [
+				"css/ztm-section-times.css"
+			],
+			"matches": [
+				"https://academy.zerotomastery.io/courses/enrolled/*"
+			]
+		},
+		{
+			"js": [
 				"scripts/ztm-hide-lecture-title.js"
 			],
 			"matches": [
