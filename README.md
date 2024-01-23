@@ -103,6 +103,7 @@ MIT License
 	* (1.23.03) - Added section times html codes to course info page.
 	* (1.23.04) - Added styles to section times html codes.
 	* (1.23.05) - Collected all the minutes.
+	* (1.23.06) - Total hours code is working.
 * Fri Jan 19, 2024
 	* (1.19.01) - Update README.
 * Thu Jan 18, 2024

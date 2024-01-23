@@ -52,6 +52,25 @@ sectionItems.forEach((sectionItem) => {
     }
 });
 
+const convertToSeconds = (time) => {
+    // Split into minutes and seconds
+    const [ minutes, seconds ] = time.split(":").map(Number);
+    let totalSeconds = minutes * 60 + seconds
+
+    return totalSeconds;
+}
+
+// Total seconds
+let totalSeconds = 0;
+// Loop through ztmMinutesArray and apply convertToSeconds function
+ztmMinutesArray.forEach((time) => totalSeconds += convertToSeconds(time));
+
+// Total hours
+const courseTotalHours = Math.floor(totalSeconds / 3600); 
+// Total minutes
+const courseTotalMinutes = Math.floor((totalSeconds % 3600) / 60); 
+
+console.log(totalSeconds, courseTotalHours, courseTotalMinutes);
 
 
 
