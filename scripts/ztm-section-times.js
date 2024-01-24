@@ -13,9 +13,9 @@ const ztmSectionTimesDiv = document.createElement('div');
 // Add id
 ztmSectionTimesDiv.id = 'ztm-section-times-container'
 ztmSectionTimesDiv.innerHTML = `
-    <!-- Total Times -->
+    <!-- Course Length -->
     <div class='ztm-section-times-item'>
-        <div class='ztm-section-times-text'>Total Times</div>
+        <div class='ztm-section-times-text'>Course Length</div>
         <div class='ztm-section-times-data'>2hrs 3mins</div>
     </div>
     <!-- Total Watched -->
@@ -38,7 +38,7 @@ const sectionItems = document.querySelectorAll('.section-item');
 const ztmMinutesArray = [];
 
 sectionItems.forEach((sectionItem) => {
-    const lectureName = sectionItem.querySelector('.lecture-name').innerText;
+    let lectureName = sectionItem.querySelector('.lecture-name').innerText;
     // Regex expression to extract minute from the lectureName
     const regex = /\(([^)]*:\s*[^)]+)\)/;
     // Get the minutes
@@ -68,9 +68,11 @@ ztmMinutesArray.forEach((time) => totalSeconds += convertToSeconds(time));
 // Total hours
 const courseTotalHours = Math.floor(totalSeconds / 3600); 
 // Total minutes
-const courseTotalMinutes = Math.floor((totalSeconds % 3600) / 60); 
+const courseTotalMinutes = Math.floor((totalSeconds % 3600) / 60);
+// Total seconds
+const  courseTotalSeconds = Math.floor(totalSeconds % 60);
 
-console.log(totalSeconds, courseTotalHours, courseTotalMinutes);
+console.log(courseTotalHours, 'hrs', courseTotalMinutes, 'mins', courseTotalSeconds);
 
 
 

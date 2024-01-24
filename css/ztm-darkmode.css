@@ -68,6 +68,10 @@ body::-webkit-scrollbar-thumb {
     background: #393E46 !important;
 }
 
+.navbar-fedora .navbar-collapse.in {
+    background: transparent !important;
+}
+
 .input-group-btn:last-child>.btn:hover,
 .input-group-btn:last-child>.btn:hover * {
     background: #393E46 !important;

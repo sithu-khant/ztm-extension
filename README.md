@@ -97,6 +97,8 @@ MIT License
 
 ## Logs
 
+* Wed Jan 24, 2024
+	* (1.24.01) - Committed for safety.
 * Tue Jan 23, 2024
 	* (1.23.01) - Added display none style to `sticky` progress bar.
 	* (1.23.02) - Added `section-times` feature to popup.
