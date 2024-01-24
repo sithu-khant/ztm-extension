@@ -106,6 +106,7 @@ MIT License
 	* (1.24.06) - Cleaned the codes.
 	* (1.24.07) - Cleaned the codes.
 	* (1.24.08) - All the feature function working.
+	* (1.24.09) - Cleaned the codes.
 * Tue Jan 23, 2024
 	* (1.23.01) - Added display none style to `sticky` progress bar.
 	* (1.23.02) - Added `section-times` feature to popup.

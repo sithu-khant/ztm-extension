@@ -1,13 +1,12 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Jan 23, 2024
+ * Last Updated: Wed Jan 24, 2024
  * Description: Show lecture time data in the course info page
  */ 
 
 // Get the course progress percentage bar
 const progressBar = document.querySelector('.course-progress-percentage');
-
 
 // Collect all the time data
 const getTimes = (item, array) => {
@@ -23,8 +22,8 @@ const getTimes = (item, array) => {
 
         // Add lectureTimes to array;
         array.push(lectureTimes);
-    }
-}
+    };
+};
 
 // Convert times to seconds
 const convertToSeconds = (time) => {
@@ -33,7 +32,7 @@ const convertToSeconds = (time) => {
     const totalSeconds = minutes * 60 + seconds
 
     return totalSeconds;
-}
+};
 
 // Get the time data
 const getTimesData = (totalSeconds, array) => {
@@ -54,38 +53,7 @@ const getTimesData = (totalSeconds, array) => {
     }
 };
 
-// For Course Length
-const courseLengthTotalSeconds = 0;
-const courseLengthTotalArray = [];
-// For Total Watched
-const totalWatchedSeconds = 0;
-const totalWatchedArray = [];
-// For Total Left
-const totalLeftSeconds = 0;
-const totalLeftArray = [];
-
-const ztmSidebarSectionTimes = () => {
-    // Get all the lectures
-    const courseLengthSectionItems = document.querySelectorAll('.section-item');
-    // Get all the completed lectures
-    const totalWatchedSectionItems = document.querySelectorAll('.completed');
-    // Get all the incompleted items
-    const totalLeftSectionItems = document.querySelectorAll('.incomplete');
-
-    // For Course Length
-    courseLengthSectionItems.forEach((sectionItem) => getTimes(sectionItem, courseLengthTotalArray));
-    const courseLength = getTimesData(courseLengthTotalSeconds, courseLengthTotalArray);
-
-    // For Total Watched
-    totalWatchedSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalWatchedArray));
-    const totalWatched = getTimesData(totalWatchedSeconds, totalWatchedArray);
-    
-    // For Total Left
-    totalLeftSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalLeftArray));
-    const isFinished = getTimesData(totalLeftSeconds, totalLeftArray);
-    // If all are zeros, mark as `Completed`
-    const totalLeft = isFinished === '0min 0s' ? 'Completed' : isFinished;
-
+const sidebarSectionTimesDiv = (courseLength, totalWatched, totalLeft) => {
     // Create a new div for lecture time data
     const ztmSidebarSectionTimesDiv = document.createElement('div');
     // Add id
@@ -110,32 +78,97 @@ const ztmSidebarSectionTimes = () => {
 
     // Add ztmSidebarSectionTimesDiv
     progressBar.parentNode.insertBefore(ztmSidebarSectionTimesDiv, progressBar.nextSibling);
-
 };
 
+const ztmSidebarSectionTimes = () => {
+    // Get all the lectures
+    const courseLengthSectionItems = document.querySelectorAll('.section-item');
+    // Get all the completed lectures
+    const totalWatchedSectionItems = document.querySelectorAll('.completed');
+    // Get all the incompleted items
+    const totalLeftSectionItems = document.querySelectorAll('.incomplete');
+
+    // For Course Length
+    const courseLengthTotalArray = [];
+    // For Total Watched
+    const totalWatchedArray = [];
+    // For Total Left
+    const totalLeftArray = [];
+
+    // For Course Length
+    courseLengthSectionItems.forEach((sectionItem) => getTimes(sectionItem, courseLengthTotalArray));
+    const courseLength = getTimesData(0, courseLengthTotalArray);
+
+    // For Total Watched
+    totalWatchedSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalWatchedArray));
+    const totalWatched = getTimesData(0, totalWatchedArray);
+    
+    // For Total Left
+    totalLeftSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalLeftArray));
+    const isFinished = getTimesData(0, totalLeftArray);
+    // If all are zeros, mark as `Completed`
+    const totalLeft = isFinished === '0min 0s' ? 'Completed' : isFinished;
+
+    // Add sidebar section div
+    sidebarSectionTimesDiv(courseLength, totalWatched, totalLeft);
+};
+
+// Section Times for Curriculum
 const ztmCurriculumSectionTimes = () => {
     const courseSections = document.querySelectorAll('.course-section');
 
+    // Loop through to add time data
     courseSections.forEach((section) => {
         const sectionTitle = section.querySelector('.section-title').innerText;
         const sectionItems = section.querySelectorAll('.section-item');
 
         // For Course Length
-        const sectionTotalSeconds = 0;
         const sectionTotalArray = [];
 
         // For Course Length
         sectionItems.forEach((sectionItem) => getTimes(sectionItem, sectionTotalArray));
-        const sectionLength = getTimesData(sectionTotalSeconds, sectionTotalArray);
+        const sectionLength = getTimesData(0, sectionTotalArray);
 
+        // Replace the section title with the one containing time data
         section.querySelector('.section-title').innerText = sectionLength === '0min 0s' ? sectionTitle : `${sectionTitle} (${sectionLength})`
-        
-    })
+ 
+    });
 };
 
+// ztmSidebarSectionTimes();
+// ztmCurriculumSectionTimes();
+
+const hideSidebarSectionTimes = (isChecked) => {
+    const sidebarSectionTimesDiv = document.getElementById('ztm-section-times-container');
+
+    sidebarSectionTimesDiv.style.display = isChecked ? '' : 'none';
+};
+
+const ztmSectionTimes = () => {
+    // Get the initial checkbox status and apply style
+    chrome.storage.sync.get('ztmSectionTimesCheckboxIsChecked', (data) => {
+        let isChecked = data.ztmSectionTimesCheckboxIsChecked || false;
+
+        hideSidebarSectionTimes(isChecked);
+    })
+
+    // Get the checkbox status dynamically and apply style
+    chrome.storage.onChanged.addListener((changes, namespace) => {
+        if (namespace === 'sync' && 'ztmSectionTimesCheckboxIsChecked' in changes) {
+            let isChecked = changes.ztmSectionTimesCheckboxIsChecked.newValue || false;
+            
+            hideSidebarSectionTimes(isChecked);        
+        };
+    });
+};
+
+ztmSectionTimes();
 ztmSidebarSectionTimes();
 ztmCurriculumSectionTimes();
 
+// Track the page for every new lecture  
+// const ztmSectionTimesObserver = new MutationObserver(() => ztmSectionTimes());
+// ztmSectionTimesObserver.observe(document.body, { childList: true, subtree: true }); 
 
 
 
