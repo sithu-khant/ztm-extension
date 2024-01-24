@@ -32,26 +32,6 @@ ztmSectionTimesDiv.innerHTML = `
 
 progressBar.parentNode.insertBefore(ztmSectionTimesDiv, progressBar.nextSibling);
 
-// Get all the section items
-const sectionItems = document.querySelectorAll('.section-item');
-// Create a new empty array to collect lecture minutes
-const ztmMinutesArray = [];
-
-sectionItems.forEach((sectionItem) => {
-    let lectureName = sectionItem.querySelector('.lecture-name').innerText;
-    // Regex expression to extract minute from the lectureName
-    const regex = /\(([^)]*:\s*[^)]+)\)/;
-    // Get the minutes
-    const getLectureMinutes = lectureName.match(regex);
-    // Remove all white spaces
-    if (getLectureMinutes && getLectureMinutes[1]) {
-        const lectureMinutes = getLectureMinutes[1].replaceAll(/\s/g,'');
-
-        // Add lectureMinutes to ztmMinutesArray;
-        ztmMinutesArray.push(lectureMinutes);
-    }
-});
-
 const convertToSeconds = (time) => {
     // Split into minutes and seconds
     const [ minutes, seconds ] = time.split(":").map(Number);
@@ -59,6 +39,31 @@ const convertToSeconds = (time) => {
 
     return totalSeconds;
 }
+
+const getTimes = (text, array) => {
+    // Regex expression to extract minute from the lectureName
+    const regex = /\(([^)]*:\s*[^)]+)\)/;
+    // Get the minutes
+    let getLectureTimes = text.match(regex);
+    // Remove all white spaces
+    if (getLectureTimes && getLectureTimes[1]) {
+        let lectureTimes = getLectureTimes[1].replaceAll(/\s/g,'');
+
+        // Add lectureTimes to array;
+        array.push(lectureTimes);
+    }
+}
+
+// Get all the section items
+const sectionItems = document.querySelectorAll('.section-item');
+// Create a new empty array to collect lecture minutes
+const ztmMinutesArray = [];
+
+sectionItems.forEach((sectionItem) => {
+    let lectureName = sectionItem.querySelector('.lecture-name').innerText;
+    
+    getTimes(lectureName, ztmMinutesArray);
+});
 
 // Total seconds
 let totalSeconds = 0;

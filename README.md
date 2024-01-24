@@ -99,6 +99,7 @@ MIT License
 
 * Wed Jan 24, 2024
 	* (1.24.01) - Committed for safety.
+	* (1.24.02) - Created `getTimes` function.
 * Tue Jan 23, 2024
 	* (1.23.01) - Added display none style to `sticky` progress bar.
 	* (1.23.02) - Added `section-times` feature to popup.
