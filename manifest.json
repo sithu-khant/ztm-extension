@@ -10,7 +10,8 @@
 	],
 	"permissions": [
 		"storage",
-		"activeTab"
+		"activeTab",
+		"webNavigation"
 	],
 	"action": {
 		"default_title": "Zero To Mastery",

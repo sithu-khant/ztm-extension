@@ -6,7 +6,7 @@
  */ 
 
 #ztm-section-times-container {
-/*    background: red;*/
+    display: none;
 }
 
 .ztm-section-times-item {

@@ -5,9 +5,6 @@
  * Description: Show lecture time data in the course info page
  */ 
 
-// Get the course progress percentage bar
-const progressBar = document.querySelector('.course-progress-percentage');
-
 // Collect all the time data
 const getTimes = (item, array) => {
     // Get the text
@@ -76,8 +73,14 @@ const sidebarSectionTimesDiv = (courseLength, totalWatched, totalLeft) => {
         </div>
     `
 
-    // Add ztmSidebarSectionTimesDiv
-    progressBar.parentNode.insertBefore(ztmSidebarSectionTimesDiv, progressBar.nextSibling);
+    // Get the course progress percentage bar
+    const progressBar = document.querySelector('.course-progress-percentage');
+
+    // Only add to the page if there is progressBar
+    if (progressBar) {
+        // Add ztmSidebarSectionTimesDiv
+        progressBar.parentNode.insertBefore(ztmSidebarSectionTimesDiv, progressBar.nextSibling);
+    }
 };
 
 const ztmSidebarSectionTimes = () => {
@@ -135,20 +138,23 @@ const ztmCurriculumSectionTimes = () => {
     });
 };
 
-// ztmSidebarSectionTimes();
-// ztmCurriculumSectionTimes();
-
 const hideSidebarSectionTimes = (isChecked) => {
+    // Get the sidebarSectionTimesDiv to hide
     const sidebarSectionTimesDiv = document.getElementById('ztm-section-times-container');
 
-    sidebarSectionTimesDiv.style.display = isChecked ? '' : 'none';
+    // If there is sidebarSectionTimesDiv, apply style
+    if (sidebarSectionTimesDiv) {
+        sidebarSectionTimesDiv.style.display = isChecked ? 'block' : 'none';
+    }
 };
 
 const ztmSectionTimes = () => {
+    ztmSidebarSectionTimes();
+    ztmCurriculumSectionTimes();
+    
     // Get the initial checkbox status and apply style
     chrome.storage.sync.get('ztmSectionTimesCheckboxIsChecked', (data) => {
         let isChecked = data.ztmSectionTimesCheckboxIsChecked || false;
-
         hideSidebarSectionTimes(isChecked);
     })
 
@@ -156,38 +162,12 @@ const ztmSectionTimes = () => {
     chrome.storage.onChanged.addListener((changes, namespace) => {
         if (namespace === 'sync' && 'ztmSectionTimesCheckboxIsChecked' in changes) {
             let isChecked = changes.ztmSectionTimesCheckboxIsChecked.newValue || false;
-            
             hideSidebarSectionTimes(isChecked);        
         };
     });
-};
+}
 
-ztmSectionTimes();
-ztmSidebarSectionTimes();
-ztmCurriculumSectionTimes();
-
-// Track the page for every new lecture  
-// const ztmSectionTimesObserver = new MutationObserver(() => ztmSectionTimes());
-// ztmSectionTimesObserver.observe(document.body, { childList: true, subtree: true }); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const ztmSectionTimesObserver = new MutationObserver(() => ztmSectionTimes());
+ztmSectionTimesObserver.observe(document.head, { childList: true, subtree: true });
 
 
