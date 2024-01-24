@@ -27,7 +27,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 *(plans to add - top to bottom)*
 
 * [x] Hide Lecture Title (Done)
-* [x] Showing total amount of time in each section by [MathCSmith](https://github.com/mattcsmith) (WIP)
+* [x] Showing total amount of time in each section (WIP)
 * [x] To keep the favourite courses at top (Delayed) 
 	* (Temporarily paused working on this feature pending the discussed investigation for optimization and the best user experience)
 * [ ] Keep the lecture video resolution the same
@@ -103,7 +103,8 @@ MIT License
 	* (1.24.03) - Cleaned the codes and created functions.
 	* (1.24.04) - Finished `Course Length`.
 	* (1.24.05) - All the codes working.
-	* (1.24.06)  Cleaned the codes.
+	* (1.24.06) - Cleaned the codes.
+	* (1.24.07) - Cleaned the codes.
 * Tue Jan 23, 2024
 	* (1.23.01) - Added display none style to `sticky` progress bar.
 	* (1.23.02) - Added `section-times` feature to popup.

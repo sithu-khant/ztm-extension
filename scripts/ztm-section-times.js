@@ -8,29 +8,6 @@
 // Get the course progress percentage bar
 const progressBar = document.querySelector('.course-progress-percentage');
 
-// Create a new div for lecture time data
-const ztmSectionTimesDiv = document.createElement('div');
-// Add id
-ztmSectionTimesDiv.id = 'ztm-section-times-container'
-ztmSectionTimesDiv.innerHTML = `
-    <!-- Course Length -->
-    <div class='ztm-section-times-item'>
-        <div class='ztm-section-times-text'>Course Length</div>
-        <div class='ztm-section-times-data'>2hrs 3mins</div>
-    </div>
-    <!-- Total Watched -->
-    <div class='ztm-section-times-item'>
-        <div class='ztm-section-times-text'>Total Watched</div>
-        <div class='ztm-section-times-data'>2hrs 3mins</div>
-    </div>
-    <!-- Total Left -->
-    <div class='ztm-section-times-item'>
-        <div class='ztm-section-times-text'>Total Left</div>
-        <div class='ztm-section-times-data'>2hrs 3mins</div>
-    </div>
-`
-
-progressBar.parentNode.insertBefore(ztmSectionTimesDiv, progressBar.nextSibling);
 
 // Collect all the time data
 const getTimes = (item, array) => {
@@ -70,7 +47,11 @@ const getTimesData = (totalSeconds, array) => {
     // Total seconds
     const courseTotalSeconds = Math.floor(totalSeconds % 60);
 
-    console.log(`${courseTotalHours}hrs ${courseTotalMinutes}mins ${courseTotalSeconds}secs`);
+    if (courseTotalHours > 0) {
+        return `${courseTotalHours}h ${courseTotalMinutes}min`;
+    } else {
+        return `${courseTotalMinutes}min ${courseTotalSeconds}s`;
+    }
 };
 
 // For Course Length
@@ -83,7 +64,7 @@ const totalWatchedArray = [];
 const totalLeftSeconds = 0;
 const totalLeftArray = [];
 
-const ztmSectionTimes = () => {
+const ztmSidebarSectionTimes = () => {
     // Get all the lectures
     const courseLengthSectionItems = document.querySelectorAll('.section-item');
     // Get all the completed lectures
@@ -93,18 +74,46 @@ const ztmSectionTimes = () => {
 
     // For Course Length
     courseLengthSectionItems.forEach((sectionItem) => getTimes(sectionItem, courseLengthTotalArray));
-    getTimesData(courseLengthTotalSeconds, courseLengthTotalArray);
+    const courseLength = getTimesData(courseLengthTotalSeconds, courseLengthTotalArray);
 
     // For Total Watched
     totalWatchedSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalWatchedArray));
-    getTimesData(totalWatchedSeconds, totalWatchedArray);
-
+    const totalWatched = getTimesData(totalWatchedSeconds, totalWatchedArray);
+    
+    // For Total Left
     totalLeftSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalLeftArray));
-    getTimesData(totalLeftSeconds, totalLeftArray);
+    const isFinished = getTimesData(totalLeftSeconds, totalLeftArray);
+    // If all are zeros, mark as `Completed`
+    const totalLeft = isFinished === '0min 0s' ? 'Completed' : isFinished;
+
+    // Create a new div for lecture time data
+    const ztmSidebarSectionTimesDiv = document.createElement('div');
+    // Add id
+    ztmSidebarSectionTimesDiv.id = 'ztm-section-times-container'
+    ztmSidebarSectionTimesDiv.innerHTML = `
+        <!-- Course Length -->
+        <div class='ztm-section-times-item'>
+            <div class='ztm-section-times-text'>Course Length</div>
+            <div class='ztm-section-times-data'>${courseLength}</div>
+        </div>
+        <!-- Total Watched -->
+        <div class='ztm-section-times-item'>
+            <div class='ztm-section-times-text'>Total Watched</div>
+            <div class='ztm-section-times-data'>${totalWatched}</div>
+        </div>
+        <!-- Total Left -->
+        <div class='ztm-section-times-item'>
+            <div class='ztm-section-times-text'>Total Left</div>
+            <div class='ztm-section-times-data'>${totalLeft}</div>
+        </div>
+    `
+
+    // Add ztmSidebarSectionTimesDiv
+    progressBar.parentNode.insertBefore(ztmSidebarSectionTimesDiv, progressBar.nextSibling);
 
 };
 
-ztmSectionTimes();
+ztmSidebarSectionTimes();
 
 
 
