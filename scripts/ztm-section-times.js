@@ -113,7 +113,44 @@ const ztmSidebarSectionTimes = () => {
 
 };
 
+const ztmCurriculumSectionTimes = () => {
+    const courseSections = document.querySelectorAll('.course-section');
+
+    courseSections.forEach((section) => {
+        const sectionTitle = section.querySelector('.section-title').innerText;
+        const sectionItems = section.querySelectorAll('.section-item');
+
+        // For Course Length
+        const sectionTotalSeconds = 0;
+        const sectionTotalArray = [];
+
+        // For Course Length
+        sectionItems.forEach((sectionItem) => getTimes(sectionItem, sectionTotalArray));
+        const sectionLength = getTimesData(sectionTotalSeconds, sectionTotalArray);
+
+        section.querySelector('.section-title').innerText = sectionLength === '0min 0s' ? sectionTitle : `${sectionTitle} (${sectionLength})`
+        
+    })
+};
+
 ztmSidebarSectionTimes();
+ztmCurriculumSectionTimes();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
