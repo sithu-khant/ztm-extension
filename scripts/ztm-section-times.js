@@ -90,16 +90,42 @@ getTimesData(courseLengthTotalSeconds, courseLengthTotalArray);
 // Course Length Section - End
 // -----
 
+// -----
+// Total Watched Section - Start
+// -----
+
 const totalWatchedSeconds = 0;
 const totalWatchedArray = [];
 
+// Get all the section items
+const totalWatchedSectionItems = document.querySelectorAll('.completed');
+
+totalWatchedSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalWatchedArray));
+getTimesData(totalWatchedSeconds, totalWatchedArray);
+
+
+// -----
+// Total Watched Section - End
+// -----
+
+
+// -----
+// Total Left Section - Start
+// -----
 const totalLeftSeconds = 0;
 const totalLeftArray = [];
 
+// Get all the section items
+const totalLeftSectionItems = document.querySelectorAll('.incomplete');
 
-// Total seconds
-getTimesData(totalWatchedSeconds, totalWatchedArray);
+if (totalLeftSectionItems) {
+    totalLeftSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalLeftArray));
+    getTimesData(totalLeftSeconds, totalLeftArray);
+}
 
+// -----
+// Total Left Section - End
+// -----
 
 
 
