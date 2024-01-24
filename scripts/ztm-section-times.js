@@ -58,6 +58,7 @@ const convertToSeconds = (time) => {
     return totalSeconds;
 }
 
+// Get the time data
 const getTimesData = (totalSeconds, array) => {
     // Loop through array and apply convertToSeconds function
     array.forEach((time) => totalSeconds += convertToSeconds(time));
@@ -72,60 +73,38 @@ const getTimesData = (totalSeconds, array) => {
     console.log(`${courseTotalHours}hrs ${courseTotalMinutes}mins ${courseTotalSeconds}secs`);
 };
 
-// -----
-// Course Length Section - Start
-// -----
-
-// Create new empty arrays to collect lecture minutes
+// For Course Length
 const courseLengthTotalSeconds = 0;
 const courseLengthTotalArray = [];
-
-// Get all the section items
-const courseLengthSectionItems = document.querySelectorAll('.section-item');
-
-courseLengthSectionItems.forEach((sectionItem) => getTimes(sectionItem, courseLengthTotalArray));
-getTimesData(courseLengthTotalSeconds, courseLengthTotalArray);
-
-// -----
-// Course Length Section - End
-// -----
-
-// -----
-// Total Watched Section - Start
-// -----
-
+// For Total Watched
 const totalWatchedSeconds = 0;
 const totalWatchedArray = [];
-
-// Get all the section items
-const totalWatchedSectionItems = document.querySelectorAll('.completed');
-
-totalWatchedSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalWatchedArray));
-getTimesData(totalWatchedSeconds, totalWatchedArray);
-
-
-// -----
-// Total Watched Section - End
-// -----
-
-
-// -----
-// Total Left Section - Start
-// -----
+// For Total Left
 const totalLeftSeconds = 0;
 const totalLeftArray = [];
 
-// Get all the section items
-const totalLeftSectionItems = document.querySelectorAll('.incomplete');
+const ztmSectionTimes = () => {
+    // Get all the lectures
+    const courseLengthSectionItems = document.querySelectorAll('.section-item');
+    // Get all the completed lectures
+    const totalWatchedSectionItems = document.querySelectorAll('.completed');
+    // Get all the incompleted items
+    const totalLeftSectionItems = document.querySelectorAll('.incomplete');
 
-if (totalLeftSectionItems) {
+    // For Course Length
+    courseLengthSectionItems.forEach((sectionItem) => getTimes(sectionItem, courseLengthTotalArray));
+    getTimesData(courseLengthTotalSeconds, courseLengthTotalArray);
+
+    // For Total Watched
+    totalWatchedSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalWatchedArray));
+    getTimesData(totalWatchedSeconds, totalWatchedArray);
+
     totalLeftSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalLeftArray));
     getTimesData(totalLeftSeconds, totalLeftArray);
-}
 
-// -----
-// Total Left Section - End
-// -----
+};
+
+ztmSectionTimes();
 
 
 
