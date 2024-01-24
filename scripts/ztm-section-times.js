@@ -32,6 +32,7 @@ ztmSectionTimesDiv.innerHTML = `
 
 progressBar.parentNode.insertBefore(ztmSectionTimesDiv, progressBar.nextSibling);
 
+// Convert times to seconds
 const convertToSeconds = (time) => {
     // Split into minutes and seconds
     const [ minutes, seconds ] = time.split(":").map(Number);
@@ -40,6 +41,7 @@ const convertToSeconds = (time) => {
     return totalSeconds;
 }
 
+// Collect all the time data
 const getTimes = (text, array) => {
     // Regex expression to extract minute from the lectureName
     const regex = /\(([^)]*:\s*[^)]+)\)/;
@@ -54,30 +56,43 @@ const getTimes = (text, array) => {
     }
 }
 
+const getTimesData = (totalSeconds, array) => {
+    // Loop through array and apply convertToSeconds function
+    array.forEach((time) => totalSeconds += convertToSeconds(time));
+
+    // Total hours
+    const courseTotalHours = Math.floor(totalSeconds / 3600); 
+    // Total minutes
+    const courseTotalMinutes = Math.floor((totalSeconds % 3600) / 60);
+    // Total seconds
+    const courseTotalSeconds = Math.floor(totalSeconds % 60);
+
+    console.log(`${courseTotalHours}hrs ${courseTotalMinutes}mins ${courseTotalSeconds}secs`);
+};
+
+// Create new empty arrays to collect lecture minutes
+const courseLengthTotalArray = [];
+const courseLengthTotalSeconds = 0;
+
+const totalWatchedArray = [];
+const totalWatchedSeconds = 0;
+
+const totalLeftArray = [];
+const totalLeftSeconds = 0;
+
 // Get all the section items
 const sectionItems = document.querySelectorAll('.section-item');
-// Create a new empty array to collect lecture minutes
-const ztmMinutesArray = [];
 
 sectionItems.forEach((sectionItem) => {
-    let lectureName = sectionItem.querySelector('.lecture-name').innerText;
-    
-    getTimes(lectureName, ztmMinutesArray);
+    const lectureName = sectionItem.querySelector('.lecture-name').innerText;
+
+    // For the course length data
+    getTimes(lectureName, courseLengthTotalArray);
 });
 
 // Total seconds
-let totalSeconds = 0;
-// Loop through ztmMinutesArray and apply convertToSeconds function
-ztmMinutesArray.forEach((time) => totalSeconds += convertToSeconds(time));
+getTimesData(courseLengthTotalSeconds, courseLengthTotalArray);
 
-// Total hours
-const courseTotalHours = Math.floor(totalSeconds / 3600); 
-// Total minutes
-const courseTotalMinutes = Math.floor((totalSeconds % 3600) / 60);
-// Total seconds
-const  courseTotalSeconds = Math.floor(totalSeconds % 60);
-
-console.log(courseTotalHours, 'hrs', courseTotalMinutes, 'mins', courseTotalSeconds);
 
 
 
