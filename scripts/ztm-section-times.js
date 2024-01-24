@@ -32,28 +32,30 @@ ztmSectionTimesDiv.innerHTML = `
 
 progressBar.parentNode.insertBefore(ztmSectionTimesDiv, progressBar.nextSibling);
 
-// Convert times to seconds
-const convertToSeconds = (time) => {
-    // Split into minutes and seconds
-    const [ minutes, seconds ] = time.split(":").map(Number);
-    let totalSeconds = minutes * 60 + seconds
-
-    return totalSeconds;
-}
-
 // Collect all the time data
-const getTimes = (text, array) => {
+const getTimes = (item, array) => {
+    // Get the text
+    const getText = item.querySelector('.lecture-name').innerText;
     // Regex expression to extract minute from the lectureName
     const regex = /\(([^)]*:\s*[^)]+)\)/;
     // Get the minutes
-    let getLectureTimes = text.match(regex);
+    const getLectureTimes = getText.match(regex);
     // Remove all white spaces
     if (getLectureTimes && getLectureTimes[1]) {
-        let lectureTimes = getLectureTimes[1].replaceAll(/\s/g,'');
+        const lectureTimes = getLectureTimes[1].replaceAll(/\s/g,'');
 
         // Add lectureTimes to array;
         array.push(lectureTimes);
     }
+}
+
+// Convert times to seconds
+const convertToSeconds = (time) => {
+    // Split into minutes and seconds
+    const [ minutes, seconds ] = time.split(":").map(Number);
+    const totalSeconds = minutes * 60 + seconds
+
+    return totalSeconds;
 }
 
 const getTimesData = (totalSeconds, array) => {
@@ -70,28 +72,33 @@ const getTimesData = (totalSeconds, array) => {
     console.log(`${courseTotalHours}hrs ${courseTotalMinutes}mins ${courseTotalSeconds}secs`);
 };
 
+// -----
+// Course Length Section - Start
+// -----
+
 // Create new empty arrays to collect lecture minutes
-const courseLengthTotalArray = [];
 const courseLengthTotalSeconds = 0;
-
-const totalWatchedArray = [];
-const totalWatchedSeconds = 0;
-
-const totalLeftArray = [];
-const totalLeftSeconds = 0;
+const courseLengthTotalArray = [];
 
 // Get all the section items
-const sectionItems = document.querySelectorAll('.section-item');
+const courseLengthSectionItems = document.querySelectorAll('.section-item');
 
-sectionItems.forEach((sectionItem) => {
-    const lectureName = sectionItem.querySelector('.lecture-name').innerText;
+courseLengthSectionItems.forEach((sectionItem) => getTimes(sectionItem, courseLengthTotalArray));
+getTimesData(courseLengthTotalSeconds, courseLengthTotalArray);
 
-    // For the course length data
-    getTimes(lectureName, courseLengthTotalArray);
-});
+// -----
+// Course Length Section - End
+// -----
+
+const totalWatchedSeconds = 0;
+const totalWatchedArray = [];
+
+const totalLeftSeconds = 0;
+const totalLeftArray = [];
+
 
 // Total seconds
-getTimesData(courseLengthTotalSeconds, courseLengthTotalArray);
+getTimesData(totalWatchedSeconds, totalWatchedArray);
 
 
 

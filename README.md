@@ -101,6 +101,7 @@ MIT License
 	* (1.24.01) - Committed for safety.
 	* (1.24.02) - Created `getTimes` function.
 	* (1.24.03) - Cleaned the codes and created functions.
+	* (1.24.04) - Finished `Course Length`.
 * Tue Jan 23, 2024
 	* (1.23.01) - Added display none style to `sticky` progress bar.
 	* (1.23.02) - Added `section-times` feature to popup.
