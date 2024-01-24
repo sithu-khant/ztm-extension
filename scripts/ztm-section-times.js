@@ -148,6 +148,7 @@ const hideSidebarSectionTimes = (isChecked) => {
     }
 };
 
+
 const ztmSectionTimes = () => {
     ztmSidebarSectionTimes();
     ztmCurriculumSectionTimes();
@@ -167,7 +168,18 @@ const ztmSectionTimes = () => {
     });
 }
 
-const ztmSectionTimesObserver = new MutationObserver(() => ztmSectionTimes());
-ztmSectionTimesObserver.observe(document.head, { childList: true, subtree: true });
+// Get the nav back link icon
+const ztmSectionTimesNavBackLink = document.querySelector('.nav-back-link');
 
-
+// Only run the observer on the course info page
+if (ztmSectionTimesNavBackLink) {
+    const ztmSectionTimesObserver = new MutationObserver(() => {
+        const isAlreadySectionTimesDiv = document.getElementById('ztm-section-times-container');
+        // If there is section times div already, don't run it again
+        if (!isAlreadySectionTimesDiv) {
+            ztmSectionTimes()
+        }
+    });
+    // ztmSectionTimesObserver.observe(document.head, { childList: true, subtree: true });
+    ztmSectionTimesObserver.observe(document.head, { childList: true, subtree: true });
+};

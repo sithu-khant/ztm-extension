@@ -108,6 +108,7 @@ MIT License
 	* (1.24.08) - All the feature function working.
 	* (1.24.09) - Cleaned the codes.
 	* (1.24.10) - The `section-times` feature is now working...
+	* (1.24.11) - Fixed bug for `section-times` feature.
 * Tue Jan 23, 2024
 	* (1.23.01) - Added display none style to `sticky` progress bar.
 	* (1.23.02) - Added `section-times` feature to popup.
