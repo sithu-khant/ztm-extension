@@ -97,6 +97,8 @@ MIT License
 
 ## Logs
 
+* Thu Jan 25, 2024
+	* (1.24.01) - Tested `background.js` script file. 
 * Wed Jan 24, 2024
 	* (1.24.01) - Committed for safety.
 	* (1.24.02) - Created `getTimes` function.

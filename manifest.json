@@ -10,8 +10,7 @@
 	],
 	"permissions": [
 		"storage",
-		"activeTab",
-		"webNavigation"
+		"activeTab"
 	],
 	"action": {
 		"default_title": "Zero To Mastery",
@@ -22,6 +21,9 @@
 			"48": "icons/icon48.png",
 			"128": "icons/icon128.png"
 		}
+	},
+	"background": {
+		"service_worker": "background.js"
 	},
 	"content_scripts": [
 		{
