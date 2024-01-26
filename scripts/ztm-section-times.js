@@ -139,7 +139,7 @@ const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
         </div> 
     `
 
-    sectionTitleItem.parentNode.insertBefore(ztmCurriculumSectionTimesDiv, sectionTitleItem.nextSibling);
+    sectionTitleItem.appendChild(ztmCurriculumSectionTimesDiv);
 }
 
 // Section Times for Curriculum

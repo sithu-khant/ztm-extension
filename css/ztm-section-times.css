@@ -38,20 +38,17 @@
 }
 
 .course-section .section-title {
-    position: relative !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #curriculum-section-times-container {
     display: flex;
-    position: absolute;
-    top: 0;
-    right: 3%;
-    transform: translateY(8%);
 }
 
 .curriculum-section-times-item {
     width: 130px;
-    margin: 5px auto;
     line-height: 25px;
 
     display: flex;
