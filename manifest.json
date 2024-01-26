@@ -64,7 +64,7 @@
 				"css/ztm-section-times.css"
 			],
 			"matches": [
-				"https://academy.zerotomastery.io/courses/enrolled/*"
+				"https://academy.zerotomastery.io/*"
 			]
 		},
 		{

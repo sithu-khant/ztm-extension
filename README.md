@@ -97,6 +97,8 @@ MIT License
 
 ## Logs
 
+* Thu Jan 26, 2024
+	* (1.24.01) - Changed to `courseInfoSectionTimes` function.
 * Thu Jan 25, 2024
 	* (1.24.01) - Tested `background.js` script file. 
 * Wed Jan 24, 2024

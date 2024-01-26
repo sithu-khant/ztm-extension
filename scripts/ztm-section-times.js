@@ -149,7 +149,7 @@ const hideSidebarSectionTimes = (isChecked) => {
 };
 
 
-const ztmSectionTimes = () => {
+const ztmCourseInfoSectionTimes = () => {
     ztmSidebarSectionTimes();
     ztmCurriculumSectionTimes();
     
@@ -171,7 +171,13 @@ const ztmSectionTimes = () => {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         console.log('Window changed');
-        ztmSectionTimes();
+
+        // Only run the ztmCourseInfoSectionTimes on the course info page
+        const ztmSectionTimesNavBackLink = document.querySelector('.nav-back-link');
+        if (ztmSectionTimesNavBackLink) {
+            ztmCourseInfoSectionTimes();
+        }
+        
     }
 });
 
