@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Wed Jan 24, 2024
+ * Last Updated: Fri Jan 26, 2024
  * Description: Show lecture time data in the course info page
  */ 
 
@@ -126,18 +126,33 @@ const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
     const ztmCurriculumSectionTimesDiv = document.createElement('div');
     // Add id
     ztmCurriculumSectionTimesDiv.id = 'curriculum-section-times-container'
-    ztmCurriculumSectionTimesDiv.innerHTML = `
-        <!-- Total Watched -->
-        <div class='curriculum-section-times-item'>
-            <div class='curriculum-section-times-text'>Watched</div>
-            <div class='curriculum-section-times-data'>${totalWatched}</div>
-        </div>
-        <!-- Course Length -->
-        <div class='curriculum-section-times-item'>
-            <div class='curriculum-section-times-text'>Total</div>
-            <div class='curriculum-section-times-data'>${total}</div>
-        </div> 
-    `
+
+    const forCourseInfoPage = document.querySelector('.nav-back-link');
+    const forLearningPage = document.querySelector('.nav-icon-back');
+
+    if (forCourseInfoPage) {
+        ztmCurriculumSectionTimesDiv.innerHTML = `
+            <!-- Total Watched -->
+            <div class='curriculum-section-times-item'>
+                <div class='curriculum-section-times-text'>Watched</div>
+                <div class='curriculum-section-times-data'>${totalWatched}</div>
+            </div>
+            <!-- Course Length -->
+            <div class='curriculum-section-times-item'>
+                <div class='curriculum-section-times-text'>Total</div>
+                <div class='curriculum-section-times-data'>${total}</div>
+            </div> 
+        `
+    };
+
+    if (forLearningPage) {
+        ztmCurriculumSectionTimesDiv.innerHTML = `
+            <!-- Total -->
+            <div class='curriculum-section-times-item for-learning-page'>
+                <div class='curriculum-section-times-data'>${total}</div>
+            </div> 
+        `
+    };
 
     sectionTitleItem.appendChild(ztmCurriculumSectionTimesDiv);
 }
@@ -182,7 +197,6 @@ const hideCourseInfoSectionTimes = (isChecked) => {
     
     if (ztmSectionTimesNavBackLink) {
         ztmSidebarSectionTimes();
-        ztmCurriculumSectionTimes();
 
         // Get the getSidebarSectionTimesDiv to hide
         const getSidebarSectionTimesDiv = document.getElementById('ztm-section-times-container');
@@ -190,13 +204,16 @@ const hideCourseInfoSectionTimes = (isChecked) => {
         if (getSidebarSectionTimesDiv) {
             getSidebarSectionTimesDiv.style.display = isChecked ? 'block' : 'none';
         }
-
-        const getCurriculumSectionTimesDiv = document.getElementById('curriculum-section-times-container');
-        // If there is getCurriculumSectionTimesDiv, apply style
-        if (getCurriculumSectionTimesDiv) {
-            getCurriculumSectionTimesDiv.style.display = isChecked ? 'flex' : 'none';
-        }
     }
+
+    ztmCurriculumSectionTimes();
+
+    const getCurriculumSectionTimesDiv = document.getElementById('curriculum-section-times-container');
+        // If there is getCurriculumSectionTimesDiv, apply style
+    if (getCurriculumSectionTimesDiv) {
+        getCurriculumSectionTimesDiv.style.display = isChecked ? 'flex' : 'none';
+    }
+
 };
 
 const ztmSectionTimes = () => {
@@ -217,8 +234,6 @@ const ztmSectionTimes = () => {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
-        console.log('Window changed');
-
         ztmSectionTimes();
     }
 });

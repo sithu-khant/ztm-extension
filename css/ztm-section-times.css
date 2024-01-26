@@ -41,6 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 #curriculum-section-times-container {
@@ -75,6 +76,22 @@
     background: transparent;
     color: #646d76;
 }
+
+.for-learning-page {
+    display: inline;
+    font-size: 10px;
+    width: 70px !important;
+}
+
+.for-learning-page .curriculum-section-times-data {
+    flex-basis: 100%;
+}
+
+/*@media screen and (max-width: 800px) {
+    #curriculum-section-times-container {
+        display: none !important;
+    }
+}*/
 
 
 

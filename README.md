@@ -103,6 +103,7 @@ MIT License
 	* (1.24.03) - `ztmCurriculumSectionTimes` function is working now.
 	* (1.24.04) - Linked `ztmCurriculumSectionTimes` with the popup.
 	* (1.24.05) - Added curriculum section time div to the section title.
+	* (1.25.06) - Section time feature is working.
 * Thu Jan 25, 2024
 	* (1.24.01) - Tested `background.js` script file. 
 * Wed Jan 24, 2024

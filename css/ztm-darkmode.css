@@ -152,6 +152,10 @@ body::-webkit-scrollbar-thumb {
     background: #393E46 !important;
 }
 
+.for-learning-page .curriculum-section-times-data {
+    background: #393E46 !important;
+}
+
 .course-sidebar {
     border-right: 1px solid #393E46 !important;
 }
