@@ -99,7 +99,8 @@ MIT License
 
 * Thu Jan 26, 2024
 	* (1.24.01) - Changed to `courseInfoSectionTimes` function.
-	* (1.24.01) - Started `ztmCurriculumSectionTimes` function.
+	* (1.24.02) - Started `ztmCurriculumSectionTimes` function.
+	* (1.24.03) - `ztmCurriculumSectionTimes` function is working now.
 * Thu Jan 25, 2024
 	* (1.24.01) - Tested `background.js` script file. 
 * Wed Jan 24, 2024
