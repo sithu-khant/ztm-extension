@@ -208,11 +208,11 @@ const hideCourseInfoSectionTimes = (isChecked) => {
 
     ztmCurriculumSectionTimes();
 
-    const getCurriculumSectionTimesDiv = document.getElementById('curriculum-section-times-container');
-        // If there is getCurriculumSectionTimesDiv, apply style
-    if (getCurriculumSectionTimesDiv) {
+    const getCurriculumSectionTimesDivs = document.querySelectorAll('#curriculum-section-times-container');
+    
+    getCurriculumSectionTimesDivs.forEach(getCurriculumSectionTimesDiv => {
         getCurriculumSectionTimesDiv.style.display = isChecked ? 'flex' : 'none';
-    }
+    })
 
 };
 
