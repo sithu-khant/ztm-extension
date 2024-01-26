@@ -112,8 +112,13 @@ const ztmSidebarSectionTimes = () => {
     // If all are zeros, mark as `Completed`
     const totalLeft = isFinished === '0min 0s' ? 'Completed' : isFinished;
 
+
+    const alreadySidebarSectionTimesDiv = document.getElementById('ztm-section-times-container');
+
     // Add sidebar section div
-    sidebarSectionTimesDiv(courseLength, totalWatched, totalLeft);
+    if (!alreadySidebarSectionTimesDiv) {
+        sidebarSectionTimesDiv(courseLength, totalWatched, totalLeft);
+    }
 };
 
 const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
@@ -159,39 +164,53 @@ const ztmCurriculumSectionTimes = () => {
         curriculumSectionItems.forEach((sectionItem) => getTimes(sectionItem, sectionCurriculumTotalArray));
         const curriculumTotal = getTimesData(0, sectionCurriculumTotalArray);
 
-        // Replace the section title with the one containing time data
-        // section.querySelector('.section-title').innerText = sectionLength === '0min 0s' ? sectionTitle : `${sectionTitle} (${sectionLength})`
-        curriculumSectionTimesDiv(curriculumSectionTitleItem, curriculumTotalWatched, curriculumTotal)
- 
+        // Only add section time div if the total section is not zero
+        if (curriculumTotal !== '0min 0s') {
+            const alreadyCurriculumSectionTimesDiv = section.querySelector('#curriculum-section-times-container');
+
+            // Only add if there is no curriculum section times div
+            if (!alreadyCurriculumSectionTimesDiv) {
+                curriculumSectionTimesDiv(curriculumSectionTitleItem, curriculumTotalWatched, curriculumTotal)
+            }
+        };
     });
 };
 
-const hideSidebarSectionTimes = (isChecked) => {
-    // Get the sidebarSectionTimesDiv to hide
-    const sidebarSectionTimesDiv = document.getElementById('ztm-section-times-container');
+const hideCourseInfoSectionTimes = (isChecked) => {
+    // Only run the ztmCourseInfoSectionTimes on the course info page
+    const ztmSectionTimesNavBackLink = document.querySelector('.nav-back-link');
+    
+    if (ztmSectionTimesNavBackLink) {
+        ztmSidebarSectionTimes();
+        ztmCurriculumSectionTimes();
 
-    // If there is sidebarSectionTimesDiv, apply style
-    if (sidebarSectionTimesDiv) {
-        sidebarSectionTimesDiv.style.display = isChecked ? 'block' : 'none';
+        // Get the getSidebarSectionTimesDiv to hide
+        const getSidebarSectionTimesDiv = document.getElementById('ztm-section-times-container');
+        // If there is getSidebarSectionTimesDiv, apply style
+        if (getSidebarSectionTimesDiv) {
+            getSidebarSectionTimesDiv.style.display = isChecked ? 'block' : 'none';
+        }
+
+        const getCurriculumSectionTimesDiv = document.getElementById('curriculum-section-times-container');
+        // If there is getCurriculumSectionTimesDiv, apply style
+        if (getCurriculumSectionTimesDiv) {
+            getCurriculumSectionTimesDiv.style.display = isChecked ? 'flex' : 'none';
+        }
     }
 };
 
-
-const ztmCourseInfoSectionTimes = () => {
-    ztmSidebarSectionTimes();
-    ztmCurriculumSectionTimes();
-    
+const ztmSectionTimes = () => {
     // Get the initial checkbox status and apply style
     chrome.storage.sync.get('ztmSectionTimesCheckboxIsChecked', (data) => {
         let isChecked = data.ztmSectionTimesCheckboxIsChecked || false;
-        hideSidebarSectionTimes(isChecked);
+        hideCourseInfoSectionTimes(isChecked);
     })
 
     // Get the checkbox status dynamically and apply style
     chrome.storage.onChanged.addListener((changes, namespace) => {
         if (namespace === 'sync' && 'ztmSectionTimesCheckboxIsChecked' in changes) {
             let isChecked = changes.ztmSectionTimesCheckboxIsChecked.newValue || false;
-            hideSidebarSectionTimes(isChecked);        
+            hideCourseInfoSectionTimes(isChecked);        
         };
     });
 }
@@ -200,12 +219,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         console.log('Window changed');
 
-        // Only run the ztmCourseInfoSectionTimes on the course info page
-        const ztmSectionTimesNavBackLink = document.querySelector('.nav-back-link');
-        if (ztmSectionTimesNavBackLink) {
-            ztmCourseInfoSectionTimes();
-        }
-        
+        ztmSectionTimes();
     }
 });
 
