@@ -116,24 +116,52 @@ const ztmSidebarSectionTimes = () => {
     sidebarSectionTimesDiv(courseLength, totalWatched, totalLeft);
 };
 
+const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
+    // Create a new div for lecture time data
+    const ztmCurriculumSectionTimesDiv = document.createElement('div');
+    // Add id
+    ztmCurriculumSectionTimesDiv.id = 'curriculum-section-times-container'
+    ztmCurriculumSectionTimesDiv.innerHTML = `
+        <!-- Total Watched -->
+        <div class='curriculum-section-times-item'>
+            <div class='curriculum-section-times-text'>Watched</div>
+            <div class='curriculum-section-times-data'>${totalWatched}</div>
+        </div>
+        <!-- Course Length -->
+        <div class='curriculum-section-times-item'>
+            <div class='curriculum-section-times-text'>Total</div>
+            <div class='curriculum-section-times-data'>${total}</div>
+        </div> 
+    `
+
+    sectionTitleItem.parentNode.insertBefore(ztmCurriculumSectionTimesDiv, sectionTitleItem.nextSibling);
+}
+
 // Section Times for Curriculum
 const ztmCurriculumSectionTimes = () => {
     const courseSections = document.querySelectorAll('.course-section');
 
     // Loop through to add time data
     courseSections.forEach((section) => {
-        const sectionTitle = section.querySelector('.section-title').innerText;
-        const sectionItems = section.querySelectorAll('.section-item');
+        const curriculumSectionTitleItem = section.querySelector('.section-title')
+        const curriculumCompletedSectionItems = section.querySelectorAll('.completed');
+        const curriculumSectionItems = section.querySelectorAll('.section-item');
 
         // For Course Length
-        const sectionTotalArray = [];
+        const sectionTotalWatchedArray = [];
+        const sectionCurriculumTotalArray = [];
 
-        // For Course Length
-        sectionItems.forEach((sectionItem) => getTimes(sectionItem, sectionTotalArray));
-        const sectionLength = getTimesData(0, sectionTotalArray);
+        // For Total Watched
+        curriculumCompletedSectionItems.forEach((sectionItem) => getTimes(sectionItem, sectionTotalWatchedArray));
+        const curriculumTotalWatched = getTimesData(0, sectionTotalWatchedArray);
+
+        // For Total
+        curriculumSectionItems.forEach((sectionItem) => getTimes(sectionItem, sectionCurriculumTotalArray));
+        const curriculumTotal = getTimesData(0, sectionCurriculumTotalArray);
 
         // Replace the section title with the one containing time data
-        section.querySelector('.section-title').innerText = sectionLength === '0min 0s' ? sectionTitle : `${sectionTitle} (${sectionLength})`
+        // section.querySelector('.section-title').innerText = sectionLength === '0min 0s' ? sectionTitle : `${sectionTitle} (${sectionLength})`
+        curriculumSectionTimesDiv(curriculumSectionTitleItem, curriculumTotalWatched, curriculumTotal)
  
     });
 };
