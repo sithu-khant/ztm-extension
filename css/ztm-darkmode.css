@@ -68,6 +68,10 @@ body::-webkit-scrollbar-thumb {
     background: #393E46 !important;
 }
 
+.navbar-fedora .navbar-collapse.in {
+    background: transparent !important;
+}
+
 .input-group-btn:last-child>.btn:hover,
 .input-group-btn:last-child>.btn:hover * {
     background: #393E46 !important;
@@ -130,6 +134,26 @@ body::-webkit-scrollbar-thumb {
 
 .full-width .navbar-fedora {
     border-bottom: 1px solid transparent !important;
+}
+
+.ztm-section-times-item {
+    border: 1px solid #393E46 !important;
+}
+
+.ztm-section-times-text {
+    background: #393E46 !important;
+}
+
+.curriculum-section-times-item {
+    border: 1px solid #393E46 !important;
+}
+
+.curriculum-section-times-text {
+    background: #393E46 !important;
+}
+
+.for-learning-page .curriculum-section-times-data {
+    background: #393E46 !important;
 }
 
 .course-sidebar {
@@ -213,14 +237,6 @@ body::-webkit-scrollbar-thumb {
 
 .course-section ul.section-list .section-item .item .btn-primary:hover {
     background: #24d37b !important;
-}
-
-.badge {
-    border: 1px solid #393E46 !important;
-}
-
-.badge .badge-prefix {
-    background-color: #393E46 !important;
 }
 
 /* ----- End Course Info Page Darkmode Section ----- */

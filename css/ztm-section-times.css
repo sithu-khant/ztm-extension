@@ -1,69 +1,112 @@
-/*
- * Author: Matt Smith
- * GitHub: https://github.com/mattcsmith
- * Date: 4th Jan 2024
- * Description: Adds lecture time statistics to each section and the sidebar
- */
+/* 
+ * Author: Sithu Khant
+ * GitHub: https://github.com/sithu-khant 
+ * Last Updated: Tue Jan 23, 2024
+ * Description: Show lecture time data in the course info page
+ */ 
 
- /* NOTE: This includes more !important's than I'd like to have used               */
- /*       However it couldn't really be avoided without making substaintial edits  */
- /*       to the darkmode theme.                                                   */
-
-/*.sect-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+#ztm-section-times-container {
+    display: none;
 }
 
-.sect-watchtime {
+.ztm-section-times-item {
+    width: 80%;
+    margin: 5px auto;
+    line-height: 30px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-size: 12px;
+    border: 1px solid #E3E3E3;
+    background: #EEEEEE;
+    border-radius: 25px;
+    color: #646d76;
+
+    overflow: hidden;
+} 
+
+.ztm-section-times-text {
+    flex-basis: 50%;
+    background: #E3E3E3;
+}
+
+.ztm-section-times-data {
+    flex-basis: 50%; 
+    background: transparent;
+}
+
+.course-section .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+#curriculum-section-times-container {
     display: flex;
 }
 
-.badge {
-  display: flex!important;
-  border: 1px solid #EEEEEE !important;
-  background: #EEEEEE !important;
-  border-radius: 20px!important;
-  padding: 0!important; 
-  margin-left: 15px!important;
-  overflow: hidden;
-  text-align: center;
-  color: #646d76 !important;
+.curriculum-section-times-item {
+    width: 130px;
+    line-height: 25px;
+
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+
+    font-size: 12px;
+    border: 1px solid transparent;
+    background: #EEEEEE;
+    border-radius: 25px;
+    color: #646d76;
+
+    overflow: hidden;
+    margin-left: 5px;
 }
 
-.sidebar-times .badge {
-  margin-left: 0!important;
+.curriculum-section-times-text {
+    flex-basis: 50%;
+    background: #E3E3E3;
 }
 
-.badge .badge-prefix {
-  padding: 8px 6px 8px 12px;
-  background-color: #e3e3e3 !important;
-  border-radius: 20px 0 0 20px;
+.curriculum-section-times-data {
+    flex-basis: 50%; 
+    background: transparent;
+    color: #646d76;
 }
 
-.badge .badge-text {
-  padding: 8px 13px!important; 
-  background: unset !important;
+.for-learning-page {
+    display: inline;
+    font-size: 10px;
+    width: 70px !important;
 }
 
-.sidebar-times .badge {
-  width: 70%;
-  margin-bottom: 15px;
-  text-align: center;
+.for-learning-page .curriculum-section-times-data {
+    flex-basis: 100%;
 }
 
-.sidebar-times .badge-prefix {
-  width: 50%;
-}
-
-.sidebar-times .badge-text {
-  width: 50%;
-}
-
-.sidebar-times {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+/*@media screen and (max-width: 800px) {
+    #curriculum-section-times-container {
+        display: none !important;
+    }
 }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+/*
+ * Author: Matt Smith
+ * GitHub: https://github.com/mattcsmith
+ * Date: 4th Jan 2024
+ * Description: Adds lecture time statistics to each section and the sidebar
+ */
+
+ /* NOTE: This includes more !important's than I'd like to have used               */
+ /*       However it couldn't really be avoided without making substaintial edits  */
+ /*       to the darkmode theme.                                                   */
+
+/*.sect-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sect-watchtime {
+    display: flex;
+}
+
+.badge {
+  display: flex!important;
+  border: 1px solid #EEEEEE !important;
+  background: #EEEEEE !important;
+  border-radius: 20px!important;
+  padding: 0!important; 
+  margin-left: 15px!important;
+  overflow: hidden;
+  text-align: center;
+  color: #646d76 !important;
+}
+
+.sidebar-times .badge {
+  margin-left: 0!important;
+}
+
+.badge .badge-prefix {
+  padding: 8px 6px 8px 12px;
+  background-color: #e3e3e3 !important;
+  border-radius: 20px 0 0 20px;
+}
+
+.badge .badge-text {
+  padding: 8px 13px!important; 
+  background: unset !important;
+}
+
+.sidebar-times .badge {
+  width: 70%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.sidebar-times .badge-prefix {
+  width: 50%;
+}
+
+.sidebar-times .badge-text {
+  width: 50%;
+}
+
+.sidebar-times {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}*/

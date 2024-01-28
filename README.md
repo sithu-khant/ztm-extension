@@ -21,15 +21,14 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 * Toggle sidebar (responsive)
 * Toggle dark mode on all pages
+* Hide Lecture Title
+* Showing total amount of time in each section
 
 
 ## Feature requests
 *(plans to add - top to bottom)*
 
-* [x] Hide Lecture Title (Done)
-* [x] Showing total amount of time in each section by [MathCSmith](https://github.com/mattcsmith) (WIP)
-* [x] To keep the favourite courses at top (Delayed) 
-	* (Temporarily paused working on this feature pending the discussed investigation for optimization and the best user experience)
+* [x] To keep the favourite courses at top (WIP) 
 * [ ] Keep the lecture video resolution the same
 
 
@@ -97,6 +96,37 @@ MIT License
 
 ## Logs
 
+* Mon Jan 29, 2024
+	* (1.29.01) - Created a new pull request for `section-times` feature.
+* Thu Jan 26, 2024
+	* (1.24.01) - Changed to `courseInfoSectionTimes` function.
+	* (1.24.02) - Started `ztmCurriculumSectionTimes` function.
+	* (1.24.03) - `ztmCurriculumSectionTimes` function is working now.
+	* (1.24.04) - Linked `ztmCurriculumSectionTimes` with the popup.
+	* (1.24.05) - Added curriculum section time div to the section title.
+	* (1.25.06) - Section time feature is working.
+	* (1.26.07) - I made it sure.
+* Thu Jan 25, 2024
+	* (1.24.01) - Tested `background.js` script file. 
+* Wed Jan 24, 2024
+	* (1.24.01) - Committed for safety.
+	* (1.24.02) - Created `getTimes` function.
+	* (1.24.03) - Cleaned the codes and created functions.
+	* (1.24.04) - Finished `Course Length`.
+	* (1.24.05) - All the codes working.
+	* (1.24.06) - Cleaned the codes.
+	* (1.24.07) - Cleaned the codes.
+	* (1.24.08) - All the feature function working.
+	* (1.24.09) - Cleaned the codes.
+	* (1.24.10) - The `section-times` feature is now working...
+	* (1.24.11) - Fixed bug for `section-times` feature.
+* Tue Jan 23, 2024
+	* (1.23.01) - Added display none style to `sticky` progress bar.
+	* (1.23.02) - Added `section-times` feature to popup.
+	* (1.23.03) - Added section times html codes to course info page.
+	* (1.23.04) - Added styles to section times html codes.
+	* (1.23.05) - Collected all the minutes.
+	* (1.23.06) - Total hours code is working.
 * Fri Jan 19, 2024
 	* (1.19.01) - Update README.
 * Thu Jan 18, 2024

@@ -56,5 +56,4 @@ if (toggleSidebarHomeBackIcon) {
     // Track the page for every new lecture  
     const ztmToggleSidebarObserver = new MutationObserver(() => ztmToggleSidebar());
     ztmToggleSidebarObserver.observe(document.body, { childList: true, subtree: true });
-    ztmToggleSidebar();
 }

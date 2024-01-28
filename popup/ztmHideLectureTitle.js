@@ -33,14 +33,3 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('ztmHideLectureTitle', ztmHideLectureTitleCheckbox.checked)
     })
 })
-
-// const ztmHideLectureTitleCheckbox = document.getElementById('ztmHideLectureTitleCheckbox');
-
-// const ztmHideLectureTitleIsEnabled = localStorage.getItem('ztmHideLectureTitle') === 'true'
-// ztmHideLectureTitleCheckbox.checked = ztmHideLectureTitleIsEnabled
-
-// const ztmHideLectureTitle = () => {
-//     localStorage.setItem('ztmHideLectureTitle', ztmHideLectureTitleCheckbox.checked)
-// }
-
-// ztmHideLectureTitleCheckbox.addEventListener('change', ztmHideLectureTitle);
