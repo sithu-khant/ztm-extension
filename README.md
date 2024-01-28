@@ -21,15 +21,14 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 * Toggle sidebar (responsive)
 * Toggle dark mode on all pages
+* Hide Lecture Title
+* Showing total amount of time in each section
 
 
 ## Feature requests
 *(plans to add - top to bottom)*
 
-* [x] Hide Lecture Title (Done)
-* [x] Showing total amount of time in each section (WIP)
-* [x] To keep the favourite courses at top (Delayed) 
-	* (Temporarily paused working on this feature pending the discussed investigation for optimization and the best user experience)
+* [x] To keep the favourite courses at top (WIP) 
 * [ ] Keep the lecture video resolution the same
 
 
@@ -97,6 +96,8 @@ MIT License
 
 ## Logs
 
+* Mon Jan 29, 2024
+	* (1.29.01) - Created a new pull request for `section-times` feature.
 * Thu Jan 26, 2024
 	* (1.24.01) - Changed to `courseInfoSectionTimes` function.
 	* (1.24.02) - Started `ztmCurriculumSectionTimes` function.
