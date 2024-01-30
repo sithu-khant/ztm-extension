@@ -98,6 +98,7 @@ MIT License
 
 * Tue Jan 30, 2023
 	* (1.30.01) - Fixed `ztm-section-times` feature showing on the Your Instructor page.
+	* (1.30.02) - Linked with course length instead of header.
 * Mon Jan 29, 2024
 	* (1.29.01) - Created a new pull request for `section-times` feature.
 * Thu Jan 26, 2024

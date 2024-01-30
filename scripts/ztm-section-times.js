@@ -75,11 +75,11 @@ const sidebarSectionTimesDiv = (courseLength, totalWatched, totalLeft) => {
 
     // Get the course progress percentage bar
     const progressBar = document.querySelector('.course-progress-percentage');
-    // Not to show on Your Instructor page
-    const IsThereCourseSection = document.querySelector('.course-section');
+    // Not to show if the course length is zero length
+    const isCourseLengthZero = courseLength == '0min 0s'
 
     // Only add to the page if there is progressBar
-    if (progressBar && IsThereCourseSection) {
+    if (progressBar && !isCourseLengthZero) {
         // Add ztmSidebarSectionTimesDiv
         progressBar.parentNode.insertBefore(ztmSidebarSectionTimesDiv, progressBar.nextSibling);
     }
