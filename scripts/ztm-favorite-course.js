@@ -25,16 +25,13 @@ const addFavCourseDiv = () => {
         </div>
         <div class="btn-group">
             <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button">
-                <i class="bx bxs-heart filtered-fav-courses" id="ztm-fav-course-heart-icon"></i>
+                <i class="bx bxs-heart" id="ztm-fav-course-heart-icon"></i>
             </button>
         </div>
     </div>
     `
 
     courseFilter.parentNode.insertBefore(favCourseDiv, courseFilter.nextSibling);
-
-// progressBar.parentNode.insertBefore(ztmSidebarSectionTimesDiv, progressBar.nextSibling);
-
 };
 
 // Add favorite course heart icon
@@ -98,6 +95,58 @@ const ztmFavoriteCourse = () => {
     });
 }
 
+const favoriteCourse = () => {
+    const ztmFavCourseHeartIcon = document.getElementById('ztm-fav-course-heart-icon');
+
+    // Get the fav course feature status
+    const getFavCourseFeatureStatus = localStorage.getItem('ztmFavCoursesStatus') === 'true';
+
+    if (getFavCourseFeatureStatus) {
+        ztmFavCourseHeartIcon.classList.add('filtered-fav-courses');
+    } 
+
+    // Listner for the click statement
+    ztmFavCourseHeartIcon.addEventListener('click', () => {
+        // toggle the class name by the student click
+        ztmFavCourseHeartIcon.classList.toggle('filtered-fav-courses');
+
+        // Get if there is `filtered-fav-courses` or not
+        const favCourseFeatureStatus = ztmFavCourseHeartIcon.classList.contains('filtered-fav-courses');
+        // Set the favorite course status
+        localStorage.setItem('ztmFavCoursesStatus', favCourseFeatureStatus)
+    });
+}
+
+const hideUnfavoritedCourses = () => {
+    // Get all the courses
+    const ztmCourses = document.querySelectorAll('.col-xs-12.col-sm-6.col-md-4');
+    // Get the fav course feature status
+    const ztmFavCourseFeatureStatus = localStorage.getItem('ztmFavCoursesStatus') === 'true';
+
+    ztmCourses.forEach((course) => {
+        const ztmHeartIconClicked = course.querySelector('.ztm-heart-icon-clicked');
+
+        if (ztmFavCourseFeatureStatus && ztmHeartIconClicked) {
+            course.style.display = 'block';
+        } else {
+            course.style.display = 'none';
+        };
+    });
+
+}
+
+
+
+
+
+
+
+
+
+
+
 addFavCourseDiv();
 ztmFavoriteCourse();
+favoriteCourse();
+// hideUnfavoritedCourses();
 
