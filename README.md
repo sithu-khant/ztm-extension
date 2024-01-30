@@ -102,6 +102,7 @@ MIT License
 	* (1.30.03) - Started `fav-course` section.
 	* (1.30.04) - Styled `ztm-fav-course-button`.
 	* (1.30.05) - This method doesn't work. But I will make a commit with the purpose of this code could be useful later.
+	* (1.30.06) - Collected favorited courses as array.
 * Mon Jan 29, 2024
 	* (1.29.01) - Created a new pull request for `section-times` feature.
 * Thu Jan 26, 2024

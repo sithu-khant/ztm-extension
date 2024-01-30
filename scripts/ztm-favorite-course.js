@@ -13,12 +13,12 @@ boxiconsCss.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
 // Add Boxicons style to the head
 document.head.appendChild(boxiconsCss);
 
-const addFavCourseDiv = () => {
+const addFavCoursesDiv = () => {
     // get the course filter
     const courseFilter = document.querySelector('.course-filter');
 
-    const favCourseDiv = document.createElement('div');
-    favCourseDiv.innerHTML = `
+    const favCoursesDiv = document.createElement('div');
+    favCoursesDiv.innerHTML = `
     <div class="pull-left course-filter ztm-fav-course-button">
         <div class="filter-label">
             Favorites:
@@ -31,7 +31,7 @@ const addFavCourseDiv = () => {
     </div>
     `
 
-    courseFilter.parentNode.insertBefore(favCourseDiv, courseFilter.nextSibling);
+    courseFilter.parentNode.insertBefore(favCoursesDiv, courseFilter.nextSibling);
 };
 
 // Add favorite course heart icon
@@ -45,8 +45,8 @@ const ztmFavoriteCourse = () => {
         const courseCardRow = courseCard.querySelector('.row');
         
         // Create a new div
-        const ztmFavCourseDiv = document.createElement('div');
-        ztmFavCourseDiv.id = 'ztm-fav-course'
+        const ztmFavCoursesDiv = document.createElement('div');
+        ztmFavCoursesDiv.id = 'ztm-fav-course'
         // Create heart icon element 
         // <i class='bx bxs-heart' id='ztm-heart'></i>
         let ztmHeartIcon = document.createElement('i');
@@ -58,11 +58,11 @@ const ztmFavoriteCourse = () => {
         let courseTitle = getCourseTitle.textContent.replaceAll(' ', '').replaceAll(':', '').trim();
         ztmHeartIcon.classList.add(courseTitle);
 
-        // Add `ztmHeartIcon` to `ztmFavCourseDiv`
-        ztmFavCourseDiv.appendChild(ztmHeartIcon);
+        // Add `ztmHeartIcon` to `ztmFavCoursesDiv`
+        ztmFavCoursesDiv.appendChild(ztmHeartIcon);
 
         // Add `ztmHeartIcon` to `courseCardRow`
-        courseCardRow.appendChild(ztmFavCourseDiv);
+        courseCardRow.appendChild(ztmFavCoursesDiv);
     });
 
     // Get all the heart icon
@@ -95,46 +95,62 @@ const ztmFavoriteCourse = () => {
     });
 }
 
-const favoriteCourse = () => {
-    const ztmFavCourseHeartIcon = document.getElementById('ztm-fav-course-heart-icon');
+const filterFavoritedCourses = () => {
+    // Get the fav courses heart icon
+    const ztmFavCoursesHeartIcon = document.getElementById('ztm-fav-course-heart-icon');
 
     // Get the fav course feature status
-    const getFavCourseFeatureStatus = localStorage.getItem('ztmFavCoursesStatus') === 'true';
+    const getFavCoursesFeatureStatus = localStorage.getItem('ztmFavCoursesStatus') === 'true';
 
-    if (getFavCourseFeatureStatus) {
-        ztmFavCourseHeartIcon.classList.add('filtered-fav-courses');
+    if (getFavCoursesFeatureStatus) {
+        ztmFavCoursesHeartIcon.classList.add('filtered-fav-courses');
     } 
 
     // Listner for the click statement
-    ztmFavCourseHeartIcon.addEventListener('click', () => {
+    ztmFavCoursesHeartIcon.addEventListener('click', () => {
         // toggle the class name by the student click
-        ztmFavCourseHeartIcon.classList.toggle('filtered-fav-courses');
+        ztmFavCoursesHeartIcon.classList.toggle('filtered-fav-courses');
 
         // Get if there is `filtered-fav-courses` or not
-        const favCourseFeatureStatus = ztmFavCourseHeartIcon.classList.contains('filtered-fav-courses');
+        const favCoursesFeatureStatus = ztmFavCoursesHeartIcon.classList.contains('filtered-fav-courses');
         // Set the favorite course status
-        localStorage.setItem('ztmFavCoursesStatus', favCourseFeatureStatus)
+        localStorage.setItem('ztmFavCoursesStatus', favCoursesFeatureStatus)
     });
-}
 
-const hideUnfavoritedCourses = () => {
+    // Collect all the favoried courses as array
+    const favoritedCoursesArray = []
     // Get all the courses
     const ztmCourses = document.querySelectorAll('.col-xs-12.col-sm-6.col-md-4');
-    // Get the fav course feature status
-    const ztmFavCourseFeatureStatus = localStorage.getItem('ztmFavCoursesStatus') === 'true';
 
+    // Loop through the courses and append the favoried course to the favoritedCoursesArray
     ztmCourses.forEach((course) => {
-        const ztmHeartIconClicked = course.querySelector('.ztm-heart-icon-clicked');
+        // ztm-heart-icon-clicked
+        const containHeartClick = course.querySelector('.ztm-heart-icon-clicked');
 
-        if (ztmFavCourseFeatureStatus && ztmHeartIconClicked) {
-            course.style.display = 'block';
-        } else {
-            course.style.display = 'none';
-        };
-    });
+        if (containHeartClick) {
+            favoritedCoursesArray.push(course.innerHTML)
+        }
+    })
+
+    console.log(favoritedCoursesArray);
 
 }
 
+// const hideUnfavoritedCourses = () => {
+//     // Get the fav course feature status
+//     const ztmFavCoursesFeatureStatus = localStorage.getItem('ztmFavCoursesStatus') === 'true';
+
+//     ztmCourses.forEach((course) => {
+//         const ztmHeartIconClicked = course.querySelector('.ztm-heart-icon-clicked');
+
+//         if (ztmFavCoursesFeatureStatus && ztmHeartIconClicked) {
+//             course.style.display = 'block';
+//         } else {
+//             course.style.display = 'none';
+//         };
+//     });
+
+// }
 
 
 
@@ -145,8 +161,9 @@ const hideUnfavoritedCourses = () => {
 
 
 
-addFavCourseDiv();
+
+addFavCoursesDiv();
 ztmFavoriteCourse();
-favoriteCourse();
+filterFavoritedCourses();
 // hideUnfavoritedCourses();
 
