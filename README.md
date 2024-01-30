@@ -96,6 +96,8 @@ MIT License
 
 ## Logs
 
+* Tue Jan 30, 2023
+	* (1.30.01) - Fixed `ztm-section-times` feature showing on the Your Instructor page.
 * Mon Jan 29, 2024
 	* (1.29.01) - Created a new pull request for `section-times` feature.
 * Thu Jan 26, 2024
