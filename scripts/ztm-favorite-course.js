@@ -13,6 +13,30 @@ boxiconsCss.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
 // Add Boxicons style to the head
 document.head.appendChild(boxiconsCss);
 
+const addFavCourseDiv = () => {
+    // get the course filter
+    const courseFilter = document.querySelector('.course-filter');
+
+    const favCourseDiv = document.createElement('div');
+    favCourseDiv.innerHTML = `
+    <div class="pull-left course-filter ztm-fav-course-button">
+        <div class="filter-label">
+            Favorites:
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button">
+                <i class="bx bxs-heart filtered-fav-courses" id="ztm-fav-course-heart-icon"></i>
+            </button>
+        </div>
+    </div>
+    `
+
+    courseFilter.parentNode.insertBefore(favCourseDiv, courseFilter.nextSibling);
+
+// progressBar.parentNode.insertBefore(ztmSidebarSectionTimesDiv, progressBar.nextSibling);
+
+};
+
 // Add favorite course heart icon
 const ztmFavoriteCourse = () => {
     // Get course cards
@@ -74,5 +98,6 @@ const ztmFavoriteCourse = () => {
     });
 }
 
+addFavCourseDiv();
 ztmFavoriteCourse();
 
