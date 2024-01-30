@@ -74,5 +74,33 @@ const ztmFavoriteCourse = () => {
     });
 }
 
-ztmFavoriteCourse();
+// Sort the courses
+const ztmFavoriteSort = () => {
+    // Get the course lis
+    let courseList = document.querySelector('.course-list');
+    
+    // Get the courses
+    let courses = courseList.querySelectorAll('.col-xs-12.col-sm-6.col-md-4')
+    // Create an arrry form the course
+    let courseArray = Array.from(courses);
 
+    // Sort the courses
+    courseArray.sort((firstCourse, secondCourse) => {
+        // Get the heart icon
+        const firstCourseFavorited = firstCourse.querySelector('.ztm-heart-icon-clicked') !== null;
+        const secondCourseFavorited = secondCourse.querySelector('.ztm-heart-icon-clicked') !== null;
+
+        // Put first the courses with class
+        if (!firstCourseFavorited && secondCourseFavorited) return 1;
+        if (firstCourseFavorited && !secondCourseFavorited) return -1;
+
+        // keep the original for the courses without favorited
+        return 0;
+    });
+
+    // Update the course list order
+    courseArray.forEach(course => courseList.appendChild(course));
+};
+
+ztmFavoriteCourse();
+ztmFavoriteSort();
