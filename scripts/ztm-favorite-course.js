@@ -133,7 +133,7 @@ const favCoursesHeartIcon = () => {
             let courseName = courseListing.querySelector('.course-listing-title').innerText;
             let courseUrl = courseListing.getAttribute('data-course-url');
 
-            // Get the array from local storage
+            // Get the favCoursesArray from local storage
             let favCoursesArray = JSON.parse(localStorage.getItem('favLinkArrayData')) || [];
             
             // Remove the course if it is not favorited
@@ -170,9 +170,31 @@ const favCoursesHeartIcon = () => {
 
 const favCourses = () => {
     // Create a table div
-    const ztmFavCourseTableDiv = document.createElement('div');
+    let ztmFavCourseDiv = document.createElement('div');
     // Add ID 
-    ztmFavCourseTableDiv.id = 'ztm-fav-course-container'
+    ztmFavCourseDiv.id = 'ztm-fav-courses-container'
+
+    // Get the favCoursesArray from local storage
+    let favCoursesArray = JSON.parse(localStorage.getItem('favLinkArrayData')) || [];
+    
+    // Loop through the array and append as child to ztmFavCourseDiv
+    favCoursesArray.forEach((course) => {
+        let courseLink = document.createElement('a');
+        courseLink.id = 'ztm-fav-courses'
+
+        courseLink.href = course.url
+        courseLink.innerText = course.name
+
+        console.log(courseLink);
+
+        ztmFavCourseDiv.appendChild(courseLink);
+    });
+
+    // Get the course list
+    let courseList = document.querySelector('.course-list');
+
+    // Add ztmFavCourseDiv to the courseList
+    courseList.appendChild(ztmFavCourseDiv);
     
 };
 
