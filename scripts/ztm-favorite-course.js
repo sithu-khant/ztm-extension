@@ -57,6 +57,20 @@ const favCoursesButton = () => {
 
         // Get if there is `filtered-fav-courses` or not
         const favCoursesFeatureStatus = ztmFavCoursesHeartIcon.classList.contains('filtered-fav-courses');
+
+        // Get course cards
+        let courseCards = document.querySelectorAll('.col-xs-12.col-sm-6.col-md-4');
+
+        courseCards.forEach((course) => {
+            course.style.display = favCoursesFeatureStatus ? 'none' : 'block'
+        });
+
+        // Get the pagination
+        let pagination = document.querySelector('.pagination');
+        if (pagination) {
+            pagination.style.display = favCoursesFeatureStatus ? 'none' : ''
+        };
+        
         // Set the favorite course status
         localStorage.setItem('ztmFavCoursesStatus', favCoursesFeatureStatus)
     });
