@@ -182,25 +182,32 @@ const ztmFavCourses = () => {
 
     // Get course cards
     let courseCards = document.querySelectorAll('.col-xs-12.col-sm-6.col-md-4');
-    // Get the pagination
-    let pagination = document.querySelector('.pagination');
 
     courseCards.forEach((course) => {
         course.style.display = IsEnabledFavCourses ? 'none' : 'block'
     });
 
-    pagination.style.display = IsEnabledFavCourses ? 'none' : ''
+    // Get the pagination
+    let pagination = document.querySelector('.pagination');
+    if (pagination) {
+        pagination.style.display = IsEnabledFavCourses ? 'none' : ''
+    }
 }
 
 
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
-        favCoursesButton();
-        favCoursesHeartIcon();
+        // Get the ztm-fav-course-button
+        let ztmFavCourseButton = document.querySelector('.ztm-fav-course-button');
+        // To prevent overwritting
+        if (!ztmFavCourseButton) {
+            favCoursesButton();
+            favCoursesHeartIcon();
 
-        favCourses();
-        ztmFavCourses();
+            favCourses();
+            ztmFavCourses();
+        };
     };
 });
 
