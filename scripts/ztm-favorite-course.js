@@ -132,6 +132,7 @@ const favCoursesHeartIcon = () => {
             let courseListing = heartIcon.closest('.course-listing');
             let courseName = courseListing.querySelector('.course-listing-title').innerText;
             let courseUrl = courseListing.getAttribute('data-course-url');
+            let coursePercentage = courseListing.querySelector('.percentage').innerText;
 
             // Get the favCoursesArray from local storage
             let favCoursesArray = JSON.parse(localStorage.getItem('favLinkArrayData')) || [];
@@ -146,7 +147,8 @@ const favCoursesHeartIcon = () => {
                     // Create an object for the current course
                     let courseData = {
                         name: courseName,
-                        url: courseUrl
+                        url: courseUrl,
+                        percentage: coursePercentage
                     };
                     // Push the courseData object to the favCoursesArray
                     favCoursesArray.push(courseData);
@@ -179,15 +181,26 @@ const favCourses = () => {
     
     // Loop through the array and append as child to ztmFavCourseDiv
     favCoursesArray.forEach((course) => {
-        let courseLink = document.createElement('a');
-        courseLink.id = 'ztm-fav-courses'
+        let courseCard = document.createElement('a');
+        courseCard.id = 'ztm-fav-course-card'
 
+        // For course link
+        let courseLink = document.createElement('a');
+        courseLink.id = 'ztm-fav-course-link'
         courseLink.href = course.url
         courseLink.innerText = course.name
 
-        console.log(courseLink);
+        // For course percentage
+        let coursePercentage = document.createElement('p');
+        coursePercentage.id = 'ztm-fav-course-link'
+        coursePercentage.innerText = course.percentage
 
-        ztmFavCourseDiv.appendChild(courseLink);
+        // Append course link and course percentage to the course card
+        courseCard.appendChild(courseLink);
+        courseCard.appendChild(coursePercentage);
+        
+        // Append course card to the ztmFavCourseDiv
+        ztmFavCourseDiv.appendChild(courseCard);
     });
 
     // Get the course list
@@ -195,7 +208,6 @@ const favCourses = () => {
 
     // Add ztmFavCourseDiv to the courseList
     courseList.appendChild(ztmFavCourseDiv);
-    
 };
 
 const ztmFavCourses = () => {
@@ -215,6 +227,8 @@ const ztmFavCourses = () => {
         pagination.style.display = IsEnabledFavCourses ? 'none' : ''
     }
 }
+
+
 
 
 

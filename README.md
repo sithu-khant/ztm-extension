@@ -105,6 +105,7 @@ MIT License
 	* (1.31.06) - Can be store/remove fav courses dynamically.
 	* (1.31.07) - To prevent overwritting.
 	* (1.31.08) - Add favorited courses to the courseList.
+	* (1.31.09) - Added course percentage to the fav course list.
 * Tue Jan 30, 2023
 	* (1.30.01) - Fixed `ztm-section-times` feature showing on the Your Instructor page.
 	* (1.30.02) - Linked with course length instead of header.
