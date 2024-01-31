@@ -13,42 +13,7 @@ boxiconsCss.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
 // Add Boxicons style to the head
 document.head.appendChild(boxiconsCss);
 
-// Card Style
-const cardStyles = document.createElement('style');
-cardStyles.innerHTML = `
-<style>
-.course-listing {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100%;
-    box-shadow: 2px 4px 40px rgba(19, 15, 235, 0.1) !important;
-    transition: box-shadow 0.4s ease-in-out !important;
-
-    &:hover {
-    box-shadow: 2px 4px 40px rgba(19, 15, 235, 0.3) !important;
-    }
-}
-
-
-.course-listing .course-box-image-container {
-    width: 100% !important;
-    height: 200px !important;
-    cursor: pointer !important;
-}
-
-
-@media screen and (max-width: 765px) {
-    .course-listing-title { 
-        min-height: 100px !important;
-    }
-}
-.course-listing .course-listing-subtitle {
-    height: 200px !important;
-}
-</style>`
-
-
-const addFavCoursesDiv = () => {
+const addFavCoursesHeartIconDiv = () => {
     // get the course filter
     const courseFilter = document.querySelector('.course-filter');
 
@@ -70,7 +35,7 @@ const addFavCoursesDiv = () => {
 };
 
 // Add favorite course heart icon
-const ztmFavoriteCourse = () => {
+const addFavCourseHeartIcon = () => {
     // Get the fav courses heart icon
     const ztmFavCoursesHeartIcon = document.getElementById('ztm-fav-course-heart-icon');
 
@@ -120,7 +85,11 @@ const ztmFavoriteCourse = () => {
         // Add `ztmHeartIcon` to `courseCardRow`
         courseCardRow.appendChild(ztmFavCoursesDiv);
     });
+}
 
+const getAllFavCourses = () => {
+    // Collect all the fav course path link
+    const favCoursesArray = []
     // Get all the heart icon
     let ztmHeartIcon = document.querySelectorAll('#ztm-heart-icon');
 
@@ -144,62 +113,43 @@ const ztmFavoriteCourse = () => {
             // Toggle `ztm-heart-icon-clicked` class
             this.classList.toggle('ztm-heart-icon-clicked');
 
+            // Add fav course link to the favCoursesArray
+
             // Store the click state
             let isFavorited = this.classList.contains('ztm-heart-icon-clicked');
             localStorage.setItem(`${courseTitle}_isFavorited`, isFavorited);
         });
     });
+
+
 }
 
-const filterFavoritedCourses = () => {
-
-    // Collect all the favoried courses as array
-    const favoritedCoursesArray = []
-    // Get all the courses
-    const ztmCourses = document.querySelectorAll('.col-xs-12.col-sm-6.col-md-4');
-
-    // Loop through the courses and append the favoried course to the favoritedCoursesArray
-    ztmCourses.forEach((course) => {
-        // ztm-heart-icon-clicked
-        const containHeartClick = course.querySelector('.ztm-heart-icon-clicked');
-
-        if (containHeartClick) {
-            favoritedCoursesArray.push(course.innerHTML)
-            // favoritedCoursesArray.push(cardStyles.innerHTML);
-        }
-    })
-
-    // Turn favoritedCoursesArray value into single array
-    const filteredFavCoursesString = favoritedCoursesArray.join('');
-    console.log(filteredFavCoursesString)
-
-    // Get the course list
-    const ztmCourseList = document.querySelector('.course-list');
+const favoritedCoursesTable = () => {
+    // Create a table div
+    const ztmFavCourseTableDiv = document.createElement('div');
+    // Add ID 
+    ztmFavCourseTableDiv.id = 'ztm-fav-course-container'
 
 
-    // Replace the course list with the new filtered fav course list
-    if (ztmCourseList) {
-        ztmCourseList.innerHTML = filteredFavCoursesString
-    }
+
+    
 }
 
-// const hideUnfavoritedCourses = () => {
-//     // Get the fav course feature status
-//     const ztmFavCoursesFeatureStatus = localStorage.getItem('ztmFavCoursesStatus') === 'true';
+const ztmFavCourses = () => {
+    // Get the addFavCoursesHeartIconDiv check status
+    const IsEnabledFavCourses =  localStorage.getItem('ztmFavCoursesStatus') === 'true'
 
-//     ztmCourses.forEach((course) => {
-//         const ztmHeartIconClicked = course.querySelector('.ztm-heart-icon-clicked');
+    // Get course cards
+    let courseCards = document.querySelectorAll('.col-xs-12.col-sm-6.col-md-4');
+    // Get the pagination
+    let pagination = document.querySelector('.pagination');
 
-//         if (ztmFavCoursesFeatureStatus && ztmHeartIconClicked) {
-//             course.style.display = 'block';
-//         } else {
-//             course.style.display = 'none';
-//         };
-//     });
+    courseCards.forEach((course) => {
+        course.style.display = IsEnabledFavCourses ? 'none' : 'block'
+    });
 
-// }
-
-
+    pagination.style.display = IsEnabledFavCourses ? 'none' : ''
+}
 
 
 
@@ -209,8 +159,11 @@ const filterFavoritedCourses = () => {
 
 
 
-addFavCoursesDiv();
-ztmFavoriteCourse();
-filterFavoritedCourses();
-// hideUnfavoritedCourses();
+
+
+
+addFavCoursesHeartIconDiv();
+addFavCourseHeartIcon();
+favoritedCoursesTable();
+ztmFavCourses();
 

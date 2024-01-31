@@ -59,34 +59,5 @@
 
 /* ----- Build-in CSS ----- */
 
-/*@media (min-width: 992px) {
-	.col-md-4 {
-	    width: 33.33333333% !important;
-	}
-}
-
-@media (min-width: 768px) {
-	.col-sm-6 {
-	    width: 50% !important;
-	}
-}
-
-.col-xs-12 {
-    width: 100% !important;
-}*/
-
-.row.course-list.list {
-	width: 100%;
-	display: flex !important;
-	flex-direction: column;
-/*	flex-basis: 30%;*/
-	justify-content: space-between;
-}
-
-.course-listing {
-    display: flex;
-    width: 40%;
-}
-
 
 
