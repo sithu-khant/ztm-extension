@@ -57,7 +57,57 @@
 	color: #B01E28;
 }
 
-/* ----- Build-in CSS ----- */
+/* ----- Fav Courses - Start ----- */
+
+#ztm-fav-courses-container {
+	border-radius: 10px;
+	overflow: hidden;
+	padding-bottom: 40vh;
+}
+
+#ztm-fav-course-card {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 2px;
+	font-size: 18px;
+}
+
+#ztm-fav-course-link {
+	flex-basis: 85%;
+	padding: 8px 20px;
+}
+
+#ztm-fav-course-percentage {
+	flex-basis: 15%;
+	margin: unset !important;
+	padding: 8px 20px;
+	font-weight: 500 !important;
+	background: #f2f2f2;
+	color: #30d683;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----- Fav Courses - End ----- */
+
 
 
 

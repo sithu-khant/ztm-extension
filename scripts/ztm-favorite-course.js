@@ -52,6 +52,7 @@ const favCoursesButton = () => {
 
     // Listner for the click statement
     ztmFavCoursesHeartIcon.addEventListener('click', () => {
+
         // toggle the class name by the student click
         ztmFavCoursesHeartIcon.classList.toggle('filtered-fav-courses');
 
@@ -191,11 +192,11 @@ const favCourses = () => {
     ztmFavCourseDiv.id = 'ztm-fav-courses-container'
 
     // Get the favCoursesArray from local storage
-    let favCoursesArray = JSON.parse(localStorage.getItem('favLinkArrayData')) || [];
+    let favCoursesArray = JSON.parse(localStorage.getItem('favLinkArrayData'));
     
     // Loop through the array and append as child to ztmFavCourseDiv
     favCoursesArray.forEach((course) => {
-        let courseCard = document.createElement('a');
+        let courseCard = document.createElement('div');
         courseCard.id = 'ztm-fav-course-card'
 
         // For course link
@@ -206,7 +207,7 @@ const favCourses = () => {
 
         // For course percentage
         let coursePercentage = document.createElement('p');
-        coursePercentage.id = 'ztm-fav-course-link'
+        coursePercentage.id = 'ztm-fav-course-percentage'
         coursePercentage.innerText = course.percentage
 
         // Append course link and course percentage to the course card
@@ -224,7 +225,7 @@ const favCourses = () => {
     courseList.appendChild(ztmFavCourseDiv);
 };
 
-const ztmFavCourses = () => {
+const showFavoritedCourses = () => {
     // Get the addFavCoursesHeartIconDiv check status
     const IsEnabledFavCourses =  localStorage.getItem('ztmFavCoursesStatus') === 'true'
 
@@ -243,23 +244,34 @@ const ztmFavCourses = () => {
 }
 
 
+const ztmFavCourses = () => {
+    // Get the ztm-fav-course-button
+    let ztmFavCourseButton = document.querySelector('.ztm-fav-course-button');
+    // To prevent overwritting
+    if (!ztmFavCourseButton) {
+        favCoursesButton();
+        favCoursesHeartIcon();
 
+        favCourses();
+        showFavoritedCourses();
+    };
 
+    console.log('running...');
+}
+
+// // Get all the course listing
+// let courseListing = document.querySelector('.course-list');
+
+// // Track the fav course changes
+// const ztmFavCoursesObserver = new MutationObserver(() => ztmFavCourses());
+// ztmFavCoursesObserver.observe(courseListing, { childList: true, subtree: true })
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
-        // Get the ztm-fav-course-button
-        let ztmFavCourseButton = document.querySelector('.ztm-fav-course-button');
-        // To prevent overwritting
-        if (!ztmFavCourseButton) {
-            favCoursesButton();
-            favCoursesHeartIcon();
-
-            favCourses();
-            ztmFavCourses();
-        };
+        ztmFavCourses();
     };
 });
+
 
 
 
