@@ -195,9 +195,14 @@ const favCourses = () => {
     let favCoursesArray = JSON.parse(localStorage.getItem('favLinkArrayData'));
     
     // Loop through the array and append as child to ztmFavCourseDiv
-    favCoursesArray.forEach((course) => {
+    favCoursesArray.forEach((course, index) => {
         let courseCard = document.createElement('div');
         courseCard.id = 'ztm-fav-course-card'
+
+        // For course link
+        let courseIndex = document.createElement('p');
+        courseIndex.id = 'ztm-fav-course-index'
+        courseIndex.innerText = `${index + 1}.`
 
         // For course link
         let courseLink = document.createElement('a');
@@ -211,6 +216,7 @@ const favCourses = () => {
         coursePercentage.innerText = course.percentage
 
         // Append course link and course percentage to the course card
+        courseCard.appendChild(courseIndex);
         courseCard.appendChild(courseLink);
         courseCard.appendChild(coursePercentage);
         

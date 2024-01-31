@@ -108,6 +108,7 @@ MIT License
 	* (1.31.09) - Added course percentage to the fav course list.
 	* (1.31.10) - Committed for safety.
 	* (1.31.11) - Styled the favorite courses.
+	* (1.31.12) - Added course index.
 * Tue Jan 30, 2023
 	* (1.30.01) - Fixed `ztm-section-times` feature showing on the Your Instructor page.
 	* (1.30.02) - Linked with course length instead of header.
