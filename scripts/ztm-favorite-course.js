@@ -13,7 +13,7 @@ boxiconsCss.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
 // Add Boxicons style to the head
 document.head.appendChild(boxiconsCss);
 
-const addFavCoursesHeartIconDiv = () => {
+const addFavCoursesButtonDiv = () => {
     // get the course filter
     const courseFilter = document.querySelector('.course-filter');
 
@@ -34,8 +34,7 @@ const addFavCoursesHeartIconDiv = () => {
     courseFilter.parentNode.insertBefore(favCoursesDiv, courseFilter.nextSibling);
 };
 
-// Add favorite course heart icon
-const addFavCourseHeartIcon = () => {
+const favCoursesButton = () => {
     // Get the fav courses heart icon
     const ztmFavCoursesHeartIcon = document.getElementById('ztm-fav-course-heart-icon');
 
@@ -56,7 +55,10 @@ const addFavCourseHeartIcon = () => {
         // Set the favorite course status
         localStorage.setItem('ztmFavCoursesStatus', favCoursesFeatureStatus)
     });
+};
 
+// Add favorite course heart icon
+const addFavCoursesHeartIcon = () => {
     // Get course cards
     let courseCards = document.querySelectorAll('.course-listing');
 
@@ -87,9 +89,7 @@ const addFavCourseHeartIcon = () => {
     });
 }
 
-const getAllFavCourses = () => {
-    // Collect all the fav course path link
-    const favCoursesArray = []
+const favCoursesHeartIcon = () => {
     // Get all the heart icon
     let ztmHeartIcon = document.querySelectorAll('#ztm-heart-icon');
 
@@ -120,20 +120,21 @@ const getAllFavCourses = () => {
             localStorage.setItem(`${courseTitle}_isFavorited`, isFavorited);
         });
     });
+};
 
+const getAllFavCourses = () => {
+    // Collect all the fav course path link
+    const favCoursesArray = []
 
-}
+};
 
-const favoritedCoursesTable = () => {
+const addfavCoursesMainDiv = () => {
     // Create a table div
     const ztmFavCourseTableDiv = document.createElement('div');
     // Add ID 
     ztmFavCourseTableDiv.id = 'ztm-fav-course-container'
-
-
-
     
-}
+};
 
 const ztmFavCourses = () => {
     // Get the addFavCoursesHeartIconDiv check status
@@ -153,17 +154,18 @@ const ztmFavCourses = () => {
 
 
 
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.action === 'windowChanged') {
+        addFavCoursesButtonDiv();
+        favCoursesButton();
+        addFavCoursesHeartIcon();
+        favCoursesHeartIcon();
+        getAllFavCourses();
+        addfavCoursesMainDiv();
+        ztmFavCourses();
+    };
+});
 
 
 
-
-
-
-
-
-
-addFavCoursesHeartIconDiv();
-addFavCourseHeartIcon();
-favoritedCoursesTable();
-ztmFavCourses();
 
