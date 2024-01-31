@@ -122,11 +122,37 @@ const favCoursesHeartIcon = () => {
     });
 };
 
-const getAllFavCourses = () => {
-    // Collect all the fav course path link
-    const favCoursesArray = []
+// Collect all the fav course path link
+// const favCoursesLinkArray = []
 
+const getAllFavCourses = () => {
+    // Get the link array from the local storage
+    let favCoursesLinkArray = [];
+    const getFavLinkArray = localStorage.getItem('favLinkArray');
+    if (getFavLinkArray) {
+        favCoursesLinkArray = JSON.parse(getFavLinkArray);
+    }
+
+    // Get the course list
+    let courseList = document.querySelectorAll('.course-listing');
+
+    // Loop through the cards
+    courseList.forEach((course) => {
+        // Check if it contains the 'ztm-heart-icon-clicked' class
+        let isFavorited = course.querySelector('.ztm-heart-icon-clicked');
+        if (isFavorited) {
+            let courseLink = course.getAttribute('data-course-id');
+            console.log(courseLink);
+            favCoursesLinkArray.push(courseLink);
+        }
+    });
+
+    // Store the updated data in the localStorage
+    localStorage.setItem('favLinkArray', JSON.stringify(favCoursesLinkArray));
+
+    console.log(favCoursesLinkArray);
 };
+
 
 const addfavCoursesMainDiv = () => {
     // Create a table div

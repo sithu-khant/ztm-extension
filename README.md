@@ -100,6 +100,7 @@ MIT License
 	* (1.31.01) - This method also doesn't work. But I will make a commit for later use.
 	* (1.31.02) - Committed for safety.
 	* (1.31.03) - Cleaned the codes.
+	* (1.31.04) - Stored data on the local storage.
 * Tue Jan 30, 2023
 	* (1.30.01) - Fixed `ztm-section-times` feature showing on the Your Instructor page.
 	* (1.30.02) - Linked with course length instead of header.
