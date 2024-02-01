@@ -100,6 +100,7 @@ MIT License
 	* (2.1.01) - Started new method for `ztm-favorite-courses`.
 	* (2.1.02) - Committed for safety.
 	* (2.1.03) - `toggleFavCourses` working...
+	* (2.1.04) - Committed for safety.
 * Wed Jan 31, 2024
 	* (1.31.01) - This method also doesn't work. But I will make a commit for later use.
 	* (1.31.02) - Committed for safety.
