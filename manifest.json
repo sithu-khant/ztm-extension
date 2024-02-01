@@ -35,10 +35,10 @@
 		},
 		{
 			"js": [
-				"scripts/ztm-favorite-course.js"
+				"scripts/ztm-favorite-courses.js"
 			],
 			"css": [
-				"css/ztm-favorite-course.css"
+				"css/ztm-favorite-courses.css"
 			],
 			"matches": [
 				"https://academy.zerotomastery.io/*"

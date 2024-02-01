@@ -9,19 +9,19 @@
 	outline: none !important;
 }
 
-.ztm-fav-course-button {
+.ztm-fav-courses-button {
 	display: flex !important;
 	align-items: center !important;
 }
 
-#ztm-fav-course-heart-icon {
+#ztm-fav-courses-heart-icon {
 	font-size: 22px;
 	cursor: pointer;
 	color: #989898;
 	opacity: 0.8;
 }
 
-#ztm-fav-course-heart-icon:hover {
+#ztm-fav-courses-heart-icon:hover {
 	opacity: 1;
 }
 
@@ -33,7 +33,7 @@
 	position: relative;
 }
 
-#ztm-fav-course {
+#ztm-fav-courses {
 	position: absolute;
 	top: 2%;
 	right: 2%;
@@ -53,8 +53,8 @@
 	opacity: 1;
 }
 
-#ztm-fav-course .ztm-heart-icon-clicked {
-	color: #B01E28;
+#ztm-fav-courses .ztm-heart-icon-clicked {
+	color: #B01E28 !important;
 }
 
 /* ----- Fav Courses - Start ----- */

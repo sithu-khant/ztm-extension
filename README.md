@@ -96,7 +96,9 @@ MIT License
 
 ## Logs
 
-* Wed Jan 31, 2023
+* Thu Feb 1, 2024
+	* (2.1.01) - Started new method for `ztm-favorite-courses`.
+* Wed Jan 31, 2024
 	* (1.31.01) - This method also doesn't work. But I will make a commit for later use.
 	* (1.31.02) - Committed for safety.
 	* (1.31.03) - Cleaned the codes.
@@ -109,7 +111,7 @@ MIT License
 	* (1.31.10) - Committed for safety.
 	* (1.31.11) - Styled the favorite courses.
 	* (1.31.12) - Added course index.
-* Tue Jan 30, 2023
+* Tue Jan 30, 2024
 	* (1.30.01) - Fixed `ztm-section-times` feature showing on the Your Instructor page.
 	* (1.30.02) - Linked with course length instead of header.
 	* (1.30.03) - Started `fav-course` section.

@@ -98,11 +98,11 @@ body::-webkit-scrollbar-thumb {
     background: #EEEEEE !important;
 }
 
-#ztm-fav-course {
+#ztm-fav-courses {
     background: transparent !important;
 }
 
-#ztm-fav-course .ztm-heart-clicked {
+#ztm-fav-courses .ztm-heart-clicked {
     color: #B01E28 !important;
 }
 
