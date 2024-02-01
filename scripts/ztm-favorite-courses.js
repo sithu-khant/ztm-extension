@@ -64,8 +64,11 @@ const favCoursesComponents = () => {
     });
 };
 
+// Get all the favorited course array from the local storage
+let favCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
 
-const favCourses = () => {
+
+const favCoursesCards = () => {
     // Get all the heart icon
     let ztmHeartIcon = document.querySelectorAll('#ztm-heart-icon');
 
@@ -80,9 +83,6 @@ const favCourses = () => {
         if (isFavorited) {
             heartIcon.classList.add('ztm-heart-icon-clicked');
         };
-
-        // Get all the favorited course array from the local storage
-        let favCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
 
         // Toggle heart icon click
         heartIcon.addEventListener('click', function (event) {
@@ -127,14 +127,62 @@ const favCourses = () => {
             // favCoursesArray.push(favoritedCourseInnerHTML);
 
             // Store the favorite courses data array in the local storage
-            localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));            
-
-            console.log(favCoursesArray);
-
+            localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));
         });
+    });
+};
 
-        localStorage.removeItem('favCoursesArrayData');
+// toggle fav courses
+const toggleFavCourses = () => {
+    // Get the ztm-fav-courses-heart-icon
+    let ztmFavCoursesHeartIcon = document.querySelector('#ztm-fav-courses-heart-icon');
+    // Get if there is `filtered-fav-courses` or not
+    let favCoursesButtonStatus = ztmFavCoursesHeartIcon.classList.contains('filtered-fav-courses');
 
+    // Get course cards
+    let courseCards = document.querySelectorAll('.col-xs-12.col-sm-6.col-md-4');
+
+    courseCards.forEach((course) => {
+        course.style.display = favCoursesButtonStatus ? 'none' : 'block'
+    });
+
+    // Get the pagination
+    let pagination = document.querySelector('.pagination');
+    if (pagination) {
+        pagination.style.display = favCoursesButtonStatus ? 'none' : ''
+    };
+};
+
+//
+const favCourses = () => {
+
+    // Get the ztm-fav-courses-heart-icon
+    let ztmFavCoursesHeartIcon = document.querySelector('#ztm-fav-courses-heart-icon');
+
+    // Get the fav course feature status ztm-fav-courses-button
+    let getFavCoursesButtonStatus = localStorage.getItem('favCoursesButtonStatus') === 'true';
+
+    if (getFavCoursesButtonStatus) {
+        ztmFavCoursesHeartIcon.classList.add('filtered-fav-courses');   
+    } 
+    // toggle fav courses
+    toggleFavCourses();
+
+    // Listner for the click statement
+    ztmFavCoursesHeartIcon.addEventListener('click', () => {
+        // Store the favorite courses data array in the local storage
+        localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));
+
+        // toggle the class name by the student click
+        ztmFavCoursesHeartIcon.classList.toggle('filtered-fav-courses');
+        // toggle fav courses
+        toggleFavCourses();
+
+        // Get if there is `filtered-fav-courses` or not
+        let favCoursesButtonStatus = ztmFavCoursesHeartIcon.classList.contains('filtered-fav-courses');
+
+        // Set the favorite course status
+        localStorage.setItem('favCoursesButtonStatus', favCoursesButtonStatus)
     });
 };
 
@@ -166,6 +214,7 @@ const favCourses = () => {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         favCoursesComponents();
+        favCoursesCards();
         favCourses();
     };
 });
