@@ -81,11 +81,13 @@ const favCourses = () => {
             heartIcon.classList.add('ztm-heart-icon-clicked');
         };
 
+        // Get all the favorited course array from the local storage
+        let favCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
+
         // Toggle heart icon click
         heartIcon.addEventListener('click', function (event) {
             // Disable to click
             event.stopPropagation();
-
             // Toggle `ztm-heart-icon-clicked` class
             heartIcon.classList.toggle('ztm-heart-icon-clicked');
 
@@ -93,9 +95,55 @@ const favCourses = () => {
             let isFavorited = heartIcon.classList.contains('ztm-heart-icon-clicked');
             // Store the click state
             localStorage.setItem(`${courseTitle}_isFavorited`, isFavorited);
+
+            // Get the course data
+            let favoritedCourse = heartIcon.closest('.col-xs-12.col-sm-6.col-md-4');
+            let favoritedCourseTitle = favoritedCourse.querySelector('.course-listing-title').innerText;
+            let favoritedCourseInnerHTML = favoritedCourse.innerHTML;
+
+            // Get the course title
+            const getCourseTitle = (courseString) => {
+                // Temporary div for storing course string as the innerHTML
+                let tempDiv = document.createElement('div');
+                tempDiv.innerHTML = courseString;
+
+                let courseTitle = tempDiv.querySelector('.course-listing-title');
+
+                console.log(courseTitle.innerText);
+                return courseTitle ? courseTitle.innerText : ''
+            }
+
+            // If not favorited, remove (filter) that course for code improvement.
+            if (!isFavorited) {
+                favCoursesArray = favCoursesArray.filter((courseString) => getCourseTitle(courseString) !== favoritedCourseTitle);
+            } else {
+                const isStored = favCoursesArray.some((courseString) => getCourseTitle(courseString) === favoritedCourseTitle);
+                // Is not already stored in the localStorage, append it
+                if (!isStored) {
+                    favCoursesArray.push(favoritedCourseInnerHTML);
+                };
+            };
+
+            // favCoursesArray.push(favoritedCourseInnerHTML);
+
+            // Store the favorite courses data array in the local storage
+            localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));            
+
+            console.log(favCoursesArray);
+
         });
+
+        localStorage.removeItem('favCoursesArrayData');
+
     });
 };
+
+
+
+
+
+
+
 
 
 
