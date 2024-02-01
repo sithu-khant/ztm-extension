@@ -247,17 +247,24 @@ const toggleFavCoursesButton = () => {
 
 
 
+const ztmFavoriteCourses = () => {
+    // Only work on the hompage
+    // get the course filter
+    const courseFilter = document.querySelector('.course-filter');
 
+    if (courseFilter) {
+        favCoursesComponents();
+        favCoursesCards();
+        toggleFavCoursesButton();
+    };
+};
 
 
 
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
-        favCoursesComponents();
-        favCoursesCards();
-        toggleFavCoursesButton();
-
+        ztmFavoriteCourses();
         // localStorage.removeItem('favCoursesArrayData');
     };
 });
