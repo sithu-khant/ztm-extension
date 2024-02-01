@@ -163,6 +163,12 @@ const toggleCourses = () => {
         course.style.display = favCoursesButtonStatus ? 'none' : 'block'
     });
 
+    // Get the filterTitle
+    let filterTitle = document.querySelector('.filter-title');
+    if (filterTitle) {
+        filterTitle.style.display = favCoursesButtonStatus ? 'none' : ''
+    };
+
     // Get the pagination
     let pagination = document.querySelector('.pagination');
     if (pagination) {
@@ -197,6 +203,8 @@ const toggleFavCourses = () => {
             tempDiv.classList.add('col-xs-12', 'col-sm-6', 'col-md-4', 'fav-courses');
 
             // Remove `ztm-fav-courses` heart icon in the favorited course
+            let ztmFavCourses = tempDiv.querySelector('#ztm-fav-courses');
+            ztmFavCourses.remove();
 
             // Append the courses to the course list
             courseList.appendChild(tempDiv);
@@ -359,20 +367,7 @@ const ztmFavoriteCourses = () => {
             ztmFavCoursesButtons[i].remove();
         };
     };
-
-    // Get all ztm-fav-courses
-    let ztmFavCourses = document.querySelectorAll('#ztm-fav-courses');
-    // Check if there is more than one ztmFavCourses
-    if (ztmFavCourses.length > 1) {
-        // Remove courses starting from the second one (index 1)
-        for (var i = 1; i < ztmFavCourses.length; i++) {
-            ztmFavCourses[i].remove();
-        };
-    };
 };
-
-
-
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {

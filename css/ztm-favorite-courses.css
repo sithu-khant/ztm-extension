@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Jan 16, 2024
+ * Last Updated: Thu Feb 1, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -54,69 +54,5 @@
 }
 
 #ztm-fav-courses .ztm-heart-icon-clicked {
-	color: #B01E28 !important;
+	color: #30d683 !important;
 }
-
-/* ----- Fav Courses - Start ----- */
-
-#ztm-fav-courses-container {
-	border-radius: 10px;
-	overflow: hidden;
-	margin-bottom: 40vh;
-}
-
-#ztm-fav-course-card {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	background: #fff;
-	margin-bottom: 2px;
-	font-size: 18px;
-}
-
-#ztm-fav-course-index {
-	flex-basis: 5%;
-	margin: unset !important;
-	padding: 8px 20px;
-	font-weight: 500 !important;	
-	background: #f2f2f2;
-	color: #989898;
-}
-
-#ztm-fav-course-link {
-	flex-basis: 80%;
-	padding: 8px 20px;
-}
-
-#ztm-fav-course-percentage {
-	flex-basis: 15%;
-	margin: unset !important;
-	padding: 8px 20px;
-	font-weight: 500 !important;
-	background: #f2f2f2;
-	color: #30d683;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----- Fav Courses - End ----- */
-
-
-
-
