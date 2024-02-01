@@ -108,18 +108,15 @@ const favCoursesCards = () => {
                 tempDiv.innerHTML = courseString;
 
                 let courseTitle = tempDiv.querySelector('.course-listing-title');
-                return courseTitle ? courseTitle.innerText : '';
+                // Return course title, otherwise, it will return empty string.
+                return courseTitle ? courseTitle.textContent.trim() : '';
             }
 
             // If not favorited, remove (filter) that course for code improvement.
             if (!isFavorited) {
-                favCoursesArray = favCoursesArray.filter((courseString) => getCourseTitle(courseString) !== favoritedCourseTitle);
+                favCoursesArray = favCoursesArray.filter((courseString) => getCourseTitle(courseString) !== favoritedCourseTitle.trim());
             } else {
-                const isStored = favCoursesArray.some((courseString) => getCourseTitle(courseString) === favoritedCourseTitle);
-                // Is not already stored in the localStorage, append it
-                if (!isStored) {
-                    favCoursesArray.push(favoritedCourseInnerHTML);
-                };
+                favCoursesArray.push(favoritedCourseInnerHTML);
             };
 
             // Remove duplicated values in `favCoursesArray` based on the course title
@@ -130,11 +127,8 @@ const favCoursesCards = () => {
                 if (!isDuplicated) {
                     array.push(currentCourse);
                 }
-
                 return array;
             }, []);
-
-            // favCoursesArray.push(favoritedCourseInnerHTML);
 
             // Store the favorite courses data array in the local storage
             localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));
@@ -187,13 +181,15 @@ const toggleFavCourses = () => {
             // Temporary div for storing course string as the innerHTML
             let tempDiv = document.createElement('div');
             tempDiv.innerHTML = courseString;
-            tempDiv.classList.add('fav-courses');
+            tempDiv.classList.add('col-xs-12', 'col-sm-6', 'col-md-4', 'fav-courses');
+
+            // Remove `ztm-fav-courses` heart icon in the favorited course
 
             // Append the courses to the course list
             courseList.appendChild(tempDiv);
         });
-    }
-}
+    };
+};
 
 //
 const toggleFavCoursesButton = () => {
@@ -208,6 +204,8 @@ const toggleFavCoursesButton = () => {
     } 
     // toggle courses
     toggleCourses();
+    // toggle favorite courses
+    toggleFavCourses();
 
     // Listner for the click statement
     ztmFavCoursesHeartIcon.addEventListener('click', () => {
