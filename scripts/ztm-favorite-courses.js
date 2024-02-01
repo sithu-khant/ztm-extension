@@ -15,6 +15,9 @@ document.head.appendChild(boxiconsCss);
 
 // Fav courses components
 const favCoursesComponents = () => {
+    // Get the ztm-fav-courses-button
+    let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
+
     // get the course filter
     const courseFilter = document.querySelector('.course-filter');
 
@@ -31,7 +34,7 @@ const favCoursesComponents = () => {
         </div>
     </div>
     `
-    // Add favCoursesButton to the academy page
+
     courseFilter.parentNode.insertBefore(favCoursesButton, courseFilter.nextSibling);
 
     // Get course cards
@@ -69,6 +72,17 @@ let favCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) ||
 
 console.log(favCoursesArray[0]);
 
+// Get the course title
+const getCourseTitle = (courseString) => {
+    // Temporary div for storing course string as the innerHTML
+    let tempDiv = document.createElement('div');
+    tempDiv.innerHTML = courseString;
+
+    let courseTitle = tempDiv.querySelector('.course-listing-title');
+    // Return course title, otherwise, it will return empty string.
+    return courseTitle ? courseTitle.textContent.trim() : '';
+}
+
 const favCoursesCards = () => {
     // Get all the heart icon
     let ztmHeartIcon = document.querySelectorAll('#ztm-heart-icon');
@@ -103,15 +117,15 @@ const favCoursesCards = () => {
             let favoritedCourseInnerHTML = favoritedCourse.innerHTML;
 
             // Get the course title
-            const getCourseTitle = (courseString) => {
-                // Temporary div for storing course string as the innerHTML
-                let tempDiv = document.createElement('div');
-                tempDiv.innerHTML = courseString;
+            // const getCourseTitle = (courseString) => {
+            //     // Temporary div for storing course string as the innerHTML
+            //     let tempDiv = document.createElement('div');
+            //     tempDiv.innerHTML = courseString;
 
-                let courseTitle = tempDiv.querySelector('.course-listing-title');
-                // Return course title, otherwise, it will return empty string.
-                return courseTitle ? courseTitle.textContent.trim() : '';
-            }
+            //     let courseTitle = tempDiv.querySelector('.course-listing-title');
+            //     // Return course title, otherwise, it will return empty string.
+            //     return courseTitle ? courseTitle.textContent.trim() : '';
+            // }
 
             // If not favorited, remove (filter) that course for code improvement.
             if (!isFavorited) {
@@ -252,6 +266,10 @@ const updateProgressbar = () => {
         let courseTitle = tempDiv.querySelector('.course-listing-title').textContent.trim();
 
         if (lectureCourseTitle === courseTitle) {
+            // Update percentage with the updatedPercentage
+            let percentage = tempDiv.querySelector('.percentage');
+            percentage.textContent = updatedPercentage
+
             // get the progressbar-fill
             let progressbarFill = tempDiv.querySelector('.progressbar-fill');
             
@@ -263,18 +281,29 @@ const updateProgressbar = () => {
             // Update the aria-valuenow value with the new updatedPercentageValue
             progressbarFill.setAttribute('aria-valuenow', updatedPercentageValue.trim());
 
-            console.log(tempDiv.innerHTML)
+            // console.log(tempDiv.innerHTML)
         };
 
         // Get all the favorited course array from the local storage
         let updatedFavCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
 
         // Remove favCoursesArray from the local storage
-        // localStorage.removeItem('favCoursesArrayData');
+        localStorage.removeItem('favCoursesArrayData');
 
         let newUpdatedCourseString = tempDiv.innerHTML
         // Add newUpdatedCourseString to updatedFavCoursesArray
         updatedFavCoursesArray.unshift(newUpdatedCourseString);
+
+        // Remove duplicated values in `favCoursesArray` based on the course title
+        updatedFavCoursesArray = updatedFavCoursesArray.reduce((array, currentCourse) => {
+            let currentTitle = getCourseTitle(currentCourse);
+            let isDuplicated = array.some(course => getCourseTitle(course) === currentTitle);
+
+            if (!isDuplicated) {
+                array.push(currentCourse);
+            }
+            return array;
+        }, []);
 
         // Store the updated favorite courses data array (updatedFavCoursesArray) in the local storage
         localStorage.setItem('favCoursesArrayData', JSON.stringify(updatedFavCoursesArray));
@@ -317,8 +346,10 @@ const ztmFavoriteCourses = () => {
         // updateProgressbar();
 
         // Track the page for every new lecture and update the progressbar 
+        // Get the course sidebar head
+        let courseSidebarHeader = document.querySelector('.course-sidebar-head');
         const ztmFavCoursesObserver = new MutationObserver(() => updateProgressbar());
-        ztmFavCoursesObserver.observe(document.body, { childList: true, subtree: true });
+        ztmFavCoursesObserver.observe(courseSidebarHeader, { childList: true, subtree: true });
     };
 };
 
