@@ -246,6 +246,9 @@ const updateProgressbar = () => {
         let tempDiv = document.createElement('div');
         tempDiv.innerHTML = courseString;
 
+        // Remove courseString from the favCoursesArray
+        favCoursesArray.indexOf(courseString)
+
         let courseTitle = tempDiv.querySelector('.course-listing-title').textContent.trim();
 
         if (lectureCourseTitle === courseTitle) {
@@ -261,8 +264,20 @@ const updateProgressbar = () => {
             progressbarFill.setAttribute('aria-valuenow', updatedPercentageValue.trim());
 
             console.log(tempDiv.innerHTML)
-        }
+        };
 
+        // Get all the favorited course array from the local storage
+        let updatedFavCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
+
+        // Remove favCoursesArray from the local storage
+        // localStorage.removeItem('favCoursesArrayData');
+
+        let newUpdatedCourseString = tempDiv.innerHTML
+        // Add newUpdatedCourseString to updatedFavCoursesArray
+        updatedFavCoursesArray.unshift(newUpdatedCourseString);
+
+        // Store the updated favorite courses data array (updatedFavCoursesArray) in the local storage
+        localStorage.setItem('favCoursesArrayData', JSON.stringify(updatedFavCoursesArray));
     });
 
 };
