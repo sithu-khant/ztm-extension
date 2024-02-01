@@ -109,6 +109,7 @@ MIT License
 	* (2.1.10) - Favorite courses feature is working...
 	* (2.1.11) - Prevent overwritting the components.
 	* (2.1.12) - Changed heart icon red to green.
+	* (2.1.13) - Applyed changed in the favorited courses.
 * Wed Jan 31, 2024
 	* (1.31.01) - This method also doesn't work. But I will make a commit for later use.
 	* (1.31.02) - Committed for safety.

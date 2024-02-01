@@ -114,17 +114,6 @@ const favCoursesCards = () => {
             let favoritedCourseTitle = favoritedCourse.querySelector('.course-listing-title').innerText;
             let favoritedCourseInnerHTML = favoritedCourse.innerHTML;
 
-            // Get the course title
-            // const getCourseTitle = (courseString) => {
-            //     // Temporary div for storing course string as the innerHTML
-            //     let tempDiv = document.createElement('div');
-            //     tempDiv.innerHTML = courseString;
-
-            //     let courseTitle = tempDiv.querySelector('.course-listing-title');
-            //     // Return course title, otherwise, it will return empty string.
-            //     return courseTitle ? courseTitle.textContent.trim() : '';
-            // }
-
             // If not favorited, remove (filter) that course for code improvement.
             if (!isFavorited) {
                 favCoursesArray = favCoursesArray.filter((courseString) => getCourseTitle(courseString) !== favoritedCourseTitle.trim());
@@ -202,13 +191,17 @@ const toggleFavCourses = () => {
             tempDiv.innerHTML = courseString;
             tempDiv.classList.add('col-xs-12', 'col-sm-6', 'col-md-4', 'fav-courses');
 
+            // New
             // Remove `ztm-fav-courses` heart icon in the favorited course
-            let ztmFavCourses = tempDiv.querySelector('#ztm-fav-courses');
-            ztmFavCourses.remove();
+            // let ztmFavCourses = tempDiv.querySelector('#ztm-fav-courses');
+            // ztmFavCourses.remove();
 
             // Append the courses to the course list
             courseList.appendChild(tempDiv);
         });
+        
+        // New -----
+        favCoursesCards();
     };
 };
 
