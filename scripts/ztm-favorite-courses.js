@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Feb 1, 2024
+ * Last Updated: Thu Feb 1, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -67,6 +67,7 @@ const favCoursesComponents = () => {
 // Get all the favorited course array from the local storage
 let favCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
 
+console.log(favCoursesArray[0]);
 
 const favCoursesCards = () => {
     // Get all the heart icon
@@ -227,6 +228,45 @@ const toggleFavCoursesButton = () => {
     });
 };
 
+// To update progress bar of favorited courses
+const updateProgressbar = () => {
+    // Get the course sidebar head
+    let courseSidebarHeader = document.querySelector('.course-sidebar-head');
+    // Get the course title
+    let lectureCourseTitleElement = courseSidebarHeader.getElementsByTagName('h2')[0];
+    let lectureCourseTitle = lectureCourseTitleElement.textContent.trim();
+    // Get the updated percentage value
+    let updatedPercentage = courseSidebarHeader.querySelector('.percentage').textContent.trim();
+
+    // Get all the favorited course array from the local storage
+    let favCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
+
+    favCoursesArray.forEach((courseString) => {
+        // Temporary div for storing course string as the innerHTML
+        let tempDiv = document.createElement('div');
+        tempDiv.innerHTML = courseString;
+
+        let courseTitle = tempDiv.querySelector('.course-listing-title').textContent.trim();
+
+        if (lectureCourseTitle === courseTitle) {
+            // get the progressbar-fill
+            let progressbarFill = tempDiv.querySelector('.progressbar-fill');
+            
+            // Update the progress bar fill minWith with the new value
+            progressbarFill.style.minWidth = updatedPercentage
+
+            // Remove % sign from the updatedPercentage
+            let updatedPercentageValue = updatedPercentage.replaceAll('%', '');
+            // Update the aria-valuenow value with the new updatedPercentageValue
+            progressbarFill.setAttribute('aria-valuenow', updatedPercentageValue.trim());
+
+            console.log(tempDiv.innerHTML)
+        }
+
+    });
+
+};
+
 
 
 
@@ -249,13 +289,21 @@ const toggleFavCoursesButton = () => {
 
 const ztmFavoriteCourses = () => {
     // Only work on the hompage
-    // get the course filter
     const courseFilter = document.querySelector('.course-filter');
-
     if (courseFilter) {
         favCoursesComponents();
         favCoursesCards();
         toggleFavCoursesButton();
+    };
+
+    // Only work on the lecture learning page
+    const ztmFavCoursesIconBack = document.querySelector('.nav-icon-back');
+    if (ztmFavCoursesIconBack) {
+        // updateProgressbar();
+
+        // Track the page for every new lecture and update the progressbar 
+        const ztmFavCoursesObserver = new MutationObserver(() => updateProgressbar());
+        ztmFavCoursesObserver.observe(document.body, { childList: true, subtree: true });
     };
 };
 
