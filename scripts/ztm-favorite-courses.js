@@ -108,7 +108,7 @@ const favCoursesCards = () => {
                 tempDiv.innerHTML = courseString;
 
                 let courseTitle = tempDiv.querySelector('.course-listing-title');
-                return courseTitle ? courseTitle.innerText : ''
+                return courseTitle ? courseTitle.innerText : '';
             }
 
             // If not favorited, remove (filter) that course for code improvement.
@@ -121,6 +121,18 @@ const favCoursesCards = () => {
                     favCoursesArray.push(favoritedCourseInnerHTML);
                 };
             };
+
+            // Remove duplicated values in `favCoursesArray` based on the course title
+            favCoursesArray = favCoursesArray.reduce((array, currentCourse) => {
+                let currentTitle = getCourseTitle(currentCourse);
+                let isDuplicated = array.some(course => getCourseTitle(course) === currentTitle);
+
+                if (!isDuplicated) {
+                    array.push(currentCourse);
+                }
+
+                return array;
+            }, []);
 
             // favCoursesArray.push(favoritedCourseInnerHTML);
 
@@ -248,7 +260,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         favCoursesCards();
         toggleFavCoursesButton();
 
-        localStorage.removeItem('favCoursesArrayData');
+        // localStorage.removeItem('favCoursesArrayData');
     };
 });
 
