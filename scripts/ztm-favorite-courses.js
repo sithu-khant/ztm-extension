@@ -308,9 +308,11 @@ const updateProgressbar = () => {
 
 };
 
+// Get the course list
+let courseList = document.querySelector('.course-list');
 // Observer the page and apply changes
 const ztmFavCoursesObserver = new MutationObserver(() => favCoursesCards());
-ztmFavCoursesObserver.observe(document.body, { childList: true, subtree: true });
+ztmFavCoursesObserver.observe(courseList, { childList: true, subtree: true });
 
 const ztmFavoriteCourses = () => {
     // Only work on the hompage
