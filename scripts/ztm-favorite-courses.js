@@ -311,7 +311,15 @@ const updateProgressbar = () => {
 // Get the course list
 let courseList = document.querySelector('.course-list');
 // Observer the page and apply changes
-const ztmFavCoursesObserver = new MutationObserver(() => favCoursesCards());
+const ztmFavCoursesObserver = new MutationObserver(() => {
+    // Get the ztm-fav-courses-heart-icon
+    let ztmFavCoursesHeartIcon = document.querySelector('#ztm-fav-courses-heart-icon');
+    // Listner for the click statement
+    ztmFavCoursesHeartIcon.addEventListener('click', () => {
+        console.log('clicked...');
+        favCoursesCards()
+    });
+});
 ztmFavCoursesObserver.observe(courseList, { childList: true, subtree: true });
 
 const ztmFavoriteCourses = () => {
@@ -320,8 +328,10 @@ const ztmFavoriteCourses = () => {
     if (courseFilter) {
         favCoursesComponents();
         toggleFavCoursesButton();
-        // favCoursesCards();
+        favCoursesCards();
     };
+
+    console.log('window changed...');
 
     // Only work on the lecture learning page
     const ztmFavCoursesIconBack = document.querySelector('.nav-icon-back');

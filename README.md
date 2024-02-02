@@ -105,6 +105,7 @@ MIT License
 	* (2.2.06) - Added check statement.
 	* (2.2.07) - Added observer to the code.
 	* (2.2.08) - Committed for safety.
+	* (2.2.09) - Testing...
 * Thu Feb 1, 2024
 	* (2.1.01) - Started new method for `ztm-favorite-courses`.
 	* (2.1.02) - Committed for safety.
