@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Thu Feb 1, 2024
+ * Last Updated: Fri Feb 2, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -93,9 +93,6 @@ const favCoursesCards = () => {
         // Get the favorite status
         let isFavorited = heartClickedArray.includes(favoritedCourseTitle);
         heartIcon.style.color = isFavorited ? '#30d683' : 'grey'
-        // if (!isFavorited) {
-        //     heartClickedArray.push(favoritedCourseTitle);
-        // }
 
         // Toggle heart icon click
         heartIcon.addEventListener('click', function (event) {
@@ -127,8 +124,6 @@ const favCoursesCards = () => {
                 return array;
             }, []);
 
-            console.log(heartClickedArray);
-
             // Store the favorite courses data array in the local storage
             localStorage.setItem('heartClickedArrayData', JSON.stringify(heartClickedArray));
 
@@ -136,8 +131,6 @@ const favCoursesCards = () => {
             localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));
         });
     });
-
-    console.log('favCoursesCards loaded...');
 };
 
 // toggle fav courses
@@ -193,7 +186,6 @@ const toggleFavCourses = () => {
             tempDiv.innerHTML = courseString;
             tempDiv.classList.add('col-xs-12', 'col-sm-6', 'col-md-4', 'fav-courses');
 
-            // New
             // Remove `ztm-fav-courses` heart icon in the favorited course
             // let ztmFavCourses = tempDiv.querySelector('#ztm-fav-courses');
             // ztmFavCourses.remove();
@@ -322,20 +314,11 @@ const ztmFavoriteCourses = () => {
         if (ztmFavCoursesHeartIcon) {
             ztmFavCoursesHeartIcon.addEventListener('click', () => {
                 favCoursesComponents();
-                // // toggle courses
-                // toggleCourses();
-                // // toggle favorite courses
-                // toggleFavCourses();
-
-                // toggleFavCoursesButton();
-                favCoursesCards()
+                favCoursesCards();
                 console.log('clicked...');
             });
         };
-
-        console.log(ztmFavCoursesHeartIcon);
     };
-    console.log('window changed...');
 
     // Only work on the lecture learning page
     const ztmFavCoursesIconBack = document.querySelector('.nav-icon-back');

@@ -43,12 +43,13 @@
 	font-size: 23px;
 	padding: 5px;
 	color: grey;
-	background: #F5F5F5;
-	border: 1px solid #EEEEEE;
+	background: rgba(245, 245, 245, 0.8);
+/*	border: 1px solid rgba(245, 245, 245, 0.5);*/
 	border-radius: 50%;
 	opacity: 0.8;
 }
 
 #ztm-heart-icon:hover {
 	opacity: 1;
+	background: rgba(245, 245, 245, 0.8);
 }
