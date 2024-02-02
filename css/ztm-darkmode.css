@@ -119,6 +119,10 @@ body::-webkit-scrollbar-thumb {
     opacity: 0;
 }
 
+path {
+    stroke: #fff !important;
+}
+
 /* ----- End Home Page Darkmode Section ----- */
 
 
