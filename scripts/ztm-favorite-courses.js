@@ -126,8 +126,6 @@ const favCoursesCards = () => {
             // Store the favorite courses data array in the local storage
             localStorage.setItem('heartClickedArrayData', JSON.stringify(heartClickedArray));
 
-            console.log(heartClickedArray);
-
             // Store the favorite courses data array in the local storage
             localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));
         });
@@ -225,6 +223,8 @@ const toggleFavCoursesButton = () => {
         toggleCourses();
         // toggle favorite courses
         toggleFavCourses();
+        // Apply fav course cards function
+        favCoursesCards();
 
         // Get if there is `filtered-fav-courses` or not
         let favCoursesButtonStatus = ztmFavCoursesHeartIcon.classList.contains('filtered-fav-courses');
