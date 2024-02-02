@@ -1,13 +1,13 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri Feb 2, 2024
+ * Last Updated: Fri Jan 12, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
 /* ----- Start Home Page Darkmode Section ----- */
 body,
-*:not(.status-icon, #ztm-fav-courses-heart-icon, #ztm-heart-icon) {
+*:not(.status-icon, .bxs-heart) {
     background: #232931 !important;
     color: #EEEEEE !important;
 }
@@ -100,10 +100,6 @@ body::-webkit-scrollbar-thumb {
 
 #ztm-fav-courses {
     background: transparent !important;
-}
-
-#ztm-heart-icon {
-    background: #393E46 !important;
 }
 
 .pagination .previous_page, 
@@ -345,4 +341,3 @@ header.half-height .lecture-left .nav-icon-list:hover * {
 }
 
 /* ----- End Lecture Page Darkmode Section ----- */
-

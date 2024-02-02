@@ -109,6 +109,7 @@ MIT License
 	* (2.2.10) - The favorite course feature is working...
 	* (2.2.11) - Committed for safety.
 	* (2.2.12) - Removed console outputs.
+	* (2.2.13) - Changed style.
 * Thu Feb 1, 2024
 	* (2.1.01) - Started new method for `ztm-favorite-courses`.
 	* (2.1.02) - Committed for safety.
