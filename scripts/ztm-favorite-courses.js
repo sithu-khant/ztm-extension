@@ -315,7 +315,6 @@ const ztmFavoriteCourses = () => {
             ztmFavCoursesHeartIcon.addEventListener('click', () => {
                 favCoursesComponents();
                 favCoursesCards();
-                console.log('clicked...');
             });
         };
     };
