@@ -111,6 +111,7 @@ MIT License
 	* (2.2.12) - Removed console outputs.
 	* (2.2.13) - Changed style.
 	* (2.2.14) - Changed footer social media icons color.
+	* (2.2.15) - Fixed a bug.
 * Thu Feb 1, 2024
 	* (2.1.01) - Started new method for `ztm-favorite-courses`.
 	* (2.1.02) - Committed for safety.

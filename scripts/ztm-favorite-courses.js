@@ -31,12 +31,14 @@ const favCoursesComponents = () => {
         </div>
     </div>
     `
-    // ztm-fav-courses-button
-    let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
+    // // ztm-fav-courses-button
+    // let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
 
-    if (!ztmFavCoursesButton) {
-        courseFilter.parentNode.insertBefore(favCoursesButton, courseFilter.nextSibling);
-    };
+    // if (!ztmFavCoursesButton) {
+    //     courseFilter.parentNode.insertBefore(favCoursesButton, courseFilter.nextSibling);
+    // };
+
+    courseFilter.parentNode.insertBefore(favCoursesButton, courseFilter.nextSibling);
 
     // Get course cards
     let courseCards = document.querySelectorAll('.course-listing');
@@ -307,6 +309,18 @@ const ztmFavoriteCourses = () => {
     if (courseFilter) {
         favCoursesComponents();
         toggleFavCoursesButton();
+
+        // Get all the ztm-fav-courses-button
+        let ztmFavCoursesButtons = document.querySelectorAll('.ztm-fav-courses-button');
+
+        // Check if there is more than one button
+        if (ztmFavCoursesButtons.length > 1) {
+            // Remove buttons starting from the first one up to the second-to-last one
+            for (var i = 0; i < ztmFavCoursesButtons.length - 1; i++) {
+                ztmFavCoursesButtons[i].remove();
+            };
+        };
+
         favCoursesCards();
 
         let ztmFavCoursesHeartIcon = document.querySelector('#ztm-fav-courses-heart-icon');
@@ -314,6 +328,16 @@ const ztmFavoriteCourses = () => {
         if (ztmFavCoursesHeartIcon) {
             ztmFavCoursesHeartIcon.addEventListener('click', () => {
                 favCoursesComponents();
+                // Get all the ztm-fav-courses-button
+                let ztmFavCoursesButtons = document.querySelectorAll('.ztm-fav-courses-button');
+
+                // Check if there is more than one button
+                if (ztmFavCoursesButtons.length > 1) {
+                    // Remove buttons starting from the first one up to the second-to-last one
+                    for (var i = 0; i < ztmFavCoursesButtons.length - 1; i++) {
+                        ztmFavCoursesButtons[i].remove();
+                    };
+                };
                 favCoursesCards();
             });
         };
@@ -329,16 +353,6 @@ const ztmFavoriteCourses = () => {
         let courseSidebarHeader = document.querySelector('.course-sidebar-head');
         let ztmProgressbarObserver = new MutationObserver(() => updateProgressbar());
         ztmProgressbarObserver.observe(courseSidebarHeader, { childList: true, subtree: true });
-    };
-
-    // Get all the ztm-fav-courses-button
-    let ztmFavCoursesButtons = document.querySelectorAll('.ztm-fav-courses-button');
-    // Check if there is more than one buttons
-    if (ztmFavCoursesButtons.length > 1) {
-        // Remove buttons starting from the second one (index 1)
-        for (var i = 1; i < ztmFavCoursesButtons.length; i++) {
-            ztmFavCoursesButtons[i].remove();
-        };
     };
 };
 
