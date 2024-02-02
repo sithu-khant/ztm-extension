@@ -92,6 +92,9 @@ const favCoursesCards = () => {
         // Get the favorite status
         let isFavorited = heartClickedArray.includes(favoritedCourseTitle);
         heartIcon.style.color = isFavorited ? '#30d683' : 'grey'
+        // if (!isFavorited) {
+        //     heartClickedArray.push(favoritedCourseTitle);
+        // }
 
         // Toggle heart icon click
         heartIcon.addEventListener('click', function (event) {
@@ -122,6 +125,8 @@ const favCoursesCards = () => {
                 }
                 return array;
             }, []);
+
+            console.log(heartClickedArray);
 
             // Store the favorite courses data array in the local storage
             localStorage.setItem('heartClickedArrayData', JSON.stringify(heartClickedArray));
@@ -211,6 +216,11 @@ const toggleFavCoursesButton = () => {
     toggleCourses();
     // toggle favorite courses
     toggleFavCourses();
+    // Apply fav course cards function
+    let isFilteredFavCourses = ztmFavCoursesHeartIcon.classList.contains('filtered-fav-courses');
+    if (!isFilteredFavCourses) {
+        favCoursesCards();
+    }
 
     // Listner for the click statement
     ztmFavCoursesHeartIcon.addEventListener('click', () => {
@@ -223,7 +233,7 @@ const toggleFavCoursesButton = () => {
         toggleCourses();
         // toggle favorite courses
         toggleFavCourses();
-        // Apply fav course cards function
+        // Apply favCoursesCards() function
         favCoursesCards();
 
         // Get if there is `filtered-fav-courses` or not
@@ -304,32 +314,15 @@ const updateProgressbar = () => {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// favCoursesCards();
 
 const ztmFavoriteCourses = () => {
     // Only work on the hompage
     const courseFilter = document.querySelector('.course-filter');
     if (courseFilter) {
         favCoursesComponents();
-        favCoursesCards();
         toggleFavCoursesButton();
+        // favCoursesCards();
     };
 
     // Only work on the lecture learning page
