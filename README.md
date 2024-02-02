@@ -101,6 +101,7 @@ MIT License
 	* (2.2.02) - Heart click and storage status working.
 	* (2.2.03) - `ztm-favorite-courses` function is working...
 	* (2.2.04) - Committed for safety.
+	* (2.2.05) - Updated `ztm-darkmode.css` file.
 * Thu Feb 1, 2024
 	* (2.1.01) - Started new method for `ztm-favorite-courses`.
 	* (2.1.02) - Committed for safety.
