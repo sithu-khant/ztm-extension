@@ -15,9 +15,6 @@ document.head.appendChild(boxiconsCss);
 
 // Fav courses components
 const favCoursesComponents = () => {
-    // Get the ztm-fav-courses-button
-    let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
-
     // get the course filter
     const courseFilter = document.querySelector('.course-filter');
 
@@ -34,8 +31,12 @@ const favCoursesComponents = () => {
         </div>
     </div>
     `
+    // ztm-fav-courses-button
+    let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
 
-    courseFilter.parentNode.insertBefore(favCoursesButton, courseFilter.nextSibling);
+    if (!ztmFavCoursesButton) {
+        courseFilter.parentNode.insertBefore(favCoursesButton, courseFilter.nextSibling);
+    };
 
     // Get course cards
     let courseCards = document.querySelectorAll('.course-listing');
@@ -308,20 +309,6 @@ const updateProgressbar = () => {
 
 };
 
-// Get the course list
-let courseList = document.querySelector('.course-list');
-// Observer the page and apply changes
-const ztmFavCoursesObserver = new MutationObserver(() => {
-    // Get the ztm-fav-courses-heart-icon
-    let ztmFavCoursesHeartIcon = document.querySelector('#ztm-fav-courses-heart-icon');
-    // Listner for the click statement
-    ztmFavCoursesHeartIcon.addEventListener('click', () => {
-        console.log('clicked...');
-        favCoursesCards()
-    });
-});
-ztmFavCoursesObserver.observe(courseList, { childList: true, subtree: true });
-
 const ztmFavoriteCourses = () => {
     // Only work on the hompage
     const courseFilter = document.querySelector('.course-filter');
@@ -329,8 +316,25 @@ const ztmFavoriteCourses = () => {
         favCoursesComponents();
         toggleFavCoursesButton();
         favCoursesCards();
-    };
 
+        let ztmFavCoursesHeartIcon = document.querySelector('#ztm-fav-courses-heart-icon');
+        // Listner for the click statement
+        if (ztmFavCoursesHeartIcon) {
+            ztmFavCoursesHeartIcon.addEventListener('click', () => {
+                favCoursesComponents();
+                // // toggle courses
+                // toggleCourses();
+                // // toggle favorite courses
+                // toggleFavCourses();
+
+                // toggleFavCoursesButton();
+                favCoursesCards()
+                console.log('clicked...');
+            });
+        };
+
+        console.log(ztmFavCoursesHeartIcon);
+    };
     console.log('window changed...');
 
     // Only work on the lecture learning page
@@ -363,8 +367,3 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         // localStorage.removeItem('heartClickedArrayData');
     };
 });
-
-
-
-
-//
