@@ -54,11 +54,6 @@ const favCoursesComponents = () => {
         ztmHeartIcon.classList.add('bx', 'bxs-heart');
         ztmHeartIcon.id = 'ztm-heart-icon'
 
-        // Add course title as the class name for storing fav courses
-        let getCourseTitle = courseCard.querySelector('.course-listing-title')
-        let courseTitle = getCourseTitle.textContent.replaceAll(' ', '').replaceAll(':', '').trim();
-        ztmHeartIcon.classList.add(courseTitle);
-
         // Add `ztmHeartIcon` to `ztmFavCoursesDiv`
         ztmFavCoursesDiv.appendChild(ztmHeartIcon);
 
@@ -69,6 +64,8 @@ const favCoursesComponents = () => {
 
 // Get all the favorited course array from the local storage
 let favCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
+// Get all the heart clicked favorited course array from the local storage
+let heartClickedArray = JSON.parse(localStorage.getItem('heartClickedArrayData')) || [];
 
 // Get the course title
 const getCourseTitle = (courseString) => {
@@ -87,38 +84,26 @@ const favCoursesCards = () => {
 
     // add toggle click
     ztmHeartIcon.forEach(function (heartIcon) {
-        // Get course title class for storing favorite course
-        let courseTitle = heartIcon.classList[2]
-
-        // Get the favorite courses from the local storage
-        let isFavorited = localStorage.getItem(`${courseTitle}_isFavorited`) === 'true';
-        // Add to the course is favorited
-        if (isFavorited) {
-            heartIcon.classList.add('ztm-heart-icon-clicked');
-        };
+        // Get the course data
+        let favoritedCourse = heartIcon.closest('.col-xs-12.col-sm-6.col-md-4');
+        let favoritedCourseTitle = favoritedCourse.querySelector('.course-listing-title').textContent.trim();
+        let favoritedCourseInnerHTML = favoritedCourse.innerHTML;
 
         // Toggle heart icon click
         heartIcon.addEventListener('click', function (event) {
             // Disable to click
             event.stopPropagation();
-            // Toggle `ztm-heart-icon-clicked` class
-            heartIcon.classList.toggle('ztm-heart-icon-clicked');
 
-            // If the course is favorited or not
-            let isFavorited = heartIcon.classList.contains('ztm-heart-icon-clicked');
-            // Store the click state
-            localStorage.setItem(`${courseTitle}_isFavorited`, isFavorited);
+            // Check if the title is already in the heartClickedArray or not
+            let favoritedCourseTitleIndex = heartClickedArray.indexOf(favoritedCourseTitle);
 
-            // Get the course data
-            let favoritedCourse = heartIcon.closest('.col-xs-12.col-sm-6.col-md-4');
-            let favoritedCourseTitle = favoritedCourse.querySelector('.course-listing-title').innerText;
-            let favoritedCourseInnerHTML = favoritedCourse.innerHTML;
-
-            // If not favorited, remove (filter) that course for code improvement.
-            if (!isFavorited) {
-                favCoursesArray = favCoursesArray.filter((courseString) => getCourseTitle(courseString) !== favoritedCourseTitle.trim());
-            } else {
+            // If there is no favoritedCourseTitle in the heartClickedArray store it
+            if (favoritedCourseTitleIndex === -1) {
+                heartClickedArray.push(favoritedCourseTitle);
                 favCoursesArray.push(favoritedCourseInnerHTML);
+            } else {
+                heartClickedArray.splice(favoritedCourseTitleIndex, 1);
+                favCoursesArray = favCoursesArray.filter((courseString) => getCourseTitle(courseString) !== favoritedCourseTitle.trim());
             };
 
             // Remove duplicated values in `favCoursesArray` based on the course title
@@ -131,6 +116,11 @@ const favCoursesCards = () => {
                 }
                 return array;
             }, []);
+
+            // Store the favorite courses data array in the local storage
+            localStorage.setItem('heartClickedArrayData', JSON.stringify(heartClickedArray));
+
+            console.log(heartClickedArray);
 
             // Store the favorite courses data array in the local storage
             localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));
@@ -201,7 +191,7 @@ const toggleFavCourses = () => {
         });
         
         // New -----
-        favCoursesCards();
+        // favCoursesCards();
     };
 };
 
@@ -365,7 +355,8 @@ const ztmFavoriteCourses = () => {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         ztmFavoriteCourses();
-        // localStorage.removeItem('favCoursesArrayData');
+        localStorage.removeItem('favCoursesArrayData');
+        localStorage.removeItem('heartClickedArrayData');
     };
 });
 
