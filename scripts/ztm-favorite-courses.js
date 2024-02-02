@@ -135,6 +135,8 @@ const favCoursesCards = () => {
             localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));
         });
     });
+
+    console.log('favCoursesCards loaded...');
 };
 
 // toggle fav courses
