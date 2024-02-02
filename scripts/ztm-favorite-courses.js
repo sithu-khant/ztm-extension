@@ -218,11 +218,6 @@ const toggleFavCoursesButton = () => {
     toggleCourses();
     // toggle favorite courses
     toggleFavCourses();
-    // Apply fav course cards function
-    let isFilteredFavCourses = ztmFavCoursesHeartIcon.classList.contains('filtered-fav-courses');
-    if (!isFilteredFavCourses) {
-        favCoursesCards();
-    }
 
     // Listner for the click statement
     ztmFavCoursesHeartIcon.addEventListener('click', () => {
@@ -235,8 +230,6 @@ const toggleFavCoursesButton = () => {
         toggleCourses();
         // toggle favorite courses
         toggleFavCourses();
-        // Apply favCoursesCards() function
-        favCoursesCards();
 
         // Get if there is `filtered-fav-courses` or not
         let favCoursesButtonStatus = ztmFavCoursesHeartIcon.classList.contains('filtered-fav-courses');
@@ -315,8 +308,9 @@ const updateProgressbar = () => {
 
 };
 
-
-// favCoursesCards();
+// Observer the page and apply changes
+const ztmFavCoursesObserver = new MutationObserver(() => favCoursesCards());
+ztmFavCoursesObserver.observe(document.body, { childList: true, subtree: true });
 
 const ztmFavoriteCourses = () => {
     // Only work on the hompage
@@ -335,8 +329,8 @@ const ztmFavoriteCourses = () => {
         // Track the page for every new lecture and update the progressbar 
         // Get the course sidebar head
         let courseSidebarHeader = document.querySelector('.course-sidebar-head');
-        const ztmFavCoursesObserver = new MutationObserver(() => updateProgressbar());
-        ztmFavCoursesObserver.observe(courseSidebarHeader, { childList: true, subtree: true });
+        let ztmProgressbarObserver = new MutationObserver(() => updateProgressbar());
+        ztmProgressbarObserver.observe(courseSidebarHeader, { childList: true, subtree: true });
     };
 
     // Get all the ztm-fav-courses-button
