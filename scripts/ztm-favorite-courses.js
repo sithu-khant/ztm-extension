@@ -89,6 +89,10 @@ const favCoursesCards = () => {
         let favoritedCourseTitle = favoritedCourse.querySelector('.course-listing-title').textContent.trim();
         let favoritedCourseInnerHTML = favoritedCourse.innerHTML;
 
+        // Get the favorite status
+        let isFavorited = heartClickedArray.includes(favoritedCourseTitle);
+        heartIcon.style.color = isFavorited ? '#30d683' : 'grey'
+
         // Toggle heart icon click
         heartIcon.addEventListener('click', function (event) {
             // Disable to click
@@ -99,9 +103,11 @@ const favCoursesCards = () => {
 
             // If there is no favoritedCourseTitle in the heartClickedArray store it
             if (favoritedCourseTitleIndex === -1) {
+                heartIcon.style.color = '#30d683'
                 heartClickedArray.push(favoritedCourseTitle);
                 favCoursesArray.push(favoritedCourseInnerHTML);
             } else {
+                heartIcon.style.color = 'grey'
                 heartClickedArray.splice(favoritedCourseTitleIndex, 1);
                 favCoursesArray = favCoursesArray.filter((courseString) => getCourseTitle(courseString) !== favoritedCourseTitle.trim());
             };
@@ -189,9 +195,6 @@ const toggleFavCourses = () => {
             // Append the courses to the course list
             courseList.appendChild(tempDiv);
         });
-        
-        // New -----
-        // favCoursesCards();
     };
 };
 
@@ -355,8 +358,8 @@ const ztmFavoriteCourses = () => {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         ztmFavoriteCourses();
-        localStorage.removeItem('favCoursesArrayData');
-        localStorage.removeItem('heartClickedArrayData');
+        // localStorage.removeItem('favCoursesArrayData');
+        // localStorage.removeItem('heartClickedArrayData');
     };
 });
 
