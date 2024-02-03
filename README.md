@@ -23,7 +23,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 * Toggle dark mode on all pages
 * Hide Lecture Title
 * Showing total amount of time in each section
-* Favourite courses 
+* Favorite courses 
 
 
 ## Feature requests
@@ -36,6 +36,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 | Versions  | Chrome | Firefox | Edge | Brave |
 |-----------|--------|---------| ------| ------|
+| 2024.2.2   | ✅      | ✅       | ✅   | ✅   |
 | 2023.12.21 | ✅      | ✅       | ✅   | ✅   |
 | 2023.12.14.01 | ✅      | ✅       |  ✅    | ✅   |
 | 2023.12.13 | ✅      | ✅       | ✅    | ✅   |
@@ -48,6 +49,11 @@ WIP - Work in progress
 
 ### Version list
 
+* 2024.2.2
+	* Hide Lecture Title
+	* Showing total amount of time in each section
+	* Favorite courses 
+	* Code improvements
 * 2023.12.21
 	* Dark mode on all the pages
 	* Changed color theme for dark mode
@@ -98,6 +104,7 @@ MIT License
 
 * Sat Feb 3, 2024
 	* (2.3.01) - Added `removeExtraFavCoursesComponents` function to the `ztm-favoriite-courses`.
+	* (2.3.02) - Added version `2024.2.2`.
 * Fri Feb 2, 2024
 	* (2.2.01) - Stored the heart clicked status in the array.
 	* (2.2.02) - Heart click and storage status working.
