@@ -23,19 +23,20 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 * Toggle dark mode on all pages
 * Hide Lecture Title
 * Showing total amount of time in each section
+* Favorite courses 
 
 
 ## Feature requests
 *(plans to add - top to bottom)*
 
-* [x] To keep the favourite courses at top (WIP) 
-* [ ] Keep the lecture video resolution the same
+* [ ] Filtering courses by instructors
 
 
 ## Versions
 
 | Versions  | Chrome | Firefox | Edge | Brave |
 |-----------|--------|---------| ------| ------|
+| 2024.2.2   | ✅      | ✅       | ✅   | ✅   |
 | 2023.12.21 | ✅      | ✅       | ✅   | ✅   |
 | 2023.12.14.01 | ✅      | ✅       |  ✅    | ✅   |
 | 2023.12.13 | ✅      | ✅       | ✅    | ✅   |
@@ -48,6 +49,11 @@ WIP - Work in progress
 
 ### Version list
 
+* 2024.2.2
+	* Hide Lecture Title
+	* Showing total amount of time in each section
+	* Favorite courses 
+	* Code improvements
 * 2023.12.21
 	* Dark mode on all the pages
 	* Changed color theme for dark mode
@@ -96,6 +102,59 @@ MIT License
 
 ## Logs
 
+* Sat Feb 3, 2024
+	* (2.3.01) - Added `removeExtraFavCoursesComponents` function to the `ztm-favoriite-courses`.
+	* (2.3.02) - Added version `2024.2.2`.
+* Fri Feb 2, 2024
+	* (2.2.01) - Stored the heart clicked status in the array.
+	* (2.2.02) - Heart click and storage status working.
+	* (2.2.03) - `ztm-favorite-courses` function is working...
+	* (2.2.04) - Committed for safety.
+	* (2.2.05) - Updated `ztm-darkmode.css` file.
+	* (2.2.06) - Added check statement.
+	* (2.2.07) - Added observer to the code.
+	* (2.2.08) - Committed for safety.
+	* (2.2.09) - Testing...
+	* (2.2.10) - The favorite course feature is working...
+	* (2.2.11) - Committed for safety.
+	* (2.2.12) - Removed console outputs.
+	* (2.2.13) - Changed style.
+	* (2.2.14) - Changed footer social media icons color.
+	* (2.2.15) - Fixed a bug.
+* Thu Feb 1, 2024
+	* (2.1.01) - Started new method for `ztm-favorite-courses`.
+	* (2.1.02) - Committed for safety.
+	* (2.1.03) - `toggleFavCourses` working...
+	* (2.1.04) - Committed for safety.
+	* (2.1.05) - (To Revert).
+	* (2.1.06) - Favorite course is partically working now...
+	* (2.1.07) - Added condition for only work on the home page.
+	* (2.1.08) - Updated course progressbar percentage.
+	* (2.1.09) - Updated for safety.
+	* (2.1.10) - Favorite courses feature is working...
+	* (2.1.11) - Prevent overwritting the components.
+	* (2.1.12) - Changed heart icon red to green.
+	* (2.1.13) - Applyed changed in the favorited courses.
+* Wed Jan 31, 2024
+	* (1.31.01) - This method also doesn't work. But I will make a commit for later use.
+	* (1.31.02) - Committed for safety.
+	* (1.31.03) - Cleaned the codes.
+	* (1.31.04) - Stored data on the local storage.
+	* (1.31.05) - Stored data as objects in the array.
+	* (1.31.06) - Can be store/remove fav courses dynamically.
+	* (1.31.07) - To prevent overwritting.
+	* (1.31.08) - Add favorited courses to the courseList.
+	* (1.31.09) - Added course percentage to the fav course list.
+	* (1.31.10) - Committed for safety.
+	* (1.31.11) - Styled the favorite courses.
+	* (1.31.12) - Added course index.
+* Tue Jan 30, 2024
+	* (1.30.01) - Fixed `ztm-section-times` feature showing on the Your Instructor page.
+	* (1.30.02) - Linked with course length instead of header.
+	* (1.30.03) - Started `fav-course` section.
+	* (1.30.04) - Styled `ztm-fav-course-button`.
+	* (1.30.05) - This method doesn't work. But I will make a commit with the purpose of this code could be useful later.
+	* (1.30.06) - Collected favorited courses as array.
 * Mon Jan 29, 2024
 	* (1.29.01) - Created a new pull request for `section-times` feature.
 * Thu Jan 26, 2024

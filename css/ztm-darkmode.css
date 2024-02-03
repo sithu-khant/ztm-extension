@@ -7,7 +7,7 @@
 
 /* ----- Start Home Page Darkmode Section ----- */
 body,
-*:not(.status-icon) {
+*:not(.status-icon, .bxs-heart) {
     background: #232931 !important;
     color: #EEEEEE !important;
 }
@@ -98,12 +98,8 @@ body::-webkit-scrollbar-thumb {
     background: #EEEEEE !important;
 }
 
-#ztm-fav-course {
+#ztm-fav-courses {
     background: transparent !important;
-}
-
-#ztm-fav-course .ztm-heart-clicked {
-    color: #B01E28 !important;
 }
 
 .pagination .previous_page, 
@@ -121,6 +117,10 @@ body::-webkit-scrollbar-thumb {
 
 .foot-logo img {
     opacity: 0;
+}
+
+path {
+    stroke: #fff !important;
 }
 
 /* ----- End Home Page Darkmode Section ----- */
@@ -345,4 +345,3 @@ header.half-height .lecture-left .nav-icon-list:hover * {
 }
 
 /* ----- End Lecture Page Darkmode Section ----- */
-

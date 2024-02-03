@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri Jan 26, 2024
+ * Last Updated: Tue Jan 30, 2024
  * Description: Show lecture time data in the course info page
  */ 
 
@@ -75,9 +75,11 @@ const sidebarSectionTimesDiv = (courseLength, totalWatched, totalLeft) => {
 
     // Get the course progress percentage bar
     const progressBar = document.querySelector('.course-progress-percentage');
+    // Not to show if the course length is zero length
+    const isCourseLengthZero = courseLength == '0min 0s'
 
     // Only add to the page if there is progressBar
-    if (progressBar) {
+    if (progressBar && !isCourseLengthZero) {
         // Add ztmSidebarSectionTimesDiv
         progressBar.parentNode.insertBefore(ztmSidebarSectionTimesDiv, progressBar.nextSibling);
     }
