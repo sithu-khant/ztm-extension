@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Thu Feb 1, 2024
+ * Last Updated: Sat Feb 3, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -44,12 +44,10 @@
 	padding: 5px;
 	color: grey;
 	background: rgba(245, 245, 245, 0.8);
-/*	border: 1px solid rgba(245, 245, 245, 0.5);*/
 	border-radius: 50%;
 	opacity: 0.8;
 }
 
 #ztm-heart-icon:hover {
 	opacity: 1;
-	background: rgba(245, 245, 245, 0.8);
 }
