@@ -30,6 +30,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 *(plans to add - top to bottom)*
 
 * [ ] Filtering courses by instructors
+* [ ] Motivation quotes
 
 
 ## Versions
@@ -102,6 +103,8 @@ MIT License
 
 ## Logs
 
+* Thu Feb 8, 2024
+	* (2.8.01) - Added `motivation-quotes` feature request.
 * Sat Feb 3, 2024
 	* (2.3.01) - Added `removeExtraFavCoursesComponents` function to the `ztm-favoriite-courses`.
 	* (2.3.02) - Added version `2024.2.2`.
