@@ -19,16 +19,15 @@ const favCoursesComponents = () => {
     const courseFilter = document.querySelector('.course-filter');
 
     const favCoursesButton = document.createElement('div');
+    favCoursesButton.classList.add('pull-left', 'course-filter', 'ztm-fav-courses-button');
     favCoursesButton.innerHTML = `
-    <div class="pull-left course-filter ztm-fav-courses-button">
-        <div class="filter-label">
-            Favorites:
-        </div>
-        <div class="btn-group">
-            <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button">
-                <i class="bx bxs-heart" id="ztm-fav-courses-heart-icon"></i>
-            </button>
-        </div>
+    <div class="filter-label">
+        Favorites:
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button">
+            <i class="bx bxs-heart" id="ztm-fav-courses-heart-icon"></i>
+        </button>
     </div>
     `
     // // ztm-fav-courses-button
@@ -341,8 +340,6 @@ const ztmFavoriteCourses = () => {
 
         // Get the ztm-fav-courses-button
         let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
-
-        let ztmFavCoursesHeartIcon = document.querySelector('#ztm-fav-courses-heart-icon');
         // Listner for the click statement
         if (ztmFavCoursesButton) {
             ztmFavCoursesButton.addEventListener('click', () => {

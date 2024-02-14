@@ -127,7 +127,7 @@ body::-webkit-scrollbar-thumb {
     opacity: 0;
 }
 
-path {
+.socials-container path {
     stroke: #fff !important;
 }
 
