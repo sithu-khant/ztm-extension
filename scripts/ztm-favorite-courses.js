@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Sat Feb 3, 2024
+ * Last Updated: Wed Feb 14, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -173,7 +173,6 @@ const toggleFavCourses = () => {
         let favCourses = document.querySelectorAll('.fav-courses');
         // Remove all favorite courses the course
         favCourses.forEach((course) => course.remove());
-        
     } else {
         // Get the course list
         let courseList = document.querySelector('.course-list');
@@ -214,8 +213,11 @@ const toggleFavCoursesButton = () => {
     // toggle favorite courses
     toggleFavCourses();
 
+    // Get the ztm-fav-courses-button
+    let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
+
     // Listner for the click statement
-    ztmFavCoursesHeartIcon.addEventListener('click', () => {
+    ztmFavCoursesButton.addEventListener('click', () => {
         // Store the favorite courses data array in the local storage
         // localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));
 
@@ -337,10 +339,13 @@ const ztmFavoriteCourses = () => {
         removeExtraFavCoursesComponents();
         favCoursesCards();
 
+        // Get the ztm-fav-courses-button
+        let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
+
         let ztmFavCoursesHeartIcon = document.querySelector('#ztm-fav-courses-heart-icon');
         // Listner for the click statement
-        if (ztmFavCoursesHeartIcon) {
-            ztmFavCoursesHeartIcon.addEventListener('click', () => {
+        if (ztmFavCoursesButton) {
+            ztmFavCoursesButton.addEventListener('click', () => {
                 favCoursesComponents();
                 removeExtraFavCoursesComponents();
                 favCoursesCards();

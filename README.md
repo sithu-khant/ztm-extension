@@ -103,6 +103,8 @@ MIT License
 
 ## Logs
 
+* Wed Feb 14, 2024
+	* (2.14.01) - Added background to the filter button. Made the whole filter button clickable.
 * Thu Feb 8, 2024
 	* (2.8.01) - Added `motivation-quotes` feature request.
 * Sat Feb 3, 2024
