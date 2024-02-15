@@ -42,7 +42,7 @@ For this example, the version of Firefox being used is: Firefox Developer Editio
 
 ![](./images/f-esr-dev-nighlty-steps/f-step-5.png)
 
-6. In the searchbar titled **Search preference name**, search for the text `xpinstall.signature.required`, then click the `toggle` icon to change the value from `true` to `false`.
+6. In the searchbar titled **Search preferences name**, search for the text `xpinstall.signature.required`, then click the `toggle` icon to change the value from `true` to `false`.
 
 ![](./images/f-esr-dev-nighlty-steps/f-step-6.png)
 
