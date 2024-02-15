@@ -103,6 +103,8 @@ MIT License
 
 ## Logs
 
+* Thu Feb 15, 2024
+	* (2.15.01) - Added favorite course checkbox in the popup.
 * Wed Feb 14, 2024
 	* (2.14.01) - Added background to the filter button. Made the whole filter button clickable.
 	* (2.14.02) - Cleaned the code.
