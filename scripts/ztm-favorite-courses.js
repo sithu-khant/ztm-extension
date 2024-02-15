@@ -329,7 +329,25 @@ const removeExtraFavCoursesComponents = () => {
     });
 };
 
-const ztmFavoriteCourses = () => {
+const toggleFavoriteCourses = (isChecked) => {
+    // get all the favorite courses button
+    let ztmFavCoursesButtons = document.querySelectorAll('.ztm-fav-courses-button');
+    // get all the heart icons
+    let ztmFavCoursesHeartIcons = document.querySelectorAll('#ztm-fav-courses');
+
+    ztmFavCoursesButtons.forEach(button => {
+        // button.style.display = isChecked ? 'block' : 'none'
+        if (!isChecked) {
+            button.remove()
+        };
+    });
+
+    ztmFavCoursesHeartIcons.forEach(heartIcon => {
+        heartIcon.style.display = isChecked ? 'block' : 'none'
+    });
+};
+
+const ztmFavoriteCourses = (isChecked) => {
     // Only work on the hompage
     const courseFilter = document.querySelector('.course-filter');
     if (courseFilter) {
@@ -337,6 +355,7 @@ const ztmFavoriteCourses = () => {
         toggleFavCoursesButton();
         removeExtraFavCoursesComponents();
         favCoursesCards();
+        toggleFavoriteCourses(isChecked)
 
         // Get the ztm-fav-courses-button
         let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
@@ -346,6 +365,7 @@ const ztmFavoriteCourses = () => {
                 favCoursesComponents();
                 removeExtraFavCoursesComponents();
                 favCoursesCards();
+                toggleFavoriteCourses(isChecked)
             });
         };
     };
@@ -363,9 +383,26 @@ const ztmFavoriteCourses = () => {
     };
 };
 
+// Toggle fav courses
+const ztmToggleFavoriteCourses = () => {
+    // Get the initial checkbox status and apply style
+    chrome.storage.sync.get('ztmFavoriteCoursesCheckboxIsChecked', (data) => {
+        let isChecked = data.ztmFavoriteCoursesCheckboxIsChecked || false;
+        ztmFavoriteCourses(isChecked)
+    })
+
+    // Get the checkbox status dynamically and apply style
+    chrome.storage.onChanged.addListener((changes, namespace) => {
+        if (namespace === 'sync' && 'ztmFavoriteCoursesCheckboxIsChecked' in changes) {
+            let isChecked = changes.ztmFavoriteCoursesCheckboxIsChecked.newValue || false;
+            ztmFavoriteCourses(isChecked);
+        }
+    });
+};
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
-        ztmFavoriteCourses();
+        ztmToggleFavoriteCourses();
         // localStorage.removeItem('favCoursesArrayData');
         // localStorage.removeItem('heartClickedArrayData');
     };
