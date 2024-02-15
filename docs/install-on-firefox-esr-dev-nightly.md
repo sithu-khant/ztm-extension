@@ -2,7 +2,7 @@
 
 **Authors:** Sithu Khant, Raylan Daalman
 
-**Last update:** Wed Feb 14, 2023
+**Last update:** Wed Feb 14, 2024
 
 ## Before Installing
 
