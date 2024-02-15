@@ -77,6 +77,7 @@ WIP - Work in progress
 
 * For Chrome -> [Installing extension on Google Chrome locally](./docs/install-on-chrome.md)
 * For Firefox -> [Installing extension on Firefox locally](./docs/install-on-firefox.md)
+* For Firefox ESR, Developer Edition, and Nightly -> [Installing extension on Firefox ESR, Developer Edition, and Nightly locally](./docs/install-on-firefox-esr-dev-nightly.md)
 
 
 ## Suggestions or Issues?
