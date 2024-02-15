@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Thu Feb 16, 2024
+ * Last Updated: Thu Feb 15, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const ztmFavoriteCoursesIsEnabled = localStorage.getItem('ztmFavoriteCourses') === 'true'
     ztmFavoriteCoursesCheckbox.checked = ztmFavoriteCoursesIsEnabled
+
+    // default is checked
+    if (localStorage.getItem('ztmFavoriteCourses') === null) {
+        ztmFavoriteCoursesCheckbox.checked = true
+    };
 
     ztmFavoriteCoursesCheckbox.addEventListener('change', () => {
         // Get the checkbox status

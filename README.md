@@ -107,6 +107,7 @@ MIT License
 	* (2.15.01) - Added favorite course checkbox in the popup.
 	* (2.15.02) - Cleaned the code.
 	* (2.15.03) - Toggle favorite courses feature is working now.
+	* (2.15.04) - Made checkbox status to true as default for the fav courses feature.
 * Wed Feb 14, 2024
 	* (2.14.01) - Added background to the filter button. Made the whole filter button clickable.
 	* (2.14.02) - Cleaned the code.
