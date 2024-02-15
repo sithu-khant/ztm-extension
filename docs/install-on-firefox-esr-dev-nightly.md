@@ -10,9 +10,9 @@ Mozilla currently does not allow unsigned add-ons to be persistently installed i
 
 The Firefox browsers that allow the installation of unsinged add-ons are:
 
-- Firefox [Extended Support Release (ESR)]([Get Firefox for your enterprise with ESR and Rapid Release](https://www.mozilla.org/en-US/firefox/enterprise/))
+- Firefox [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/)
 
-- Firefox [Developer Edition]([Firefox Developer Edition](https://www.mozilla.org/firefox/developer/))
+- Firefox [Developer Edition](https://www.mozilla.org/firefox/developer/)
 
 - Firefox [Nightly Edition](https://nightly.mozilla.org/)
 
