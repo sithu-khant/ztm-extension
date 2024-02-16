@@ -103,6 +103,8 @@ MIT License
 
 ## Logs
 
+* Fri Feb 16, 2024
+	* (2.16.01) - Ready for pull request.
 * Thu Feb 15, 2024
 	* (2.15.01) - Added favorite course checkbox in the popup.
 	* (2.15.02) - Cleaned the code.
