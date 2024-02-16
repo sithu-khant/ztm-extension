@@ -27,32 +27,54 @@ const dailyMotivationComponent = (quote, author) => {
     motivationP.innerHTML = `
     <p class='quote'>"${quote}"</p><p class='dash-author'>&#x2015 <span class='author'>${author}</span></p>
     `
-
-    // Insert motivationP tag to the container
-    container.insertBefore(motivationP, container.firstChild);
+    
+    // Get the motivation container
+    let motivationContainer = document.querySelector('#daily-motivation');
+    if (!motivationContainer) {
+        // Insert motivationP tag to the container
+        container.insertBefore(motivationP, container.firstChild);
+    };
 };
 
-// Get random quote for the quote
-const getRandomQuote = () => {
-    const randomIndex = Math.floor(Math.random() * quotesArray.length);
-    const randomQuote = quotesArray[randomIndex];
+// Get a new quote for every new day
+const dailyMotivation = () => {
+    // Initial Index
+    let index;
+    // Get the stored day
+    let getDayData = localStorage.getItem('getDay') || 0;
+    // Get the date
+    const currentDate = new Date();
+
+    // If getDay and current day are not equal, get the new index 
+    if (getDayData != currentDate.getDay()) {
+        index = Math.floor(Math.random() * quotesArray.length);
+        // Store that new index and date
+        localStorage.setItem('getIndex', index)
+        localStorage.setItem('getDay', currentDate.getDay())
+    };
+
+    // Get the stored index
+    index = localStorage.getItem('getIndex') || 0;
+
+    const randomQuote = quotesArray[index];
     let quote = randomQuote[0];
     let author = randomQuote[1];
-
-    return { quote, author }
-};
-
-const dailyMotivation = () => {
-    // Get the random quote and author
-    let { quote, author } = getRandomQuote();
-
-    console.log(quote);
     
     dailyMotivationComponent(quote, author);
 };
 
-dailyMotivation();
 
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.action === 'windowChanged') {
+        // To track for the home page
+        let courseFilter = document.querySelector('.course-filter');
+        if (courseFilter) {
+            dailyMotivation();
+        };
+        // localStorage.removeItem('getIndex');
+        // localStorage.removeItem('getDay');
+    };
+});
 
 
 
