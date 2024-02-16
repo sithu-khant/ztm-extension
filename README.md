@@ -24,12 +24,12 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 * Hide Lecture Title
 * Showing total amount of time in each section
 * Favorite courses 
+* Daily Motivation
 
 
 ## Feature requests
 *(plans to add - top to bottom)*
 
-* [x] Daily Motivation (WIP)
 * [ ] Filtering courses by instructors
 
 
@@ -110,6 +110,7 @@ MIT License
 	* (2.16.03) - Committed for safety. To try new method.
 	* (2.16.04) - Getting random quote is working now.
 	* (2.16.05) - Daily Motivation feature is now working.
+	* (2.16.06) - Connected Daily Motivation feature with popup.
 * Thu Feb 15, 2024
 	* (2.15.01) - Added favorite course checkbox in the popup.
 	* (2.15.02) - Cleaned the code.

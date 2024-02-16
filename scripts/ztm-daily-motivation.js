@@ -27,7 +27,7 @@ const dailyMotivationComponent = (quote, author) => {
     motivationP.innerHTML = `
     <p class='quote'>"${quote}"</p><p class='dash-author'>&#x2015 <span class='author'>${author}</span></p>
     `
-    
+
     // Get the motivation container
     let motivationContainer = document.querySelector('#daily-motivation');
     if (!motivationContainer) {
@@ -42,6 +42,7 @@ const dailyMotivation = () => {
     let index;
     // Get the stored day
     let getDayData = localStorage.getItem('getDay') || 0;
+    
     // Get the date
     const currentDate = new Date();
 
@@ -63,30 +64,43 @@ const dailyMotivation = () => {
     dailyMotivationComponent(quote, author);
 };
 
+const toggleDailyMotivation = (isChecked) => {
+    if (isChecked) {
+        dailyMotivation();
+    } else {
+        // Get the motivation container
+        let motivationContainer = document.querySelector('#daily-motivation');
+        if (motivationContainer) {
+            // Remove the motivation container
+            motivationContainer.remove();
+        };
+    };
+};
+
+const ztmDailyMotivation = () => {
+    // Get the initial checkbox status and apply style
+    chrome.storage.sync.get('ztmDailyMotivationCheckboxIsChecked', (data) => {
+        let isChecked = data.ztmDailyMotivationCheckboxIsChecked || false;
+        toggleDailyMotivation(isChecked);
+    })
+
+    // Get the checkbox status dynamically and apply style
+    chrome.storage.onChanged.addListener((changes, namespace) => {
+        if (namespace === 'sync' && 'ztmDailyMotivationCheckboxIsChecked' in changes) {
+            let isChecked = changes.ztmDailyMotivationCheckboxIsChecked.newValue || false;
+            toggleDailyMotivation(isChecked);        
+        };
+    });
+};
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         // To track for the home page
         let courseFilter = document.querySelector('.course-filter');
         if (courseFilter) {
-            dailyMotivation();
+            ztmDailyMotivation();
         };
         // localStorage.removeItem('getIndex');
         // localStorage.removeItem('getDay');
     };
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
