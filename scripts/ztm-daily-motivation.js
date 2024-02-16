@@ -15,7 +15,7 @@ const quotesArray = [
 ];
 
 // Daily motivation component
-const dailyMotivationComponent = () => {
+const dailyMotivationComponent = (quote, author) => {
     // Get the course directory
     const courseDirectory = document.querySelector('.course-directory');
     // Get the container
@@ -25,17 +25,30 @@ const dailyMotivationComponent = () => {
     const motivationP =  document.createElement('div');
     motivationP.id = 'daily-motivation' 
     motivationP.innerHTML = `
-    <p class='quote'>"Success is not final, failure is not fatal: It is the courage to continue that counts."</p>
-    <p class='dash-author'>&#x2015 <span class='author'>Winston Churchill</span></p>
+    <p class='quote'>"${quote}"</p><p class='dash-author'>&#x2015 <span class='author'>${author}</span></p>
     `
 
     // Insert motivationP tag to the container
     container.insertBefore(motivationP, container.firstChild);
-}
+};
+
+// Get random quote for the quote
+const getRandomQuote = () => {
+    const randomIndex = Math.floor(Math.random() * quotesArray.length);
+    const randomQuote = quotesArray[randomIndex];
+    let quote = randomQuote[0];
+    let author = randomQuote[1];
+
+    return { quote, author }
+};
 
 const dailyMotivation = () => {
+    // Get the random quote and author
+    let { quote, author } = getRandomQuote();
+
+    console.log(quote);
     
-    dailyMotivationComponent();
+    dailyMotivationComponent(quote, author);
 };
 
 dailyMotivation();
