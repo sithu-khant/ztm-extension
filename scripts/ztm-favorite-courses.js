@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Sat Feb 3, 2024
+ * Last Updated: Wed Feb 14, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -19,16 +19,15 @@ const favCoursesComponents = () => {
     const courseFilter = document.querySelector('.course-filter');
 
     const favCoursesButton = document.createElement('div');
+    favCoursesButton.classList.add('pull-left', 'course-filter', 'ztm-fav-courses-button');
     favCoursesButton.innerHTML = `
-    <div class="pull-left course-filter ztm-fav-courses-button">
-        <div class="filter-label">
-            Favorites:
-        </div>
-        <div class="btn-group">
-            <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button">
-                <i class="bx bxs-heart" id="ztm-fav-courses-heart-icon"></i>
-            </button>
-        </div>
+    <div class="filter-label">
+        Favorites:
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button">
+            <i class="bx bxs-heart" id="ztm-fav-courses-heart-icon"></i>
+        </button>
     </div>
     `
     // // ztm-fav-courses-button
@@ -173,7 +172,6 @@ const toggleFavCourses = () => {
         let favCourses = document.querySelectorAll('.fav-courses');
         // Remove all favorite courses the course
         favCourses.forEach((course) => course.remove());
-        
     } else {
         // Get the course list
         let courseList = document.querySelector('.course-list');
@@ -214,8 +212,11 @@ const toggleFavCoursesButton = () => {
     // toggle favorite courses
     toggleFavCourses();
 
+    // Get the ztm-fav-courses-button
+    let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
+
     // Listner for the click statement
-    ztmFavCoursesHeartIcon.addEventListener('click', () => {
+    ztmFavCoursesButton.addEventListener('click', () => {
         // Store the favorite courses data array in the local storage
         // localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));
 
@@ -328,7 +329,25 @@ const removeExtraFavCoursesComponents = () => {
     });
 };
 
-const ztmFavoriteCourses = () => {
+const toggleFavoriteCourses = (isChecked) => {
+    // get all the favorite courses button
+    let ztmFavCoursesButtons = document.querySelectorAll('.ztm-fav-courses-button');
+    // get all the heart icons
+    let ztmFavCoursesHeartIcons = document.querySelectorAll('#ztm-fav-courses');
+
+    ztmFavCoursesButtons.forEach(button => {
+        // button.style.display = isChecked ? 'block' : 'none'
+        if (!isChecked) {
+            button.remove()
+        };
+    });
+
+    ztmFavCoursesHeartIcons.forEach(heartIcon => {
+        heartIcon.style.display = isChecked ? 'block' : 'none'
+    });
+};
+
+const ztmFavoriteCourses = (isChecked) => {
     // Only work on the hompage
     const courseFilter = document.querySelector('.course-filter');
     if (courseFilter) {
@@ -336,14 +355,17 @@ const ztmFavoriteCourses = () => {
         toggleFavCoursesButton();
         removeExtraFavCoursesComponents();
         favCoursesCards();
+        toggleFavoriteCourses(isChecked)
 
-        let ztmFavCoursesHeartIcon = document.querySelector('#ztm-fav-courses-heart-icon');
+        // Get the ztm-fav-courses-button
+        let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
         // Listner for the click statement
-        if (ztmFavCoursesHeartIcon) {
-            ztmFavCoursesHeartIcon.addEventListener('click', () => {
+        if (ztmFavCoursesButton) {
+            ztmFavCoursesButton.addEventListener('click', () => {
                 favCoursesComponents();
                 removeExtraFavCoursesComponents();
                 favCoursesCards();
+                toggleFavoriteCourses(isChecked)
             });
         };
     };
@@ -361,9 +383,30 @@ const ztmFavoriteCourses = () => {
     };
 };
 
+// Toggle fav courses
+const ztmToggleFavoriteCourses = () => {
+    // Get the initial checkbox status and apply style
+    chrome.storage.sync.get('ztmFavoriteCoursesCheckboxIsChecked', (data) => {
+        if (data.ztmFavoriteCoursesCheckboxIsChecked === undefined) {
+            ztmFavoriteCourses(true);
+        } else {
+            let isChecked = data.ztmFavoriteCoursesCheckboxIsChecked || false;
+            ztmFavoriteCourses(isChecked)
+        }
+    });
+
+    // Get the checkbox status dynamically and apply style
+    chrome.storage.onChanged.addListener((changes, namespace) => {
+        if (namespace === 'sync' && 'ztmFavoriteCoursesCheckboxIsChecked' in changes) {
+            let isChecked = changes.ztmFavoriteCoursesCheckboxIsChecked.newValue || false;
+            ztmFavoriteCourses(isChecked);
+        }
+    });
+};
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
-        ztmFavoriteCourses();
+        ztmToggleFavoriteCourses();
         // localStorage.removeItem('favCoursesArrayData');
         // localStorage.removeItem('heartClickedArrayData');
     };

@@ -104,6 +104,16 @@ MIT License
 
 ## Logs
 
+* Fri Feb 16, 2024
+	* (2.16.01) - Ready for pull request.
+* Thu Feb 15, 2024
+	* (2.15.01) - Added favorite course checkbox in the popup.
+	* (2.15.02) - Cleaned the code.
+	* (2.15.03) - Toggle favorite courses feature is working now.
+	* (2.15.04) - Made checkbox status to true as default for the fav courses feature.
+* Wed Feb 14, 2024
+	* (2.14.01) - Added background to the filter button. Made the whole filter button clickable.
+	* (2.14.02) - Cleaned the code.
 * Thu Feb 8, 2024
 	* (2.8.01) - Added `motivation-quotes` feature request.
 * Sat Feb 3, 2024

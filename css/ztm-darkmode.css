@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri Jan 12, 2024
+ * Last Updated: Wed Feb 14, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
@@ -40,6 +40,14 @@ body::-webkit-scrollbar-thumb {
 .nav.navbar-nav>li .fedora-navbar-link:hover {
     background: #232931 !important;
     color: #EEEEEE !important;
+}
+
+.course-filter {
+    background: #393E46 !important;
+}
+
+.course-filter * {
+    background: transparent !important;
 }
 
 .open>.dropdown-menu,
@@ -119,7 +127,7 @@ body::-webkit-scrollbar-thumb {
     opacity: 0;
 }
 
-path {
+.socials-container path {
     stroke: #fff !important;
 }
 
