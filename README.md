@@ -29,8 +29,8 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 ## Feature requests
 *(plans to add - top to bottom)*
 
+* [x] Daily Motivation (WIP)
 * [ ] Filtering courses by instructors
-* [ ] Motivation quotes
 
 
 ## Versions
@@ -106,6 +106,7 @@ MIT License
 
 * Fri Feb 16, 2024
 	* (2.16.01) - Ready for pull request.
+	* (2.16.02) - Added daily motivation feature to the popup.
 * Thu Feb 15, 2024
 	* (2.15.01) - Added favorite course checkbox in the popup.
 	* (2.15.02) - Cleaned the code.
