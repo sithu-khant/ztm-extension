@@ -20,11 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const ztmFavoriteCoursesIsEnabled = localStorage.getItem('ztmDailyMotivation') === 'true'
     ztmDailyMotivationCheckbox.checked = ztmFavoriteCoursesIsEnabled
 
-    // default is checked
-    if (localStorage.getItem('ztmDailyMotivation') === null) {
-        ztmDailyMotivationCheckbox.checked = true
-    };
-
     ztmDailyMotivationCheckbox.addEventListener('change', () => {
         // Get the checkbox status
         let checkboxStatus = { 'ztmDailyMotivationCheckboxIsChecked' : ztmDailyMotivationCheckbox.checked }

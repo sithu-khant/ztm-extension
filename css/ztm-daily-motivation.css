@@ -1,0 +1,28 @@
+/* 
+ * Author: Sithu Khant
+ * GitHub: https://github.com/sithu-khant 
+ * Last Updated: Fri Feb 16, 2024
+ * Description: Adds daily motivation quote to the home page
+ */ 
+
+#daily-motivation {
+    margin-bottom: 55px;
+    font-style: italic;
+    position: relative;
+}
+
+#daily-motivation .quote {
+    max-width: 550px;
+    margin: auto;
+    font-size: 20px;
+}
+
+#daily-motivation .dash-author {
+    font-size: 20px;
+    text-align: right;
+    margin-right: 25%;
+}
+
+#daily-motivation .author {
+    color: #30D683 !important;
+}
