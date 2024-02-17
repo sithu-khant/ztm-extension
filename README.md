@@ -104,6 +104,8 @@ MIT License
 
 ## Logs
 
+* Sat Feb 17, 2024
+	* (2.17.01) - Added a lot of daily quotes.
 * Fri Feb 16, 2024
 	* (2.16.01) - Ready for pull request.
 	* (2.16.02) - Added daily motivation feature to the popup.
