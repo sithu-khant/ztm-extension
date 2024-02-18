@@ -106,6 +106,7 @@ MIT License
 
 * Sun Feb 18, 2024
 	* (2.18.01) - Preparing for the new version.
+	* (2.18.02) - Version 2024.2.18.
 * Sat Feb 17, 2024
 	* (2.17.01) - Added a lot of daily quotes.
 * Fri Feb 16, 2024
