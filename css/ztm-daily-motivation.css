@@ -5,7 +5,7 @@
  * Description: Adds daily motivation quote to the home page
  */ 
 
-#daily-motivation {
+/*#daily-motivation {
     width: 50%;
     margin: auto;
     margin-bottom: 55px;
@@ -23,6 +23,6 @@
     margin-right: -10px;
 }
 
-#daily-motivation .author {
-    color: #30D683 !important;
-}
+#daily-motivation .dash-author {
+    font-size: 18px;
+}*/
