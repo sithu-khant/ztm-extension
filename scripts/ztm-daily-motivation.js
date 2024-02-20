@@ -1,10 +1,10 @@
-// /* 
+// /*
 //  * Author: Sithu Khant
-//  * GitHub: https://github.com/sithu-khant 
+//  * GitHub: https://github.com/sithu-khant
 //  * Last Updated: Sat Feb 17, 2024
 //  * Description: Adds daily motivation quote to the home page
-//  */ 
-
+//  */
+//
 // // Quotes
 // const quotesArray = [
 //     ['The only way to do great work is to love what you do.', 'Steve Jobs'],
@@ -86,19 +86,19 @@
 //     ['I haven’t failed. I’ve found 10,000 ways that don’t work.', 'Thomas Edison'],
 //     ['One man has enthusiasm for 30 minutes, another for 30 days, but it is the man who has it for 30 years who makes a success of his life.', 'Edward B. Butler'],
 // ];
-
+//
 // // Daily motivation component
 // const dailyMotivationComponent = (quote, author) => {
 //     // Get the course directory
 //     const courseDirectory = document.querySelector('.course-directory');
 //     // Get the container
 //     const container = courseDirectory.querySelector('.container');
-
+//
 //     // Create a new p tag for quotes
 //     const motivationP =  document.createElement('div');
-//     motivationP.id = 'daily-motivation' 
+//     motivationP.id = 'daily-motivation'
 //     motivationP.innerHTML = `<p class='quote'>"${quote}"</p><p class='dash-author'>&#x2015 <span class='author'>${author}</span></p>`
-
+//
 //     // Get the motivation container
 //     let motivationContainer = document.querySelector('#daily-motivation');
 //     if (!motivationContainer) {
@@ -106,35 +106,35 @@
 //         container.insertBefore(motivationP, container.firstChild);
 //     };
 // };
-
+//
 // // Get a new quote for every new day
 // const dailyMotivation = () => {
 //     // Initial Index
 //     let index;
 //     // Get the stored day
 //     let getDayData = localStorage.getItem('getDay') || 0;
-    
+//
 //     // Get the date
 //     const currentDate = new Date();
-
-//     // If getDay and current day are not equal, get the new index 
+//
+//     // If getDay and current day are not equal, get the new index
 //     if (getDayData != currentDate.getDay()) {
 //         index = Math.floor(Math.random() * quotesArray.length);
 //         // Store that new index and date
 //         localStorage.setItem('getIndex', index)
 //         localStorage.setItem('getDay', currentDate.getDay())
 //     };
-
+//
 //     // Get the stored index
 //     index = localStorage.getItem('getIndex') || 0;
-
+//
 //     const randomQuote = quotesArray[index];
 //     let quote = randomQuote[0];
 //     let author = randomQuote[1];
-    
+//
 //     dailyMotivationComponent(quote, author);
 // };
-
+//
 // const toggleDailyMotivation = (isChecked) => {
 //     if (isChecked) {
 //         dailyMotivation();
@@ -147,23 +147,23 @@
 //         };
 //     };
 // };
-
+//
 // const ztmDailyMotivation = () => {
 //     // Get the initial checkbox status and apply style
 //     chrome.storage.sync.get('ztmDailyMotivationCheckboxIsChecked', (data) => {
 //         let isChecked = data.ztmDailyMotivationCheckboxIsChecked || false;
 //         toggleDailyMotivation(isChecked);
 //     })
-
+//
 //     // Get the checkbox status dynamically and apply style
 //     chrome.storage.onChanged.addListener((changes, namespace) => {
 //         if (namespace === 'sync' && 'ztmDailyMotivationCheckboxIsChecked' in changes) {
 //             let isChecked = changes.ztmDailyMotivationCheckboxIsChecked.newValue || false;
-//             toggleDailyMotivation(isChecked);        
+//             toggleDailyMotivation(isChecked);
 //         };
 //     });
 // };
-
+//
 // chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 //     if (message.action === 'windowChanged') {
 //         // To track for the home page
