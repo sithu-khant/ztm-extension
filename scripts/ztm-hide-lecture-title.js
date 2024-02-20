@@ -25,13 +25,13 @@ if (lectureTitleHomeBackIcon) {
 
 	const ztmHideLectureTitle = () => {
 		// Get the initial checkbox status and apply style
-		chrome.storage.sync.get('ztmHideLectureTitleCheckboxIsChecked', (data) => {
+		browser.storage.sync.get('ztmHideLectureTitleCheckboxIsChecked', (data) => {
 		    let isChecked = data.ztmHideLectureTitleCheckboxIsChecked || false;
 		    hideLectureTitle(isChecked);
 		})
 
 		// Get the checkbox status dynamically and apply style
-		chrome.storage.onChanged.addListener((changes, namespace) => {
+		browser.storage.onChanged.addListener((changes, namespace) => {
 		    if (namespace === 'sync' && 'ztmHideLectureTitleCheckboxIsChecked' in changes) {
 		        let isChecked = changes.ztmHideLectureTitleCheckboxIsChecked.newValue || false;
 		        hideLectureTitle(isChecked);

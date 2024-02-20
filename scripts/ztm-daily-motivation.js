@@ -156,13 +156,13 @@ const toggleDailyMotivation = (isChecked) => {
 
 const ztmDailyMotivation = () => {
     // Get the initial checkbox status and apply style
-    chrome.storage.sync.get('ztmDailyMotivationCheckboxIsChecked', (data) => {
+    browser.storage.sync.get('ztmDailyMotivationCheckboxIsChecked', (data) => {
         let isChecked = data.ztmDailyMotivationCheckboxIsChecked || false;
         toggleDailyMotivation(isChecked);
     })
 
     // Get the checkbox status dynamically and apply style
-    chrome.storage.onChanged.addListener((changes, namespace) => {
+    browser.storage.onChanged.addListener((changes, namespace) => {
         if (namespace === 'sync' && 'ztmDailyMotivationCheckboxIsChecked' in changes) {
             let isChecked = changes.ztmDailyMotivationCheckboxIsChecked.newValue || false;
             toggleDailyMotivation(isChecked);
@@ -170,7 +170,7 @@ const ztmDailyMotivation = () => {
     });
 };
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         // To track for the home page
         let courseFilter = document.querySelector('.course-filter');

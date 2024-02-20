@@ -11,7 +11,7 @@ const cssFile = 'css/ztm-dark-mode.css';
 const darkModeCssLink = document.createElement('link');
 darkModeCssLink.rel = 'stylesheet';
 darkModeCssLink.type = 'text/css';
-darkModeCssLink.href = chrome.runtime.getURL(cssFile);
+darkModeCssLink.href = browser.runtime.getURL(cssFile);
 
 const enableZtmDarkMode = () => {
     // Add dark mode css file to the head tag
@@ -33,13 +33,13 @@ const ztmToggleDarkMode = (isChecked) => {
 };
 
 // Get the initial checkbox status and apply style
-chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', (data) => {
+browser.storage.sync.get('ztmDarkModeCheckboxIsChecked', (data) => {
     let isChecked = data.ztmDarkModeCheckboxIsChecked || false;
     ztmToggleDarkMode(isChecked);
 })
 
 // Get the checkbox status dynamically and apply style
-chrome.storage.onChanged.addListener((changes, namespace) => {
+browser.storage.onChanged.addListener((changes, namespace) => {
     if (namespace === 'sync' && 'ztmDarkModeCheckboxIsChecked' in changes) {
         let isChecked = changes.ztmDarkModeCheckboxIsChecked.newValue || false;
         ztmToggleDarkMode(isChecked);

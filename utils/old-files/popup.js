@@ -3,10 +3,10 @@
 // ----------
 
 function querySendTabMessage( options ){
-    chrome.tabs.query(
+    browser.tabs.query(
         { active: true, currentWindow: true},
         function (tabs) {
-            chrome.tabs.sendMessage(
+            browser.tabs.sendMessage(
                 tabs[0].id,
                 options
             )
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let ztmDarkModeCheckbox = document.getElementById('ztmDarkModeCheckbox');
 
     ztmDarkModeCheckbox.addEventListener('change', function () {
-        chrome.storage.sync.set({'ztmDarkModeCheckboxIsChecked': ztmDarkModeCheckbox.checked}, 
+        browser.storage.sync.set({'ztmDarkModeCheckboxIsChecked': ztmDarkModeCheckbox.checked}, 
         function () {
             // sends
             querySendTabMessage({

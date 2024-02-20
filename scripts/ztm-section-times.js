@@ -220,13 +220,13 @@ const hideCourseInfoSectionTimes = (isChecked) => {
 
 const ztmSectionTimes = () => {
     // Get the initial checkbox status and apply style
-    chrome.storage.sync.get('ztmSectionTimesCheckboxIsChecked', (data) => {
+    browser.storage.sync.get('ztmSectionTimesCheckboxIsChecked', (data) => {
         let isChecked = data.ztmSectionTimesCheckboxIsChecked || false;
         hideCourseInfoSectionTimes(isChecked);
     })
 
     // Get the checkbox status dynamically and apply style
-    chrome.storage.onChanged.addListener((changes, namespace) => {
+    browser.storage.onChanged.addListener((changes, namespace) => {
         if (namespace === 'sync' && 'ztmSectionTimesCheckboxIsChecked' in changes) {
             let isChecked = changes.ztmSectionTimesCheckboxIsChecked.newValue || false;
             hideCourseInfoSectionTimes(isChecked);        
@@ -234,7 +234,7 @@ const ztmSectionTimes = () => {
     });
 }
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         ztmSectionTimes();
     }

@@ -395,7 +395,7 @@ const ztmFavoriteCourses = (isChecked) => {
 // Toggle fav courses
 const ztmToggleFavoriteCourses = () => {
     // Get the initial checkbox status and apply style
-    chrome.storage.sync.get('ztmFavoriteCoursesCheckboxIsChecked', (data) => {
+    browser.storage.sync.get('ztmFavoriteCoursesCheckboxIsChecked', (data) => {
         if (data.ztmFavoriteCoursesCheckboxIsChecked === undefined) {
             ztmFavoriteCourses(true);
         } else {
@@ -405,7 +405,7 @@ const ztmToggleFavoriteCourses = () => {
     });
 
     // Get the checkbox status dynamically and apply style
-    chrome.storage.onChanged.addListener((changes, namespace) => {
+    browser.storage.onChanged.addListener((changes, namespace) => {
         if (namespace === 'sync' && 'ztmFavoriteCoursesCheckboxIsChecked' in changes) {
             let isChecked = changes.ztmFavoriteCoursesCheckboxIsChecked.newValue || false;
             ztmFavoriteCourses(isChecked);
@@ -413,7 +413,7 @@ const ztmToggleFavoriteCourses = () => {
     });
 };
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         ztmToggleFavoriteCourses();
         // localStorage.removeItem('favCoursesArrayData');

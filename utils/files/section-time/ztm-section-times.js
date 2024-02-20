@@ -131,14 +131,14 @@
 //     };
 
 //     const ztmSectionTimesObserver = new MutationObserver(() => {
-//         chrome.storage.sync.get("ztmSectionTimesCheckboxIsChecked", (data) => {
+//         browser.storage.sync.get("ztmSectionTimesCheckboxIsChecked", (data) => {
 //             const isEnabled = data?.ztmSectionTimesCheckboxIsChecked || false;
 //             updateFunctionality(isEnabled);
 //         });
 
 //         console.log('section time observer is running...');
 
-//         chrome.storage.onChanged.addListener((changes, namespace) => {
+//         browser.storage.onChanged.addListener((changes, namespace) => {
 //             if (namespace === "sync" && "ztmSectionTimesCheckboxIsChecked" in changes) {
 //                 const value = changes.ztmSectionTimesCheckboxIsChecked.newValue || false;
 //                 updateFunctionality(value);

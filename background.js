@@ -5,8 +5,8 @@
  * Description: Sending windowChanged message to the window tab.
  */ 
 
-chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+browser.tabs.onUpdated.addListener((tabId, changeInfo) => {
     if (changeInfo.status === 'complete') {
-        chrome.tabs.sendMessage(tabId, { action: 'windowChanged' });
+        browser.tabs.sendMessage(tabId, { action: 'windowChanged' });
     }
 });

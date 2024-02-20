@@ -272,7 +272,7 @@ const ztmFavCourses = () => {
 // const ztmFavCoursesObserver = new MutationObserver(() => ztmFavCourses());
 // ztmFavCoursesObserver.observe(courseListing, { childList: true, subtree: true })
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         ztmFavCourses();
     };

@@ -10,8 +10,8 @@
 
 // Function to query and send a message to the active tab
 // function querySendTabMessage(options) {
-//   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-//     chrome.tabs.sendMessage(tabs[0].id, options);
+//   browser.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+//     browser.tabs.sendMessage(tabs[0].id, options);
 //   });
 // }
 
@@ -22,8 +22,8 @@
 //     "ztmSectionTimesCheckbox"
 //   );
 
-//   // Retrieve the stored checkbox state from Chrome storage
-//   const data = await chrome.storage.sync.get(
+//   // Retrieve the stored checkbox state from browser storage
+//   const data = await browser.storage.sync.get(
 //     "ztmSectionTimesCheckboxIsChecked"
 //   );
 
@@ -31,7 +31,7 @@
 //   sectionTimesCheckbox.checked = data.ztmSectionTimesCheckboxIsChecked || false;
 
 //   sectionTimesCheckbox.addEventListener("change", function () {
-//     chrome.storage.sync.set(
+//     browser.storage.sync.set(
 //       { ztmSectionTimesCheckboxIsChecked: sectionTimesCheckbox.checked },
 //       function () {
 //         // Send a message to the active tab with the updated checkbox state
