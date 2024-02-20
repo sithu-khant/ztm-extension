@@ -1,11 +1,11 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri Feb 16, 2024
+ * Last Updated: Tue Feb 20, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
-/* ----- Start Home Page Darkmode Section ----- */
+/* ----- Start Home Page Dark Mode Section ----- */
 body,
 *:not(.status-icon, .bxs-heart) {
     background: #232931 !important;
@@ -26,7 +26,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar {
-    box-shadow: 0px 1px 1px rgba(225, 225, 225, 0.1);
+    box-shadow: 0 1px 1px rgba(225, 225, 225, 0.1);
 }
 
 .navbar-fedora .navbar-toggle .icon-bar {
@@ -139,10 +139,10 @@ body::-webkit-scrollbar-thumb {
     stroke: #fff !important;
 }
 
-/* ----- End Home Page Darkmode Section ----- */
+/* ----- End Home Page Dark Mode Section ----- */
 
 
-/* ----- Start Course Info Page Darkmode Section ----- */
+/* ----- Start Course Info Page Dark Mode Section ----- */
 
 .full-width {
     border-bottom: 1px solid #393E46 !important;
@@ -255,9 +255,9 @@ body::-webkit-scrollbar-thumb {
     background: #24d37b !important;
 }
 
-/* ----- End Course Info Page Darkmode Section ----- */
+/* ----- End Course Info Page Dark Mode Section ----- */
 
-/* ----- Start Lecture Page Darkmode Section ----- */
+/* ----- Start Lecture Page Dark Mode Section ----- */
 
 .course-sidebar .course-progress.lecture-page.sticky {
     background: #232931 !important;
@@ -360,4 +360,4 @@ header.half-height .lecture-left .nav-icon-list:hover * {
     border-bottom: 1px solid transparent !important;
 }
 
-/* ----- End Lecture Page Darkmode Section ----- */
+/* ----- End Lecture Page Dark Mode Section ----- */
