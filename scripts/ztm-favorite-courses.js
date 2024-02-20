@@ -345,6 +345,15 @@ const toggleFavoriteCourses = (isChecked) => {
     ztmFavCoursesHeartIcons.forEach(heartIcon => {
         heartIcon.style.display = isChecked ? 'block' : 'none'
     });
+
+    // When toggle off from the popup, made all the course card to display block
+    // get all the course cards
+    let courseCards = document.querySelectorAll('.col-xs-12.col-sm-6.col-md-4')
+    courseCards.forEach((courseCard) => {
+        if (!isChecked) {
+            courseCard.style.display = 'block'
+        };
+    });
 };
 
 const ztmFavoriteCourses = (isChecked) => {

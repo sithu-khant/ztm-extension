@@ -1,4 +1,4 @@
-<img align="right" width="150" height="150" src="./utils/assets/ztm-logo.png">
+<img align="right" width="150" height="150" src="./utils/assets/ztm-logo.png" alt="logo">
 
 # Zero To Mastery - Extension
 
@@ -23,26 +23,26 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 * Toggle dark mode on all pages
 * Hide Lecture Title
 * Showing total amount of time in each section
-* Favorite courses 
+* Favorite courses
 
 
 ## Feature requests
 *(plans to add - top to bottom)*
 
-* [ ] Filtering courses by instructors
-* [ ] Motivation quotes
+* [ ] Daily Motivation
 
 
 ## Versions
 
-| Versions  | Chrome | Firefox | Edge | Brave |
-|-----------|--------|---------| ------| ------|
-| 2024.2.2   | ✅      | ✅       | ✅   | ✅   |
-| 2023.12.21 | ✅      | ✅       | ✅   | ✅   |
-| 2023.12.14.01 | ✅      | ✅       |  ✅    | ✅   |
-| 2023.12.13 | ✅      | ✅       | ✅    | ✅   |
-| 23.12.13 | ✅      | ✅       | ✅    | ✅   |
-| 2023.12.12 | ✅      | ✅       | ✅    | ✅   |
+| Versions      | Chrome | Firefox | Edge | Brave |
+|---------------|--------|---------|------|-------|
+| 2024.2.18     | ✅      | ✅       | ✅    | ✅     |
+| 2024.2.2      | ✅      | ✅       | ✅    | ✅     |
+| 2023.12.21    | ✅      | ✅       | ✅    | ✅     |
+| 2023.12.14.01 | ✅      | ✅       | ✅    | ✅     |
+| 2023.12.13    | ✅      | ✅       | ✅    | ✅     |
+| 23.12.13      | ✅      | ✅       | ✅    | ✅     |
+| 2023.12.12    | ✅      | ✅       | ✅    | ✅     |
 
 WIP - Work in progress
 
@@ -50,6 +50,9 @@ WIP - Work in progress
 
 ### Version list
 
+* 2024.2.18
+  * Improved favorite course feature
+  * Code improvements
 * 2024.2.2
 	* Hide Lecture Title
 	* Showing total amount of time in each section
@@ -88,7 +91,7 @@ Feel free to create a new issue here -> [GitHub Issue](https://github.com/sithu-
 
 (If you are currently a member of the ZTM discord server, you can also suggest/issue there)
 
-## Want to contribue?
+## Want to contribute?
 
 If you added any new features, make a pull request. I will review, and merge into the extension if it is fun to have.
 
@@ -104,6 +107,20 @@ MIT License
 
 ## Logs
 
+* Tue Feb 20, 2024
+  * (2.20.01) - Ready to merge to main branch. Released version `2024.2.18`.  
+* Sun Feb 18, 2024
+	* (2.18.01) - Preparing for the new version.
+	* (2.18.02) - Version 2024.2.18.
+* Sat Feb 17, 2024
+	* (2.17.01) - Added a lot of daily quotes.
+* Fri Feb 16, 2024
+	* (2.16.01) - Ready for pull request.
+	* (2.16.02) - Added daily motivation feature to the popup.
+	* (2.16.03) - Committed for safety. To try new method.
+	* (2.16.04) - Getting random quote is working now.
+	* (2.16.05) - Daily Motivation feature is now working.
+	* (2.16.06) - Connected Daily Motivation feature with popup.
 * Fri Feb 16, 2024
 	* (2.16.01) - Ready for pull request.
 * Thu Feb 15, 2024

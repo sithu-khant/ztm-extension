@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Wed Feb 14, 2024
+ * Last Updated: Fri Feb 16, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
@@ -27,6 +27,14 @@ body::-webkit-scrollbar-thumb {
 
 .navbar {
     box-shadow: 0px 1px 1px rgba(225, 225, 225, 0.1);
+}
+
+.navbar-fedora .navbar-toggle .icon-bar {
+    background: #EEEEEE !important;
+}
+
+.navbar-fedora .navbar-collapse.in .nav.navbar-nav>li .fedora-navbar-link {
+    color: #EEEEEE !important;
 }
 
 .nav.navbar-nav>li .fedora-navbar-link {
