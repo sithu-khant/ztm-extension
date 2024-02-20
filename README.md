@@ -24,12 +24,13 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 * Hide Lecture Title
 * Showing total amount of time in each section
 * Favorite courses
+* Daily Motivation
 
 
 ## Feature requests
 *(plans to add - top to bottom)*
 
-* [ ] Daily Motivation
+* Currently, there is no feature request.
 
 
 ## Versions
@@ -108,7 +109,8 @@ MIT License
 ## Logs
 
 * Tue Feb 20, 2024
-  * (2.20.01) - Ready to merge to main branch. Released version `2024.2.18`.  
+  * (2.20.01) - Ready to merge to main branch. Released version `2024.2.18`.
+  * (2.20.02) - Improved daily motivation feature. All done.
 * Sun Feb 18, 2024
 	* (2.18.01) - Preparing for the new version.
 	* (2.18.02) - Version 2024.2.18.

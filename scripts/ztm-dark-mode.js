@@ -1,11 +1,11 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Sat Jan 12, 2024
+ * Last Updated: Tue Feb 20, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
-const cssFile = 'css/ztm-darkmode.css';
+const cssFile = 'css/ztm-dark-mode.css';
 
 // Create dark mode css file
 const darkModeCssLink = document.createElement('link');
