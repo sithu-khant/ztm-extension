@@ -7,21 +7,18 @@
 
 #daily-motivation {
     width: 50%;
-    margin: auto auto 55px;
+    margin: auto auto 35px;
     font-style: italic;
     position: relative;
 }
 
 #daily-motivation .quote {
     font-size: 20px;
+    margin: 0 auto;
 }
 
 #daily-motivation .dash-author {
-    font-size: 20px;
+    font-size: 12px;
     text-align: right;
-    margin-right: -10px;
-}
-
-#daily-motivation .dash-author {
-    font-size: 18px;
+    margin: 0 auto;
 }

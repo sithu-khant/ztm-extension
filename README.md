@@ -37,6 +37,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 | Versions      | Chrome | Firefox | Edge | Brave |
 |---------------|--------|---------|------|-------|
+| 2024.2.20     | ✅      | ✅       | ✅    | ✅     |
 | 2024.2.18     | ✅      | ✅       | ✅    | ✅     |
 | 2024.2.2      | ✅      | ✅       | ✅    | ✅     |
 | 2023.12.21    | ✅      | ✅       | ✅    | ✅     |
@@ -111,6 +112,7 @@ MIT License
 * Tue Feb 20, 2024
   * (2.20.01) - Ready to merge to main branch. Released version `2024.2.18`.
   * (2.20.02) - Improved daily motivation feature. All done.
+  * (2.20.03) - Published version `2024.2.20`.
 * Sun Feb 18, 2024
 	* (2.18.01) - Preparing for the new version.
 	* (2.18.02) - Version 2024.2.18.

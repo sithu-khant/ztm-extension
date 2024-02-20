@@ -89,7 +89,7 @@
 	"web_accessible_resources": [
 		{
 			"resources": [
-				"css/ztm-darkmode.css"
+				"css/ztm-dark-mode.css"
 			],
 			"matches": [
 				"https://academy.zerotomastery.io/*"

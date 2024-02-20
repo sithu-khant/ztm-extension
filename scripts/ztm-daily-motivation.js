@@ -7,6 +7,12 @@
 
 // Quotes
 const quotesArray = [
+    ['A cynic is a man who knows the price of everything, and the value of nothing.', 'Oscar Wilde'],
+    ['The purpose of knowledge is action, not knowledge.', 'Aristotle'],
+    ['Knowledge isn\'t free. You have to pay attention.', 'Richard Feynman'],
+    ['Dhamma is in your mind, not in the forest. You don\'t have to go and look anywhere else', 'Ajahn Chah'],
+    ['We must be true inside, true to ourselves before we can know a truth that is outside us.', 'Thomas Merton'],
+    ['Saying yes frequently is an additive strategy. Saying no is a subtractive strategy. Keep saying no to a lot of things - the negative and unimportant ones - and once in awhile, you will be left with an idea which is so compelling that it would be a screaming no-brained \'yes\'', 'Unknown'],
     ['The only way to do great work is to love what you do.', 'Steve Jobs'],
     ['Success is not final, failure is not fatal: It is the courage to continue that counts.', 'Winston Churchill'],
     ['Don’t watch the clock; do what it does. Keep going.', 'Sam Levenson'],
