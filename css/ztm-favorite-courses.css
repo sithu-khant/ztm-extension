@@ -14,10 +14,9 @@
 	align-items: center !important;
 
 	cursor: pointer;
-
 	-webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #ztm-fav-courses-heart-icon {

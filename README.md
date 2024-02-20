@@ -121,6 +121,8 @@ MIT License
 	* (2.16.04) - Getting random quote is working now.
 	* (2.16.05) - Daily Motivation feature is now working.
 	* (2.16.06) - Connected Daily Motivation feature with popup.
+* Fri Feb 16, 2024
+	* (2.16.01) - Ready for pull request.
 * Thu Feb 15, 2024
 	* (2.15.01) - Added favorite course checkbox in the popup.
 	* (2.15.02) - Cleaned the code.
