@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88a93d3f-02c3-471a-9b0a-14f83a380ce4" name="Changes" comment="2.20.01">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/ztm-daily-motivation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ztm-daily-motivation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ztm-daily-motivation.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ztm-daily-motivation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +62,7 @@
       <workItem from="1708386561495" duration="4145000" />
       <workItem from="1708390838162" duration="103000" />
       <workItem from="1708396603162" duration="162000" />
-      <workItem from="1708427170060" duration="1923000" />
+      <workItem from="1708427170060" duration="2024000" />
     </task>
     <task id="LOCAL-00001" summary="2.20.01">
       <option name="closed" value="true" />
