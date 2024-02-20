@@ -79,7 +79,7 @@ Feel free to create a new issue here -> [GitHub Issue](https://github.com/sithu-
 
 (If you are currently a member of the ZTM discord server, you can also suggest/issue there)
 
-## Want to contribue?
+## Want to contribute?
 
 If you added any new features, make a pull request. I will review, and merge into the extension if it is fun to have.
 
