@@ -53,6 +53,10 @@ WIP - Work in progress
 
 ### Version list
 
+* 2024.2.21
+  * Made changes to the Daily Motivation feature
+  	* Edited some quotes
+  	* Added new quotes
 * 2024.2.20
   * Daily motivation feature
 * 2024.2.18
@@ -118,6 +122,7 @@ MIT License
 * Wed Feb 21, 2024
   * (2.20.01) - Made a little touch to the quotes. Added new quotes.
   * (2.20.02) - Added version files.
+  * (2.20.03) - Added new version to the version list.
 * Tue Feb 20, 2024
   * (2.20.01) - Ready to merge to main branch. Released version `2024.2.18`.
   * (2.20.02) - Improved daily motivation feature. All done.
