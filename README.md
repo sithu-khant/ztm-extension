@@ -110,7 +110,7 @@ If you added any new features, make a pull request. I will review, and merge int
 
 ### Supporters
 
-* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains support free license for Open Source Development.You can apply it [here](https://jb.gg/OpenSourceSupport). 
+* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development.You can apply it [here](https://jb.gg/OpenSourceSupport). 
 
 ## License
 
@@ -123,6 +123,7 @@ MIT License
   * (2.20.01) - Made a little touch to the quotes. Added new quotes.
   * (2.20.02) - Added version files.
   * (2.20.03) - Added new version to the version list.
+  * (2.20.04) - Updated Readme.
 * Tue Feb 20, 2024
   * (2.20.01) - Ready to merge to main branch. Released version `2024.2.18`.
   * (2.20.02) - Improved daily motivation feature. All done.
