@@ -1,7 +1,7 @@
 /*
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant
- * Last Updated: Sat Feb 17, 2024
+ * Last Updated: Wed Feb 21, 2024
  * Description: Adds daily motivation quote to the home page
  */
 
@@ -86,6 +86,13 @@ const quotesArray = [
     ['There are basically two types of people. People who accomplish things, and people who claim to have accomplished things. The first group is less crowded.', 'Mark Twain'],
     ['I haven’t failed. I’ve found 10,000 ways that don’t work.', 'Thomas Edison'],
     ['One man has enthusiasm for 30 minutes, another for 30 days, but it is the man who has it for 30 years who makes a success of his life.', 'Edward B. Butler'],
+    ['Small lifestyle changes compound over a period of time.', 'James Clear'],
+    ['We don\'t rise to the level of our goals, we fall to the level of our systems.', 'James Clear'],
+    ['It is not about ambition or effort, it is about creating an environment that makes behavioral change inevitable.', 'James Clear'],
+    ['People who believe they are capable of doing something are far more likely to do it.', 'David Robson'],
+    ['Adopt mindsets and beliefs that are most likely to help you.', 'David Robson'],
+    ['You shouldn\'t necessarily avoid stress, you should pick the stress that you\'re happy to have.', 'Kelly McGonigal, Ph.D'],
+    ['We don\'t do great work at things we love, we tend to love things that we become very good at.', 'Cal Newport'],
 ];
 
 // Daily motivation component
@@ -105,7 +112,7 @@ const dailyMotivationComponent = (quote, author) => {
     if (!motivationContainer) {
         // Insert motivationP tag to the container
         container.insertBefore(motivationP, container.firstChild);
-    };
+    }
 };
 
 // Get a new quote for every new day
@@ -124,7 +131,7 @@ const dailyMotivation = () => {
         // Store that new index and date
         localStorage.setItem('getIndex', index)
         localStorage.setItem('getDay', currentDate.getDay())
-    };
+    }
 
     // Get the stored index
     index = localStorage.getItem('getIndex') || 0;
@@ -145,8 +152,8 @@ const toggleDailyMotivation = (isChecked) => {
         if (motivationContainer) {
             // Remove the motivation container
             motivationContainer.remove();
-        };
-    };
+        }
+    }
 };
 
 const ztmDailyMotivation = () => {
@@ -161,7 +168,7 @@ const ztmDailyMotivation = () => {
         if (namespace === 'sync' && 'ztmDailyMotivationCheckboxIsChecked' in changes) {
             let isChecked = changes.ztmDailyMotivationCheckboxIsChecked.newValue || false;
             toggleDailyMotivation(isChecked);
-        };
+        }
     });
 };
 
@@ -171,8 +178,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         let courseFilter = document.querySelector('.course-filter');
         if (courseFilter) {
             ztmDailyMotivation();
-        };
+        }
         // localStorage.removeItem('getIndex');
         // localStorage.removeItem('getDay');
-    };
+    }
 });
