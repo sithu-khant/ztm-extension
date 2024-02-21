@@ -104,6 +104,9 @@ If you added any new features, make a pull request. I will review, and merge int
 
 <a href="https://www.buymeacoffee.com/sithukhant" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
+### Supporters
+
+* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains support free license for Open Source Development.You can apply it [here](https://jb.gg/OpenSourceSupport). 
 
 ## License
 
@@ -114,6 +117,7 @@ MIT License
 
 * Wed Feb 21, 2024
   * (2.20.01) - Made a little touch to the quotes. Added new quotes.
+  * (2.20.02) - Added version files.
 * Tue Feb 20, 2024
   * (2.20.01) - Ready to merge to main branch. Released version `2024.2.18`.
   * (2.20.02) - Improved daily motivation feature. All done.
