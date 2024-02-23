@@ -119,6 +119,8 @@ MIT License
 
 ## Logs
 
+* Fri Feb 23, 2024
+  * (2.23.01) - Bug fixed for favorite course feature. That bug is not in common, but fixed it to make it safety.
 * Wed Feb 21, 2024
   * (2.20.01) - Made a little touch to the quotes. Added new quotes.
   * (2.20.02) - Added version files.
@@ -178,14 +180,14 @@ MIT License
 	* (2.1.03) - `toggleFavCourses` working...
 	* (2.1.04) - Committed for safety.
 	* (2.1.05) - (To Revert).
-	* (2.1.06) - Favorite course is partically working now...
+	* (2.1.06) - Favorite course is partially working now...
 	* (2.1.07) - Added condition for only work on the home page.
 	* (2.1.08) - Updated course progressbar percentage.
 	* (2.1.09) - Updated for safety.
 	* (2.1.10) - Favorite courses feature is working...
-	* (2.1.11) - Prevent overwritting the components.
+	* (2.1.11) - Prevent overwriting the components.
 	* (2.1.12) - Changed heart icon red to green.
-	* (2.1.13) - Applyed changed in the favorited courses.
+	* (2.1.13) - Applied changed in the favorite courses.
 * Wed Jan 31, 2024
 	* (1.31.01) - This method also doesn't work. But I will make a commit for later use.
 	* (1.31.02) - Committed for safety.
@@ -193,8 +195,8 @@ MIT License
 	* (1.31.04) - Stored data on the local storage.
 	* (1.31.05) - Stored data as objects in the array.
 	* (1.31.06) - Can be store/remove fav courses dynamically.
-	* (1.31.07) - To prevent overwritting.
-	* (1.31.08) - Add favorited courses to the courseList.
+	* (1.31.07) - To prevent overwriting.
+	* (1.31.08) - Add favorite courses to the courseList.
 	* (1.31.09) - Added course percentage to the fav course list.
 	* (1.31.10) - Committed for safety.
 	* (1.31.11) - Styled the favorite courses.
@@ -205,7 +207,7 @@ MIT License
 	* (1.30.03) - Started `fav-course` section.
 	* (1.30.04) - Styled `ztm-fav-course-button`.
 	* (1.30.05) - This method doesn't work. But I will make a commit with the purpose of this code could be useful later.
-	* (1.30.06) - Collected favorited courses as array.
+	* (1.30.06) - Collected favorite courses as array.
 * Mon Jan 29, 2024
 	* (1.29.01) - Created a new pull request for `section-times` feature.
 * Thu Jan 26, 2024
@@ -284,7 +286,7 @@ MIT License
 * Tue Dec 26, 2023
 	* (12.26.01) - Merged from `LaurelineP`.
 		* fixed typos
-		* provided a bit of refacto
+		* provided a bit of refactor.
 		* have a catch block - to handle as you wish later on
 	* (12.26.02) - Committed for safety
 	* (12.26.03) - Fixed a bug
