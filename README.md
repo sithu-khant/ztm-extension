@@ -119,6 +119,8 @@ MIT License
 
 ## Logs
 
+* Mon Feb 26, 2024
+	* (2.25.01) - Added `?` to the hide lecture title feature.
 * Sun Feb 25, 2024
   * (2.25.01) - Added new quote.
 * Fri Feb 23, 2024
