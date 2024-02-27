@@ -9,6 +9,9 @@
 body,
 *:not(.status-icon, .bxs-heart, .gravatar.jsx-2575539602, .secondaryButton, .jsx-2138578525) {
     background: #232931 !important;
+}
+
+.view-directory.course-directory * {
     color: #EEEEEE !important;
 }
 
@@ -143,6 +146,18 @@ body::-webkit-scrollbar-thumb {
 
 
 /* ----- Start Course Info Page Dark Mode Section ----- */
+
+.container.jsx-2755510470 {
+    color: #EEEEEE !important;
+}
+
+.section-header.jsx-4255369697 h2,
+.section-header.jsx-4255369697 p {
+    color: #EEEEEE !important;
+}
+.info.jsx-2138578525, .info.jsx-2138578525 * {
+    color: #EEEEEE !important;
+}
 
 .full-width {
     border-bottom: 1px solid #393E46 !important;
@@ -338,6 +353,14 @@ a.jsx-2575539602:hover {
 
 /* ----- Start Lecture Page Dark Mode Section ----- */
 
+header.half-height .lecture-left * {
+    color: #EEEEEE !important;
+}
+
+header.half-height .lecture-left .nav-icon-back use {
+    color: #EEEEEE !important;
+}
+
 .course-sidebar .course-progress.lecture-page.sticky {
     background: #232931 !important;
     border-bottom: 1px solid #232931 !important;
@@ -361,6 +384,10 @@ header.half-height .lecture-left .settings-dropdown ul {
     border: 1px solid #393E46 !important;
 }
 
+.course-sidebar-head h2 {
+    color: #EEEEEE !important;
+}
+
 .dropdown-backdrop {
     background: transparent !important;
 }
@@ -380,6 +407,7 @@ header.half-height .lecture-left .open .dropdown-toggle {
 
 header.half-height .lecture-nav a.nav-btn {
     border-left: 1px solid #232931 !important;
+    color: #EEEEEE !important;
 }
 
 header.half-height .lecture-nav a.nav-btn:hover {
@@ -394,8 +422,16 @@ header.half-height .lecture-nav a.nav-btn * {
     background: transparent !important;
 }
 
+.course-section ul.section-list .section-item .item .lecture-icon svg {
+    color: #EEEEEE !important;
+}
+
 .lecture-content.course-mainbar * {
     background: transparent !important;
+    color: #EEEEEE !important;
+}
+
+.course-sidebar .row.lecture-sidebar .course-section .section-title {
     color: #EEEEEE !important;
 }
 
