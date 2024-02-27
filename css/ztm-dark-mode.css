@@ -7,11 +7,11 @@
 
 /* ----- Start Home Page Dark Mode Section ----- */
 body,
-*:not(.status-icon, .bxs-heart, .gravatar.jsx-2575539602, .secondaryButton, .jsx-2138578525) {
+*:not(.status-icon, .bxs-heart, .gravatar.jsx-2575539602, .secondaryButton, .jsx-2138578525, .course-filter, .progressbar) {
     background: #232931 !important;
 }
 
-.view-directory.course-directory * {
+.view-directory.course-directory *:not(.bxs-heart) {
     color: #EEEEEE !important;
 }
 
@@ -57,7 +57,9 @@ body::-webkit-scrollbar-thumb {
     background: #393E46 !important;
 }
 
-.course-filter * {
+.course-filter .filter-label,
+.course-filter .btn-group,
+.course-filter .btn-group * {
     background: transparent !important;
 }
 
@@ -276,6 +278,10 @@ ul.jsx-2575539602 {
     border: 1px solid #393E46 !important;
 }
 
+ul.jsx-2575539602 a {
+    color: #EEEEEE !important;
+}
+
 a.jsx-2575539602:hover {
     background: #393E46 !important;
 }
@@ -336,10 +342,6 @@ a.jsx-2575539602:hover {
     background: #393E46 !important;
 }
 
-.progressBar.jsx-687475899 {
-    background-color: #232931 !important;
-}
-
 .finished.jsx-687475899 {
     background: #EEEEEE !important;
 }
@@ -347,6 +349,7 @@ a.jsx-2575539602:hover {
 .instructor.jsx-1343021134,
 .instructor.jsx-1343021134 * {
     background: #393E46 !important;
+    color: #EEEEEE !important;
 }
 
 /* ----- End Course Info Page Dark Mode Section ----- */

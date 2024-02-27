@@ -125,6 +125,7 @@ MIT License
 	* (2.27.03) - Committed for safety.
 	* (2.27.04) - Committed for safety.
 	* (2.27.05) - Committed for safety.
+	* (2.27.06) - Dark mode is completed for the new look.
 * Mon Feb 26, 2024
 	* (2.25.01) - Added `?` to the hide lecture title feature.
 * Sun Feb 25, 2024
