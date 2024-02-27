@@ -1,12 +1,13 @@
 /*
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant
- * Last Updated: Wed Feb 21, 2024
+ * Last Updated: Sun Feb 25s, 2024
  * Description: Adds daily motivation quote to the home page
  */
 
 // Quotes
 const quotesArray = [
+    ['The mind is everything. What you think you become', 'Buddha']
     ['A cynic is a man who knows the price of everything, and the value of nothing.', 'Oscar Wilde'],
     ['The purpose of knowledge is action, not knowledge.', 'Aristotle'],
     ['Knowledge isn\'t free. You have to pay attention.', 'Richard Feynman'],

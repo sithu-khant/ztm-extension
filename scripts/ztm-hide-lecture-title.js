@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Sun Jan 14, 2024
+ * Last Updated: Mon Feb 26, 2024
  * Description: Hide the video lecture title 
  */ 
 
@@ -14,7 +14,7 @@ if (lectureTitleHomeBackIcon) {
 		// Get the lecture attachement
 		const lectureAttachment = document.querySelector('.lecture-attachment');
 		// Check it is video lecture type or not
-		const isVideoLectureType =  lectureAttachment.classList.contains('lecture-attachment-type-video');
+		const isVideoLectureType =  lectureAttachment?.classList.contains('lecture-attachment-type-video');
 
 		// Get the lecture title
 		const ztmVideoLectureTitle = document.getElementById('lecture_heading');

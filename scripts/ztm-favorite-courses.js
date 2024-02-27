@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Wed Feb 14, 2024
+ * Last Updated: Fri Feb 23, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -112,7 +112,7 @@ const favCoursesCards = () => {
                 heartIcon.style.color = 'grey'
                 heartClickedArray.splice(favoritedCourseTitleIndex, 1);
                 favCoursesArray = favCoursesArray.filter((courseString) => getCourseTitle(courseString) !== favoritedCourseTitle.trim());
-            };
+            }
 
             // Remove duplicated values in `favCoursesArray` based on the course title
             favCoursesArray = favCoursesArray.reduce((array, currentCourse) => {
@@ -152,13 +152,13 @@ const toggleCourses = () => {
     let filterTitle = document.querySelector('.filter-title');
     if (filterTitle) {
         filterTitle.style.display = favCoursesButtonStatus ? 'none' : ''
-    };
+    }
 
     // Get the pagination
     let pagination = document.querySelector('.pagination');
     if (pagination) {
         pagination.style.display = favCoursesButtonStatus ? 'none' : ''
-    };
+    }
 };
 
 // Toggle fav courses
@@ -193,7 +193,7 @@ const toggleFavCourses = () => {
             // Append the courses to the course list
             courseList.appendChild(tempDiv);
         });
-    };
+    }
 };
 
 //
@@ -215,7 +215,7 @@ const toggleFavCoursesButton = () => {
     // Get the ztm-fav-courses-button
     let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
 
-    // Listner for the click statement
+    // Listener for the click statement
     ztmFavCoursesButton.addEventListener('click', () => {
         // Store the favorite courses data array in the local storage
         // localStorage.setItem('favCoursesArrayData', JSON.stringify(favCoursesArray));
@@ -275,7 +275,7 @@ const updateProgressbar = () => {
             progressbarFill.setAttribute('aria-valuenow', updatedPercentageValue.trim());
 
             // console.log(tempDiv.innerHTML)
-        };
+        }
 
         // Get all the favorited course array from the local storage
         let updatedFavCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
@@ -310,10 +310,10 @@ const removeExtraFavCoursesComponents = () => {
     // Check if there is more than one button
     if (ztmFavCoursesButtons.length > 1) {
         // Remove buttons starting from the first one up to the second-to-last one
-        for (var i = 0; i < ztmFavCoursesButtons.length - 1; i++) {
+        for (let i = 0; i < ztmFavCoursesButtons.length - 1; i++) {
             ztmFavCoursesButtons[i].remove();
-        };
-    };
+        }
+    }
 
     // Get all the course-listing
     let courseListing = document.querySelectorAll('.course-listing');
@@ -322,10 +322,10 @@ const removeExtraFavCoursesComponents = () => {
         // Check if there is more than one button
         if (ztmFavCoursesAll.length > 1) {
             // Remove buttons starting from the first one up to the second-to-last one
-            for (var i = 0; i < ztmFavCoursesAll.length - 1; i++) {
+            for (let i = 0; i < ztmFavCoursesAll.length - 1; i++) {
                 ztmFavCoursesAll[i].remove();
-            };
-        };
+            }
+        }
     });
 };
 
@@ -339,7 +339,7 @@ const toggleFavoriteCourses = (isChecked) => {
         // button.style.display = isChecked ? 'block' : 'none'
         if (!isChecked) {
             button.remove()
-        };
+        }
     });
 
     ztmFavCoursesHeartIcons.forEach(heartIcon => {
@@ -352,12 +352,25 @@ const toggleFavoriteCourses = (isChecked) => {
     courseCards.forEach((courseCard) => {
         if (!isChecked) {
             courseCard.style.display = 'block'
-        };
+        }
     });
+
+    let pagination = document.querySelector('.pagination');
+    if (pagination && !isChecked) {
+        pagination.style.display = 'inline-block'
+    }
+
+    // get all the favorite courses
+    let favCourseCards = document.querySelectorAll('.fav-courses')
+    favCourseCards.forEach((courseCard) => {
+        if (!isChecked) {
+            courseCard.style.display = 'none'
+        }
+    })
 };
 
 const ztmFavoriteCourses = (isChecked) => {
-    // Only work on the hompage
+    // Only work on the homepage
     const courseFilter = document.querySelector('.course-filter');
     if (courseFilter) {
         favCoursesComponents();
@@ -368,7 +381,7 @@ const ztmFavoriteCourses = (isChecked) => {
 
         // Get the ztm-fav-courses-button
         let ztmFavCoursesButton = document.querySelector('.ztm-fav-courses-button');
-        // Listner for the click statement
+        // Listener for the click statement
         if (ztmFavCoursesButton) {
             ztmFavCoursesButton.addEventListener('click', () => {
                 favCoursesComponents();
@@ -376,8 +389,8 @@ const ztmFavoriteCourses = (isChecked) => {
                 favCoursesCards();
                 toggleFavoriteCourses(isChecked)
             });
-        };
-    };
+        }
+    }
 
     // Only work on the lecture learning page
     const ztmFavCoursesIconBack = document.querySelector('.nav-icon-back');
@@ -389,7 +402,7 @@ const ztmFavoriteCourses = (isChecked) => {
         let courseSidebarHeader = document.querySelector('.course-sidebar-head');
         let ztmProgressbarObserver = new MutationObserver(() => updateProgressbar());
         ztmProgressbarObserver.observe(courseSidebarHeader, { childList: true, subtree: true });
-    };
+    }
 };
 
 // Toggle fav courses
@@ -418,5 +431,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         ztmToggleFavoriteCourses();
         // localStorage.removeItem('favCoursesArrayData');
         // localStorage.removeItem('heartClickedArrayData');
-    };
+    }
 });
