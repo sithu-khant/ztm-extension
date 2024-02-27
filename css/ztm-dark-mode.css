@@ -7,7 +7,7 @@
 
 /* ----- Start Home Page Dark Mode Section ----- */
 body,
-*:not(.status-icon, .bxs-heart, .gravatar.jsx-2575539602, .secondaryButton) {
+*:not(.status-icon, .bxs-heart, .gravatar.jsx-2575539602, .secondaryButton, .jsx-2138578525) {
     background: #232931 !important;
     color: #EEEEEE !important;
 }
@@ -308,35 +308,12 @@ a.jsx-2575539602:hover {
     background: #393E46 !important;
 }
 
-.status-icon.jsx-2138578525 {
-    color: #30D683 !important;
-}
-
-/*.columns.jsx-4204861187 {
-    background: #393E46 !important;   
-}*/
-
-/*.columns.jsx-4204861187 * {
-    background: transparent !important;   
-}*/
-
-/*.icon.jsx-4255369697,
-.jsx-4255369697 {
-    color: #30D683 !important;
-}*/
-
-/*.icon.jsx-4255369697 {
-    color: red !important;
-    stoke: color: #30D683 !important;
-    background: blue !important;
-}*/
-
-/*.jsx-2138578525.button.secondaryButton {
-    background: #30D683 !important;
-}*/
-
 .bar.jsx-2138578525 {
     background: #232931 !important;
+}
+
+.status-icon.jsx-2138578525 {
+    color: #30D683 !important;
 }
 
 .progress.jsx-687475899,
