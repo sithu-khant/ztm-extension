@@ -123,6 +123,7 @@ MIT License
 	* (2.27.01) - Merged `bug-fix` branch to the main.
 	* (2.27.02) - Refactored the folder the new theme.
 	* (2.27.03) - Committed for safety.
+	* (2.27.04) - Committed for safety.
 * Mon Feb 26, 2024
 	* (2.25.01) - Added `?` to the hide lecture title feature.
 * Sun Feb 25, 2024
