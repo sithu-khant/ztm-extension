@@ -124,6 +124,7 @@ MIT License
 	* (2.28.02) - Rechecked the dark mode theme.
 	* (2.28.03) - Prepared files for the section time feature on new theme.
 	* (2.28.04) - Committed for safety.
+	* (2.28.05) - Disable the section file feature for a while for further conservation.
 * Tue Feb 27, 2024
 	* (2.27.01) - Merged `bug-fix` branch to the main.
 	* (2.27.02) - Refactored the folder the new theme.
