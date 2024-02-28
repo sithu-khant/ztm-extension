@@ -1,13 +1,13 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Feb 20, 2024
+ * Last Updated: Wed Feb 28, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
 /* ----- Start Home Page Dark Mode Section ----- */
 body,
-*:not(.status-icon, .bxs-heart, .gravatar.jsx-2575539602, .secondaryButton, .jsx-2138578525, .course-filter, .progressbar) {
+*:not(.status-icon, .bxs-heart, .gravatar.jsx-2575539602, .secondaryButton, .jsx-2138578525, .course-filter, .progressbar, .nav-icon-back) {
     background: #232931 !important;
 }
 
@@ -376,7 +376,7 @@ header.half-height .lecture-left * {
     color: #EEEEEE !important;
 }
 
-header.half-height .lecture-left .nav-icon-back use {
+header.half-height .lecture-left .nav-icon-back {
     color: #EEEEEE !important;
 }
 
