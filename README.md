@@ -119,6 +119,8 @@ MIT License
 
 ## Logs
 
+* Wed Feb 28, 2024
+	* (2.28.01) - Committed for safety.
 * Tue Feb 27, 2024
 	* (2.27.01) - Merged `bug-fix` branch to the main.
 	* (2.27.02) - Refactored the folder the new theme.

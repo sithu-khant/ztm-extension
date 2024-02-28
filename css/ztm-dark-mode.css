@@ -191,6 +191,11 @@ body::-webkit-scrollbar-thumb {
 
 .course-sidebar {
     border-right: 1px solid #393E46 !important;
+    color: #EEEEEE !important;
+}
+
+.course-sidebar * {
+    color: #EEEEEE !important;
 }
 
 .course-sidebar::-webkit-scrollbar {
@@ -217,6 +222,16 @@ body::-webkit-scrollbar-thumb {
     background: #393E46 !important;
 }
 
+.course-mainbar h2.section-title {
+    color: #EEEEEE !important;
+}
+
+.course-mainbar p,
+.course-mainbar strong,
+.course-mainbar strong a {
+    color: #EEEEEE !important;
+}
+
 .course-mainbar .next-lecture-wrapper .start-next-lecture {
     background: #32DD88 !important;
 }
@@ -240,6 +255,7 @@ body::-webkit-scrollbar-thumb {
 
 .course-section .section-title {
     border-bottom: 1px solid #EEEEEE !important;
+    color: #EEEEEE !important;
 }
 
 .course-section ul.section-list .section-item .item:hover {
