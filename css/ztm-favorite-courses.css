@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Feb 27, 2024
+ * Last Updated: Wed Feb 28, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -21,7 +21,7 @@
 
 #ztm-fav-courses-heart-icon {
 	font-size: 22px;
-	color: #989898 !important;
+	color: #989898;
 }
 
 .filtered-fav-courses {
@@ -41,7 +41,7 @@
 #ztm-heart-icon {
 	font-size: 23px;
 	padding: 5px;
-	color: grey !important;
+	color: grey;
 	background: rgba(245, 245, 245, 0.8) !important;
 	border-radius: 50%;
 	opacity: 0.8;
