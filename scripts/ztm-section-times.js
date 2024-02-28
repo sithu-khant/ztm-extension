@@ -1,14 +1,14 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Jan 30, 2024
+ * Last Updated: Wed Feb 28, 2024
  * Description: Show lecture time data in the course info page
  */ 
 
 // Collect all the time data
 const getTimes = (item, array) => {
     // Get the text
-    const getText = item.querySelector('.lecture-name').innerText;
+    const getText = item.querySelector('.jsx-2138578525.duration').innerText;
     // Regex expression to extract minute from the lectureName
     const regex = /\(([^)]*:\s*[^)]+)\)/;
     // Get the minutes
@@ -20,6 +20,8 @@ const getTimes = (item, array) => {
         // Add lectureTimes to array;
         array.push(lectureTimes);
     };
+
+    console.log(getText);
 };
 
 // Convert times to seconds
@@ -74,7 +76,7 @@ const sidebarSectionTimesDiv = (courseLength, totalWatched, totalLeft) => {
     `
 
     // Get the course progress percentage bar
-    const progressBar = document.querySelector('.course-progress-percentage');
+    const progressBar = document.querySelector('.jsx-687475899.progressBar');
     // Not to show if the course length is zero length
     const isCourseLengthZero = courseLength == '0min 0s'
 
@@ -86,13 +88,6 @@ const sidebarSectionTimesDiv = (courseLength, totalWatched, totalLeft) => {
 };
 
 const ztmSidebarSectionTimes = () => {
-    // Get all the lectures
-    const courseLengthSectionItems = document.querySelectorAll('.section-item');
-    // Get all the completed lectures
-    const totalWatchedSectionItems = document.querySelectorAll('.completed');
-    // Get all the incompleted items
-    const totalLeftSectionItems = document.querySelectorAll('.incomplete');
-
     // For Course Length
     const courseLengthTotalArray = [];
     // For Total Watched
@@ -100,23 +95,31 @@ const ztmSidebarSectionTimes = () => {
     // For Total Left
     const totalLeftArray = [];
 
-    // For Course Length
-    courseLengthSectionItems.forEach((sectionItem) => getTimes(sectionItem, courseLengthTotalArray));
-    const courseLength = getTimesData(0, courseLengthTotalArray);
+    // Get all the lecture bars
+    const lectureBars = document.querySelectorAll('.bar');
 
-    // For Total Watched
-    totalWatchedSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalWatchedArray));
+    // For Total Watched and Total Left
+    lectureBars.forEach((lectureBar) => {
+        const icon = lectureBar.querySelector('.jsx-2138578525');
+        const iconStatus = icon.getAttribute('xlink:href');
+
+        if (iconStatus == '#icon-circle-check') {
+            getTimes(lectureBar, totalWatchedArray)
+        } else if (iconStatus == '#icon-circle-outline') {
+            getTimes(lectureBar, totalLeftArray)
+        } else {
+            getTimes(lectureBar, courseLengthTotalArray)
+        }
+    });
+
+    const courseLength = getTimesData(0, courseLengthTotalArray);
     const totalWatched = getTimesData(0, totalWatchedArray);
-    
-    // For Total Left
-    totalLeftSectionItems.forEach((sectionItem) => getTimes(sectionItem, totalLeftArray));
     const isFinished = getTimesData(0, totalLeftArray);
     // If all are zeros, mark as `Completed`
     const totalLeft = isFinished === '0min 0s' ? 'Completed' : isFinished;
 
-
     const alreadySidebarSectionTimesDiv = document.getElementById('ztm-section-times-container');
-
+    
     // Add sidebar section div
     if (!alreadySidebarSectionTimesDiv) {
         sidebarSectionTimesDiv(courseLength, totalWatched, totalLeft);
@@ -129,7 +132,7 @@ const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
     // Add id
     ztmCurriculumSectionTimesDiv.id = 'curriculum-section-times-container'
 
-    const forCourseInfoPage = document.querySelector('.nav-back-link');
+    const forCourseInfoPage = document.querySelector('.instructor');
     const forLearningPage = document.querySelector('.nav-icon-back');
 
     if (forCourseInfoPage) {
@@ -195,9 +198,9 @@ const ztmCurriculumSectionTimes = () => {
 
 const hideCourseInfoSectionTimes = (isChecked) => {
     // Only run the ztmCourseInfoSectionTimes on the course info page
-    const ztmSectionTimesNavBackLink = document.querySelector('.nav-back-link');
+    const ztmInstructorProfile = document.querySelector('.instructor');
     
-    if (ztmSectionTimesNavBackLink) {
+    if (ztmInstructorProfile) {
         ztmSidebarSectionTimes();
 
         // Get the getSidebarSectionTimesDiv to hide
@@ -237,6 +240,7 @@ const ztmSectionTimes = () => {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'windowChanged') {
         ztmSectionTimes();
+        ztmSidebarSectionTimes();
     }
 });
 
