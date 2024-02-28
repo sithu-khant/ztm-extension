@@ -20,8 +20,6 @@ const getTimes = (item, array) => {
         // Add lectureTimes to array;
         array.push(lectureTimes);
     };
-
-    console.log(getText);
 };
 
 // Convert times to seconds
@@ -76,7 +74,7 @@ const sidebarSectionTimesDiv = (courseLength, totalWatched, totalLeft) => {
     `
 
     // Get the course progress percentage bar
-    const progressBar = document.querySelector('.jsx-687475899.progressBar');
+    const progressBar = document.querySelector('.progressBar');
     // Not to show if the course length is zero length
     const isCourseLengthZero = courseLength == '0min 0s'
 
@@ -100,15 +98,18 @@ const ztmSidebarSectionTimes = () => {
 
     // For Total Watched and Total Left
     lectureBars.forEach((lectureBar) => {
-        const icon = lectureBar.querySelector('.jsx-2138578525');
+        const icon = lectureBar.querySelector('use');
         const iconStatus = icon.getAttribute('xlink:href');
 
-        if (iconStatus == '#icon-circle-check') {
+        // For Course Length
+        getTimes(lectureBar, courseLengthTotalArray)
+
+        if (iconStatus === '#icon-circle-check') {
+            // For Total Watched
             getTimes(lectureBar, totalWatchedArray)
-        } else if (iconStatus == '#icon-circle-outline') {
+        } else if (iconStatus === '#icon-circle-outline') {
+            // For Total Left
             getTimes(lectureBar, totalLeftArray)
-        } else {
-            getTimes(lectureBar, courseLengthTotalArray)
         }
     });
 
@@ -237,11 +238,15 @@ const ztmSectionTimes = () => {
     });
 }
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.action === 'windowChanged') {
-        ztmSectionTimes();
-    }
-});
+// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+//     if (message.action === 'windowChanged') {
+//         ztmSectionTimes();
+//     }
+// });
+
+// Track the page
+const ztmSectionTimesObserver = new MutationObserver(() => ztmSectionTimes());
+ztmSectionTimesObserver.observe(document.body, { childList: true, subtree: true });
 
 
 

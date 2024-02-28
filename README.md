@@ -119,6 +119,8 @@ MIT License
 
 ## Logs
 
+* Thu Feb 29, 2024
+	* (2.29.01) - New section times feature is partially working now.
 * Wed Feb 28, 2024
 	* (2.28.01) - Committed for safety.
 	* (2.28.02) - Rechecked the dark mode theme.
