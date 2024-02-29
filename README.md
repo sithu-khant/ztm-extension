@@ -124,6 +124,7 @@ MIT License
 	* (2.29.02) - Section times feature is now working on the learning page.
 	* (2.29.03) - Committed for safety.
 	* (2.29.04) - Clean the code.
+	* (2.29.05) - Fixed bug.
 * Wed Feb 28, 2024
 	* (2.28.01) - Committed for safety.
 	* (2.28.02) - Rechecked the dark mode theme.
