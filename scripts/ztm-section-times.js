@@ -8,7 +8,7 @@
 // Collect all the time data
 const getTimes = (item, className, array) => {
     // Get the text
-    const getText = item.querySelector(className)?.innerText;
+    const getText = item?.querySelector(className)?.innerText;
     // Regex expression to extract minute from the lectureName
     const regex = /\(([^)]*:\s*[^)]+)\)/;
     // Get the minutes
@@ -138,6 +138,16 @@ const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
 
     if (forCourseCurriculumPage) {
         ztmCurriculumSectionTimesDiv.innerHTML = `
+            <style>
+            #curriculum-section-times-container {
+                display: flex;
+
+                position: absolute;
+                top: 50%;
+                right: 65px;
+                transform: translateY(-50%);
+            }
+            </style>
             <!-- Total Watched -->
             <div class='curriculum-section-times-item'>
                 <div class='curriculum-section-times-text'>Watched</div>
@@ -149,6 +159,9 @@ const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
                 <div class='curriculum-section-times-data'>${total}</div>
             </div> 
         `
+        
+        const sectionArrowIcon = sectionTitleItem.querySelector('.icon');
+        sectionTitleItem.insertBefore(ztmCurriculumSectionTimesDiv, sectionArrowIcon);   
     };
 
     if (forLearningPage) {
@@ -158,13 +171,57 @@ const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
                 <div class='curriculum-section-times-data'>${total}</div>
             </div> 
         `
+
+        sectionTitleItem.appendChild(ztmCurriculumSectionTimesDiv);
     };
 
-    sectionTitleItem.appendChild(ztmCurriculumSectionTimesDiv);
+    // if (sectionTitleItem.classList.contains('.jsx-4255369697')) {
+    // } else {
+    //     sectionTitleItem.appendChild(ztmCurriculumSectionTimesDiv);
+    // };
 }
 
 const ztmCurriculumSectionTimes = () => {
 
+    // Get all the lecture bars
+    const slimSections = document.querySelectorAll('.slim-section');
+
+    // For Total Watched and Total Left
+    slimSections.forEach((slimSection) => {
+        const lectureBar = slimSection.querySelector('.bar');
+        const sectionHeader = slimSection.querySelector('.section-header');
+        const sectionArrowIconDiv = sectionHeader.querySelectorAll('.jsx-4255369697')[2];
+        const icon = lectureBar?.querySelector('use');
+        const iconStatus = icon?.getAttribute('xlink:href');
+
+        console.log(sectionHeader.querySelectorAll('.jsx-4255369697')[2]);
+
+
+        // For Total
+        const curriculumTotalArray = [];
+        // For Total Watched
+        const curriculumTotalWatchedArray = [];
+
+        // For Total
+        getTimes(lectureBar, '.jsx-2138578525.duration', curriculumTotalArray)
+        // For Total Watched
+        if (iconStatus === '#icon-circle-check') {
+            getTimes(lectureBar, '.jsx-2138578525.duration', curriculumTotalWatchedArray)
+        }
+
+        const curriculumTotal = getTimesData(0, curriculumTotalArray);
+        const curriculumTotalWatched = getTimesData(0, curriculumTotalWatchedArray);
+
+        // Only add section time div if the total section is not zero
+        if (curriculumTotal !== '0min 0s') {
+            const alreadyCurriculumSectionTimesDiv = sectionArrowIconDiv.querySelector('#curriculum-section-times-container');
+
+            // Only add if there is no curriculum section times div
+            if (!alreadyCurriculumSectionTimesDiv) {
+                curriculumSectionTimesDiv(sectionArrowIconDiv, curriculumTotalWatched, curriculumTotal)
+            }
+        };
+    });
 };
 
 // Section Times for Learning Page
@@ -199,6 +256,7 @@ const hideCourseInfoSectionTimes = (isChecked) => {
 
     if (ztmInstructorProfile) {
         ztmCurriculumPageSectionTimes();
+        ztmCurriculumSectionTimes();
 
         // Get the getSidebarSectionTimesDiv to hide
         const getSidebarSectionTimesDiv = document.getElementById('ztm-section-times-container');

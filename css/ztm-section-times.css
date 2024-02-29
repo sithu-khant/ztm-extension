@@ -45,13 +45,17 @@
     overflow: hidden;
 }
 
+.section-header.jsx-4255369697 {
+    position: relative;
+}
+
 #curriculum-section-times-container {
     display: flex;
 }
 
 .curriculum-section-times-item {
     width: 130px;
-    line-height: 18px;
+    line-height: 25px;
 
     display: flex;
     justify-content: space-evenly;
@@ -80,6 +84,7 @@
 
 .for-learning-page {
     display: inline;
+    line-height: 18px;
     font-size: 10px;
     width: 70px !important;
 }
