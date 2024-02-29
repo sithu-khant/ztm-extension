@@ -85,7 +85,7 @@ const sidebarSectionTimesDiv = (courseLength, totalWatched, totalLeft) => {
     }
 };
 
-const ztmSidebarSectionTimes = () => {
+const ztmOverallCurriculumPageSectionTimes = () => {
     // For Course Length
     const courseLengthTotalArray = [];
     // For Total Watched
@@ -127,21 +127,32 @@ const ztmSidebarSectionTimes = () => {
     }
 };
 
-
-
-
-
-// Total times for learning page
-const learningPageSectionTimesDiv = (sectionTitleItem, total) => {
+const sectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
     // Create a new div for lecture time data
-    const ztmLearningPageSectionTimesDiv = document.createElement('div');
+    const ztmCurriculumSectionTimesDiv = document.createElement('div');
     // Add id
-    ztmLearningPageSectionTimesDiv.id = 'curriculum-section-times-container'
+    ztmCurriculumSectionTimesDiv.id = 'curriculum-section-times-container'
 
+    const forCourseCurriculumPage = document.querySelector('.instructor');
     const forLearningPage = document.querySelector('.nav-icon-back');
 
+    if (forCourseCurriculumPage) {
+        ztmCurriculumSectionTimesDiv.innerHTML = `
+            <!-- Total Watched -->
+            <div class='curriculum-section-times-item'>
+                <div class='curriculum-section-times-text'>Watched</div>
+                <div class='curriculum-section-times-data'>${totalWatched}</div>
+            </div>
+            <!-- Course Length -->
+            <div class='curriculum-section-times-item'>
+                <div class='curriculum-section-times-text'>Total</div>
+                <div class='curriculum-section-times-data'>${total}</div>
+            </div> 
+        `
+    };
+
     if (forLearningPage) {
-        ztmLearningPageSectionTimesDiv.innerHTML = `
+        ztmCurriculumSectionTimesDiv.innerHTML = `
             <!-- Total -->
             <div class='curriculum-section-times-item for-learning-page'>
                 <div class='curriculum-section-times-data'>${total}</div>
@@ -149,8 +160,86 @@ const learningPageSectionTimesDiv = (sectionTitleItem, total) => {
         `
     };
 
-    sectionTitleItem.appendChild(ztmLearningPageSectionTimesDiv);
+    sectionTitleItem.appendChild(ztmCurriculumSectionTimesDiv);
+}
+
+// const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
+//     // Create a new div for lecture time data
+//     const ztmCurriculumSectionTimesDiv = document.createElement('div');
+//     // Add id
+//     ztmCurriculumSectionTimesDiv.id = 'curriculum-section-times-container'
+
+//     const forCurriculumPage = document.querySelector('.nav-back-link');
+
+//     if (forCurriculumPage) {
+//         ztmCurriculumSectionTimesDiv.innerHTML = `
+//             <!-- Total Watched -->
+//             <div class='curriculum-section-times-item'>
+//                 <div class='curriculum-section-times-text'>Watched</div>
+//                 <div class='curriculum-section-times-data'>${totalWatched}</div>
+//             </div>
+//             <!-- Course Length -->
+//             <div class='curriculum-section-times-item'>
+//                 <div class='curriculum-section-times-text'>Total</div>
+//                 <div class='curriculum-section-times-data'>${total}</div>
+//             </div> 
+//         `
+//     };
+//     sectionTitleItem.appendChild(ztmCurriculumSectionTimesDiv);
+// }
+
+
+const ztmCurriculumPageSectionTimes = () => {
+    const courseSections = document.querySelectorAll('.course-section');
+
+    // Loop through to add time data
+    courseSections.forEach((section) => {
+        const learningPageSectionTitleItem = section.querySelector('.section-title')
+        const learningPageSectionItems = section.querySelectorAll('.section-item');
+
+        // For Total
+        const learningPageTotalArray = [];
+        learningPageSectionItems.forEach((sectionItem) => getTimes(sectionItem, learningPageTotalArray, '.lecture-name'));
+        const learningPageTotal = getTimesData(0, learningPageTotalArray);
+
+        console.log(learningPageTotalArray);
+
+        // Only add section time div if the total section is not zero
+        if (learningPageTotal !== '0min 0s') {
+            const alreadyCurriculumSectionTimesDiv = section.querySelector('#curriculum-section-times-container');
+
+            // Only add if there is no curriculum section times div
+            if (!alreadyCurriculumSectionTimesDiv) {
+                sectionTimesDiv(learningPageSectionTitleItem, 0, learningPageTotal)
+            }
+        };
+    });
 };
+
+
+
+// ----------------
+
+// // Total times for learning page
+// const learningPageSectionTimesDiv = (sectionTitleItem, total) => {
+//     // Create a new div for lecture time data
+//     const ztmLearningPageSectionTimesDiv = document.createElement('div');
+//     // Add id
+//     ztmLearningPageSectionTimesDiv.id = 'curriculum-section-times-container'
+
+//     const forLearningPage = document.querySelector('.nav-icon-back');
+
+//     if (forLearningPage) {
+//         ztmLearningPageSectionTimesDiv.innerHTML = `
+//             <!-- Total -->
+//             <div class='curriculum-section-times-item for-learning-page'>
+//                 <div class='curriculum-section-times-data'>${total}</div>
+//             </div> 
+//         `
+//     };
+
+//     sectionTitleItem.appendChild(ztmLearningPageSectionTimesDiv);
+// };
 
 // Section Times for Learning Page
 const ztmLearningPageSectionTimes = () => {
@@ -172,7 +261,7 @@ const ztmLearningPageSectionTimes = () => {
 
             // Only add if there is no curriculum section times div
             if (!alreadyCurriculumSectionTimesDiv) {
-                learningPageSectionTimesDiv(learningPageSectionTitleItem, learningPageTotal)
+                sectionTimesDiv(learningPageSectionTitleItem, 0, learningPageTotal)
             }
         };
     });
@@ -183,7 +272,7 @@ const hideCourseInfoSectionTimes = (isChecked) => {
     const ztmInstructorProfile = document.querySelector('.instructor');
     
     if (ztmInstructorProfile) {
-        ztmSidebarSectionTimes();
+        ztmOverallCurriculumPageSectionTimes();
 
         // Get the getSidebarSectionTimesDiv to hide
         const getSidebarSectionTimesDiv = document.getElementById('ztm-section-times-container');
