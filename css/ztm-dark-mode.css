@@ -169,25 +169,57 @@ body::-webkit-scrollbar-thumb {
     border-bottom: 1px solid transparent !important;
 }
 
-.ztm-section-times-item {
+#ztm-section-times-container {
+    background: transparent !important;
+}
+
+#ztm-section-times-container .ztm-section-times-text {
+    background: #393E46 !important;
+}
+
+.ztm-section-times-item * {
+    color: #EEEEEE !important;
+}
+
+#ztm-section-times-container .ztm-section-times-item {
+    border: 1px solid #232931 !important;
+}
+
+#curriculum-section-times-container .ztm-section-times-item {
     border: 1px solid #393E46 !important;
 }
 
-.ztm-section-times-text {
+#curriculum-section-times-container .ztm-section-times-text {
+    background: #393E46 !important;
+}
+
+#section-times-title-container,
+#section-times-title-container * {
+    background: #393E46 !important;
+}
+
+#curriculum-section-times-container,
+#curriculum-section-times-container *:not(.curriculum-section-times-data) {
     background: #393E46 !important;
 }
 
 .curriculum-section-times-item {
-    border: 1px solid #393E46 !important;
+    border: 1px solid #232931 !important;
+    background: red !important;
 }
 
-.curriculum-section-times-text {
-    background: #393E46 !important;
+.curriculum-section-times-item * {
+    color: #EEEEEE !important;
 }
 
-.for-learning-page .curriculum-section-times-data {
-    background: #393E46 !important;
+#section-times-toggle-arrow-icon,
+#section-times-toggle-arrow-icon * {
+    background: transparent !important;
 }
+
+/*.for-learning-page .curriculum-section-times-data {
+    background: #393E46 !important;
+}*/
 
 .course-sidebar {
     border-right: 1px solid #393E46 !important;
@@ -315,7 +347,6 @@ a.jsx-2575539602:hover {
 }
 
 .section-header.jsx-4255369697,
-.section-header.jsx-4255369697 *,
 .lectures.jsx-3137867545 {
     background: #393E46 !important;  
 }
@@ -326,6 +357,7 @@ a.jsx-2575539602:hover {
 
 .bar.jsx-2138578525 {
     border: 1px solid #232931 !important;
+    background: #232931 !important;
 }
 
 .jsx-2138578525.text {
@@ -343,10 +375,6 @@ a.jsx-2575539602:hover {
 .info.jsx-2138578525,
 .info.jsx-2138578525 * {
     background: #393E46 !important;
-}
-
-.bar.jsx-2138578525 {
-    background: #232931 !important;
 }
 
 .status-icon.jsx-2138578525 {
