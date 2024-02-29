@@ -130,6 +130,7 @@ MIT License
 	* (2.29.08) - Added styles.
 	* (2.29.09) - Added dark mode styles.
 	* (2.29.10) - Added styles to learning page.
+	* (2.28.11) - All done for the new theme.
 * Wed Feb 28, 2024
 	* (2.28.01) - Committed for safety.
 	* (2.28.02) - Rechecked the dark mode theme.
