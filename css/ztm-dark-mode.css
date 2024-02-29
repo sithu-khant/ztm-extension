@@ -185,8 +185,8 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid #232931 !important;
 }
 
-#curriculum-section-times-container .ztm-section-times-item {
-    border: 1px solid #393E46 !important;
+#curriculum-section-times-container {
+    background: transparent !important;
 }
 
 #curriculum-section-times-container .ztm-section-times-text {
@@ -198,7 +198,6 @@ body::-webkit-scrollbar-thumb {
     background: #393E46 !important;
 }
 
-#curriculum-section-times-container,
 #curriculum-section-times-container *:not(.curriculum-section-times-data) {
     background: #393E46 !important;
 }
@@ -217,9 +216,13 @@ body::-webkit-scrollbar-thumb {
     background: transparent !important;
 }
 
-/*.for-learning-page .curriculum-section-times-data {
+.for-learning-page {
+    background: transparent !important;
+}
+
+.for-learning-page .curriculum-section-times-data {
     background: #393E46 !important;
-}*/
+}
 
 .course-sidebar {
     border-right: 1px solid #393E46 !important;
@@ -390,10 +393,24 @@ a.jsx-2575539602:hover {
     background: #EEEEEE !important;
 }
 
+.progress.jsx-1189601211,
+.percentComplete.jsx-1189601211 {
+    background: #393E46 !important;
+}
+
+.finished.jsx-1189601211 {
+    background: #EEEEEE !important;
+}
+
 .instructor.jsx-1343021134,
 .instructor.jsx-1343021134 * {
     background: #393E46 !important;
     color: #EEEEEE !important;
+}
+
+.certificate.jsx-633761444,
+.title.jsx-633761444 {
+    background: #393E46 !important;
 }
 
 /* ----- End Course Info Page Dark Mode Section ----- */
