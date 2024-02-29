@@ -22,7 +22,7 @@
     font-size: 12px;
     border: 1px solid #E3E3E3;
     background: #EEEEEE;
-    border-radius: 25px;
+    border-radius: 5px;
     color: #646d76;
 
     overflow: hidden;
@@ -45,8 +45,17 @@
     overflow: hidden;
 }
 
+#section-times-title-container {
+    flex-basis: 70% !important;
+}
+
 #curriculum-section-times-container {
     display: flex;
+    flex-basis: 15% !important;
+}
+
+#section-times-toggle-arrow-icon {
+    flex-basis: 6% !important;
 }
 
 .curriculum-section-times-item {
@@ -60,7 +69,7 @@
     font-size: 12px;
     border: 1px solid transparent;
     background: #EEEEEE;
-    border-radius: 25px;
+    border-radius: 5px;
     color: #646d76;
 
     overflow: hidden;

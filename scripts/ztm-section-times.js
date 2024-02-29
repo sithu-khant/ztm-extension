@@ -175,6 +175,12 @@ const ztmCurriculumSectionTimes = () => {
         const sectionHeader = slimSection.querySelector('.section-header');
         const lectureBars = slimSection.querySelectorAll('.bar');
 
+        // Add custom id for aligning styles
+        const titleContainer = sectionHeader.querySelectorAll('.jsx-4255369697')[0];
+        titleContainer.id = 'section-times-title-container'
+        const toggleArrowIcon = sectionHeader.querySelectorAll('.jsx-4255369697')[2];
+        toggleArrowIcon.id = 'section-times-toggle-arrow-icon'
+
         // For Total
         const curriculumTotalArray = [];
         // For Total Watched
