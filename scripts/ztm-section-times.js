@@ -1,14 +1,14 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Wed Feb 28, 2024
+ * Last Updated: Thu Feb 29, 2024
  * Description: Show lecture time data in the course info page
  */ 
 
 // Collect all the time data
-const getTimes = (item, array) => {
+const getTimes = (item, array, className) => {
     // Get the text
-    const getText = item.querySelector('.jsx-2138578525.duration')?.innerText;
+    const getText = item.querySelector(className)?.innerText;
     // Regex expression to extract minute from the lectureName
     const regex = /\(([^)]*:\s*[^)]+)\)/;
     // Get the minutes
@@ -102,7 +102,7 @@ const ztmSidebarSectionTimes = () => {
         const iconStatus = icon.getAttribute('xlink:href');
 
         // For Course Length
-        getTimes(lectureBar, courseLengthTotalArray)
+        getTimes(lectureBar, courseLengthTotalArray, '.jsx-2138578525.duration')
 
         if (iconStatus === '#icon-circle-check') {
             // For Total Watched
@@ -127,32 +127,21 @@ const ztmSidebarSectionTimes = () => {
     }
 };
 
-const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
-    // Create a new div for lecture time data
-    const ztmCurriculumSectionTimesDiv = document.createElement('div');
-    // Add id
-    ztmCurriculumSectionTimesDiv.id = 'curriculum-section-times-container'
 
-    const forCourseInfoPage = document.querySelector('.instructor');
+
+
+
+// Total times for learning page
+const learningPageSectionTimesDiv = (sectionTitleItem, total) => {
+    // Create a new div for lecture time data
+    const ztmLearningPageSectionTimesDiv = document.createElement('div');
+    // Add id
+    ztmLearningPageSectionTimesDiv.id = 'curriculum-section-times-container'
+
     const forLearningPage = document.querySelector('.nav-icon-back');
 
-    if (forCourseInfoPage) {
-        ztmCurriculumSectionTimesDiv.innerHTML = `
-            <!-- Total Watched -->
-            <div class='curriculum-section-times-item'>
-                <div class='curriculum-section-times-text'>Watched</div>
-                <div class='curriculum-section-times-data'>${totalWatched}</div>
-            </div>
-            <!-- Course Length -->
-            <div class='curriculum-section-times-item'>
-                <div class='curriculum-section-times-text'>Total</div>
-                <div class='curriculum-section-times-data'>${total}</div>
-            </div> 
-        `
-    };
-
     if (forLearningPage) {
-        ztmCurriculumSectionTimesDiv.innerHTML = `
+        ztmLearningPageSectionTimesDiv.innerHTML = `
             <!-- Total -->
             <div class='curriculum-section-times-item for-learning-page'>
                 <div class='curriculum-section-times-data'>${total}</div>
@@ -160,38 +149,30 @@ const curriculumSectionTimesDiv = (sectionTitleItem, totalWatched, total ) => {
         `
     };
 
-    sectionTitleItem.appendChild(ztmCurriculumSectionTimesDiv);
-}
+    sectionTitleItem.appendChild(ztmLearningPageSectionTimesDiv);
+};
 
-// Section Times for Curriculum
-const ztmCurriculumSectionTimes = () => {
+// Section Times for Learning Page
+const ztmLearningPageSectionTimes = () => {
     const courseSections = document.querySelectorAll('.course-section');
 
     // Loop through to add time data
     courseSections.forEach((section) => {
-        const curriculumSectionTitleItem = section.querySelector('.section-title')
-        const curriculumCompletedSectionItems = section.querySelectorAll('.completed');
-        const curriculumSectionItems = section.querySelectorAll('.section-item');
-
-        // For Course Length
-        const sectionTotalWatchedArray = [];
-        const sectionCurriculumTotalArray = [];
-
-        // For Total Watched
-        curriculumCompletedSectionItems.forEach((sectionItem) => getTimes(sectionItem, sectionTotalWatchedArray));
-        const curriculumTotalWatched = getTimesData(0, sectionTotalWatchedArray);
+        const learningPageSectionTitleItem = section.querySelector('.section-title')
+        const learningPageSectionItems = section.querySelectorAll('.section-item');
 
         // For Total
-        curriculumSectionItems.forEach((sectionItem) => getTimes(sectionItem, sectionCurriculumTotalArray));
-        const curriculumTotal = getTimesData(0, sectionCurriculumTotalArray);
+        const learningPageTotalArray = [];
+        learningPageSectionItems.forEach((sectionItem) => getTimes(sectionItem, learningPageTotalArray, '.lecture-name'));
+        const learningPageTotal = getTimesData(0, learningPageTotalArray);
 
         // Only add section time div if the total section is not zero
-        if (curriculumTotal !== '0min 0s') {
+        if (learningPageTotal !== '0min 0s') {
             const alreadyCurriculumSectionTimesDiv = section.querySelector('#curriculum-section-times-container');
 
             // Only add if there is no curriculum section times div
             if (!alreadyCurriculumSectionTimesDiv) {
-                curriculumSectionTimesDiv(curriculumSectionTitleItem, curriculumTotalWatched, curriculumTotal)
+                learningPageSectionTimesDiv(learningPageSectionTitleItem, learningPageTotal)
             }
         };
     });
@@ -212,7 +193,7 @@ const hideCourseInfoSectionTimes = (isChecked) => {
         }
     }
 
-    ztmCurriculumSectionTimes();
+    ztmLearningPageSectionTimes();
 
     const getCurriculumSectionTimesDivs = document.querySelectorAll('#curriculum-section-times-container');
     
