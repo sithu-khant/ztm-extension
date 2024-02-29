@@ -178,7 +178,7 @@ const ztmLearningPageSectionTimes = () => {
 
         // For Total
         const learningPageTotalArray = [];
-        learningPageSectionItems.forEach((sectionItem) => getTimes(sectionItem, learningPageTotalArray, '.lecture-name'));
+        learningPageSectionItems.forEach((sectionItem) => getTimes(sectionItem, '.lecture-name', learningPageTotalArray));
         const learningPageTotal = getTimesData(0, learningPageTotalArray);
 
         // Only add section time div if the total section is not zero
