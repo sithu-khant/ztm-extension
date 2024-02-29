@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Feb 20, 2024
+ * Last Updated: Thu Feb 29, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
@@ -16,6 +16,20 @@ darkModeCssLink.href = chrome.runtime.getURL(cssFile);
 const enableZtmDarkMode = () => {
     // Add dark mode css file to the head tag
     document.head.appendChild(darkModeCssLink);
+
+    const isLearningPage = document.querySelector('.nav-icon-back')
+    if (isLearningPage) {
+        const customStyleDiv = document.createElement('div');
+        customStyleDiv.id = 'custom-style-div'
+        customStyleDiv.innerHTML = `
+        <style>
+        * {
+            color: #EEEEEE !important;
+        }
+        </style>
+        `
+        document.head.appendChild(customStyleDiv);
+    }
 };
 
 const disableZtmDarkMode = () => {
@@ -23,8 +37,13 @@ const disableZtmDarkMode = () => {
     
     if (getDarkModeCssLink) {
         // Remove the dark mode css file
-        getDarkModeCssLink.remove()
+        getDarkModeCssLink.remove();
     };
+
+    const getCustomStyleDiv = document.getElementById('custom-style-div');
+    if (getCustomStyleDiv) {
+        getCustomStyleDiv.remove();
+    }
 };
 
 // Enable os disable based on the toggle check status
