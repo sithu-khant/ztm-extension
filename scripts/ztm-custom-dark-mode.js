@@ -5,6 +5,21 @@
  * Description: Adds custom dark mode (unable to do with css file) to the academy page. 
  */ 
 
+// Custom css properties for elements those exist in all pages
+const customCss = (isChecked) => {
+    // Progress bar
+    const progressbars = document.querySelectorAll('.progressbar');
+    progressbars.forEach((progressbar) => {
+        progressbar.style.background = isChecked ? '#393E46' : ''
+    });
+
+    // progressbar-fill
+    const progressbarFills = document.querySelectorAll('.progressbar-fill');
+    progressbarFills.forEach((progressbarFill) => {
+        progressbarFill.style.background = isChecked ? '#EEEEEE' : ''
+    });
+};
+
 const customCssForCourseCurriculumPage = (isChecked) => {
     // Only run the custom dark mode on the course curriculum page
     const ztmInstructorProfile = document.querySelector('.instructor');
@@ -41,6 +56,7 @@ const ztmCustomDarkMode = () => {
     // Get the initial checkbox status and apply style
     chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', (data) => {
         let isChecked = data.ztmDarkModeCheckboxIsChecked || false;
+        customCss(isChecked);
         customCssForCourseCurriculumPage(isChecked);
     })
 
@@ -48,6 +64,7 @@ const ztmCustomDarkMode = () => {
     chrome.storage.onChanged.addListener((changes, namespace) => {
         if (namespace === 'sync' && 'ztmDarkModeCheckboxIsChecked' in changes) {
             let isChecked = changes.ztmDarkModeCheckboxIsChecked.newValue || false;
+            customCss(isChecked);
             customCssForCourseCurriculumPage(isChecked);
         }
     });
