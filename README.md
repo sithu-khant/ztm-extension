@@ -121,6 +121,7 @@ MIT License
 
 * Fri Mar 1, 2024
 	* (3.1.01) - Added `ztm-custom-dark-mode.js` file.
+	* (3.1.02) - Added custom dark mode functions.
 * Thu Feb 29, 2024
 	* (2.29.01) - New section times feature is partially working now.
 	* (2.29.02) - Section times feature is now working on the learning page.
