@@ -119,6 +119,8 @@ MIT License
 
 ## Logs
 
+* Sun Mar 3, 2024
+	* (3.3.01) - Added some css styles.
 * Fri Mar 1, 2024
 	* (3.1.01) - Added `ztm-custom-dark-mode.js` file.
 	* (3.1.02) - Added custom dark mode functions.

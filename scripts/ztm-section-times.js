@@ -281,11 +281,11 @@ const ztmSectionTimes = () => {
     });
 }
 
-// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-//     if (message.action === 'windowChanged') {
-//         ztmSectionTimes();
-//     }
-// });
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.action === 'windowChanged') {
+        ztmSectionTimes();
+    }
+});
 
 // Track the page
 const ztmSectionTimesObserver = new MutationObserver(() => ztmSectionTimes());

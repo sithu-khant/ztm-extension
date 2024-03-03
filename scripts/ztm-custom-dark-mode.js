@@ -48,7 +48,15 @@ const customCssForCourseCurriculumPage = (isChecked) => {
         // Get the finished
         const finished = document.querySelector('.finished');
         finished.style.background = isChecked ? '#EEEEEE' : ''    
-        
+
+        // Get the certificate
+        const certificate = document.querySelector('.certificate');
+        if (certificate) {
+            certificate.style.background = isChecked ? '#393E46' : ''
+            const certTitle = certificate?.querySelector('.title');
+            certTitle.style.background = isChecked ? '#393E46' : ''
+            certTitle.style.color = isChecked ? '#EEEEEE' : ''
+        }
     };
 };
 
