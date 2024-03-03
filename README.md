@@ -121,6 +121,7 @@ MIT License
 
 * Sun Mar 3, 2024
 	* (3.3.01) - Added some css styles.
+	* (3.3.02) - Dark mode working on mobile view.
 * Fri Mar 1, 2024
 	* (3.1.01) - Added `ztm-custom-dark-mode.js` file.
 	* (3.1.02) - Added custom dark mode functions.
