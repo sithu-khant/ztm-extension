@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri Mar 1, 2024
+ * Last Updated: Sun Mar 3, 2024
  * Description: Adds custom dark mode (unable to do with css file) to the academy page. 
  */ 
 
@@ -24,9 +24,9 @@ const customCssForCourseCurriculumPage = (isChecked) => {
     // Only run the custom dark mode on the course curriculum page
     const ztmInstructorProfile = document.querySelector('.instructor');
     // On mobile view
-    const ztmNext = document.querySelector('.next');
+    const ztmCurriculumSectionHeader = document.querySelector('.section-header.jsx-3825904483');
 
-    if (ztmInstructorProfile || ztmNext) {
+    if (ztmInstructorProfile || ztmCurriculumSectionHeader) {
         // Get the course heading
         const heading = document.querySelector('.heading');
         heading.style.color = isChecked ? '#EEEEEE' : ''
@@ -35,17 +35,23 @@ const customCssForCourseCurriculumPage = (isChecked) => {
         const banner = document.querySelector('.banner');
         banner.style.color = isChecked ? '#EEEEEE' : ''
 
-        // Get the progress
-        const progress = document.querySelector('.progress');
-        progress.style.background = isChecked ? '#393E46' : ''
+        if (ztmInstructorProfile) {
+            // Get the progress
+            const progress = document.querySelector('.progress');
+            progress.style.background = isChecked ? '#393E46' : ''  
+            
+            // Get the progressBar
+            let progressBar = document.querySelector('.progressBar');
+            progressBar.style.background = isChecked ? '#232931' : ''
+        }
 
         // Get the percentComplete
         const percentComplete = document.querySelector('.percentComplete');
-        progress.style.color = isChecked ? '#EEEEEE' : ''
+        percentComplete.style.color = isChecked ? '#EEEEEE' : ''
 
         // Get the progressBar
-        const progressBar = document.querySelector('.progressBar');
-        progressBar.style.background = isChecked ? '#232931' : ''
+        let progressBar = document.querySelector('.progressBar');
+        progressBar.style.background = isChecked ? '#393E46' : ''
         
         // Get the finished
         const finished = document.querySelector('.finished');
