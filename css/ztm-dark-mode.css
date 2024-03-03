@@ -10,8 +10,11 @@ body,
 *:not(.status-icon, 
     .bxs-heart, 
     .gravatar.jsx-2575539602, 
-    .secondaryButton, 
-    .jsx-2138578525, 
+    .primaryButton,
+    .secondaryButton,
+    .btnLink,
+    .jsx-2138578525,
+    .jsx-3825904483,
     .course-filter, 
     .progressbar, 
     .progressbar-fill, 
@@ -63,6 +66,10 @@ body::-webkit-scrollbar-thumb {
     outline: none !important;
 }
 
+.navbar-nav>li>.dropdown-menu {
+    border: 1px solid #393E46;
+}
+
 .nav.navbar-nav>li .fedora-navbar-link:hover {
     background: #232931 !important;
     color: #EEEEEE !important;
@@ -81,20 +88,20 @@ body::-webkit-scrollbar-thumb {
 .open>.dropdown-menu,
 .open>.dropdown-menu li a,
 .course-filter .dropdown-menu li a {
-    background: #393E46 !important;
+    background: #232931 !important;
     color: #EEEEEE !important;
 }
 
 .course-filter .dropdown-menu li a:hover {
-    background: #232931 !important;
-}
-
-.open>.dropdown-menu li a {
     background: #393E46 !important;
 }
 
+/* .open>.dropdown-menu li a {
+    background: #393E46 !important;
+} */
+
 .open>.dropdown-menu li a:hover {
-    background: #232931 !important;
+    background: #393E46 !important;
 }
 
 .nav.navbar-nav>li .fedora-navbar-link {
@@ -353,6 +360,10 @@ a.jsx-2575539602:hover {
     background: #393E46 !important;
 }
 
+.menu-btn.jsx-3712860888 {
+    color: #EEEEEE !important;
+}
+
 .banner.jsx-1640592643 {
     background: #393E46 !important;
 }
@@ -366,24 +377,36 @@ a.jsx-2575539602:hover {
 }
 
 .section-header.jsx-4255369697,
-.lectures.jsx-3137867545 {
+.jsx-3825904483.section-header,
+.lectures.jsx-3137867545,
+.jsx-811576928.lectures {
     background: #393E46 !important;  
 }
 
-.slim-section.jsx-3137867545 {
+.slim-section.jsx-3137867545,
+.jsx-811576928.slim-section {
     background: #393E46 !important;  
 }
 
-.bar.jsx-2138578525 {
+.jsx-3825904483.heading,
+.jsx-1998191207.completion {
+    color: #EEEEEE !important;
+    background: #393E46 !important;
+}
+
+.bar.jsx-2138578525,
+.jsx-1081277293.bar {
     border: 1px solid #232931 !important;
     background: #232931 !important;
 }
 
-.jsx-2138578525.text {
+.jsx-2138578525.text,
+.jsx-1081277293.text {
     color: #EEEEEE !important;
 }
 
-.active.jsx-2138578525 {
+.active.jsx-2138578525,
+.active.jsx-1081277293 {
     border-left: 8px solid #30D683 !important;
 }
 

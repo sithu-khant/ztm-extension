@@ -23,8 +23,10 @@ const customCss = (isChecked) => {
 const customCssForCourseCurriculumPage = (isChecked) => {
     // Only run the custom dark mode on the course curriculum page
     const ztmInstructorProfile = document.querySelector('.instructor');
+    // On mobile view
+    const ztmNext = document.querySelector('.next');
 
-    if (ztmInstructorProfile) {
+    if (ztmInstructorProfile || ztmNext) {
         // Get the course heading
         const heading = document.querySelector('.heading');
         heading.style.color = isChecked ? '#EEEEEE' : ''
