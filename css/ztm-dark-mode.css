@@ -548,6 +548,35 @@ header.half-height .lecture-nav a.nav-btn * {
     color: #c7254e !important;
 }
 
+.lecture-content.course-mainbar .code-viewer-label {
+    background: #393E46 !important;
+}
+
+.lecture-content.course-mainbar .hljs-attr, 
+.lecture-content.course-mainbar .hljs-variable, 
+.lecture-content.course-mainbar .hljs-template-variable, 
+.lecture-content.course-mainbar .hljs-type, 
+.lecture-content.course-mainbar .hljs-selector-class, 
+.lecture-content.course-mainbar .hljs-selector-attr, 
+.lecture-content.course-mainbar .hljs-selector-pseudo, 
+.lecture-content.course-mainbar .hljs-number {
+    color: #d19a66 !important;
+}
+
+.lecture-content.course-mainbar .hljs-doctag, 
+.lecture-content.course-mainbar .hljs-keyword, 
+.lecture-content.course-mainbar .hljs-formula {
+    color: #c678dd !important;
+}
+
+.lecture-content.course-mainbar .hljs-string, 
+.lecture-content.course-mainbar .hljs-regexp, 
+.lecture-content.course-mainbar .hljs-addition, 
+.lecture-content.course-mainbar .hljs-attribute, 
+.lecture-content.course-mainbar .hljs-meta-strin {
+    color: #98c379 !important;
+}
+
 .lecture-attachment .attachment {
     border-bottom: 1px solid #393E46 !important;
 }
