@@ -25,7 +25,8 @@ body,
     .finished, 
     .certificate,
     .title,
-    .nav-icon-back) {
+    .nav-icon-back,
+    .dropdown-backdrop) {
     background: #232931 !important;
 }
 
@@ -425,16 +426,30 @@ a.jsx-2575539602:hover {
     color: #EEEEEE !important;
 }
 
+/* New theme mobile view ----- */
+
+.sidebar.jsx-2074486510 {
+    background-color: rgba(0,0,0,0.4) !important;
+}
+
+.sidebar-content.jsx-2074486510 * {
+    color: #EEEEEE !important;
+}
+
 /* ----- End Course Info Page Dark Mode Section ----- */
 
 /* ----- Start Lecture Page Dark Mode Section ----- */
 
-header.half-height .lecture-left * {
+header.half-height .lecture-left {
     color: #EEEEEE !important;
+    /* background-color: #393E46 !important; */
+    background-color: transparent !important;
 }
 
-header.half-height .lecture-left .nav-icon-back {
+header.half-height .lecture-left .nav-icon-back,
+header.half-height .lecture-left .nav-icon-back * {
     color: #EEEEEE !important;
+    /* background-color: #393E46 !important; */
 }
 
 .course-sidebar .course-progress.lecture-page.sticky {
