@@ -125,6 +125,7 @@ MIT License
 	* (3.3.03) - Double checked.
 	* (3.3.04) - Added colors for code view in dark mode.
 	* (3.3.05) - Updated some css color in dark mode.
+	* (3.3.06) - Fixed css style on finished course template.
 * Fri Mar 1, 2024
 	* (3.1.01) - Added `ztm-custom-dark-mode.js` file.
 	* (3.1.02) - Added custom dark mode functions.
