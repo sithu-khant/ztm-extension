@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri Mar 1, 2024
+ * Last Updated: Sat Mar 2, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
@@ -15,10 +15,13 @@ body,
     .course-filter, 
     .progressbar, 
     .progressbar-fill, 
+    .ul.jsx-2575539602,
     .progress, 
     .percentComplete, 
     .progressBar, 
     .finished, 
+    .certificate,
+    .title,
     .nav-icon-back) {
     background: #232931 !important;
 }
@@ -76,8 +79,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .open>.dropdown-menu,
+.open>.dropdown-menu li a,
 .course-filter .dropdown-menu li a {
     background: #393E46 !important;
+    color: #EEEEEE !important;
 }
 
 .course-filter .dropdown-menu li a:hover {
@@ -123,14 +128,6 @@ body::-webkit-scrollbar-thumb {
     color: #32dd88 !important;
 }
 
-/*.progressbar {
-    background: #393E46 !important;
-}
-
-.progressbar .progressbar-fill {
-    background: #EEEEEE !important;
-}
-*/
 #ztm-fav-courses {
     background: transparent !important;
 }
@@ -150,6 +147,10 @@ body::-webkit-scrollbar-thumb {
 
 .foot-logo img {
     opacity: 0;
+}
+
+.link-container a {
+    color: #EEEEEE !important;
 }
 
 .socials-container path {
@@ -339,10 +340,13 @@ body::-webkit-scrollbar-thumb {
 
 ul.jsx-2575539602 {
     border: 1px solid #393E46 !important;
+    /* background-color: #393E46 !important; */
 }
 
+ul.jsx-2575539602 *,
 ul.jsx-2575539602 a {
     color: #EEEEEE !important;
+    /* background-color: #393E46 !important; */
 }
 
 a.jsx-2575539602:hover {
@@ -392,37 +396,10 @@ a.jsx-2575539602:hover {
     background: #393E46 !important;
 }
 
-/*.status-icon.jsx-2138578525 {
-    color: #30D683 !important;
-}
-
-.progress.jsx-687475899,
-.percentComplete.jsx-687475899 {
-    background: #393E46 !important;
-}
-
-.finished.jsx-687475899 {
-    background: #EEEEEE !important;
-}
-
-.progress.jsx-1189601211,
-.percentComplete.jsx-1189601211 {
-    background: #393E46 !important;
-}
-
-.finished.jsx-1189601211 {
-    background: #EEEEEE !important;
-}*/
-
 .instructor.jsx-1343021134,
 .instructor.jsx-1343021134 * {
     background: #393E46 !important;
     color: #EEEEEE !important;
-}
-
-.certificate.jsx-633761444,
-.title.jsx-633761444 {
-    background: #393E46 !important;
 }
 
 /* ----- End Course Info Page Dark Mode Section ----- */

@@ -98,26 +98,8 @@
     flex-basis: 100%;
 }
 
-/*@media screen and (max-width: 800px) {
+@media screen and (max-width: 980px) {
     #curriculum-section-times-container {
         display: none !important;
     }
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
