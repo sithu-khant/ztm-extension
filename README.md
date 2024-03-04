@@ -119,6 +119,8 @@ MIT License
 
 ## Logs
 
+* Mon Mar 4, 2024
+	* (4.3.01) - Committed.
 * Sun Mar 3, 2024
 	* (3.3.01) - Added some css styles.
 	* (3.3.02) - Dark mode working on mobile view.
