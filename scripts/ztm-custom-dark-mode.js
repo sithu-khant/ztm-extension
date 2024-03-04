@@ -35,16 +35,6 @@ const customCssForCourseCurriculumPage = (isChecked) => {
         const banner = document.querySelector('.banner');
         banner.style.color = isChecked ? '#EEEEEE' : ''
 
-        if (ztmInstructorProfile) {
-            // Get the progress
-            const progress = document.querySelector('.progress');
-            progress.style.background = isChecked ? '#393E46' : ''  
-            
-            // Get the progressBar
-            let progressBar = document.querySelector('.progressBar');
-            progressBar.style.background = isChecked ? '#232931' : ''
-        }
-
         // Get the percentComplete
         const percentComplete = document.querySelector('.percentComplete');
         percentComplete.style.color = isChecked ? '#EEEEEE' : ''
@@ -55,7 +45,17 @@ const customCssForCourseCurriculumPage = (isChecked) => {
         
         // Get the finished
         const finished = document.querySelector('.finished');
-        finished.style.background = isChecked ? '#EEEEEE' : ''    
+        finished.style.background = isChecked ? '#EEEEEE' : ''
+        
+        if (ztmInstructorProfile) {
+            // Get the progress
+            const progress = document.querySelector('.progress');
+            progress.style.background = isChecked ? '#393E46' : ''  
+            
+            // Get the progressBar
+            let progressBar = document.querySelector('.progressBar');
+            progressBar.style.background = isChecked ? '#232931' : ''
+        }
 
         // Get the certificate
         const certificate = document.querySelector('.certificate');
