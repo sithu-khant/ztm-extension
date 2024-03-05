@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "Zero To Mastery",
-	"version": "2024.3.3",
+	"version": "2024.3.5",
 	"description": "Official extension for Zero To Mastery Academy students.",
 	"author": "Sithu Khant",
 	"homepage_url": "https://zerotomastery.io/",
@@ -28,14 +28,6 @@
 		{
 			"js": [
 				"scripts/ztm-dark-mode.js"
-			],
-			"matches": [
-				"https://academy.zerotomastery.io/*"
-			]
-		},
-		{
-			"js": [
-				"scripts/ztm-custom-dark-mode.js"
 			],
 			"matches": [
 				"https://academy.zerotomastery.io/*"
