@@ -151,8 +151,18 @@ body::-webkit-scrollbar-thumb {
     border-bottom: 1px solid transparent !important;
 }
 
+#ztm-section-times-container {
+    background: #393E46 !important;
+}
+
+#ztm-section-times-container *,
+.curriculum-section-times-item * {
+    color: #EEEEEE !important;
+}
+
 .ztm-section-times-item {
-    border: 1px solid #393E46 !important;
+    border: 1px solid #232931 !important;
+    color: #EEEEEE !important;
 }
 
 .ztm-section-times-text {
@@ -160,7 +170,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .curriculum-section-times-item {
-    border: 1px solid #393E46 !important;
+    border: 1px solid #232931 !important;
 }
 
 .curriculum-section-times-text {
@@ -288,8 +298,8 @@ body::-webkit-scrollbar-thumb {
     border-left: 8px solid #30D683 !important;
 }
 
-.slim-section .section-header div,
-.slim-section .section-header div * {
+.slim-section .section-header div:not(.curriculum-section-times-data),
+.slim-section .section-header div *:not(.curriculum-section-times-data) {
     background: #393E46 !important;
 }
 

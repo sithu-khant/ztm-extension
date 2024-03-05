@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri Feb 23, 2024
+ * Last Updated: Tue Mar 5, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -172,12 +172,27 @@ const toggleFavCourses = () => {
         let favCourses = document.querySelectorAll('.fav-courses');
         // Remove all favorite courses the course
         favCourses.forEach((course) => course.remove());
+        let noFavoritedCourseDiv = document.querySelector('#no-favorited-course');
+        // Remove the text if there is
+        noFavoritedCourseDiv ? noFavoritedCourseDiv.remove() : ''
     } else {
         // Get the course list
         let courseList = document.querySelector('.course-list');
 
         // Get all the favorited course array from the local storage
         let favCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
+
+        // No favorited course
+        let noFavoritedCourseDiv = document.createElement('div');
+        noFavoritedCourseDiv.id = 'no-favorited-course'
+        noFavoritedCourseDiv.innerHTML = `
+        <p>No courses selected as favorites. Turn off Favorites button above to see all courses.</p>
+        `
+        // If there is no favorited course
+        let isAlreadyNoFavoritedCourseDiv = document.querySelector('#no-favorited-course');
+        if (favCoursesArray.length === 0 && !isAlreadyNoFavoritedCourseDiv) {
+            courseList.appendChild(noFavoritedCourseDiv);
+        };
 
         // Loop through the array
         favCoursesArray.forEach((courseString) => {
