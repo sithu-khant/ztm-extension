@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Wed Feb 28, 2024
+ * Last Updated: Tue Mar 5, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -30,6 +30,14 @@
 
 .course-box-image-container {
 	position: relative;
+}
+
+#no-favorited-course {
+	margin: 20px 10px;
+	margin-bottom: 50px;
+	font-size: 20px;
+	font-style: italic;
+	text-align: center;
 }
 
 #ztm-fav-courses {
