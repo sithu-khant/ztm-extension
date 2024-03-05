@@ -1,14 +1,36 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Mar 5, 2024
+ * Last Updated: Sun Mar 3, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
 /* ----- Start Home Page Dark Mode Section ----- */
 body,
-*:not(.status-icon, .bxs-heart) {
+*:not(.status-icon, 
+    .bxs-heart, 
+    .gravatar.jsx-2575539602, 
+    .primaryButton,
+    .secondaryButton,
+    .btnLink,
+    .jsx-2138578525,
+    .jsx-3825904483,
+    .course-filter, 
+    .progressbar, 
+    .progressbar-fill, 
+    .ul.jsx-2575539602,
+    .progress, 
+    .percentComplete, 
+    .progressBar, 
+    .finished, 
+    .certificate,
+    .title,
+    .nav-icon-back,
+    .dropdown-backdrop) {
     background: #232931 !important;
+}
+
+.view-directory.course-directory *:not(.bxs-heart) {
     color: #EEEEEE !important;
 }
 
@@ -45,6 +67,10 @@ body::-webkit-scrollbar-thumb {
     outline: none !important;
 }
 
+.navbar-nav>li>.dropdown-menu {
+    border: 1px solid #393E46;
+}
+
 .nav.navbar-nav>li .fedora-navbar-link:hover {
     background: #232931 !important;
     color: #EEEEEE !important;
@@ -54,25 +80,29 @@ body::-webkit-scrollbar-thumb {
     background: #393E46 !important;
 }
 
-.course-filter * {
+.course-filter .filter-label,
+.course-filter .btn-group,
+.course-filter .btn-group * {
     background: transparent !important;
 }
 
 .open>.dropdown-menu,
+.open>.dropdown-menu li a,
 .course-filter .dropdown-menu li a {
-    background: #393E46 !important;
+    background: #232931 !important;
+    color: #EEEEEE !important;
 }
 
 .course-filter .dropdown-menu li a:hover {
-    background: #232931 !important;
-}
-
-.open>.dropdown-menu li a {
     background: #393E46 !important;
 }
 
+/* .open>.dropdown-menu li a {
+    background: #393E46 !important;
+} */
+
 .open>.dropdown-menu li a:hover {
-    background: #232931 !important;
+    background: #393E46 !important;
 }
 
 .nav.navbar-nav>li .fedora-navbar-link {
@@ -106,14 +136,6 @@ body::-webkit-scrollbar-thumb {
     color: #32dd88 !important;
 }
 
-.progressbar {
-    background: #393E46 !important;
-}
-
-.progressbar .progressbar-fill {
-    background: #EEEEEE !important;
-}
-
 #ztm-fav-courses {
     background: transparent !important;
 }
@@ -135,6 +157,10 @@ body::-webkit-scrollbar-thumb {
     opacity: 0;
 }
 
+.link-container a {
+    color: #EEEEEE !important;
+}
+
 .socials-container path {
     stroke: #fff !important;
 }
@@ -144,6 +170,18 @@ body::-webkit-scrollbar-thumb {
 
 /* ----- Start Course Info Page Dark Mode Section ----- */
 
+.container.jsx-2755510470 {
+    color: #EEEEEE !important;
+}
+
+.section-header.jsx-4255369697 h2,
+.section-header.jsx-4255369697 p {
+    color: #EEEEEE !important;
+}
+.info.jsx-2138578525, .info.jsx-2138578525 * {
+    color: #EEEEEE !important;
+}
+
 .full-width {
     border-bottom: 1px solid #393E46 !important;
 }
@@ -152,20 +190,55 @@ body::-webkit-scrollbar-thumb {
     border-bottom: 1px solid transparent !important;
 }
 
-.ztm-section-times-item {
-    border: 1px solid #393E46 !important;
+#ztm-section-times-container {
+    background: transparent !important;
 }
 
-.ztm-section-times-text {
+#ztm-section-times-container .ztm-section-times-text {
+    background: #393E46 !important;
+}
+
+.ztm-section-times-item * {
+    color: #EEEEEE !important;
+}
+
+#ztm-section-times-container .ztm-section-times-item {
+    border: 1px solid #232931 !important;
+}
+
+#curriculum-section-times-container {
+    background: transparent !important;
+}
+
+#curriculum-section-times-container .ztm-section-times-text {
+    background: #393E46 !important;
+}
+
+#section-times-title-container,
+#section-times-title-container * {
+    background: #393E46 !important;
+}
+
+#curriculum-section-times-container *:not(.curriculum-section-times-data) {
     background: #393E46 !important;
 }
 
 .curriculum-section-times-item {
-    border: 1px solid #393E46 !important;
+    border: 1px solid #232931 !important;
+    background: red !important;
 }
 
-.curriculum-section-times-text {
-    background: #393E46 !important;
+.curriculum-section-times-item * {
+    color: #EEEEEE !important;
+}
+
+#section-times-toggle-arrow-icon,
+#section-times-toggle-arrow-icon * {
+    background: transparent !important;
+}
+
+.for-learning-page {
+    background: transparent !important;
 }
 
 .for-learning-page .curriculum-section-times-data {
@@ -174,6 +247,11 @@ body::-webkit-scrollbar-thumb {
 
 .course-sidebar {
     border-right: 1px solid #393E46 !important;
+    color: #EEEEEE !important;
+}
+
+.course-sidebar * {
+    color: #EEEEEE !important;
 }
 
 .course-sidebar::-webkit-scrollbar {
@@ -200,6 +278,16 @@ body::-webkit-scrollbar-thumb {
     background: #393E46 !important;
 }
 
+.course-mainbar h2.section-title {
+    color: #EEEEEE !important;
+}
+
+.course-mainbar p,
+.course-mainbar strong,
+.course-mainbar strong a {
+    color: #EEEEEE !important;
+}
+
 .course-mainbar .next-lecture-wrapper .start-next-lecture {
     background: #32DD88 !important;
 }
@@ -223,6 +311,7 @@ body::-webkit-scrollbar-thumb {
 
 .course-section .section-title {
     border-bottom: 1px solid #EEEEEE !important;
+    color: #EEEEEE !important;
 }
 
 .course-section ul.section-list .section-item .item:hover {
@@ -255,9 +344,117 @@ body::-webkit-scrollbar-thumb {
     background: #24d37b !important;
 }
 
+/* new ---- */
+
+ul.jsx-2575539602 {
+    border: 1px solid #393E46 !important;
+    /* background-color: #393E46 !important; */
+}
+
+ul.jsx-2575539602 *,
+ul.jsx-2575539602 a {
+    color: #EEEEEE !important;
+    /* background-color: #393E46 !important; */
+}
+
+a.jsx-2575539602:hover {
+    background: #393E46 !important;
+}
+
+.menu-btn.jsx-3712860888 {
+    color: #EEEEEE !important;
+}
+
+.banner.jsx-1640592643 {
+    background: #393E46 !important;
+}
+
+.right.jsx-1640592643 * {
+    background: transparent !important;
+}
+
+.right.jsx-1640592643 .primaryButton {
+    background: #30D683 !important;
+}
+
+.icon-check.jsx-1998191207 {
+    background: #393E46 !important; 
+}
+
+.section-header.jsx-4255369697,
+.jsx-3825904483.section-header,
+.lectures.jsx-3137867545,
+.jsx-811576928.lectures {
+    background: #393E46 !important;  
+}
+
+.slim-section.jsx-3137867545,
+.jsx-811576928.slim-section {
+    background: #393E46 !important;  
+}
+
+.jsx-3825904483.heading,
+.jsx-1998191207.completion {
+    color: #EEEEEE !important;
+    background: #393E46 !important;
+}
+
+.bar.jsx-2138578525,
+.jsx-1081277293.bar {
+    border: 1px solid #232931 !important;
+    background: #232931 !important;
+}
+
+.jsx-2138578525.text,
+.jsx-1081277293.text {
+    color: #EEEEEE !important;
+}
+
+.active.jsx-2138578525,
+.active.jsx-1081277293 {
+    border-left: 8px solid #30D683 !important;
+}
+
+.secondaryButtonInverse {
+    background: #232931 !important;
+}
+
+.info.jsx-2138578525,
+.info.jsx-2138578525 * {
+    background: #393E46 !important;
+}
+
+.instructor.jsx-1343021134,
+.instructor.jsx-1343021134 * {
+    background: #393E46 !important;
+    color: #EEEEEE !important;
+}
+
+/* New theme mobile view ----- */
+
+.sidebar.jsx-2074486510 {
+    background-color: rgba(0,0,0,0.4) !important;
+}
+
+.sidebar-content.jsx-2074486510 * {
+    color: #EEEEEE !important;
+}
+
 /* ----- End Course Info Page Dark Mode Section ----- */
 
 /* ----- Start Lecture Page Dark Mode Section ----- */
+
+header.half-height .lecture-left {
+    color: #EEEEEE !important;
+    /* background-color: #393E46 !important; */
+    background-color: transparent !important;
+}
+
+header.half-height .lecture-left .nav-icon-back,
+header.half-height .lecture-left .nav-icon-back * {
+    color: #EEEEEE !important;
+    /* background-color: #393E46 !important; */
+}
 
 .course-sidebar .course-progress.lecture-page.sticky {
     background: #232931 !important;
@@ -282,6 +479,10 @@ header.half-height .lecture-left .settings-dropdown ul {
     border: 1px solid #393E46 !important;
 }
 
+.course-sidebar-head h2 {
+    color: #EEEEEE !important;
+}
+
 .dropdown-backdrop {
     background: transparent !important;
 }
@@ -301,6 +502,7 @@ header.half-height .lecture-left .open .dropdown-toggle {
 
 header.half-height .lecture-nav a.nav-btn {
     border-left: 1px solid #232931 !important;
+    color: #EEEEEE !important;
 }
 
 header.half-height .lecture-nav a.nav-btn:hover {
@@ -315,8 +517,16 @@ header.half-height .lecture-nav a.nav-btn * {
     background: transparent !important;
 }
 
+.course-section ul.section-list .section-item .item .lecture-icon svg {
+    color: #EEEEEE !important;
+}
+
 .lecture-content.course-mainbar * {
     background: transparent !important;
+    color: #EEEEEE !important;
+}
+
+.course-sidebar .row.lecture-sidebar .course-section .section-title {
     color: #EEEEEE !important;
 }
 
@@ -340,6 +550,35 @@ header.half-height .lecture-nav a.nav-btn * {
 .lecture-content.course-mainbar code em,
 .lecture-content.course-mainbar pre em {
     color: #c7254e !important;
+}
+
+.lecture-content.course-mainbar .code-viewer-label {
+    background: #393E46 !important;
+}
+
+.lecture-content.course-mainbar .hljs-attr, 
+.lecture-content.course-mainbar .hljs-variable, 
+.lecture-content.course-mainbar .hljs-template-variable, 
+.lecture-content.course-mainbar .hljs-type, 
+.lecture-content.course-mainbar .hljs-selector-class, 
+.lecture-content.course-mainbar .hljs-selector-attr, 
+.lecture-content.course-mainbar .hljs-selector-pseudo, 
+.lecture-content.course-mainbar .hljs-number {
+    color: #d19a66 !important;
+}
+
+.lecture-content.course-mainbar .hljs-doctag, 
+.lecture-content.course-mainbar .hljs-keyword, 
+.lecture-content.course-mainbar .hljs-formula {
+    color: #c678dd !important;
+}
+
+.lecture-content.course-mainbar .hljs-string, 
+.lecture-content.course-mainbar .hljs-regexp, 
+.lecture-content.course-mainbar .hljs-addition, 
+.lecture-content.course-mainbar .hljs-attribute, 
+.lecture-content.course-mainbar .hljs-meta-strin {
+    color: #98c379 !important;
 }
 
 .lecture-attachment .attachment {
