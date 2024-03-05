@@ -7,9 +7,8 @@
 
 /* ----- Start Home Page Dark Mode Section ----- */
 body,
-*:not(.status-icon, .bxs-heart) {
+*:not(.status-icon, .bxs-heart, .gravatar, .primaryButton, .secondaryButton, .secondaryButtonInverse) {
     background: #232931 !important;
-    color: #EEEEEE !important;
 }
 
 body::-webkit-scrollbar {
@@ -254,6 +253,121 @@ body::-webkit-scrollbar-thumb {
 .course-section ul.section-list .section-item .item .btn-primary:hover {
     background: #24d37b !important;
 }
+
+/* New ---------- */
+
+.nav ul,
+.nav ul * {
+    background: #393E46 !important;
+    color: #EEEEEE !important;
+}
+
+.nav ul li:hover,
+.nav ul li a:hover {
+    background: #232931 !important;
+}
+
+.heading,
+.description,
+.subheading,
+.completion {
+    color: #EEEEEE !important;
+}
+
+.container .wrap .banner {
+    background: #393E46 !important;
+}
+
+.slim-section,
+.slim-section .section-header,
+.slim-section .lectures {
+    background: #393E46 !important;
+}
+
+.container .columns .slim-section .lectures .active {
+    border-left: 8px solid #30D683 !important;
+}
+
+.slim-section .section-header div,
+.slim-section .section-header div * {
+    background: #393E46 !important;
+}
+
+.slim-section .lectures .bar {
+    border: 1px solid #232931 !important;
+}
+
+.slim-section .lectures .bar .text {
+    color: #EEEEEE !important;
+}
+
+.slim-section .lectures .bar .info,
+.slim-section .lectures .bar .info * {
+    background: #393E46 !important;
+    color: #EEEEEE !important;
+}
+
+.secondaryButtonInverse {
+    background: #232931 !important;
+}
+
+.progress {
+    background: #393E46 !important;
+}
+
+.container .columns .progress .progressBar {
+    background: #232931 !important;
+}
+
+.progress .percentComplete {
+    background: #393E46 !important;
+    color: #EEEEEE !important;
+}
+
+.progress .progressBar .finished {
+    background: #EEEEEE !important;
+}
+
+.instructor,
+.instructor *,
+.certificate,
+.certificate *:not(.secondaryButton) {
+    background: #393E46 !important;
+    color: #EEEEEE !important;
+}
+
+/* Mobile vew --------- */
+
+.menu-btn {
+    color: #EEEEEE !important;
+}
+
+.sidebar {
+    background: rgba(0,0,0,0.4) !important;
+}
+
+.sidebar-content,
+.sidebar-content * {
+    background: #393E46 !important;
+    color: #EEEEEE !important;
+}
+
+.percentComplete {
+    color: #EEEEEE !important;
+}
+
+.progressBar {
+    background: #393E46 !important;
+}
+
+.progressBar .finished {
+    background: #EEEEEE !important;
+}
+
+.next {
+    color: #EEEEEE !important;
+}
+
 
 /* ----- End Course Info Page Dark Mode Section ----- */
 
