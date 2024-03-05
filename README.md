@@ -120,11 +120,12 @@ MIT License
 ## Logs
 
 * Tue Mar 5, 2024
-	* (5.3.01) - Prepared for the new experiencement.
-	* (5.3.02) - Dark mode is fully working now.
-	* (5.3.03) - All done by now.
+	* (3.5.01) - Prepared for the new experiencement.
+	* (3.5.02) - Dark mode is fully working now.
+	* (3.5.03) - All done by now.
+	* (3.5.04) - Added style for code block.
 * Mon Mar 4, 2024
-	* (4.3.01) - Committed.
+	* (3.4.01) - Committed.
 * Sun Mar 3, 2024
 	* (3.3.01) - Added some css styles.
 	* (3.3.02) - Dark mode working on mobile view.
