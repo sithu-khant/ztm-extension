@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Thu Feb 29, 2024
+ * Last Updated: Tue Mar 5, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
@@ -17,19 +17,21 @@ const enableZtmDarkMode = () => {
     // Add dark mode css file to the head tag
     document.head.appendChild(darkModeCssLink);
 
-    const isLearningPage = document.querySelector('.nav-icon-back')
-    if (isLearningPage) {
-        const customStyleDiv = document.createElement('div');
-        customStyleDiv.id = 'custom-style-div'
-        customStyleDiv.innerHTML = `
-        <style>
-        * {
-            color: #EEEEEE !important;
-        }
-        </style>
-        `
-        document.head.appendChild(customStyleDiv);
+    const customStyleDiv = document.createElement('div');
+    customStyleDiv.id = 'custom-style-div'
+    customStyleDiv.innerHTML = `
+    <style>
+    * {
+        color: #EEEEEE !important;
     }
+    </style>
+    `
+
+    const isHomePage = document.querySelector('.course-list');
+    const isLearningPage = document.querySelector('.nav-icon-back')
+    if (isHomePage || isLearningPage) {
+        document.head.appendChild(customStyleDiv);
+    };
 };
 
 const disableZtmDarkMode = () => {

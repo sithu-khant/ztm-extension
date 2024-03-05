@@ -121,6 +121,7 @@ MIT License
 
 * Tue Mar 5, 2024
 	* (5.3.01) - Prepared for the new experiencement.
+	* (5.3.02) - Dark mode is fully working now.
 * Mon Mar 4, 2024
 	* (4.3.01) - Committed.
 * Sun Mar 3, 2024
