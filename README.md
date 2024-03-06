@@ -37,6 +37,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 | Versions      | Chrome | Firefox | Edge | Brave |
 |---------------|--------|---------|------|-------|
+| 2024.3.5      | ✅      | ✅       | ✅    | ✅     |
 | 2024.2.21     | ✅      | ✅       | ✅    | ✅     |
 | 2024.2.20     | ✅      | ✅       | ✅    | ✅     |
 | 2024.2.18     | ✅      | ✅       | ✅    | ✅     |
@@ -53,6 +54,11 @@ WIP - Work in progress
 
 ### Version list
 
+* 2024.3.5
+	* New dark mode theme for the new course curriculum template.
+	* Added the reminder text if you checked the favorite course button but if there is no favorited courses.
+	* Code improvement.
+	* Daily motivation update.
 * 2024.2.21
   * Made changes to the Daily Motivation feature
   	* Edited some quotes
@@ -119,6 +125,8 @@ MIT License
 
 ## Logs
 
+* Wed Mar 6, 2024
+	* (3.6.01) - Updated readme.
 * Tue Mar 5, 2024
 	* (3.5.01) - Prepared for the new experiencement.
 	* (3.5.02) - Dark mode is fully working now.
