@@ -128,6 +128,7 @@ MIT License
 * Wed Mar 6, 2024
 	* (3.6.01) - Updated readme.
 	* (3.6.02) - Updated the version number.
+	* (3.6.03) - Added version files.
 * Tue Mar 5, 2024
 	* (3.5.01) - Prepared for the new experiencement.
 	* (3.5.02) - Dark mode is fully working now.
