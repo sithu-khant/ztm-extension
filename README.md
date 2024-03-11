@@ -125,6 +125,8 @@ MIT License
 
 ## Logs
 
+* Mon Mar 11, 2023
+	* (3.11.01) - Added one missing comma in the quote list.
 * Wed Mar 6, 2024
 	* (3.6.01) - Updated readme.
 	* (3.6.02) - Updated the version number.
