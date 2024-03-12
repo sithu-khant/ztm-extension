@@ -125,7 +125,9 @@ MIT License
 
 ## Logs
 
-* Mon Mar 11, 2023
+* Tue Mar 12, 2024
+	* (3.12.01) - Fixed a dark mode bug.
+* Mon Mar 11, 2024
 	* (3.11.01) - Added one missing comma in the quote list.
 * Wed Mar 6, 2024
 	* (3.6.01) - Updated readme.
