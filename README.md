@@ -30,7 +30,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 ## Feature requests
 *(plans to add - top to bottom)*
 
-* Currently, there is no feature request.
+* Statistic time
 
 
 ## Versions
@@ -125,6 +125,8 @@ MIT License
 
 ## Logs
 
+* Sun Mar 31, 2024
+	* (3.31.01) - Added prototype files for Statistic time feature.
 * Wed Mar 6, 2024
 	* (3.6.01) - Updated readme.
 	* (3.6.02) - Updated the version number.
