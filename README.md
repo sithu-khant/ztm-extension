@@ -129,6 +129,8 @@ MIT License
 
 ## Logs
 
+* Sun Mar 31, 2024
+	* (3.31.01) - Added prototype files for Statistic time feature.
 * Wed Mar 6, 2024
 	* (3.6.01) - Updated readme.
 	* (3.6.02) - Updated the version number.
