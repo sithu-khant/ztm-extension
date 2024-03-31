@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Mar 5, 2024
+ * Last Updated: Mon Mar 11, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
@@ -29,7 +29,8 @@ const enableZtmDarkMode = () => {
 
     const isHomePage = document.querySelector('.course-list');
     const isLearningPage = document.querySelector('.nav-icon-back')
-    if (isHomePage || isLearningPage) {
+    const isCurriculumPageOld = document.querySelector('.nav-back-link');
+    if (isHomePage || isLearningPage || isCurriculumPageOld) {
         document.head.appendChild(customStyleDiv);
     };
 };

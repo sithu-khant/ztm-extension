@@ -454,7 +454,8 @@ header.half-height .lecture-nav a.nav-btn * {
 }
 
 .lecture-content.course-mainbar code,
-.lecture-content.course-mainbar pre {
+.lecture-content.course-mainbar pre,
+.lecture-content.course-mainbar pre * {
     color: #c7254e !important;
     background-color: #f9f2f4 !important;
 }
