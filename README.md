@@ -38,6 +38,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 | Versions      | Chrome | Firefox | Edge | Brave |
 |---------------|--------|---------|------|-------|
+| 2024.4.13     | ✅      | ✅       | ✅    | ✅     |
 | 2024.3.12     | ✅      | ✅       | ✅    | ✅     |
 | 2024.3.6      | ✅      | ✅       | ✅    | ✅     |
 | 2024.2.21     | ✅      | ✅       | ✅    | ✅     |
@@ -56,6 +57,10 @@ WIP - Work in progress
 
 ### Version list
 
+* 2024.4.13
+	* Fixed section times feature.
+	* Imporved dark mode.
+	* Imporved favorite course feature.
 * 2024.3.12
 	* Fixed daily motivation feature.
 	* Updated dark mode css properties to work both course curriculum pages.
@@ -135,6 +140,7 @@ MIT License
 	* (4.13.02) - Started using the predefined CSS color properties.
 	* (4.13.03) - Repleace all css colors with the predefined ones.
 	* (4.13.04) - Added comments to `ztm-dark-mode.css` file.
+	* (4.13.05) - Released version 2024.4.13. Added version files.
 * Sun Mar 31, 2024
 	* (3.31.01) - Added prototype files for Statistic time feature.
 * Wed Mar 6, 2024
