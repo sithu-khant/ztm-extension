@@ -217,7 +217,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .course-mainbar .next-lecture-wrapper .start-next-lecture {
-    background: #32DD88 !important;
+    background: var(--default-green) !important;
 }
 
 .course-mainbar .next-lecture-wrapper .start-next-lecture:hover {
@@ -256,7 +256,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .course-section ul.section-list .section-item .lecture-name {
-    color: #f4f4f4 !important;
+    color: var(--primary-white) !important;
 }
 
 .course-section ul.section-list .section-item {
@@ -264,7 +264,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .course-section ul.section-list .section-item .item .btn-primary {
-    background: #32DD88 !important;
+    background: var(--default-green) !important;
 }
 
 .course-section ul.section-list .section-item .item .btn-primary:hover {

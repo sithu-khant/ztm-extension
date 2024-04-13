@@ -133,6 +133,7 @@ MIT License
 * Sat Apr 13, 2024
 	* (4.13.01) - Fixed the section times feature. Imporved favorite courses feature code.
 	* (4.13.02) - Started using the predefined CSS color properties.
+	* (4.13.03) - Repleace all css colors with the predefined ones.
 * Sun Mar 31, 2024
 	* (3.31.01) - Added prototype files for Statistic time feature.
 * Wed Mar 6, 2024
