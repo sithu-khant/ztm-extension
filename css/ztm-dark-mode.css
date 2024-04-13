@@ -1,15 +1,15 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Mar 5, 2024
+ * Last Updated: Sat Apr 13, 2024
  * Description: Adds dark mode to the academy page
  */ 
 
 :root {
-    --primary-dark: #232931;
-    --secondary-dark: #393E46;
-    --primary-white: #EEEEEE;
-    --default-green: #30d683;
+    --primary-dark: #232931;   /* mostly for background */
+    --secondary-dark: #393E46  /* mostly for hover */;
+    --primary-white: #EEEEEE;  /* mostly for text */;
+    --default-green: #30d683;  /* default green color of ZTM Academy */;
 }
 
 /* ----- Start Home Page Dark Mode Section ----- */
