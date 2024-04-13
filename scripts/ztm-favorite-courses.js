@@ -370,6 +370,11 @@ const toggleFavoriteCourses = (isChecked) => {
         }
     });
 
+    // Remove no favorite course text
+    let noFavoritedCourseDiv = document.querySelector('#no-favorited-course');
+    // Remove the text if it is unchecked
+    !isChecked ? noFavoritedCourseDiv.remove() : ''
+
     let pagination = document.querySelector('.pagination');
     if (pagination && !isChecked) {
         pagination.style.display = 'inline-block'

@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Thu Feb 29, 2024
+ * Last Updated: Sat Apr 13, 2024
  * Description: Show lecture time data in the course info page
  */ 
 
@@ -107,7 +107,7 @@ const ztmCurriculumPageSectionTimes = () => {
         if (iconStatus === '#icon-circle-check') {
             // For Total Watched
             getTimes(lectureBar, '.duration', totalWatchedArray)
-        } else if (iconStatus === '#icon-circle-outline') {
+        } else {
             // For Total Left
             getTimes(lectureBar, '.duration', totalLeftArray)
         }
