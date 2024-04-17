@@ -31,6 +31,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 *(plans to add - top to bottom)*
 
 * Course Details
+* Multiple Dark Mode Themes
 * Statistic time
 
 
@@ -135,6 +136,8 @@ MIT License
 
 ## Logs
 
+* Wed Apr 17, 2024
+	* (4.17.01) - Published version 2024.4.13 in GitHub Releases.
 * Sat Apr 13, 2024
 	* (4.13.01) - Fixed the section times feature. Imporved favorite courses feature code.
 	* (4.13.02) - Started using the predefined CSS color properties.
