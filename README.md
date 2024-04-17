@@ -60,8 +60,8 @@ WIP - Work in progress
 
 * 2024.4.13
 	* Fixed section times feature.
-	* Imporved dark mode.
-	* Imporved favorite course feature.
+	* Improved dark mode.
+	* Improved favorite course feature.
 * 2024.3.12
 	* Fixed daily motivation feature.
 	* Updated dark mode css properties to work both course curriculum pages.
@@ -138,6 +138,7 @@ MIT License
 
 * Wed Apr 17, 2024
 	* (4.17.01) - Published version 2024.4.13 in GitHub Releases.
+	* (4.17.02) - Fixed typo.
 * Sat Apr 13, 2024
 	* (4.13.01) - Fixed the section times feature. Imporved favorite courses feature code.
 	* (4.13.02) - Started using the predefined CSS color properties.
