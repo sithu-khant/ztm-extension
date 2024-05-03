@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Mar 5, 2024
+ * Last Updated: Fri May 3, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
@@ -373,7 +373,7 @@ const toggleFavoriteCourses = (isChecked) => {
     // Remove no favorite course text
     let noFavoritedCourseDiv = document.querySelector('#no-favorited-course');
     // Remove the text if it is unchecked
-    !isChecked ? noFavoritedCourseDiv.remove() : ''
+    !isChecked ? noFavoritedCourseDiv?.remove() : ''
 
     let pagination = document.querySelector('.pagination');
     if (pagination && !isChecked) {
