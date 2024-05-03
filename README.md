@@ -136,6 +136,8 @@ MIT License
 
 ## Logs
 
+* Fri May 3, 2024
+	* (5.3.01) - Added donation button in the popup.
 * Wed Apr 17, 2024
 	* (4.17.01) - Published version 2024.4.13 in GitHub Releases.
 	* (4.17.02) - Fixed typo.
