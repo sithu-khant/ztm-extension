@@ -139,6 +139,7 @@ MIT License
 * Fri May 3, 2024
 	* (5.3.01) - Added donation button in the popup.
 	* (5.3.02) - Added course details feature to the popup. Added check statement condition in daily motivation feature.
+	* (5.3.03) - Added course detatils icon to each page.
 * Wed Apr 17, 2024
 	* (4.17.01) - Published version 2024.4.13 in GitHub Releases.
 	* (4.17.02) - Fixed typo.

@@ -46,6 +46,17 @@
 		},
 		{
 			"js": [
+				"scripts/ztm-course-details.js"
+			],
+			"css": [
+				"css/ztm-course-details.css"
+			],
+			"matches": [
+				"https://academy.zerotomastery.io/*"
+			]
+		},
+		{
+			"js": [
 				"scripts/ztm-daily-motivation.js"
 			],
 			"css": [

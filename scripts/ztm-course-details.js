@@ -2,7 +2,7 @@
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
  * Last Updated: Fri Mar 5, 2024
- * Description: Adds favorite course feature to the home page
+ * Description: Adds course details feature to the home page
  */ 
 
 // Create Boxicons style
@@ -51,3 +51,28 @@ const courseDetailsComponents = () => {
 //     // Return course title, otherwise, it will return empty string.
 //     return courseTitle ? courseTitle.textContent.trim() : '';
 // }
+
+const ztmCourseDetails = () => {
+    // Get the initial checkbox status and apply style
+    chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', (data) => {
+        let isChecked = data.ztmDarkModeCheckboxIsChecked || false;
+        // ztmToggleDarkMode(isChecked);
+        courseDetailsComponents();
+    })
+
+    // Get the checkbox status dynamically and apply style
+    chrome.storage.onChanged.addListener((changes, namespace) => {
+        if (namespace === 'sync' && 'ztmDarkModeCheckboxIsChecked' in changes) {
+            let isChecked = changes.ztmDarkModeCheckboxIsChecked.newValue || false;
+            // ztmToggleDarkMode(isChecked);
+            courseDetailsComponents();
+        }
+    });
+}
+
+
+chrome.runtime.onMessage.addListener((message) => {
+    if (message.action === 'windowChanged') {
+        ztmCourseDetails();
+    }
+});
