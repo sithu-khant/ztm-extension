@@ -30,7 +30,7 @@ const courseDetailsComponents = () => {
         // Create heart icon element 
         // <i class='bx bxs-heart' id='ztm-heart'></i>
         let ztmCourseDetailsIcon = document.createElement('i');
-        ztmCourseDetailsIcon.classList.add('bx', 'bx-info-circle');
+        ztmCourseDetailsIcon.classList.add('bx', 'bxs-info-circle');
         ztmCourseDetailsIcon.id = 'ztm-course-details-icon'
 
         // Add `ztmCourseDetailsIcon` to `ztmCourseDetailsDiv`

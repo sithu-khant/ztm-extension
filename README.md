@@ -141,6 +141,7 @@ MIT License
 	* (5.3.02) - Added course details feature to the popup. Added check statement condition in daily motivation feature.
 	* (5.3.03) - Added course details icon to each page.
 	* (5.3.04) - Added styles to course details feature.
+	* (5.3.05) - Updated styles to the course details feature.
 * Wed Apr 17, 2024
 	* (4.17.01) - Published version 2024.4.13 in GitHub Releases.
 	* (4.17.02) - Fixed typo.
