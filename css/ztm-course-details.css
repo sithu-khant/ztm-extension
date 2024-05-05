@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri Mar 5, 2024
+ * Last Updated: Sun May 5, 2024
  * Description: Styles for course details feature
 */
 
@@ -11,17 +11,9 @@
 
 #ztm-course-details {
 	position: absolute;
-    /* --- Style 1 --- */
-	top: 41%;
-	right: 2%;
-
-    /* --- Style 2 --- */
-    /* top: 2%;
-	left: 2%; */
-
     /* --- Style 3 --- */
-    /* top: 2%;
-	right: 13%; */
+    top: 2%;
+	right: 13%;
 }
 
 #ztm-course-details-icon {
@@ -29,7 +21,7 @@
 	padding: 5px;
 	color: grey;
 	background: rgba(245, 245, 245, 0.7) !important;
-	border-radius: 50%;
+	border-radius: 7px;
 	opacity: 0.9;
 
 	/* text-shadow: 0px 0px 2px #393E46; */
