@@ -65,7 +65,7 @@ WIP - Work in progress
     * Updated dark mode css properties to work both course curriculum pages.
 * 2024.3.6
     * New dark mode theme for the new course curriculum template.
-    * Added the reminder text if you checked the favorite course button but if there is no favorited courses.
+    * Added the reminder text if you checked the favorite course button but if there is no favorite courses.
     * Code improvement.
     * Daily motivation update.
 * 2024.2.21
@@ -121,11 +121,13 @@ If you added any new features, make a pull request. I will review, and merge int
 
 ## To support my work?
 
-<a href="https://www.buymeacoffee.com/sithukhant" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+Your generous donation allows me to work on more open-source projects.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D5SRN3A)
 
 ### Supporters
 
-* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development.You can apply it [here](https://jb.gg/OpenSourceSupport). 
+* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport). 
 
 ## License
 
@@ -136,6 +138,7 @@ MIT License
 * Tue May 14, 2024
     * (5.14.01) - Added `course-details.json` file in the `main` branch.
     * (5.14.02) - Updated codes from the main.
+    * (5.14.03) - Updated readme.
 * Wed Apr 17, 2024
     * (4.17.01) - Published version 2024.4.13 in GitHub Releases.
     * (4.17.02) - Fixed typo.
@@ -161,7 +164,7 @@ MIT License
 * Sun Mar 3, 2024
     * (3.3.01) - Added some css styles.
     * (3.3.02) - Dark mode working on mobile view.
-    * (3.3.03) - Double checked.
+    * (3.3.03) - Double-checked.
     * (3.3.04) - Added colors for code view in dark mode.
     * (3.3.05) - Updated some css color in dark mode.
     * (3.3.06) - Fixed css style on finished course template.
@@ -326,10 +329,10 @@ MIT License
       index number but not working properly.
 * Tue Jan 16, 2024
     * (1.16.01) - Cleaned the `ztmHideLectureTitle` code.
-    * (1.16.02) - Made reindentation to `ztm-section-times` code. Added `.prettierrc`
+    * (1.16.02) - Made indentation to `ztm-section-times` code. Added `.prettierrc`
       file.
     * (1.16.03) - Improved the code efficiency.
-    * (1.16.04) - `ztm-section-times` is working but it delays when on and off.
+    * (1.16.04) - `ztm-section-times` is working, but it delays when on and off.
     * (1.16.05) - Disabled `ztm-section-times` feature.
     * (1.16.06) - Started working on the `fav-course` feature. Added heart icons to each course.
     * (1.16.07) - Phew...
@@ -377,12 +380,12 @@ MIT License
 * Fri Dec 22, 2023 - Version (2023.12.21)
 * Thu Dec 21, 2023
     * (12.21.01) - Added dark scroll bar. (pre-release, version 2023.12.21)
-    * (12.21.02) - Added KeepResolution function in popup and it is worked now.
+    * (12.21.02) - Added KeepResolution function in popup, and it is worked now.
     * (12.21.03) - Started working for the favourite course feature.
     * (12.21.03) - Committed to safety.
 * Wed Dec 20, 2023
-    * (12.20.01) - Added darkmode to `course-info` page.
-    * (12.20.02) - Darkmode to all pages.
+    * (12.20.01) - Added dark mode to `course-info` page.
+    * (12.20.02) - Dark mode to all pages.
     * (12.20.03) - Added hover box-shadow and border.
     * (12.20.04) - Fixed toggle bar function.
     * (12.20.05) - New theme for the academy home page
