@@ -139,6 +139,7 @@ MIT License
     * (5.14.01) - Added `course-details.json` file in the `main` branch.
     * (5.14.02) - Updated codes from the main.
     * (5.14.03) - Updated readme.
+    * (5.14.04) - Updated popup box.
 * Wed Apr 17, 2024
     * (4.17.01) - Published version 2024.4.13 in GitHub Releases.
     * (4.17.02) - Fixed typo.

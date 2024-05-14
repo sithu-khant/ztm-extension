@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Sat Jan 13, 2024
+ * Last Updated: Tue May 14, 2024
  * Description: Adds dark mode to the popup and the academy page
  */ 
 
@@ -40,7 +40,7 @@ const popupDarkMode = () => {
     // Get the class list of the popup container
     const containerClassList = ztmPopupContainer.classList
     // If dark mode is enabled, add dark mode class
-    ztmDarkModeCheckbox.checked ? containerClassList.add('popup-darkmode') : containerClassList.remove('popup-darkmode');
+    ztmDarkModeCheckbox.checked ? containerClassList.add('popup-dark-mode') : containerClassList.remove('popup-dark-mode');
 
     // Store the check status in local storage for popup dark mode
     localStorage.setItem('ztmPopupDarkMode', ztmDarkModeCheckbox.checked);
