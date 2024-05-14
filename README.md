@@ -16,7 +16,6 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png" alt='Available in the Chrome Web Store'>
 </a>
 
-
 ## Features
 
 * Toggle sidebar (responsive)
@@ -26,14 +25,13 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 * Favorite courses
 * Daily Motivation
 
-
 ## Feature requests
+
 *(plans to add - top to bottom)*
 
 * Course Details
 * Multiple Dark Mode Themes
 * Statistic time
-
 
 ## Versions
 
@@ -99,19 +97,19 @@ WIP - Work in progress
     * New feature `Toggle sidebar`
     * New feature `Toggle dark mode`
 
-
 ## Download and install it locally?
 
 [![Downloads](https://img.shields.io/github/downloads/sithu-khant/ztm-extension/total.svg)]()
 
 * For Chrome -> [Installing extension on Google Chrome locally](./docs/install-on-chrome.md)
 * For Firefox -> [Installing extension on Firefox locally](./docs/install-on-firefox.md)
-* For Firefox ESR, Developer Edition, and Nightly -> [Installing extension on Firefox ESR, Developer Edition, and Nightly locally](./docs/install-on-firefox-esr-dev-nightly.md)
-
+* For Firefox ESR, Developer Edition, and
+  Nightly -> [Installing extension on Firefox ESR, Developer Edition, and Nightly locally](./docs/install-on-firefox-esr-dev-nightly.md)
 
 ## Suggestions or Issues?
 
-Any new suggestions are welcome. You can suggest here -> [GitHub Suggestion](https://github.com/sithu-khant/ztm-extension/issues)
+Any new suggestions are welcome. You can suggest
+here -> [GitHub Suggestion](https://github.com/sithu-khant/ztm-extension/issues)
 
 Feel free to create a new issue here -> [GitHub Issue](https://github.com/sithu-khant/ztm-extension/issues)
 
@@ -133,17 +131,11 @@ If you added any new features, make a pull request. I will review, and merge int
 
 MIT License
 
-
 ## Logs
 
-* Sun May 5, 2024
-    * (5.5.01) - Changed course details position to what people voted.
-* Fri May 3, 2024
-    * (5.3.01) - Added donation button in the popup.
-    * (5.3.02) - Added course details feature to the popup. Added check statement condition in daily motivation feature.
-    * (5.3.03) - Added course details icon to each page.
-    * (5.3.04) - Added styles to course details feature.
-    * (5.3.05) - Updated styles to the course details feature.
+* Tue May 14, 2024
+    * (5.14.01) - Added `course-details.json` file in the `main` branch.
+    * (5.14.02) - Updated codes from the main.
 * Wed Apr 17, 2024
     * (4.17.01) - Published version 2024.4.13 in GitHub Releases.
     * (4.17.02) - Fixed typo.
@@ -160,7 +152,7 @@ MIT License
     * (3.6.02) - Updated the version number.
     * (3.6.03) - Added version files.
 * Tue Mar 5, 2024
-    * (3.5.01) - Prepared for the new experiencement.
+    * (3.5.01) - Prepared for the new experience.
     * (3.5.02) - Dark mode is fully working now.
     * (3.5.03) - All done by now.
     * (3.5.04) - Added style for code block.
@@ -205,7 +197,7 @@ MIT License
 * Mon Feb 26, 2024
     * (2.25.01) - Added `?` to the hide lecture title feature.
 * Sun Feb 25, 2024
-  * (2.25.01) - Added new quote.
+    * (2.25.01) - Added new quote.
 * Fri Feb 23, 2024
     * (2.23.01) - Bug fixed for favorite course feature. That bug is not in common, but fixed it to make it safety.
 * Wed Feb 21, 2024
@@ -293,7 +285,8 @@ MIT License
     * (1.30.02) - Linked with course length instead of header.
     * (1.30.03) - Started `fav-course` section.
     * (1.30.04) - Styled `ztm-fav-course-button`.
-    * (1.30.05) - This method doesn't work. But I will make a commit with the purpose of this code could be useful later.
+    * (1.30.05) - This method doesn't work. But I will make a commit with the purpose of this code could be useful
+      later.
     * (1.30.06) - Collected favorite courses as array.
 * Mon Jan 29, 2024
     * (1.29.01) - Created a new pull request for `section-times` feature.
@@ -329,7 +322,8 @@ MIT License
 * Fri Jan 19, 2024
     * (1.19.01) - Update README.
 * Thu Jan 18, 2024
-    * (1.18.01) - Added course title as class list for storing fav courses in the local storage. I tried to use it with index number but not working properly.
+    * (1.18.01) - Added course title as class list for storing fav courses in the local storage. I tried to use it with
+      index number but not working properly.
 * Tue Jan 16, 2024
     * (1.16.01) - Cleaned the `ztmHideLectureTitle` code.
     * (1.16.02) - Made reindentation to `ztm-section-times` code. Added `.prettierrc`
@@ -395,15 +389,16 @@ MIT License
     * (12.20.06) - New theme for the course info page
     * (12.20.07) - New theme for the learning page
 * Tue Dec 19, 2023
-    * (12.19.01) - Darkmode function works in beta but needs to be dynamic.
-    * (12.19.02) - Darkmode function is now dynamic.
-    * (12.19.03) - Darkmode for `popup`.
+    * (12.19.01) - Dark mode function works in beta but needs to be dynamic.
+    * (12.19.02) - Dark mode function is now dynamic.
+    * (12.19.03) - Dark mode for `popup`.
     * (12.19.04) - Toggle Sidebar linked with the `popup`.
 * Mon Dec 18, 2023 - All the checkboxes in `popup` can now store the check status.
     * Toggle Sidebar is connected to the `popup`.
 * Sun Dec 17, 2023 - Added `popup`. Started working on the content scripts. Restructure the folder directories.
 * Fri Dec 15, 2023 - Made official announcement in the ZTM discord server.
-* Thu Dec 14, 2023 - fixed all the `<a>` tags that are not underlined in dark mode. Fixed a lot of bugs. Released version (2023.12.14.01).
+* Thu Dec 14, 2023 - fixed all the `<a>` tags that are not underlined in dark mode. Fixed a lot of bugs. Released
+  version (2023.12.14.01).
 * Wed Dec 13, 2023 - Version (23.12.13) pre-release and version (2023.12.13)
 * Tue Dec 12, 2023 - Launched first version (2023.12.12).
-* Sun Dec 10, 2023 - Started the project.
+* Sun Dec 10, 2023 - Started the project 🔥.
