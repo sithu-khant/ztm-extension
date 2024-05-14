@@ -400,4 +400,4 @@ MIT License
   version (2023.12.14.01).
 * Wed Dec 13, 2023 - Version (23.12.13) pre-release and version (2023.12.13)
 * Tue Dec 12, 2023 - Launched first version (2023.12.12).
-* Sun Dec 10, 2023 - Started the project.
+* Sun Dec 10, 2023 - Started the project 🔥.
