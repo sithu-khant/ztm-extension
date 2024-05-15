@@ -75,20 +75,23 @@ const courseDetails = () => {
 
         // Course title data cleaning
         const removeColonFromTitle = courseTitle.replace(/:/g, '')
-        const getTitleArray = removeColonFromTitle.split(' ')
-        // Regular expression for years lik 2024, 2025, 2026
-        const yearRegex = /^\d{4}:$/
-        const yearWithColonRegex = /^\d{4}$/
-        const yearWithBracketsRegex = /\[\d{4}]/
-        // Filter out `in` and year elements from  titleArray
-        const titleArray = getTitleArray.filter(item => {
-            return (
-                item !== 'in'
-                && !yearRegex.test(item)
-                && !yearWithColonRegex.test(item)
-                && !yearWithBracketsRegex.test(item)
-            )
-        })
+        const removeBracketsFromTitle = removeColonFromTitle.replace(/[()]/g, '')
+        const titleArray =  removeBracketsFromTitle.split(' ')
+
+        // const getTitleArray = removeColonFromTitle.split(' ')
+        // // Regular expression for years lik 2024, 2025, 2026
+        // const yearRegex = /^\d{4}:$/
+        // const yearWithColonRegex = /^\d{4}$/
+        // const yearWithBracketsRegex = /\[\d{4}]/
+        // // Filter out `in` and year elements from  titleArray
+        // const titleArray = getTitleArray.filter(item => {
+        //     return (
+        //         item !== 'in'
+        //         && !yearRegex.test(item)
+        //         && !yearWithColonRegex.test(item)
+        //         && !yearWithBracketsRegex.test(item)
+        //     )
+        // })
 
         console.log(titleArray)
 
@@ -98,14 +101,16 @@ const courseDetails = () => {
             .then(res => res.json())
             .then((responses) => {
                 responses.forEach((res) => {
-                    const getResTitleArray = res.name?.replace(/:/g, '')
-                    const resTitleArray = getResTitleArray.split(' ')
+                    const removeColonFromResTitleArray = res.name?.replace(/:/g, '')
+                    const removeBracketsFromResTitleArray = removeColonFromResTitleArray.replace(/[()]/g, '')
+
+                    const resTitleArray = removeBracketsFromResTitleArray.split(' ')
                     const courseDetailsUrl = res.link
                     // Check all the element in resTitleArray exists in titleArray or not
-                    const isTrue = titleArray.every(element => resTitleArray.includes(element))
-                    // const isTrue = checkTitles(titleArray, resTitleArray);
+                    // const isTrue = titleArray.every(element => resTitleArray.includes(element))
+                    // const isTrue = titleArray.every(element => resTitleArray.includes(element))
 
-                    // const isTrue = resTitleArray.every(element => titleArray.includes(element))
+                    const isTrue = resTitleArray.every(element => titleArray.includes(element))
 
                     // console.log(resTitleArray)
                     // ['Complete', 'Web', 'Developer:', 'Zero', 'to', 'Mastery']
