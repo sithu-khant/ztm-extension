@@ -73,8 +73,9 @@ const courseDetails = () => {
         // Get `ztm-course-details-anchor` tag
         const ztmCourseDetailsAnchor = courseDetailsIcon.closest('#ztm-course-details-anchor')
 
-        // const [courseDetailsUrl, isTrue] = checkCourseDetails(courseTitle);
-        const getTitleArray = courseTitle.split(' ')
+        // Course title data cleaning
+        const removeColonFromTitle = courseTitle.replace(/:/g, '')
+        const getTitleArray = removeColonFromTitle.split(' ')
         // Regular expression for years lik 2024, 2025, 2026
         const yearRegex = /^\d{4}:$/
         const yearWithColonRegex = /^\d{4}$/
@@ -97,7 +98,8 @@ const courseDetails = () => {
             .then(res => res.json())
             .then((responses) => {
                 responses.forEach((res) => {
-                    const resTitleArray = res.name?.split(' ')
+                    const getResTitleArray = res.name?.replace(/:/g, '')
+                    const resTitleArray = getResTitleArray.split(' ')
                     const courseDetailsUrl = res.link
                     // Check all the element in resTitleArray exists in titleArray or not
                     const isTrue = titleArray.every(element => resTitleArray.includes(element))
