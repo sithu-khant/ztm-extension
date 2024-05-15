@@ -26,15 +26,21 @@ const courseDetailsComponents = () => {
 
         // Create a new div
         const ztmCourseDetailsDiv = document.createElement('div')
-        ztmCourseDetailsDiv.id = 'ztm-course-details'
+        ztmCourseDetailsDiv.id = "ztm-course-details"
+        const ztmCourseDetailsAnchor = document.createElement('a')
+        ztmCourseDetailsAnchor.id = "ztm-course-details-anchor"
+        ztmCourseDetailsAnchor.target = "_blank"
+        // Append `ztmCourseDetailsAnchor` to `ztmCourseDetailsDiv`
+        ztmCourseDetailsDiv.appendChild(ztmCourseDetailsAnchor)
+
         // Create heart icon element 
         // <i class='bx bxs-heart' id='ztm-heart'></i>
         let ztmCourseDetailsIcon = document.createElement('i')
         ztmCourseDetailsIcon.classList.add('bx', 'bxs-info-circle')
         ztmCourseDetailsIcon.id = 'ztm-course-details-icon'
 
-        // Add `ztmCourseDetailsIcon` to `ztmCourseDetailsDiv`
-        ztmCourseDetailsDiv.appendChild(ztmCourseDetailsIcon)
+        // Add `ztmCourseDetailsIcon` to `ztmCourseDetailsAnchor`
+        ztmCourseDetailsAnchor.appendChild(ztmCourseDetailsIcon)
 
         // Add `ztmCourseDetailsIcon` to `courseCardRow`
         courseCardRow.appendChild(ztmCourseDetailsDiv)
@@ -49,6 +55,8 @@ const courseDetails = () => {
         // Get the course data
         const courseCard = courseDetailsIcon.closest('.col-xs-12.col-sm-6.col-md-4')
         const courseTitle = courseCard.querySelector('.course-listing-title').textContent.trim()
+        // Get `ztm-course-details-anchor` tag
+        const ztmCourseDetailsAnchor = courseDetailsIcon.closest("#ztm-course-details-anchor")
 
         // const [courseDetailsUrl, isTrue] = checkCourseDetails(courseTitle);
         const titleArray = courseTitle.split(' ')
@@ -63,10 +71,18 @@ const courseDetails = () => {
                     // Check all the element in resTitleArray exists in titleArray or not
                     const isTrue = resTitleArray.every(element => titleArray.includes(element))
 
-                    courseDetailsIcon.addEventListener("click", (event) => {
-                        // Disable to click
-                        event.stopPropagation();
-                    })
+                    if (isTrue) {
+                        // Add courseDetailsUrl as url link
+                        ztmCourseDetailsAnchor.href = courseDetailsUrl
+                    }
+
+                    console.log(isTrue)
+
+                    // courseDetailsIcon.addEventListener("click", (event) => {
+                    //     // Disable to click
+                    //     event.stopPropagation();
+                    //
+                    // })
                 })
             })
     })
