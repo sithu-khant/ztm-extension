@@ -139,6 +139,7 @@ MIT License
     * (5.15.01) - Committed for safety.
     * (5.15.02) - Fetched course details json data from the GitHub url.
     * (5.15.03) - Committed for safety.
+    * (5.15.04) - Tested regular expression.
 * Tue May 14, 2024
     * (5.14.01) - Added `course-details.json` file in the `main` branch.
     * (5.14.02) - Updated codes from the main.

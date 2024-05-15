@@ -26,10 +26,10 @@ const courseDetailsComponents = () => {
 
         // Create a new div
         const ztmCourseDetailsDiv = document.createElement('div')
-        ztmCourseDetailsDiv.id = "ztm-course-details"
+        ztmCourseDetailsDiv.id = 'ztm-course-details'
         const ztmCourseDetailsAnchor = document.createElement('a')
-        ztmCourseDetailsAnchor.id = "ztm-course-details-anchor"
-        ztmCourseDetailsAnchor.target = "_blank"
+        ztmCourseDetailsAnchor.id = 'ztm-course-details-anchor'
+        ztmCourseDetailsAnchor.target = '_blank'
         // Append `ztmCourseDetailsAnchor` to `ztmCourseDetailsDiv`
         ztmCourseDetailsDiv.appendChild(ztmCourseDetailsAnchor)
 
@@ -47,6 +47,21 @@ const courseDetailsComponents = () => {
     })
 }
 
+// Check if two titles are equal
+// const checkTitles = (title1, title2) => {
+//     let count = 0;
+//     // Loop through the title1
+//     for (let i = 0; i < title1.length; i++) {
+//         if (title2.includes(title1[i])) {
+//             count++
+//             // If at least four elements are equal, return true
+//             if (count >= 5) return true
+//         }
+//     }
+//     return false
+// }
+
+
 const courseDetails = () => {
     // Get all the course details icon
     let ztmCourseDetailsIcons = document.querySelectorAll('#ztm-course-details-icon')
@@ -56,10 +71,26 @@ const courseDetails = () => {
         const courseCard = courseDetailsIcon.closest('.col-xs-12.col-sm-6.col-md-4')
         const courseTitle = courseCard.querySelector('.course-listing-title').textContent.trim()
         // Get `ztm-course-details-anchor` tag
-        const ztmCourseDetailsAnchor = courseDetailsIcon.closest("#ztm-course-details-anchor")
+        const ztmCourseDetailsAnchor = courseDetailsIcon.closest('#ztm-course-details-anchor')
 
         // const [courseDetailsUrl, isTrue] = checkCourseDetails(courseTitle);
-        const titleArray = courseTitle.split(' ')
+        const getTitleArray = courseTitle.split(' ')
+        // Regular expression for years lik 2024, 2025, 2026
+        const yearRegex = /^\d{4}:$/
+        const yearWithColonRegex = /^\d{4}$/
+        const yearWithBracketsRegex = /\[\d{4}]/
+        // Filter out `in` and year elements from  titleArray
+        const titleArray = getTitleArray.filter(item => {
+            return (
+                item !== 'in'
+                && !yearRegex.test(item)
+                && !yearWithColonRegex.test(item)
+                && !yearWithBracketsRegex.test(item)
+            )
+        })
+
+        console.log(titleArray)
+
         const jsonUrl = 'https://raw.githubusercontent.com/sithu-khant/ztm-extension/main/course-details.json'
 
         fetch(jsonUrl)
@@ -69,20 +100,28 @@ const courseDetails = () => {
                     const resTitleArray = res.name?.split(' ')
                     const courseDetailsUrl = res.link
                     // Check all the element in resTitleArray exists in titleArray or not
-                    const isTrue = resTitleArray.every(element => titleArray.includes(element))
+                    const isTrue = titleArray.every(element => resTitleArray.includes(element))
+                    // const isTrue = checkTitles(titleArray, resTitleArray);
+
+                    // const isTrue = resTitleArray.every(element => titleArray.includes(element))
+
+                    // console.log(resTitleArray)
+                    // ['Complete', 'Web', 'Developer:', 'Zero', 'to', 'Mastery']
+
+                    // console.log(titleArray)
+                    // ['Complete', 'Web', 'Developer', 'in', '2024:', 'Zero', 'to', 'Mastery']
 
                     if (isTrue) {
                         // Add courseDetailsUrl as url link
                         ztmCourseDetailsAnchor.href = courseDetailsUrl
                     }
 
-                    console.log(isTrue)
+                    // ztmCourseDetailsAnchor.href = courseDetailsUrl
 
-                    // courseDetailsIcon.addEventListener("click", (event) => {
-                    //     // Disable to click
-                    //     event.stopPropagation();
-                    //
-                    // })
+                    courseDetailsIcon.addEventListener('click', (event) => {
+                        // Disable to click
+                        event.stopPropagation()
+                    })
                 })
             })
     })
