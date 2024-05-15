@@ -1,17 +1,17 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Fri May 3, 2024
+ * Last Updated: Wed May 15, 2024
  * Description: Adds favorite course feature to the home page
  */ 
 
-// Create Boxicons style
-const boxiconsCss = document.createElement('link');
-boxiconsCss.rel = 'stylesheet';
-boxiconsCss.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+// Create Box icons style
+const boxIconsCss = document.createElement('link');
+boxIconsCss.rel = 'stylesheet';
+boxIconsCss.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
 
-// Add Boxicons style to the head
-document.head.appendChild(boxiconsCss);
+// Add Box icons style to the head
+document.head.appendChild(boxIconsCss);
 
 // Fav courses components
 const favCoursesComponents = () => {
@@ -64,9 +64,9 @@ const favCoursesComponents = () => {
     });
 };
 
-// Get all the favorited course array from the local storage
+// Get all the favorite course array from the local storage
 let favCoursesArray = JSON.parse(localStorage.getItem('favCoursesArrayData')) || [];
-// Get all the heart clicked favorited course array from the local storage
+// Get all the heart clicked favorite course array from the local storage
 let heartClickedArray = JSON.parse(localStorage.getItem('heartClickedArrayData')) || [];
 
 // Get the course title

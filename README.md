@@ -135,6 +135,8 @@ MIT License
 
 ## Logs
 
+* Wed May 15, 2024
+    * (5.15.01) - Committed for safety.
 * Tue May 14, 2024
     * (5.14.01) - Added `course-details.json` file in the `main` branch.
     * (5.14.02) - Updated codes from the main.
