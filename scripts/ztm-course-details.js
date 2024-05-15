@@ -41,27 +41,6 @@ const courseDetailsComponents = () => {
     })
 }
 
-const checkCourseDetails = (courseTitle) => {
-    const titleArray = courseTitle.split(" ");
-    const jsonUrl = 'https://raw.githubusercontent.com/sithu-khant/ztm-extension/main/course-details.json';
-
-    const getCourseDetails = (responses) => {
-        responses.forEach((res) => {
-            const resTitleArray = res.name?.split(" ");
-            const courseDetailsUrl = res.link
-            // Check all the element in resTitleArray exists in titleArray or not
-            const isTrue = resTitleArray.every(element => titleArray.includes(element));
-
-            return [courseDetailsUrl, isTrue];
-        })
-    }
-
-    fetch(jsonUrl)
-        .then(res => res.json())
-        .then(responses => getCourseDetails(responses));
-}
-
-
 const courseDetails = () => {
     // Get all the course details icon
     let ztmCourseDetailsIcons = document.querySelectorAll('#ztm-course-details-icon')
@@ -71,9 +50,25 @@ const courseDetails = () => {
         const courseCard = courseDetailsIcon.closest('.col-xs-12.col-sm-6.col-md-4')
         const courseTitle = courseCard.querySelector('.course-listing-title').textContent.trim()
 
-        const [courseDetailsUrl, isTrue] = checkCourseDetails(courseTitle);
+        // const [courseDetailsUrl, isTrue] = checkCourseDetails(courseTitle);
+        const titleArray = courseTitle.split(' ')
+        const jsonUrl = 'https://raw.githubusercontent.com/sithu-khant/ztm-extension/main/course-details.json'
 
-        console.log(isTrue)
+        fetch(jsonUrl)
+            .then(res => res.json())
+            .then((responses) => {
+                responses.forEach((res) => {
+                    const resTitleArray = res.name?.split(' ')
+                    const courseDetailsUrl = res.link
+                    // Check all the element in resTitleArray exists in titleArray or not
+                    const isTrue = resTitleArray.every(element => titleArray.includes(element))
+
+                    courseDetailsIcon.addEventListener("click", (event) => {
+                        // Disable to click
+                        event.stopPropagation();
+                    })
+                })
+            })
     })
 }
 
