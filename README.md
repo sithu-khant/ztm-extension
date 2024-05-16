@@ -141,6 +141,7 @@ MIT License
     * (5.16.02) - Merged from `main` to `course-details`.
     * (5.16.03) - Created function for feature position.
     * (5.16.04) - Feature position is now working.
+    * (5.16.05) - Removed feature icon that doesn't have url link.
 * Wed May 15, 2024
     * (5.15.01) - Committed for safety.
     * (5.15.02) - Fetched course details json data from the GitHub url.

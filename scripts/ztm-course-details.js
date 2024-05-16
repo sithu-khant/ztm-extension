@@ -112,6 +112,16 @@ const courseDetails = () => {
                     })
                 })
             })
+            .then(() => {
+                // Remove course details feature those don't have url
+                const getCourseDetailsAnchor = courseDetailsIcon.closest('#ztm-course-details-anchor')
+                const getCourseDetails = courseDetailsIcon.closest('#ztm-course-details')
+                if (!getCourseDetailsAnchor.href) {
+                    getCourseDetails.style.display = "none";
+                    getCourseDetails.remove();
+                }
+            })
+
     })
 }
 
