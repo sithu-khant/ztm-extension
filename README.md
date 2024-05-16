@@ -135,6 +135,8 @@ MIT License
 
 ## Logs
 
+* Thu May 16, 2024
+    * (5.16.01) - Cleaned codes of course details feature.
 * Wed May 15, 2024
     * (5.15.01) - Committed for safety.
     * (5.15.02) - Fetched course details json data from the GitHub url.

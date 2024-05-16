@@ -47,21 +47,6 @@ const courseDetailsComponents = () => {
     })
 }
 
-// Check if two titles are equal
-// const checkTitles = (title1, title2) => {
-//     let count = 0;
-//     // Loop through the title1
-//     for (let i = 0; i < title1.length; i++) {
-//         if (title2.includes(title1[i])) {
-//             count++
-//             // If at least four elements are equal, return true
-//             if (count >= 5) return true
-//         }
-//     }
-//     return false
-// }
-
-
 const courseDetails = () => {
     // Get all the course details icon
     let ztmCourseDetailsIcons = document.querySelectorAll('#ztm-course-details-icon')
@@ -76,24 +61,7 @@ const courseDetails = () => {
         // Course title data cleaning
         const removeColonFromTitle = courseTitle.replace(/:/g, '')
         const removeBracketsFromTitle = removeColonFromTitle.replace(/[()]/g, '')
-        const titleArray =  removeBracketsFromTitle.split(' ')
-
-        // const getTitleArray = removeColonFromTitle.split(' ')
-        // // Regular expression for years lik 2024, 2025, 2026
-        // const yearRegex = /^\d{4}:$/
-        // const yearWithColonRegex = /^\d{4}$/
-        // const yearWithBracketsRegex = /\[\d{4}]/
-        // // Filter out `in` and year elements from  titleArray
-        // const titleArray = getTitleArray.filter(item => {
-        //     return (
-        //         item !== 'in'
-        //         && !yearRegex.test(item)
-        //         && !yearWithColonRegex.test(item)
-        //         && !yearWithBracketsRegex.test(item)
-        //     )
-        // })
-
-        console.log(titleArray)
+        const titleArray = removeBracketsFromTitle.split(' ')
 
         const jsonUrl = 'https://raw.githubusercontent.com/sithu-khant/ztm-extension/main/course-details.json'
 
@@ -107,23 +75,12 @@ const courseDetails = () => {
                     const resTitleArray = removeBracketsFromResTitleArray.split(' ')
                     const courseDetailsUrl = res.link
                     // Check all the element in resTitleArray exists in titleArray or not
-                    // const isTrue = titleArray.every(element => resTitleArray.includes(element))
-                    // const isTrue = titleArray.every(element => resTitleArray.includes(element))
-
                     const isTrue = resTitleArray.every(element => titleArray.includes(element))
-
-                    // console.log(resTitleArray)
-                    // ['Complete', 'Web', 'Developer:', 'Zero', 'to', 'Mastery']
-
-                    // console.log(titleArray)
-                    // ['Complete', 'Web', 'Developer', 'in', '2024:', 'Zero', 'to', 'Mastery']
 
                     if (isTrue) {
                         // Add courseDetailsUrl as url link
                         ztmCourseDetailsAnchor.href = courseDetailsUrl
                     }
-
-                    // ztmCourseDetailsAnchor.href = courseDetailsUrl
 
                     courseDetailsIcon.addEventListener('click', (event) => {
                         // Disable to click
