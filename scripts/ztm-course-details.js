@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Wed May 15, 2024
+ * Last Updated: Thu May 16, 2024
  * Description: Adds course details feature to the home page
  */
 
@@ -51,6 +51,7 @@ const courseDetails = () => {
     // Get all the course details icon
     let ztmCourseDetailsIcons = document.querySelectorAll('#ztm-course-details-icon')
 
+
     ztmCourseDetailsIcons.forEach(courseDetailsIcon => {
         // Get the course data
         const courseCard = courseDetailsIcon.closest('.col-xs-12.col-sm-6.col-md-4')
@@ -89,6 +90,23 @@ const courseDetails = () => {
                 })
             })
     })
+
+
+    // Track the page for every new lecture
+    const obs = new MutationObserver(() => {
+        // Get the favourite course feature icon status
+        const favoriteCoursesFeature = document.getElementById('ztm-fav-courses')
+        const isFavoriteCoursesFeature = favoriteCoursesFeature?.getAttribute('style')
+
+        const ztmCourseDetailsDiv = document.querySelector('#ztm-course-details')
+        // If favorite course feature display is none, make ztmCourseDetailsIcon `right: 2%`
+        if (isFavoriteCoursesFeature === 'display: none;') {
+            ztmCourseDetailsDiv.style.right = '2%'
+        } else {
+            ztmCourseDetailsDiv.style.right = '13%'
+        }
+    })
+    obs.observe(document.body, { childList: true, subtree: true })
 }
 
 

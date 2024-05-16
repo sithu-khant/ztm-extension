@@ -139,6 +139,7 @@ MIT License
     * (5.16.01) - Cleaned codes of course details feature.
     * (5.16.01) - Updated `course-details.json` file.
     * (5.16.02) - Merged from `main` to `course-details`.
+    * (5.16.03) - Created function for feature position.
 * Wed May 15, 2024
     * (5.15.01) - Committed for safety.
     * (5.15.02) - Fetched course details json data from the GitHub url.
