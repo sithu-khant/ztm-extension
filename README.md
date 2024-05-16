@@ -133,6 +133,8 @@ MIT License
 
 ## Logs
 
+* Thu May 16, 2024
+    * (5.16.01) - Updated `course-details.json` file.
 * Tue May 14, 2024
     * (5.14.01) - Added `course-details.json` file in the `main` branch.
 * Wed Apr 17, 2024

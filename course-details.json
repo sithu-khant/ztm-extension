@@ -64,7 +64,7 @@
     "link": "https://zerotomastery.io/courses/learn-tensorflow/"
   },
   {
-    "name": "Complete Vue Developer (w/ Vuex, Composition API, Router)",
+    "name": "Complete Vue Developer in 2024: Zero to Mastery (Pinia, Vitest)",
     "link": "https://zerotomastery.io/courses/learn-vue-js/"
   },
   {
@@ -84,7 +84,7 @@
     "link": "https://zerotomastery.io/courses/devops-bootcamp/"
   },
   {
-    "name": "The Complete Guide to Freelancing: Zero to Mastery",
+    "name": "Complete Guide to Freelancing: Zero to Mastery",
     "link": "https://zerotomastery.io/courses/become-a-freelancer/"
   },
   {
@@ -92,7 +92,11 @@
     "link": "https://zerotomastery.io/courses/learn-rust/"
   },
   {
-    "name": "SEO Fundamentals (Keywords, Link Building, Content Optimization)",
+    "name": "Build a Fullstack Twitter Clone with Rust",
+    "link": "https://zerotomastery.io/courses/rust-project-twitter-clone/"
+  },
+  {
+    "name": "SEO Bootcamp: Learn Search Engine Optimization",
     "link": "https://zerotomastery.io/courses/seo-content-optimization/"
   },
   {
@@ -128,15 +132,15 @@
     "link": "https://zerotomastery.io/courses/learn-meditation-for-productivity/"
   },
   {
-    "name": "Python for Business Data Analytics & Intelligence",
+    "name": "Business Analytics Bootcamp (with Python): Zero to Mastery",
     "link": "https://zerotomastery.io/courses/learn-business-analytics/"
   },
   {
-    "name": "Freelance Consulting: The Complete Guide",
+    "name": "Consulting: The Complete Freelancer's Guide",
     "link": "https://zerotomastery.io/courses/learn-freelance-consulting/"
   },
   {
-    "name": "Web3 101: Introduction to Web3",
+    "name": "Web3 Masterclass: Blockchain, DApps, DAOs + More",
     "link": "https://zerotomastery.io/courses/introduction-to-web3/"
   },
   {
@@ -152,8 +156,8 @@
     "link": "https://zerotomastery.io/courses/life-system-design/"
   },
   {
-    "name": "Solidity",
-    "link": " and Blockchain: The Complete Developer's Guide\""
+    "name": "Solidity, Ethereum and Blockchain: The Complete Developer's Guide",
+    "link": "https://zerotomastery.io/courses/blockchain-developer-bootcamp/"
   },
   {
     "name": "ZTM Fitness: Get Healthier in 4 Weeks",
@@ -172,7 +176,7 @@
     "link": "https://zerotomastery.io/courses/learn-cybersecurity-bootcamp/"
   },
   {
-    "name": "Business Intelligence with Excel",
+    "name": "Advanced Excel Bootcamp: Data Analytics and Business Intelligence",
     "link": "https://zerotomastery.io/courses/business-intelligence-course/"
   },
   {
@@ -184,7 +188,7 @@
     "link": "https://zerotomastery.io/courses/time-series-forecasting/"
   },
   {
-    "name": "Master the Coding Interview: System Design + Architecture [Part 1]",
+    "name": "Master the Coding Interview: System Design + Architecture",
     "link": "https://zerotomastery.io/courses/system-design/"
   },
   {
@@ -276,7 +280,7 @@
     "link": "https://zerotomastery.io/courses/flutter-projects-yelp-clone/"
   },
   {
-    "name": "Create a Discord Bot with and Node.js",
+    "name": "Create a Discord Bot with Node.js",
     "link": "https://zerotomastery.io/courses/nodejs-projects-discord-bot/"
   },
   {
@@ -308,7 +312,7 @@
     "link": "https://zerotomastery.io/courses/learn-statistics-with-python/"
   },
   {
-    "name": "The OpenAI API: GPT, DALL-E & Whisper",
+    "name": "Building AI Apps with the OpenAI API: GPT, DALL-E & Whisper",
     "link": "https://zerotomastery.io/courses/openai-api-tutorial/"
   },
   {
@@ -316,7 +320,7 @@
     "link": "https://zerotomastery.io/courses/learn-neovim-and-vim/"
   },
   {
-    "name": "Introduction to ChatGPT Code Interpreter",
+    "name": "Introduction to ChatGPT: A Practical Guide",
     "link": "https://zerotomastery.io/courses/chatgpt-code-interpreter-guide/"
   },
   {
@@ -328,7 +332,7 @@
     "link": "https://zerotomastery.io/courses/javascript-project-algorithm-visualizer/"
   },
   {
-    "name": "Ultimate AWS Bedrock Guide: Build and Scale Generative AI Apps",
+    "name": "Ultimate AWS Bedrock Guide: Build & Scale Generative AI Apps",
     "link": "https://zerotomastery.io/courses/learn-aws-bedrock/"
   },
   {
@@ -360,7 +364,7 @@
     "link": "https://zerotomastery.io/courses/nuxt-project-chatbot-ai/"
   },
   {
-    "name": "Prompt Engineering & Working With LLMs: Zero to Mastery",
+    "name": "Prompt Engineering Bootcamp (Working With LLMs): Zero to Mastery",
     "link": "https://zerotomastery.io/courses/prompt-engineering-bootcamp/"
   }
 ]
