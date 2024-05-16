@@ -47,10 +47,33 @@ const courseDetailsComponents = () => {
     })
 }
 
+const courseDetailsIconPosition = () => {
+    // Get the favourite course feature icon status
+    const favoriteCoursesFeature = document.getElementById('ztm-fav-courses')
+    const isFavoriteCoursesFeature = favoriteCoursesFeature?.getAttribute('style')
+
+    const ztmCourseDetailsDivs = document.querySelectorAll('#ztm-course-details')
+
+    ztmCourseDetailsDivs.forEach((div) => {
+        // If favorite course feature display is none, make ztmCourseDetailsIcon `right: 2%`
+        if (isFavoriteCoursesFeature === 'display: none;') {
+            div.style.right = '2%'
+        } else {
+            div.style.right = '13%'
+        }
+    })
+}
+
 const courseDetails = () => {
+    // Initial icon position
+    courseDetailsIconPosition()
+
+    // Track the page for favorite courses feature status
+    const observeCourseDetails = new MutationObserver(() => courseDetailsIconPosition())
+    observeCourseDetails.observe(document.body, { childList: true, subtree: true })
+
     // Get all the course details icon
     let ztmCourseDetailsIcons = document.querySelectorAll('#ztm-course-details-icon')
-
 
     ztmCourseDetailsIcons.forEach(courseDetailsIcon => {
         // Get the course data
@@ -90,25 +113,7 @@ const courseDetails = () => {
                 })
             })
     })
-
-
-    // Track the page for every new lecture
-    const obs = new MutationObserver(() => {
-        // Get the favourite course feature icon status
-        const favoriteCoursesFeature = document.getElementById('ztm-fav-courses')
-        const isFavoriteCoursesFeature = favoriteCoursesFeature?.getAttribute('style')
-
-        const ztmCourseDetailsDiv = document.querySelector('#ztm-course-details')
-        // If favorite course feature display is none, make ztmCourseDetailsIcon `right: 2%`
-        if (isFavoriteCoursesFeature === 'display: none;') {
-            ztmCourseDetailsDiv.style.right = '2%'
-        } else {
-            ztmCourseDetailsDiv.style.right = '13%'
-        }
-    })
-    obs.observe(document.body, { childList: true, subtree: true })
 }
-
 
 const ztmCourseDetails = () => {
     // Get the initial checkbox status and apply style
