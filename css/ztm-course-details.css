@@ -19,7 +19,7 @@
 #ztm-course-details-icon {
 	font-size: 23px;
 	padding: 5px;
-	color: grey;
+	color: grey !important;
 	background: rgba(245, 245, 245, 0.7) !important;
 	border-radius: 7px;
 	opacity: 0.9;
