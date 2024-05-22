@@ -41,17 +41,8 @@ const courseDetailsComponents = () => {
 
         // Add `ztmCourseDetailsIcon` to `ztmCourseDetailsAnchor`
         ztmCourseDetailsAnchor.appendChild(ztmCourseDetailsIcon)
-
-        // const getCourseDetailsDiv = document.getElementById('ztm-course-details')
-        //
-        // console.log(getCourseDetailsDiv)
-        // if (!getCourseDetailsDiv) {
-        //     // Add `ztmCourseDetailsIcon` to `courseCardRow`
-        //     courseCardRow.appendChild(ztmCourseDetailsDiv)
-        // }
-
+        // Add `ztmCourseDetailsDiv` to `courseCardRow`
         courseCardRow.appendChild(ztmCourseDetailsDiv)
-
     })
 }
 
@@ -96,7 +87,7 @@ const courseDetails = () => {
         const titleArray = removeBracketsFromTitle.split(' ')
 
         // const jsonUrl = 'https://raw.githubusercontent.com/sithu-khant/ztm-extension/main/course-details.json'
-        const jsonUrl = chrome.runtime.getURL("../course-details.json");
+        const jsonUrl = chrome.runtime.getURL('../course-details.json')
 
         fetch(jsonUrl)
             .then(res => res.json())
@@ -132,22 +123,30 @@ const courseDetails = () => {
     })
 }
 
+const toggleCourseDetails = (isChecked) => {
+    // Get all the course details div
+    const ztmCourseDetailsDivs = document.querySelectorAll('#ztm-course-details')
+    ztmCourseDetailsDivs.forEach(div => {
+        div.style.display = isChecked ? 'block' : 'none'
+    })
+}
+
 const ztmCourseDetails = () => {
     // Get the initial checkbox status and apply style
-    chrome.storage.sync.get('ztmDarkModeCheckboxIsChecked', (data) => {
-        let isChecked = data.ztmDarkModeCheckboxIsChecked || false
-        // ztmToggleDarkMode(isChecked);
+    chrome.storage.sync.get('ztmCourseDetailsCheckboxIsChecked', (data) => {
+        let isChecked = data.ztmCourseDetailsCheckboxIsChecked || false
+        toggleCourseDetails(isChecked)
+        // Add course details components first
         courseDetailsComponents()
-        courseDetails()
+        courseDetails();
     })
 
     // Get the checkbox status dynamically and apply style
     chrome.storage.onChanged.addListener((changes, namespace) => {
-        if (namespace === 'sync' && 'ztmDarkModeCheckboxIsChecked' in changes) {
-            let isChecked = changes.ztmDarkModeCheckboxIsChecked.newValue || false
-            // ztmToggleDarkMode(isChecked);
-            courseDetailsComponents()
-            courseDetails()
+        if (namespace === 'sync' && 'ztmCourseDetailsCheckboxIsChecked' in changes) {
+            let isChecked = changes.ztmCourseDetailsCheckboxIsChecked.newValue || false
+            toggleCourseDetails(isChecked)
+            courseDetails();
         }
     })
 }
