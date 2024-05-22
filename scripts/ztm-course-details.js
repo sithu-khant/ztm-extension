@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Thu May 16, 2024
+ * Last Updated: Wed May 22, 2024
  * Description: Adds course details feature to the home page
  */
 
@@ -42,8 +42,16 @@ const courseDetailsComponents = () => {
         // Add `ztmCourseDetailsIcon` to `ztmCourseDetailsAnchor`
         ztmCourseDetailsAnchor.appendChild(ztmCourseDetailsIcon)
 
-        // Add `ztmCourseDetailsIcon` to `courseCardRow`
+        // const getCourseDetailsDiv = document.getElementById('ztm-course-details')
+        //
+        // console.log(getCourseDetailsDiv)
+        // if (!getCourseDetailsDiv) {
+        //     // Add `ztmCourseDetailsIcon` to `courseCardRow`
+        //     courseCardRow.appendChild(ztmCourseDetailsDiv)
+        // }
+
         courseCardRow.appendChild(ztmCourseDetailsDiv)
+
     })
 }
 
@@ -87,7 +95,8 @@ const courseDetails = () => {
         const removeBracketsFromTitle = removeColonFromTitle.replace(/[()]/g, '')
         const titleArray = removeBracketsFromTitle.split(' ')
 
-        const jsonUrl = 'https://raw.githubusercontent.com/sithu-khant/ztm-extension/main/course-details.json'
+        // const jsonUrl = 'https://raw.githubusercontent.com/sithu-khant/ztm-extension/main/course-details.json'
+        const jsonUrl = chrome.runtime.getURL("../course-details.json");
 
         fetch(jsonUrl)
             .then(res => res.json())
@@ -111,17 +120,15 @@ const courseDetails = () => {
                         event.stopPropagation()
                     })
                 })
-            })
-            .then(() => {
+
                 // Remove course details feature those don't have url
                 const getCourseDetailsAnchor = courseDetailsIcon.closest('#ztm-course-details-anchor')
-                const getCourseDetails = courseDetailsIcon.closest('#ztm-course-details')
                 if (!getCourseDetailsAnchor.href) {
-                    getCourseDetails.style.display = "none";
-                    getCourseDetails.remove();
+                    const getCourseDetails = courseDetailsIcon.closest('#ztm-course-details')
+                    getCourseDetails.style.display = 'none'
+                    getCourseDetails.remove()
                 }
             })
-
     })
 }
 

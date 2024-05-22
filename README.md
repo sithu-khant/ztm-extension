@@ -135,6 +135,8 @@ MIT License
 
 ## Logs
 
+* Wed May 22, 2024
+    * (5.22.01) - Stored `course-dedatils.json` file as the resource file in the Chrome extension.
 * Thu May 16, 2024
     * (5.16.01) - Cleaned codes of course details feature.
     * (5.16.01) - Updated `course-details.json` file.
