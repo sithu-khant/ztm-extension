@@ -92,7 +92,7 @@
     "link": "https://zerotomastery.io/courses/learn-rust/"
   },
   {
-    "name": "Build a Fullstack Twitter Clone with Rust",
+    "name": "Build a Full-Stack X/Twitter Clone with Rust",
     "link": "https://zerotomastery.io/courses/rust-project-twitter-clone/"
   },
   {
@@ -366,5 +366,9 @@
   {
     "name": "Prompt Engineering Bootcamp (Working With LLMs): Zero to Mastery",
     "link": "https://zerotomastery.io/courses/prompt-engineering-bootcamp/"
+  },
+  {
+    "name": "Introduction to ChatGPT Code Interpreter",
+    "link": "https://zerotomastery.io/courses/chatgpt-code-interpreter-guide/"
   }
 ]
