@@ -3,13 +3,13 @@
  * GitHub: https://github.com/sithu-khant 
  * Last Updated: Wed May 22, 2024
  * Description: Adds dark mode to the academy page
- */ 
+ */
 
 :root {
-    --primary-dark: #232931;   /* mostly for background */
-    --secondary-dark: #393E46  /* mostly for hover */;
-    --primary-white: #EEEEEE;  /* mostly for text */;
-    --default-green: #30d683;  /* default green color of ZTM Academy */;
+    --primary-dark: #232931; /* mostly for background */
+    --secondary-dark: #393E46 /* mostly for hover */;
+    --primary-white: #EEEEEE; /* mostly for text */;
+    --default-green: #30d683; /* default green color of ZTM Academy */;
 }
 
 /* ----- Start Home Page Dark Mode Section ----- */
@@ -21,11 +21,11 @@ body,
 body::-webkit-scrollbar {
     width: 0.3em;
 }
- 
+
 body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
- 
+
 body::-webkit-scrollbar-thumb {
     background-color: var(--secondary-dark);
     outline: 1px solid var(--primary-dark);
@@ -39,11 +39,12 @@ body::-webkit-scrollbar-thumb {
     background: var(--primary-white) !important;
 }
 
-.navbar-fedora .navbar-collapse.in .nav.navbar-nav>li .fedora-navbar-link {
+.navbar-fedora .navbar-collapse.in .nav.navbar-nav > li .fedora-navbar-link {
     color: var(--primary-white) !important;
 }
 
-.nav.navbar-nav>li .fedora-navbar-link {
+.nav.navbar-nav > li .fedora-navbar-link,
+.nav.navbar-nav > li .fedora-navbar-link:visited {
     color: var(--primary-white) !important;
 }
 
@@ -51,7 +52,7 @@ body::-webkit-scrollbar-thumb {
     outline: none !important;
 }
 
-.nav.navbar-nav>li .fedora-navbar-link:hover {
+.nav.navbar-nav > li .fedora-navbar-link:hover {
     background: var(--primary-dark) !important;
     color: var(--primary-white) !important;
 }
@@ -64,7 +65,7 @@ body::-webkit-scrollbar-thumb {
     background: transparent !important;
 }
 
-.open>.dropdown-menu,
+.open > .dropdown-menu,
 .course-filter .dropdown-menu li a {
     background: var(--secondary-dark) !important;
 }
@@ -73,20 +74,20 @@ body::-webkit-scrollbar-thumb {
     background: var(--primary-dark) !important;
 }
 
-.open>.dropdown-menu li a {
+.open > .dropdown-menu li a {
     background: var(--secondary-dark) !important;
 }
 
-.open>.dropdown-menu li a:hover {
+.open > .dropdown-menu li a:hover {
     background: var(--primary-dark) !important;
 }
 
-.nav.navbar-nav>li .fedora-navbar-link {
+.nav.navbar-nav > li .fedora-navbar-link {
     background: transparent !important;
 }
 
-.fedora-navbar-link.active, .nav.navbar-nav>li .fedora-navbar-link:hover, 
-.nav.navbar-nav>li .fedora-navbar-link:focus {
+.fedora-navbar-link.active, .nav.navbar-nav > li .fedora-navbar-link:hover,
+.nav.navbar-nav > li .fedora-navbar-link:focus {
     background: var(--secondary-dark) !important;
 }
 
@@ -94,8 +95,8 @@ body::-webkit-scrollbar-thumb {
     background: transparent !important;
 }
 
-.input-group-btn:last-child>.btn:hover,
-.input-group-btn:last-child>.btn:hover * {
+.input-group-btn:last-child > .btn:hover,
+.input-group-btn:last-child > .btn:hover * {
     background: var(--secondary-dark) !important;
 }
 
@@ -129,14 +130,14 @@ body::-webkit-scrollbar-thumb {
     background: transparent !important;
 }
 
-.pagination .previous_page, 
-.pagination .current, 
+.pagination .previous_page,
+.pagination .current,
 .pagination a {
     background: transparent !important;
     border: 1px solid var(--primary-white) !important;
 }
 
-.pagination .current, 
+.pagination .current,
 .pagination a:hover {
     background: var(--default-green) !important;
     color: var(--primary-white) !important;
@@ -200,11 +201,11 @@ body::-webkit-scrollbar-thumb {
 .course-sidebar::-webkit-scrollbar {
     width: 0.5em;
 }
- 
+
 .course-sidebar::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
- 
+
 .course-sidebar::-webkit-scrollbar-thumb {
     background-color: var(--secondary-dark);
     outline: 1px solid var(--primary-dark);
@@ -365,7 +366,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sidebar {
-    background: rgba(0,0,0,0.4) !important;
+    background: rgba(0, 0, 0, 0.4) !important;
 }
 
 .sidebar-content,
@@ -409,7 +410,7 @@ header.half-height .lecture-left .nav-icon-settings {
     background: var(--secondary-dark) !important;
 }
 
-header.half-height .lecture-left .nav-icon-settings:hover, 
+header.half-height .lecture-left .nav-icon-settings:hover,
 header.half-height .lecture-left .nav-icon-list:hover {
     background: var(--secondary-dark) !important;
 }
@@ -462,7 +463,7 @@ header.half-height .lecture-nav a.nav-btn * {
 
 .lecture-content .lecture-attachment .video-options a {
     background: var(--secondary-dark) !important;
-    text-decoration: none !important;  
+    text-decoration: none !important;
 }
 
 .lecture-content.course-mainbar code,
@@ -483,27 +484,27 @@ header.half-height .lecture-nav a.nav-btn * {
     background: var(--secondary-dark) !important;
 }
 
-.lecture-content.course-mainbar .hljs-attr, 
-.lecture-content.course-mainbar .hljs-variable, 
-.lecture-content.course-mainbar .hljs-template-variable, 
-.lecture-content.course-mainbar .hljs-type, 
-.lecture-content.course-mainbar .hljs-selector-class, 
-.lecture-content.course-mainbar .hljs-selector-attr, 
-.lecture-content.course-mainbar .hljs-selector-pseudo, 
+.lecture-content.course-mainbar .hljs-attr,
+.lecture-content.course-mainbar .hljs-variable,
+.lecture-content.course-mainbar .hljs-template-variable,
+.lecture-content.course-mainbar .hljs-type,
+.lecture-content.course-mainbar .hljs-selector-class,
+.lecture-content.course-mainbar .hljs-selector-attr,
+.lecture-content.course-mainbar .hljs-selector-pseudo,
 .lecture-content.course-mainbar .hljs-number {
     color: #d19a66 !important;
 }
 
-.lecture-content.course-mainbar .hljs-doctag, 
-.lecture-content.course-mainbar .hljs-keyword, 
+.lecture-content.course-mainbar .hljs-doctag,
+.lecture-content.course-mainbar .hljs-keyword,
 .lecture-content.course-mainbar .hljs-formula {
     color: #c678dd !important;
 }
 
-.lecture-content.course-mainbar .hljs-string, 
-.lecture-content.course-mainbar .hljs-regexp, 
-.lecture-content.course-mainbar .hljs-addition, 
-.lecture-content.course-mainbar .hljs-attribute, 
+.lecture-content.course-mainbar .hljs-string,
+.lecture-content.course-mainbar .hljs-regexp,
+.lecture-content.course-mainbar .hljs-addition,
+.lecture-content.course-mainbar .hljs-attribute,
 .lecture-content.course-mainbar .hljs-meta-strin {
     color: #98c379 !important;
 }
