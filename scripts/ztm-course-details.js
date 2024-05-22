@@ -129,28 +129,37 @@ const toggleCourseDetails = (isChecked) => {
     ztmCourseDetailsDivs.forEach(div => {
         div.style.display = isChecked ? 'block' : 'none'
     })
+
+    // Get all the course-listing
+    let courseListing = document.querySelectorAll('.course-listing')
+    courseListing.forEach((course) => {
+        const ztmCourseDetailsDivs = course.querySelectorAll('#ztm-course-details')
+
+        // Remove extra div starting from the first one up to the second-to-last one
+        for (let i = 0; i < ztmCourseDetailsDivs.length - 1; i++) {
+            ztmCourseDetailsDivs[i].remove()
+        }
+    })
 }
 
 const ztmCourseDetails = () => {
     // Get the initial checkbox status and apply style
     chrome.storage.sync.get('ztmCourseDetailsCheckboxIsChecked', (data) => {
         let isChecked = data.ztmCourseDetailsCheckboxIsChecked || false
-        toggleCourseDetails(isChecked)
-        // Add course details components first
         courseDetailsComponents()
-        courseDetails();
+        courseDetails()
+        toggleCourseDetails(isChecked)
     })
 
     // Get the checkbox status dynamically and apply style
     chrome.storage.onChanged.addListener((changes, namespace) => {
         if (namespace === 'sync' && 'ztmCourseDetailsCheckboxIsChecked' in changes) {
             let isChecked = changes.ztmCourseDetailsCheckboxIsChecked.newValue || false
+            courseDetails()
             toggleCourseDetails(isChecked)
-            courseDetails();
         }
     })
 }
-
 
 chrome.runtime.onMessage.addListener((message) => {
     if (message.action === 'windowChanged') {

@@ -139,6 +139,7 @@ MIT License
     * (5.22.01) - Stored `course-details.json` file as the resource file in the Chrome extension.
     * (5.22.02) - Course details feature is now working.
     * (5.22.03) - Updated the background color in the dark mode.
+    * (5.22.04) - Improved code efficient.
 * Thu May 16, 2024
     * (5.16.01) - Cleaned codes of course details feature.
     * (5.16.01) - Updated `course-details.json` file.
