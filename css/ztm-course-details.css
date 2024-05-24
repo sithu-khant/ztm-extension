@@ -1,0 +1,32 @@
+/* 
+ * Author: Sithu Khant
+ * GitHub: https://github.com/sithu-khant 
+ * Last Updated: Wed May 22, 2024
+ * Description: Styles for course details feature
+*/
+
+.course-box-image-container {
+    position: relative;
+}
+
+#ztm-course-details {
+    position: absolute;
+    /* --- Style 3 --- */
+    top: 2%;
+    right: 13%;
+}
+
+#ztm-course-details-icon {
+    font-size: 23px;
+    padding: 5px;
+    color: grey !important;
+    background: rgba(245, 245, 245, 0.7) !important;
+    border-radius: 7px;
+    opacity: 0.8;
+
+    /* text-shadow: 0px 0px 2px #393E46; */
+}
+
+#ztm-course-details-icon:hover {
+    opacity: 1;
+}

@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Sat Jan 13, 2024
+ * Last Updated: Tue May 14, 2024
  * Description: Adds styles to the popup 
  */
 
@@ -24,7 +24,7 @@ html, body {
     user-select: none;
 }
 
-.popup-darkmode {
+.popup-dark-mode {
     background-color: #393E46;
     color: #fff;
 }
@@ -36,7 +36,7 @@ html, body {
     color: #fff;
 }
 
-.popup-darkmode .ztm-title {
+.popup-dark-mode .ztm-title {
     background-color: #232931;
 }
 
@@ -55,7 +55,7 @@ html, body {
     border-radius: 5px;
 }
 
-.popup-darkmode .feature {
+.popup-dark-mode .feature {
     background-color: #232931;
     border: 1px solid #232931;
 }
@@ -65,7 +65,7 @@ html, body {
     color: #646d76;
 }
 
-.popup-darkmode .feature-title {
+.popup-dark-mode .feature-title {
     color: #fff;
 }
 
@@ -128,22 +128,25 @@ html, body {
     border-radius: 50%;
 }
 
-a {
-    color: blue;
-}
-
 .ztm-footer {
     font-size: 12px;
-    line-height: 15px;
     padding: 12px;
-    border-top: 0.5px solid #EEEEEE;
+    border-top: 1px solid #EEEEEE;
 }
 
-.popup-darkmode .ztm-footer {
+.popup-dark-mode .ztm-footer {
     background-color: #393E46;
     border-top: 0.5px solid #EEEEEE;
 }
 
-.popup-darkmode a {
+.ztm-footer .links {
+    margin-top: -8px;
+}
+
+.ztm-footer .links a {
+    color: blue;
+}
+
+.popup-dark-mode .links a {
     color: #fff;
 }

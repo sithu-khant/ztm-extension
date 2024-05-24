@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
+
 <body>
 
     <div class="ztm-container">
@@ -35,7 +37,7 @@
                 <div class="feature-title">
                     <p>Section Times</p>
                 </div>
-            
+
                 <div class="toggle-switch">
                     <label class="switch">
                         <input id='ztmSectionTimesCheckbox' type="checkbox">
@@ -71,7 +73,7 @@
                     </label>
                 </div>
             </div>
-            
+
             <!-- Daily Motivation -->
             <div class="feature">
                 <div class="feature-title">
@@ -81,6 +83,20 @@
                 <div class="toggle-switch">
                     <label class="switch">
                         <input id='ztmDailyMotivationCheckbox' type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Course Details -->
+            <div class="feature">
+                <div class="feature-title">
+                    <p>Course Details</p>
+                </div>
+
+                <div class="toggle-switch">
+                    <label class="switch">
+                        <input id='ztmCourseDetailsCheckbox' type="checkbox">
                         <span class="slider round"></span>
                     </label>
                 </div>
@@ -109,7 +125,9 @@
         <div class="ztm-footer">
             <p>Enable the feature you want.</p>
             <br>
-            <p>Found issue? <a href="https://github.com/sithu-khant/ztm-extension/issues" target="_blank">Please report</a></p>
+            <div class="links">
+                <a href="https://github.com/sithu-khant/ztm-extension/issues" target="_blank">Feature Report</a>
+            </div>
         </div>
 
     </div>
@@ -119,5 +137,7 @@
     <script type="text/javascript" src='ztmHideLectureTitle.js'></script>
     <script type="text/javascript" src='ztmFavoriteCourses.js'></script>
     <script type="text/javascript" src='ztmDailyMotivation.js'></script>
+    <script type="text/javascript" src='ztmCourseDetails.js'></script>
 </body>
+
 </html>

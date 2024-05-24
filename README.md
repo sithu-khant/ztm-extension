@@ -24,12 +24,12 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 * Showing total amount of time in each section
 * Favorite courses
 * Daily Motivation
+* Course Details
 
 ## Feature requests
 
 *(plans to add - top to bottom)*
 
-* Course Details
 * Multiple Dark Mode Themes
 * Statistic time
 
@@ -37,6 +37,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 | Versions      | Chrome | Firefox | Edge | Brave |
 |---------------|--------|---------|------|-------|
+| 2024.5.20     | ✅      | ✅       | ✅    | ✅     |
 | 2024.4.13     | ✅      | ✅       | ✅    | ✅     |
 | 2024.3.12     | ✅      | ✅       | ✅    | ✅     |
 | 2024.3.6      | ✅      | ✅       | ✅    | ✅     |
@@ -54,8 +55,21 @@ WIP - Work in progress
 
 **Not found your favorite browser?** Feel free to test that, and contribute to this.
 
-### Version list
+## To support my work?
 
+Your generous donation allows me to work on more open-source projects.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D5SRN3A)
+
+### Supporters
+
+* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport). 
+
+## Version list
+
+* 2024.5.20
+    * Course details feature
+    * Improved code efficient.
 * 2024.4.13
     * Fixed section times feature.
     * Improved dark mode.
@@ -65,7 +79,7 @@ WIP - Work in progress
     * Updated dark mode css properties to work both course curriculum pages.
 * 2024.3.6
     * New dark mode theme for the new course curriculum template.
-    * Added the reminder text if you checked the favorite course button but if there is no favorited courses.
+    * Added the reminder text if you checked the favorite course button but if there is no favorite courses.
     * Code improvement.
     * Daily motivation update.
 * 2024.2.21
@@ -119,24 +133,41 @@ Feel free to create a new issue here -> [GitHub Issue](https://github.com/sithu-
 
 If you added any new features, make a pull request. I will review, and merge into the extension if it is fun to have.
 
-## To support my work?
-
-<a href="https://www.buymeacoffee.com/sithukhant" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
-### Supporters
-
-* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development.You can apply it [here](https://jb.gg/OpenSourceSupport). 
-
 ## License
 
 MIT License
 
 ## Logs
 
+* Fri May 24, 2024
+    * (5.24.01) - Removed donation button from the popup. Added `2024.5.20` version files.
+    * (5.24.02) - Updated typo.
+* Wed May 22, 2024
+    * (5.22.01) - Stored `course-details.json` file as the resource file in the Chrome extension.
+    * (5.22.02) - Course details feature is now working.
+    * (5.22.03) - Updated the background color in the dark mode.
+    * (5.22.04) - Improved code efficient.
+    * (5.22.05) - Updated css files (ztm-course-details, ztm-favorite-courses, ztm-dark-mode).
+    * (5.22.06) - Updated missing course detail links.
 * Thu May 16, 2024
+    * (5.16.01) - Cleaned codes of course details feature.
     * (5.16.01) - Updated `course-details.json` file.
+    * (5.16.02) - Merged from `main` to `course-details`.
+    * (5.16.03) - Created function for feature position.
+    * (5.16.04) - Feature position is now working.
+    * (5.16.05) - Removed feature icon that doesn't have url link.
+* Wed May 15, 2024
+    * (5.15.01) - Committed for safety.
+    * (5.15.02) - Fetched course details json data from the GitHub url.
+    * (5.15.03) - Committed for safety.
+    * (5.15.04) - Tested regular expression.
+    * (5.15.05) - Course details feature working.
+    * (5.15.06) - Committed for safety.
 * Tue May 14, 2024
     * (5.14.01) - Added `course-details.json` file in the `main` branch.
+    * (5.14.02) - Updated codes from the main.
+    * (5.14.03) - Updated readme.
+    * (5.14.04) - Updated popup box.
 * Wed Apr 17, 2024
     * (4.17.01) - Published version 2024.4.13 in GitHub Releases.
     * (4.17.02) - Fixed typo.
@@ -162,7 +193,7 @@ MIT License
 * Sun Mar 3, 2024
     * (3.3.01) - Added some css styles.
     * (3.3.02) - Dark mode working on mobile view.
-    * (3.3.03) - Double checked.
+    * (3.3.03) - Double-checked.
     * (3.3.04) - Added colors for code view in dark mode.
     * (3.3.05) - Updated some css color in dark mode.
     * (3.3.06) - Fixed css style on finished course template.
@@ -327,10 +358,10 @@ MIT License
       index number but not working properly.
 * Tue Jan 16, 2024
     * (1.16.01) - Cleaned the `ztmHideLectureTitle` code.
-    * (1.16.02) - Made reindentation to `ztm-section-times` code. Added `.prettierrc`
+    * (1.16.02) - Made indentation to `ztm-section-times` code. Added `.prettierrc`
       file.
     * (1.16.03) - Improved the code efficiency.
-    * (1.16.04) - `ztm-section-times` is working but it delays when on and off.
+    * (1.16.04) - `ztm-section-times` is working, but it delays when on and off.
     * (1.16.05) - Disabled `ztm-section-times` feature.
     * (1.16.06) - Started working on the `fav-course` feature. Added heart icons to each course.
     * (1.16.07) - Phew...
@@ -378,21 +409,21 @@ MIT License
 * Fri Dec 22, 2023 - Version (2023.12.21)
 * Thu Dec 21, 2023
     * (12.21.01) - Added dark scroll bar. (pre-release, version 2023.12.21)
-    * (12.21.02) - Added KeepResolution function in popup and it is worked now.
+    * (12.21.02) - Added KeepResolution function in popup, and it is worked now.
     * (12.21.03) - Started working for the favourite course feature.
     * (12.21.03) - Committed to safety.
 * Wed Dec 20, 2023
-    * (12.20.01) - Added darkmode to `course-info` page.
-    * (12.20.02) - Darkmode to all pages.
+    * (12.20.01) - Added dark mode to `course-info` page.
+    * (12.20.02) - Dark mode to all pages.
     * (12.20.03) - Added hover box-shadow and border.
     * (12.20.04) - Fixed toggle bar function.
     * (12.20.05) - New theme for the academy home page
     * (12.20.06) - New theme for the course info page
     * (12.20.07) - New theme for the learning page
 * Tue Dec 19, 2023
-    * (12.19.01) - Darkmode function works in beta but needs to be dynamic.
-    * (12.19.02) - Darkmode function is now dynamic.
-    * (12.19.03) - Darkmode for `popup`.
+    * (12.19.01) - Dark mode function works in beta but needs to be dynamic.
+    * (12.19.02) - Dark mode function is now dynamic.
+    * (12.19.03) - Dark mode for `popup`.
     * (12.19.04) - Toggle Sidebar linked with the `popup`.
 * Mon Dec 18, 2023 - All the checkboxes in `popup` can now store the check status.
     * Toggle Sidebar is connected to the `popup`.

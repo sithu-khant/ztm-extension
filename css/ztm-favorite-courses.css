@@ -1,62 +1,62 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Tue Mar 5, 2024
+ * Last Updated: Wed May 22, 2024
  * Description: Adds favorite course feature to the home page
- */ 
+ */
 
 .btn-course-filter {
-	outline: none !important;
+    outline: none !important;
 }
 
 .ztm-fav-courses-button {
-	display: flex !important;
-	align-items: center !important;
+    display: flex !important;
+    align-items: center !important;
 
-	cursor: pointer;
-	-webkit-user-select: none;
-  	-ms-user-select: none;
-  	user-select: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #ztm-fav-courses-heart-icon {
-	font-size: 22px;
-	color: #989898;
+    font-size: 22px;
+    color: #989898;
 }
 
 .filtered-fav-courses {
-	color: #30d683 !important;
+    color: #30d683 !important;
 }
 
 .course-box-image-container {
-	position: relative;
+    position: relative;
 }
 
 #no-favorited-course {
-	margin: 20px 10px;
-	margin-bottom: 50px;
-	font-size: 20px;
-	font-style: italic;
-	text-align: center;
+    margin: 20px 10px 50px;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
 }
 
 #ztm-fav-courses {
-	position: absolute;
-	top: 2%;
-	right: 2%;
+    position: absolute;
+    top: 2%;
+    right: 2%;
 }
 
 #ztm-heart-icon {
-	font-size: 23px;
-	padding: 5px;
-	color: grey;
-	background: rgba(245, 245, 245, 0.8) !important;
-	border-radius: 50%;
-	opacity: 0.8;
+    font-size: 23px;
+    padding: 5px;
+    color: grey;
+    background: rgba(245, 245, 245, 0.8) !important;
+    /*border-radius: 50%;*/
+    border-radius: 7px;
+    opacity: 0.8;
 
-	text-shadow: 0px 0px 2px #393E46;
+    text-shadow: 0 0 2px #393E46;
 }
 
 #ztm-heart-icon:hover {
-	opacity: 1;
+    opacity: 1;
 }
