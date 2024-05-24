@@ -55,6 +55,16 @@ WIP - Work in progress
 
 **Not found your favorite browser?** Feel free to test that, and contribute to this.
 
+## To support my work?
+
+Your generous donation allows me to work on more open-source projects.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D5SRN3A)
+
+### Supporters
+
+* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport). 
+
 ### Version list
 
 * 2024.5.20
@@ -123,22 +133,14 @@ Feel free to create a new issue here -> [GitHub Issue](https://github.com/sithu-
 
 If you added any new features, make a pull request. I will review, and merge into the extension if it is fun to have.
 
-## To support my work?
-
-Your generous donation allows me to work on more open-source projects.
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D5SRN3A)
-
-### Supporters
-
-* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport). 
-
 ## License
 
 MIT License
 
 ## Logs
 
+* Fri May 24, 2024
+    * (5.24.01) - Removed donation button from the popup. Added `2024.5.20` version files
 * Wed May 22, 2024
     * (5.22.01) - Stored `course-details.json` file as the resource file in the Chrome extension.
     * (5.22.02) - Course details feature is now working.
