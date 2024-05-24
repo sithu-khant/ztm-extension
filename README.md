@@ -65,7 +65,7 @@ Your generous donation allows me to work on more open-source projects.
 
 * <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport). 
 
-### Version list
+## Version list
 
 * 2024.5.20
     * Course details feature
@@ -140,7 +140,8 @@ MIT License
 ## Logs
 
 * Fri May 24, 2024
-    * (5.24.01) - Removed donation button from the popup. Added `2024.5.20` version files
+    * (5.24.01) - Removed donation button from the popup. Added `2024.5.20` version files.
+    * (5.24.02) - Updated typo.
 * Wed May 22, 2024
     * (5.22.01) - Stored `course-details.json` file as the resource file in the Chrome extension.
     * (5.22.02) - Course details feature is now working.
