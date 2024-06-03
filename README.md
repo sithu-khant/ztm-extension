@@ -64,7 +64,7 @@ Your generous donation allows me to work on more open-source projects.
 ### Supporters
 
 * <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport).
-* <img height='15' src="[https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png](https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Tuta_logo.svg/1200px-Tuta_logo.svg.png)" alt="Tuta logo"> Tuta is the world's most secure email service, easy to use and private by design. [More Information](https://tuta.com/)
+* <img height='15' src="https://files.mastodon.social/accounts/avatars/000/207/529/original/0145568d36350108.png" alt="Tuta logo"> Tuta is the world's most secure email service, easy to use and private by design. [More Information](https://tuta.com/)
 
 ## Version list
 
