@@ -63,7 +63,8 @@ Your generous donation allows me to work on more open-source projects.
 
 ### Supporters
 
-* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport). 
+* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport).
+* <img height='15' src="[https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png](https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Tuta_logo.svg/1200px-Tuta_logo.svg.png)" alt="Tuta logo"> Tuta is the world's most secure email service, easy to use and private by design. [More Information](https://tuta.com/)
 
 ## Version list
 
@@ -139,6 +140,8 @@ MIT License
 
 ## Logs
 
+* Mon Jun 3, 2024
+    * (6.3.01) - Tuta email provider approved my project.
 * Fri May 24, 2024
     * (5.24.01) - Removed donation button from the popup. Added `2024.5.20` version files.
     * (5.24.02) - Updated typo.
