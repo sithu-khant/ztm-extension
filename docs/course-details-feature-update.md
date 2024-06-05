@@ -83,6 +83,7 @@ Select these files and folders in your file manager
 * `LICENSE`
 * `manifest.json`
 * `popup/`
+* `scripts/`
 
 And compress them to create zip file. Rename that file into this format `ztm-extension-chrome-2024.6.5`, `2024.6.5` is the version name.
 
