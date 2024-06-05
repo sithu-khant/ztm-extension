@@ -64,7 +64,8 @@ Your generous donation allows me to work on more open-source projects.
 ### Supporters
 
 * <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport).
-* <img height='15' src="https://files.mastodon.social/accounts/avatars/000/207/529/original/0145568d36350108.png" alt="Tuta logo"> Tuta is the world's most secure email service, easy to use and private by design. [More Information](https://tuta.com/)
+* <img width='15' src="https://st.agrd.eu/favicons/adguard/favicon.ico" alt="AdGuard logo."> Surf the Web ad-free and safely. Shields up! Get it [here](https://adguard.com/en/welcome.html).
+* <img height='15' src="https://files.mastodon.social/accounts/avatars/000/207/529/original/0145568d36350108.png" alt="Tuta logo"> Tuta is the world's most secure email service, easy to use and private by design. [More Information](https://tuta.com/).
 
 ## Version list
 
@@ -140,8 +141,10 @@ MIT License
 
 ## Logs
 
+* Wed Jun 5, 2024
+    * (6.5.01) - Added AdGuard into the project supporter list. *(AdGuard already supported me for a while)*
 * Mon Jun 3, 2024
-    * (6.3.01) - Tuta email provider approved my project.
+    * (6.3.01) - Tuta email provider approved my project. 
 * Fri May 24, 2024
     * (5.24.01) - Removed donation button from the popup. Added `2024.5.20` version files.
     * (5.24.02) - Updated typo.
