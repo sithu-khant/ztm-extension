@@ -36,7 +36,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 ## Versions
 
 | Versions      | Chrome | Firefox | Edge | Brave |
-|---------------|--------|---------|------|-------|
+| ------------- | ------ | ------- | ---- | ----- |
 | 2024.5.20     | ✅      | ✅       | ✅    | ✅     |
 | 2024.4.13     | ✅      | ✅       | ✅    | ✅     |
 | 2024.3.12     | ✅      | ✅       | ✅    | ✅     |
@@ -67,7 +67,7 @@ Your generous donation allows me to work on more open-source projects.
 * <img width='15' src="https://st.agrd.eu/favicons/adguard/favicon.ico" alt="AdGuard logo."> Surf the Web ad-free and safely. Shields up! Get it [here](https://adguard.com/en/welcome.html).
 * <img height='15' src="https://files.mastodon.social/accounts/avatars/000/207/529/original/0145568d36350108.png" alt="Tuta logo"> Tuta is the world's most secure email service, easy to use and private by design. [More Information](https://tuta.com/).
 
-## Version list
+## Version List
 
 * 2024.5.20
     * Course details feature
@@ -135,6 +135,10 @@ Feel free to create a new issue here -> [GitHub Issue](https://github.com/sithu-
 
 If you added any new features, make a pull request. I will review, and merge into the extension if it is fun to have.
 
+### Course Deatils feature missing icon
+
+If you found the course detail icon of a course (course courses don't have the detail page by default), you can follow [this steps](./docs/course-details-feature-update.md) and contribute our project.
+
 ## License
 
 MIT License
@@ -143,6 +147,7 @@ MIT License
 
 * Wed Jun 5, 2024
     * (6.5.01) - Added AdGuard into the project supporter list. *(AdGuard already supported me for a while)*
+    * (6.5.02) - Added course details feature update documentation.
 * Mon Jun 3, 2024
     * (6.3.01) - Tuta email provider approved my project. 
 * Fri May 24, 2024
