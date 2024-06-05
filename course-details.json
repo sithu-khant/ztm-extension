@@ -370,5 +370,9 @@
   {
     "name": "Introduction to ChatGPT Code Interpreter",
     "link": "https://zerotomastery.io/courses/chatgpt-code-interpreter-guide/"
+  },
+  {
+    "name": "Conquer JavaScript by Building Your Own Framework from Scratch",
+    "link": "https://zerotomastery.io/courses/build-javascript-framework-project/"
   }
 ]
