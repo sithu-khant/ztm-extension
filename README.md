@@ -37,6 +37,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 | Versions      | Chrome | Firefox | Edge | Brave |
 | ------------- | ------ | ------- | ---- | ----- |
+| 2024.6.05     | ✅      | ✅       | ✅    | ✅     |
 | 2024.5.20     | ✅      | ✅       | ✅    | ✅     |
 | 2024.4.13     | ✅      | ✅       | ✅    | ✅     |
 | 2024.3.12     | ✅      | ✅       | ✅    | ✅     |
