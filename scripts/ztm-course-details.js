@@ -1,7 +1,7 @@
 /* 
  * Author: Sithu Khant
  * GitHub: https://github.com/sithu-khant 
- * Last Updated: Wed May 22, 2024
+ * Last Updated: Wed Jun 5, 2024
  * Description: Adds course details feature to the home page
  */
 
@@ -84,7 +84,10 @@ const courseDetails = () => {
         // Course title data cleaning
         const removeColonFromTitle = courseTitle.replace(/:/g, '')
         const removeBracketsFromTitle = removeColonFromTitle.replace(/[()]/g, '')
-        const titleArray = removeBracketsFromTitle.split(' ')
+        const removeYearsFromTitle = removeBracketsFromTitle.replace(/\b\d{4}\b/g, '')
+        const removeInFromTitle = removeYearsFromTitle.replace('in', '')
+        // Cleaned titleArray
+        const titleArray = removeInFromTitle.split(' ')
 
         // const jsonUrl = 'https://raw.githubusercontent.com/sithu-khant/ztm-extension/main/course-details.json'
         const jsonUrl = chrome.runtime.getURL('../course-details.json')
@@ -95,8 +98,11 @@ const courseDetails = () => {
                 responses.forEach((res) => {
                     const removeColonFromResTitleArray = res.name?.replace(/:/g, '')
                     const removeBracketsFromResTitleArray = removeColonFromResTitleArray.replace(/[()]/g, '')
+                    const removeYearsFromResTitleArray = removeBracketsFromResTitleArray.replace(/\b\d{4}\b/g, '')
+                    const removeInFromResTitleArray = removeYearsFromResTitleArray.replace('in', '')
+                    // Cleaned resTitleArray
+                    const resTitleArray = removeInFromResTitleArray.split(' ')
 
-                    const resTitleArray = removeBracketsFromResTitleArray.split(' ')
                     const courseDetailsUrl = res.link
                     // Check all the element in resTitleArray exists in titleArray or not
                     const isTrue = resTitleArray.every(element => titleArray.includes(element))
