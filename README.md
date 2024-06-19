@@ -37,6 +37,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 | Versions      | Chrome | Firefox | Edge | Brave |
 | ------------- | ------ | ------- | ---- | ----- |
+| 2024.6.19      | ✅      | ✅       | ✅    | ✅     |
 | 2024.6.5      | ✅      | ✅       | ✅    | ✅     |
 | 2024.5.20     | ✅      | ✅       | ✅    | ✅     |
 | 2024.4.13     | ✅      | ✅       | ✅    | ✅     |
@@ -69,6 +70,8 @@ Your generous donation allows me to work on more open-source projects.
 * <img height='15' src="https://files.mastodon.social/accounts/avatars/000/207/529/original/0145568d36350108.png" alt="Tuta logo"> Tuta is the world's most secure email service, easy to use and private by design. [More Information](https://tuta.com/).
 
 ## Version List
+* 2024.6.19
+    * Added newest ZTM course to the list
 * 2024.6.5
     * Added newest ZTM course to the list
 * 2024.5.20
