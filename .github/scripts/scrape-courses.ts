@@ -58,11 +58,11 @@ const fetchAndParse = async (
         const href = node.getAttribute('data-course-url')
         // Some of the URLs have changed, so we need to check if the URL is in the changed URLs object
         // Also want to slice off the p at the front of the URL if found
-        const link = `https://zerotomastery.io${
-            changedUrls[href] ?? href.indexOf('/p/') === 0
-                ? href.slice(2)
-                : href
+        const link = `https://zerotomastery.io/${
+            changedUrls[href] ??
+            (href.indexOf('/p/') === 0 ? href.slice(3) : href)
         }`
+        console.log(changedUrls[href], href)
         const thumbnail = node
             .querySelector('.course-box-image')
             .getAttribute('src')
