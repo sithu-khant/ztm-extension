@@ -62,7 +62,7 @@ const fetchAndParse = async (
             changedUrls[href] ??
             (href.indexOf('/p/') === 0 ? href.slice(3) : href)
         }`
-        console.log(changedUrls[href], href)
+
         const thumbnail = node
             .querySelector('.course-box-image')
             .getAttribute('src')
