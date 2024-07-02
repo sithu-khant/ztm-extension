@@ -9,6 +9,7 @@ type CourseListItem = {
     thumbnail: string
 }
 
+// There's a script tag in the dom with updated URL redirects
 const extractChangedUrls = (document: any): Record<string, string> => {
     const scriptContent = [...document.querySelectorAll('script')].find(
         (script: any) =>
@@ -23,7 +24,7 @@ const extractChangedUrls = (document: any): Record<string, string> => {
         throw new Error('Changed URLs object could not be extracted.')
     }
 
-    // Sanitize is
+    // Sanitize and convert to JSON before parsing
     const jsonString = match[1]
         .replace(/(\w+):/g, '"$1":') // Quote property names
         .replace(/'/g, '"') // Replace single quotes with double quotes
@@ -43,9 +44,6 @@ const fetchAndParse = async (
         'text/html'
     )
 
-    // Some of the url slugs have changed and appear in the document
-    const changedUrls = extractChangedUrls(document)
-
     const foundCourses = [
         ...document.querySelectorAll('[data-course-id].course-listing'),
     ]
@@ -54,11 +52,14 @@ const fetchAndParse = async (
         throw new Error('No courses found on the page.')
     }
 
+    // Some of the url slugs have changed and appear in the document
+    const changedUrls = extractChangedUrls(document)
+
     const courses = foundCourses.map((node) => {
         const id = node.getAttribute('data-course-id')
         const href = node.getAttribute('data-course-url')
-        // Some of the URLs have changed, so we need to check if the URL is in the changed URLs object
-        // Also want to slice off the p at the front of the URL if found
+        // Check if the URL has changed
+        // If not, then replace the /p/ with courses/
         const link = `https://zerotomastery.io/${
             changedUrls[href] ?? href.replace('/p/', 'courses/')
         }`
@@ -91,7 +92,6 @@ const fetchAndParse = async (
         : allCourses.concat(courses)
 }
 
-// Fetch the list and remove duplicates
 const coursesList = (
     await fetchAndParse('https://academy.zerotomastery.io/courses')
 )
