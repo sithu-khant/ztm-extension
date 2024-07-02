@@ -1,5 +1,5 @@
 # Scrape courses from the ZTM course listing page
-name: Ping sites
+name: Check for course updates
 on:
     # Manually trigger the workflow
     workflow_dispatch:
