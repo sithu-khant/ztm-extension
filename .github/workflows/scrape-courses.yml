@@ -1,0 +1,30 @@
+# Scrape courses from the ZTM course listing page
+name: Ping sites
+on:
+    # Manually trigger the workflow
+    workflow_dispatch:
+    schedule:
+    # Once a day at 6am
+    - cron: "0 6 * * *"
+jobs:
+    scrape:
+        name: Scrape courses
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - uses: denoland/setup-deno@v1
+              with:
+                deno-version: vx.x.x
+            - name: Collect data
+              run: deno run --allow-net --allow-write .github/scripts/scrape-courses.ts
+            - name: Create Pull Request if needed
+              uses: peter-evans/create-pull-request@v6
+              with:
+                author: 'GitHub Actions <github-actions[bot]@users.noreply.github.com>'
+                committer: 'GitHub Actions <github-actions[bot]@users.noreply.github.com>'
+                add-paths: "course-details.json"
+                commit-message: "Update courses list"
+                title: "New courses found"
+                branch: "update-courses"
+                delete-branch: true
