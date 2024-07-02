@@ -5,6 +5,7 @@ type CourseListItem = {
     name: string
     description: string
     link: string
+    author: string
     thumbnail: string
 }
 
@@ -71,7 +72,10 @@ const fetchAndParse = async (
         const description = node
             .querySelector('.course-listing-subtitle')
             .textContent.trim()
-        return { id, name, description, link, thumbnail }
+        const author = node
+            .querySelector('.course-author-name')
+            .textContent.trim()
+        return { id, name, description, link, author, thumbnail }
     })
 
     // Find the next page URL if it exists
