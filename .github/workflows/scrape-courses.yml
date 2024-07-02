@@ -26,5 +26,6 @@ jobs:
                 add-paths: "course-details.json"
                 commit-message: "Update courses list"
                 title: "New courses found"
+                body: "New courses have been found on the ZTM course listing page."
                 branch: "update-courses"
                 delete-branch: true
