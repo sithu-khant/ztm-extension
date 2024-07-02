@@ -59,8 +59,7 @@ const fetchAndParse = async (
         // Some of the URLs have changed, so we need to check if the URL is in the changed URLs object
         // Also want to slice off the p at the front of the URL if found
         const link = `https://zerotomastery.io/${
-            changedUrls[href] ??
-            (href.indexOf('/p/') === 0 ? href.slice(3) : href)
+            changedUrls[href] ?? href.replace('/p/', 'courses/')
         }`
 
         const thumbnail = node
