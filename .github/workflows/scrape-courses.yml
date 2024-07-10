@@ -17,7 +17,7 @@ jobs:
               with:
                 deno-version: vx.x.x
             - name: Collect data
-              run: deno run --allow-net --allow-write .github/scripts/scrape-courses.ts
+              run: deno run --allow-net --allow-write .github/scripts/scrape-courses/scrape-courses.ts
             - name: Create Pull Request if needed
               uses: peter-evans/create-pull-request@v6
               with:
