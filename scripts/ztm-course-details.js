@@ -133,7 +133,7 @@ const courseDetails = () => {
                         removeYearsFromResTitleArray.replace('in', '')
                     // Cleaned resTitleArray
                     const resTitleArray = removeInFromResTitleArray.split(' ')
-
+                    
                     const courseDetailsUrl = res.link
                     // Check all the element in resTitleArray exists in titleArray or not
                     const isTrue = resTitleArray.every((element) =>
