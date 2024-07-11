@@ -107,7 +107,7 @@ const courseDetails = () => {
                     // Check all the element in resTitleArray exists in titleArray or not
                     const isTrue = resTitleArray.every(element => titleArray.includes(element))
 
-                    if (isTrue) {
+                    if (isTrue && courseDetailsUrl) {
                         // Add courseDetailsUrl as url link
                         ztmCourseDetailsAnchor.href = courseDetailsUrl
                     }
