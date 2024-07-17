@@ -57,18 +57,6 @@ WIP - Work in progress
 
 **Not found your favorite browser?** Feel free to test that, and contribute to this.
 
-## To support my work?
-
-Your generous donation allows me to work on more open-source projects.
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D5SRN3A)
-
-### Supporters
-
-* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport).
-* <img width='15' src="https://st.agrd.eu/favicons/adguard/favicon.ico" alt="AdGuard logo."> Surf the Web ad-free and safely. Shields up! Get it [here](https://adguard.com/en/welcome.html).
-* <img height='15' src="https://files.mastodon.social/accounts/avatars/000/207/529/original/0145568d36350108.png" alt="Tuta logo"> Tuta is the world's most secure email service, easy to use and private by design. [More Information](https://tuta.com/).
-
 ## Version List
 * 2024.6.19
     * Added newest ZTM course to the list
@@ -144,12 +132,20 @@ If you added any new features, make a pull request. I will review, and merge int
 
 If you found the course detail icon of a course (course courses don't have the detail page by default), you can follow [this steps](./docs/course-details-feature-update.md) and contribute our project.
 
+## Supporters
+
+* <img width='15' src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> JetBrains supports free license for Open Source Development. You can apply it [here](https://jb.gg/OpenSourceSupport).
+* <img width='15' src="https://st.agrd.eu/favicons/adguard/favicon.ico" alt="AdGuard logo."> Surf the Web ad-free and safely. Shields up! Get it [here](https://adguard.com/en/welcome.html).
+* <img height='15' src="https://files.mastodon.social/accounts/avatars/000/207/529/original/0145568d36350108.png" alt="Tuta logo"> Tuta is the world's most secure email service, easy to use and private by design. [More Information](https://tuta.com/).
+
 ## License
 
 MIT License
 
 ## Logs
 
+* Wed Jul 17, 2024
+    * (7.17.01) - Removed donation button.
 * Wed Jun 5, 2024
     * (6.5.01) - Added AdGuard into the project supporter list. *(AdGuard already supported me for a while)*
     * (6.5.02) - Added course details feature update documentation.
