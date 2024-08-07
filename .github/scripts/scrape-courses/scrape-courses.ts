@@ -26,6 +26,10 @@ const fetchAndParse = async (
 
     const courses = foundCourses.map((node) => {
         const id = String(node.getAttribute('data-course-id'))
+        const url = new URL(
+            'https://academy.zerotomastery.io' +
+                node.getAttribute('data-course-url')
+        )
         const name = String(
             node.querySelector('.course-listing-title').textContent.trim()
         )
@@ -47,7 +51,7 @@ const fetchAndParse = async (
         const instructor =
             details?.instructor ??
             String(node.querySelector('.course-author-name').textContent.trim())
-        const link = details?.detailsLink ?? null
+        const link = details?.detailsLink ?? url ?? null
         const courseLink = 'https://academy.zerotomastery.io/courses/' + id
 
         // Set missing details to null
