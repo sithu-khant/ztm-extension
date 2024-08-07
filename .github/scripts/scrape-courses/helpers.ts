@@ -1,5 +1,17 @@
 // Some helpers to guess the name of the course
-const getWords = (str) => str.toLowerCase().match(/\w+/g) || []
+const getWords = (str) => {
+    const wordsToRemove = ['zero to mastery', 'complete']
+    const regexWords = new RegExp(`\\b(?:${wordsToRemove.join('|')})\\b`, 'gi')
+    const regexPunctuation = /[.,\/#!$%\^&\*;:{}=\-_`~()]/g
+
+    // Remove specified words and punctuation
+    const cleanedStr = str
+        .replaceAll(regexWords, '')
+        .replaceAll(regexPunctuation, '')
+        .toLowerCase()
+
+    return cleanedStr.match(/\w+/g) || []
+}
 const calculateSimilarity = (name1, name2) => {
     const words1 = new Set(getWords(name1))
     const words2 = new Set(getWords(name2))
