@@ -4,9 +4,9 @@ on:
     # Manually trigger the workflow
     workflow_dispatch:
     schedule:
-    # Once a day at 6am
-    - cron: "0 6 * * *"
-    
+        # Once a day at 6am
+        - cron: "0 6 * * *"
+
 permissions:
     contents: write
     pull-requests: write

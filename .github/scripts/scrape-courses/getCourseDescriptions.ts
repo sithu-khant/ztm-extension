@@ -23,20 +23,15 @@ export const getCourseDescriptions = async (): Promise<
         // The level is the first dom element and has an inline color
         const level = node.querySelector('div[color]').textContent.trim()
         const name = node
-            .querySelector('a[class*=CardTitle]')
+            .querySelector('a[class*=CardTitle] p')
             .textContent.trim()
         const description = node
             .querySelector('p[class*=Excerpt]')
             .textContent.trim()
-        const courseLink = node
-            .querySelector(
-                'a[href^="https://academy.zerotomastery.io/courses"]'
-            )
-            .getAttribute('href')
-        const id = String(courseLink.match(/courses\/(\d+)\/lectures/)?.[1])
         const detailsLink =
             'https://zerotomastery.io' +
             node.querySelector('a[href^="/courses"]').getAttribute('href')
+
         // Split the span to get the time and lessons
         const meta = node
             .querySelector('span[class*=TimeDetails]')
@@ -52,11 +47,9 @@ export const getCourseDescriptions = async (): Promise<
             .textContent.trim()
 
         return {
-            id,
             name,
             description,
             detailsLink,
-            courseLink,
             level,
             length,
             lessons,

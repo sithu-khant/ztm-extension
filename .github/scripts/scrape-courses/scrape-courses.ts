@@ -29,9 +29,8 @@ const fetchAndParse = async (
         const name = String(
             node.querySelector('.course-listing-title').textContent.trim()
         )
-        // Get the details by matching id or name
+        // Get the details by matching the name
         const details =
-            courseDescriptions.find((c) => c.id === id) ??
             courseDescriptions.find((c) => c.name === name) ??
             findMostSimilarName(name, courseDescriptions)
 
@@ -49,7 +48,7 @@ const fetchAndParse = async (
             details?.instructor ??
             String(node.querySelector('.course-author-name').textContent.trim())
         const link = details?.detailsLink ?? null
-        const courseLink = details?.courseLink ?? null
+        const courseLink = 'https://academy.zerotomastery.io/courses/' + id
 
         // Set missing details to null
         const { length, lessons, level } = details ?? {
