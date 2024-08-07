@@ -1,382 +1,382 @@
 [
-    {
-      "name": "Complete Web Developer: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/coding-bootcamp/"
-    },
-    {
-      "name": "The Complete Junior to Senior Web Developer Roadmap",
-      "link": "https://zerotomastery.io/courses/junior-to-senior-web-developer-roadmap/"
-    },
-    {
-      "name": "Master the Coding Interview: Data Structures + Algorithms",
-      "link": "https://zerotomastery.io/courses/learn-data-structures-and-algorithms/"
-    },
-    {
-      "name": "JavaScript: The Advanced Concepts",
-      "link": "https://zerotomastery.io/courses/advanced-javascript-concepts/"
-    },
-    {
-      "name": "Complete React Developer (w/ Redux, Hooks, GraphQL)",
-      "link": "https://zerotomastery.io/courses/learn-react/"
-    },
-    {
-      "name": "Complete Python Developer: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-python/"
-    },
-    {
-      "name": "Complete Machine Learning and Data Science: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/machine-learning-and-data-science-bootcamp/"
-    },
-    {
-      "name": "Learning to Learn [Efficient Learning]: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learning-how-to-learn/"
-    },
-    {
-      "name": "Deno: The Complete Guide Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-deno/"
-    },
-    {
-      "name": "JavaScript Web Projects: 20 Projects to Build Your Portfolio",
-      "link": "https://zerotomastery.io/courses/javascript-projects/"
-    },
-    {
-      "name": "Complete SQL + Databases Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/sql-bootcamp/"
-    },
-    {
-      "name": "Complete Web & Mobile Designer: UI/UX, Figma + more",
-      "link": "https://zerotomastery.io/courses/learn-web-design/"
-    },
-    {
-      "name": "Master the Coding Interview: Big Tech (FAANG) Interviews",
-      "link": "https://zerotomastery.io/courses/faang-interview-prep/"
-    },
-    {
-      "name": "Complete Ethical Hacking Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-ethical-hacking/"
-    },
-    {
-      "name": "Complete React Native Developer: Zero to Mastery [with Hooks]",
-      "link": "https://zerotomastery.io/courses/learn-react-native/"
-    },
-    {
-      "name": "TensorFlow Developer Certificate: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-tensorflow/"
-    },
-    {
-      "name": "Complete Vue Developer in 2024: Zero to Mastery (Pinia, Vitest)",
-      "link": "https://zerotomastery.io/courses/learn-vue-js/"
-    },
-    {
-      "name": "Complete Node.js Developer: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-node-js/"
-    },
-    {
-      "name": "Dart: The Complete Developer's Guide",
-      "link": "https://zerotomastery.io/courses/learn-dart/"
-    },
-    {
-      "name": "Web Security & Bug Bounty: Learn Penetration Testing",
-      "link": "https://zerotomastery.io/courses/learn-penetration-testing/"
-    },
-    {
-      "name": "DevOps Bootcamp: Learn Linux & Become a Linux Sysadmin",
-      "link": "https://zerotomastery.io/courses/devops-bootcamp/"
-    },
-    {
-      "name": "Complete Guide to Freelancing: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/become-a-freelancer/"
-    },
-    {
-      "name": "Rust Programming: The Complete Developer's Guide",
-      "link": "https://zerotomastery.io/courses/learn-rust/"
-    },
-    {
-      "name": "Build a Full-Stack X/Twitter Clone with Rust",
-      "link": "https://zerotomastery.io/courses/rust-project-twitter-clone/"
-    },
-    {
-      "name": "SEO Bootcamp: Learn Search Engine Optimization",
-      "link": "https://zerotomastery.io/courses/seo-content-optimization/"
-    },
-    {
-      "name": "Motion Design with Figma: Animations, Motion Graphics, UX/UI",
-      "link": "https://zerotomastery.io/courses/learn-motion-design/"
-    },
-    {
-      "name": "Complete Next.js Developer: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-next-js/"
-    },
-    {
-      "name": "WebAssembly: A Practical Guide",
-      "link": "https://zerotomastery.io/courses/learn-webassembly/"
-    },
-    {
-      "name": "NFT 101: Introduction to NFTs",
-      "link": "https://zerotomastery.io/courses/introduction-to-nfts/"
-    },
-    {
-      "name": "Complete Angular Developer: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-angular/"
-    },
-    {
-      "name": "The Excel Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/excel-bootcamp/"
-    },
-    {
-      "name": "Go Programming (Golang): The Complete Developer's Guide",
-      "link": "https://zerotomastery.io/courses/learn-golang/"
-    },
-    {
-      "name": "Learning to Meditate [Productivity & Focus]",
-      "link": "https://zerotomastery.io/courses/learn-meditation-for-productivity/"
-    },
-    {
-      "name": "Business Analytics Bootcamp (with Python): Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-business-analytics/"
-    },
-    {
-      "name": "Consulting: The Complete Freelancer's Guide",
-      "link": "https://zerotomastery.io/courses/learn-freelance-consulting/"
-    },
-    {
-      "name": "Web3 Masterclass: Blockchain, DApps, DAOs + More",
-      "link": "https://zerotomastery.io/courses/introduction-to-web3/"
-    },
-    {
-      "name": "DevOps Bootcamp: Terraform",
-      "link": "https://zerotomastery.io/courses/learn-terraform-certification/"
-    },
-    {
-      "name": "AWS Certified Cloud Practitioner",
-      "link": "https://zerotomastery.io/courses/learn-aws-cloud-practitioner/"
-    },
-    {
-      "name": "Life System Design",
-      "link": "https://zerotomastery.io/courses/life-system-design/"
-    },
-    {
-      "name": "Solidity, Ethereum and Blockchain: The Complete Developer's Guide",
-      "link": "https://zerotomastery.io/courses/blockchain-developer-bootcamp/"
-    },
-    {
-      "name": "ZTM Fitness: Get Healthier in 4 Weeks",
-      "link": "https://zerotomastery.io/courses/exercise-bootcamp/"
-    },
-    {
-      "name": "VBA Programming",
-      "link": "https://zerotomastery.io/courses/learn-vba/"
-    },
-    {
-      "name": "PyTorch for Deep Learning",
-      "link": "https://zerotomastery.io/courses/learn-pytorch/"
-    },
-    {
-      "name": "Complete Cybersecurity Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-cybersecurity-bootcamp/"
-    },
-    {
-      "name": "Advanced Excel Bootcamp: Data Analytics and Business Intelligence",
-      "link": "https://zerotomastery.io/courses/business-intelligence-course/"
-    },
-    {
-      "name": "Bash Scripting: Learn Shell Scripting",
-      "link": "https://zerotomastery.io/courses/learn-bash-scripting/"
-    },
-    {
-      "name": "Time Series Forecasting with Python",
-      "link": "https://zerotomastery.io/courses/time-series-forecasting/"
-    },
-    {
-      "name": "Master the Coding Interview: System Design + Architecture",
-      "link": "https://zerotomastery.io/courses/system-design/"
-    },
-    {
-      "name": "AWS Certified Solutions Architect",
-      "link": "https://zerotomastery.io/courses/aws-certified-solutions-architect-bootcamp/"
-    },
-    {
-      "name": "Unity Bootcamp: 3D Game Development",
-      "link": "https://zerotomastery.io/courses/learn-unity-bootcamp/"
-    },
-    {
-      "name": "Testing: The Complete Developer's Guide",
-      "link": "https://zerotomastery.io/courses/software-testing-course/"
-    },
-    {
-      "name": "Power BI Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-power-bi-bootcamp/"
-    },
-    {
-      "name": "ChatGPT and Large Language Models (LLMs): A Practical Guide",
-      "link": "https://zerotomastery.io/courses/large-language-models/"
-    },
-    {
-      "name": "The Complete Career Toolkit: Personal Branding, Resume Building + more",
-      "link": "https://zerotomastery.io/courses/personal-branding/"
-    },
-    {
-      "name": "C#/.NET Bootcamp: The Fundamentals + more",
-      "link": "https://zerotomastery.io/courses/csharp-net-bootcamp/"
-    },
-    {
-      "name": "Java Programming Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/java-bootcamp/"
-    },
-    {
-      "name": "CompTIA Security+ Certification Bootcamp",
-      "link": "https://zerotomastery.io/courses/security-plus-boot-camp/"
-    },
-    {
-      "name": "Flutter Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/flutter-bootcamp/"
-    },
-    {
-      "name": "Django Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/django-bootcamp/"
-    },
-    {
-      "name": "TypeScript Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/typescript-bootcamp/"
-    },
-    {
-      "name": "Three.js Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-three-js/"
-    },
-    {
-      "name": "Remix Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-remix-run/"
-    },
-    {
-      "name": "Statistics with Python: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-statistics-with-python/"
-    },
-    {
-      "name": "The CSS Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/css-bootcamp/"
-    },
-    {
-      "name": "Build an End-to-End Web App from Scratch in AWS",
-      "link": "https://zerotomastery.io/courses/aws-project-web-app/"
-    },
-    {
-      "name": "Design a Responsive Airbnb Website with Figma",
-      "link": "https://zerotomastery.io/courses/figma-projects-responsive-web-design/"
-    },
-    {
-      "name": "Conduct a Choice-Based Conjoint Analysis for Netflix with Python",
-      "link": "https://zerotomastery.io/courses/data-analysis-projects-choice-based-conjoint-analysis/"
-    },
-    {
-      "name": "Developing LLM App Frontends with Streamlit",
-      "link": "https://zerotomastery.io/courses/learn-streamlit-tutorial/"
-    },
-    {
-      "name": "Developing LLM Apps with LangChain",
-      "link": "https://zerotomastery.io/courses/learn-langchain-pinecone/"
-    },
-    {
-      "name": "Build a Yelp! Clone for Restaurants with Flutter and Dart",
-      "link": "https://zerotomastery.io/courses/flutter-projects-yelp-clone/"
-    },
-    {
-      "name": "Create a Discord Bot with Node.js",
-      "link": "https://zerotomastery.io/courses/nodejs-projects-discord-bot/"
-    },
-    {
-      "name": "Enhanced Freelancing with AI",
-      "link": "https://zerotomastery.io/courses/ai-freelancing/"
-    },
-    {
-      "name": "Artificial Intelligence in Cybersecurity",
-      "link": "https://zerotomastery.io/courses/ai-and-cybersecurity/"
-    },
-    {
-      "name": "AI Coding with GitHub Copilot",
-      "link": "https://zerotomastery.io/courses/learn-github-copilot/"
-    },
-    {
-      "name": "AI Coding with Jupyter AI",
-      "link": "https://zerotomastery.io/courses/learn-jupyter-ai/"
-    },
-    {
-      "name": "Future of A.I. & How To Use ChatGPT ",
-      "link": "Youtube version here you can share"
-    },
-    {
-      "name": "Introduction to Networking",
-      "link": "https://zerotomastery.io/courses/introduction-to-networking/"
-    },
-    {
-      "name": "Statistics Bootcamp (with Python): Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-statistics-with-python/"
-    },
-    {
-      "name": "Building AI Apps with the OpenAI API: GPT, DALL-E & Whisper",
-      "link": "https://zerotomastery.io/courses/openai-api-tutorial/"
-    },
-    {
-      "name": "Supercharged Code Editing with Vim and Neovim",
-      "link": "https://zerotomastery.io/courses/learn-neovim-and-vim/"
-    },
-    {
-      "name": "Introduction to ChatGPT: A Practical Guide",
-      "link": "https://zerotomastery.io/courses/chatgpt-code-interpreter-guide/"
-    },
-    {
-      "name": "Build a Notion Clone with React and TypeScript",
-      "link": "https://zerotomastery.io/courses/react-project-ideas-notion-clone/"
-    },
-    {
-      "name": "Master the Pathfinding Algorithms with JavaScript and React",
-      "link": "https://zerotomastery.io/courses/javascript-project-algorithm-visualizer/"
-    },
-    {
-      "name": "Ultimate AWS Bedrock Guide: Build & Scale Generative AI Apps",
-      "link": "https://zerotomastery.io/courses/learn-aws-bedrock/"
-    },
-    {
-      "name": "Rank a Website on the First Page of Google with SEO",
-      "link": "https://zerotomastery.io/courses/seo-projects-rank-first-page/"
-    },
-    {
-      "name": "Crack the Frontend Interview with React",
-      "link": "https://zerotomastery.io/courses/react-projects-star-rating-component/"
-    },
-    {
-      "name": "Create a Retirement Planning Tool with Excel",
-      "link": "https://zerotomastery.io/courses/excel-projects-retirement-planning-tool/"
-    },
-    {
-      "name": "Build an Instagram Filters App with Vue, TypeScript and WebAssembly",
-      "link": "https://zerotomastery.io/courses/vue-project-instagram-filter-app/"
-    },
-    {
-      "name": "Building AI Apps with the Gemini API",
-      "link": "https://zerotomastery.io/courses/learn-gemini-api/"
-    },
-    {
-      "name": "PHP Development Bootcamp: Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/learn-php-bootcamp/"
-    },
-    {
-      "name": "Build a ChatBot with Nuxt, TypeScript and the OpenAI Assistants API",
-      "link": "https://zerotomastery.io/courses/nuxt-project-chatbot-ai/"
-    },
-    {
-      "name": "Prompt Engineering Bootcamp (Working With LLMs): Zero to Mastery",
-      "link": "https://zerotomastery.io/courses/prompt-engineering-bootcamp/"
-    },
-    {
-      "name": "Introduction to ChatGPT Code Interpreter",
-      "link": "https://zerotomastery.io/courses/chatgpt-code-interpreter-guide/"
-    },
-    {
-      "name": "Conquer JavaScript by Building Your Own Framework from Scratch",
-      "link": "https://zerotomastery.io/courses/build-javascript-framework-project/"
-    },
-    {
-      "name": "The Networking Bootcamp (CompTIA Network+ Certification)",
-      "link": "https://zerotomastery.io/courses/networking-bootcamp/"
-    }
-  ]
+  {
+    "name": "Complete Web Developer: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/coding-bootcamp/"
+  },
+  {
+    "name": "The Complete Junior to Senior Web Developer Roadmap",
+    "link": "https://zerotomastery.io/courses/junior-to-senior-web-developer-roadmap/"
+  },
+  {
+    "name": "Master the Coding Interview: Data Structures + Algorithms",
+    "link": "https://zerotomastery.io/courses/learn-data-structures-and-algorithms/"
+  },
+  {
+    "name": "JavaScript: The Advanced Concepts",
+    "link": "https://zerotomastery.io/courses/advanced-javascript-concepts/"
+  },
+  {
+    "name": "Complete React Developer (w/ Redux, Hooks, GraphQL)",
+    "link": "https://zerotomastery.io/courses/learn-react/"
+  },
+  {
+    "name": "Complete Python Developer: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-python/"
+  },
+  {
+    "name": "Complete Machine Learning and Data Science: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/machine-learning-and-data-science-bootcamp/"
+  },
+  {
+    "name": "Learning to Learn [Efficient Learning]: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learning-how-to-learn/"
+  },
+  {
+    "name": "Deno: The Complete Guide Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-deno/"
+  },
+  {
+    "name": "JavaScript Web Projects: 20 Projects to Build Your Portfolio",
+    "link": "https://zerotomastery.io/courses/javascript-projects/"
+  },
+  {
+    "name": "Complete SQL + Databases Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/sql-bootcamp/"
+  },
+  {
+    "name": "Complete Web & Mobile Designer: UI/UX, Figma + more",
+    "link": "https://zerotomastery.io/courses/learn-web-design/"
+  },
+  {
+    "name": "Master the Coding Interview: Big Tech (FAANG) Interviews",
+    "link": "https://zerotomastery.io/courses/faang-interview-prep/"
+  },
+  {
+    "name": "Complete Ethical Hacking Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-ethical-hacking/"
+  },
+  {
+    "name": "Complete React Native Developer: Zero to Mastery [with Hooks]",
+    "link": "https://zerotomastery.io/courses/learn-react-native/"
+  },
+  {
+    "name": "TensorFlow Developer Certificate: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-tensorflow/"
+  },
+  {
+    "name": "Complete Vue Developer in 2024: Zero to Mastery (Pinia, Vitest)",
+    "link": "https://zerotomastery.io/courses/learn-vue-js/"
+  },
+  {
+    "name": "Complete Node.js Developer: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-node-js/"
+  },
+  {
+    "name": "Dart: The Complete Developer's Guide",
+    "link": "https://zerotomastery.io/courses/learn-dart/"
+  },
+  {
+    "name": "Web Security & Bug Bounty: Learn Penetration Testing",
+    "link": "https://zerotomastery.io/courses/learn-penetration-testing/"
+  },
+  {
+    "name": "DevOps Bootcamp: Learn Linux & Become a Linux Sysadmin",
+    "link": "https://zerotomastery.io/courses/devops-bootcamp/"
+  },
+  {
+    "name": "Complete Guide to Freelancing: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/become-a-freelancer/"
+  },
+  {
+    "name": "Rust Programming: The Complete Developer's Guide",
+    "link": "https://zerotomastery.io/courses/learn-rust/"
+  },
+  {
+    "name": "Build a Full-Stack X/Twitter Clone with Rust",
+    "link": "https://zerotomastery.io/courses/rust-project-twitter-clone/"
+  },
+  {
+    "name": "SEO Bootcamp: Learn Search Engine Optimization",
+    "link": "https://zerotomastery.io/courses/seo-content-optimization/"
+  },
+  {
+    "name": "Motion Design with Figma: Animations, Motion Graphics, UX/UI",
+    "link": "https://zerotomastery.io/courses/learn-motion-design/"
+  },
+  {
+    "name": "Complete Next.js Developer: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-next-js/"
+  },
+  {
+    "name": "WebAssembly: A Practical Guide",
+    "link": "https://zerotomastery.io/courses/learn-webassembly/"
+  },
+  {
+    "name": "NFT 101: Introduction to NFTs",
+    "link": "https://zerotomastery.io/courses/introduction-to-nfts/"
+  },
+  {
+    "name": "Complete Angular Developer: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-angular/"
+  },
+  {
+    "name": "The Excel Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/excel-bootcamp/"
+  },
+  {
+    "name": "Go Programming (Golang): The Complete Developer's Guide",
+    "link": "https://zerotomastery.io/courses/learn-golang/"
+  },
+  {
+    "name": "Learning to Meditate [Productivity & Focus]",
+    "link": "https://zerotomastery.io/courses/learn-meditation-for-productivity/"
+  },
+  {
+    "name": "Business Analytics Bootcamp (with Python): Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-business-analytics/"
+  },
+  {
+    "name": "Consulting: The Complete Freelancer's Guide",
+    "link": "https://zerotomastery.io/courses/learn-freelance-consulting/"
+  },
+  {
+    "name": "Web3 Masterclass: Blockchain, DApps, DAOs + More",
+    "link": "https://zerotomastery.io/courses/introduction-to-web3/"
+  },
+  {
+    "name": "DevOps Bootcamp: Terraform",
+    "link": "https://zerotomastery.io/courses/learn-terraform-certification/"
+  },
+  {
+    "name": "AWS Certified Cloud Practitioner",
+    "link": "https://zerotomastery.io/courses/learn-aws-cloud-practitioner/"
+  },
+  {
+    "name": "Life System Design",
+    "link": "https://zerotomastery.io/courses/life-system-design/"
+  },
+  {
+    "name": "Solidity, Ethereum and Blockchain: The Complete Developer's Guide",
+    "link": "https://zerotomastery.io/courses/blockchain-developer-bootcamp/"
+  },
+  {
+    "name": "ZTM Fitness: Get Healthier in 4 Weeks",
+    "link": "https://zerotomastery.io/courses/exercise-bootcamp/"
+  },
+  {
+    "name": "VBA Programming",
+    "link": "https://zerotomastery.io/courses/learn-vba/"
+  },
+  {
+    "name": "PyTorch for Deep Learning",
+    "link": "https://zerotomastery.io/courses/learn-pytorch/"
+  },
+  {
+    "name": "Complete Cybersecurity Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-cybersecurity-bootcamp/"
+  },
+  {
+    "name": "Advanced Excel Bootcamp: Data Analytics and Business Intelligence",
+    "link": "https://zerotomastery.io/courses/business-intelligence-course/"
+  },
+  {
+    "name": "Bash Scripting: Learn Shell Scripting",
+    "link": "https://zerotomastery.io/courses/learn-bash-scripting/"
+  },
+  {
+    "name": "Time Series Forecasting with Python",
+    "link": "https://zerotomastery.io/courses/time-series-forecasting/"
+  },
+  {
+    "name": "Master the Coding Interview: System Design + Architecture",
+    "link": "https://zerotomastery.io/courses/system-design/"
+  },
+  {
+    "name": "AWS Certified Solutions Architect",
+    "link": "https://zerotomastery.io/courses/aws-certified-solutions-architect-bootcamp/"
+  },
+  {
+    "name": "Unity Bootcamp: 3D Game Development",
+    "link": "https://zerotomastery.io/courses/learn-unity-bootcamp/"
+  },
+  {
+    "name": "Testing: The Complete Developer's Guide",
+    "link": "https://zerotomastery.io/courses/software-testing-course/"
+  },
+  {
+    "name": "Power BI Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-power-bi-bootcamp/"
+  },
+  {
+    "name": "ChatGPT and Large Language Models (LLMs): A Practical Guide",
+    "link": "https://zerotomastery.io/courses/large-language-models/"
+  },
+  {
+    "name": "The Complete Career Toolkit: Personal Branding, Resume Building + more",
+    "link": "https://zerotomastery.io/courses/personal-branding/"
+  },
+  {
+    "name": "C#/.NET Bootcamp: The Fundamentals + more",
+    "link": "https://zerotomastery.io/courses/csharp-net-bootcamp/"
+  },
+  {
+    "name": "Java Programming Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/java-bootcamp/"
+  },
+  {
+    "name": "CompTIA Security+ Certification Bootcamp",
+    "link": "https://zerotomastery.io/courses/security-plus-boot-camp/"
+  },
+  {
+    "name": "Flutter Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/flutter-bootcamp/"
+  },
+  {
+    "name": "Django Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/django-bootcamp/"
+  },
+  {
+    "name": "TypeScript Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/typescript-bootcamp/"
+  },
+  {
+    "name": "Three.js Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-three-js/"
+  },
+  {
+    "name": "Remix Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-remix-run/"
+  },
+  {
+    "name": "Statistics with Python: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-statistics-with-python/"
+  },
+  {
+    "name": "The CSS Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/css-bootcamp/"
+  },
+  {
+    "name": "Build an End-to-End Web App from Scratch in AWS",
+    "link": "https://zerotomastery.io/courses/aws-project-web-app/"
+  },
+  {
+    "name": "Design a Responsive Airbnb Website with Figma",
+    "link": "https://zerotomastery.io/courses/figma-projects-responsive-web-design/"
+  },
+  {
+    "name": "Conduct a Choice-Based Conjoint Analysis for Netflix with Python",
+    "link": "https://zerotomastery.io/courses/data-analysis-projects-choice-based-conjoint-analysis/"
+  },
+  {
+    "name": "Developing LLM App Frontends with Streamlit",
+    "link": "https://zerotomastery.io/courses/learn-streamlit-tutorial/"
+  },
+  {
+    "name": "Developing LLM Apps with LangChain",
+    "link": "https://zerotomastery.io/courses/learn-langchain-pinecone/"
+  },
+  {
+    "name": "Build a Yelp! Clone for Restaurants with Flutter and Dart",
+    "link": "https://zerotomastery.io/courses/flutter-projects-yelp-clone/"
+  },
+  {
+    "name": "Create a Discord Bot with Node.js",
+    "link": "https://zerotomastery.io/courses/nodejs-projects-discord-bot/"
+  },
+  {
+    "name": "Enhanced Freelancing with AI",
+    "link": "https://zerotomastery.io/courses/ai-freelancing/"
+  },
+  {
+    "name": "Artificial Intelligence in Cybersecurity",
+    "link": "https://zerotomastery.io/courses/ai-and-cybersecurity/"
+  },
+  {
+    "name": "AI Coding with GitHub Copilot",
+    "link": "https://zerotomastery.io/courses/learn-github-copilot/"
+  },
+  {
+    "name": "AI Coding with Jupyter AI",
+    "link": "https://zerotomastery.io/courses/learn-jupyter-ai/"
+  },
+  {
+    "name": "Future of A.I. & How To Use ChatGPT ",
+    "link": "Youtube version here you can share"
+  },
+  {
+    "name": "Introduction to Networking",
+    "link": "https://zerotomastery.io/courses/introduction-to-networking/"
+  },
+  {
+    "name": "Statistics Bootcamp (with Python): Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-statistics-with-python/"
+  },
+  {
+    "name": "Building AI Apps with the OpenAI API: GPT, DALL-E & Whisper",
+    "link": "https://zerotomastery.io/courses/openai-api-tutorial/"
+  },
+  {
+    "name": "Supercharged Code Editing with Vim and Neovim",
+    "link": "https://zerotomastery.io/courses/learn-neovim-and-vim/"
+  },
+  {
+    "name": "Introduction to ChatGPT: A Practical Guide",
+    "link": "https://zerotomastery.io/courses/chatgpt-code-interpreter-guide/"
+  },
+  {
+    "name": "Build a Notion Clone with React and TypeScript",
+    "link": "https://zerotomastery.io/courses/react-project-ideas-notion-clone/"
+  },
+  {
+    "name": "Master the Pathfinding Algorithms with JavaScript and React",
+    "link": "https://zerotomastery.io/courses/javascript-project-algorithm-visualizer/"
+  },
+  {
+    "name": "Ultimate AWS Bedrock Guide: Build & Scale Generative AI Apps",
+    "link": "https://zerotomastery.io/courses/learn-aws-bedrock/"
+  },
+  {
+    "name": "Rank a Website on the First Page of Google with SEO",
+    "link": "https://zerotomastery.io/courses/seo-projects-rank-first-page/"
+  },
+  {
+    "name": "Crack the Frontend Interview with React",
+    "link": "https://zerotomastery.io/courses/react-projects-star-rating-component/"
+  },
+  {
+    "name": "Create a Retirement Planning Tool with Excel",
+    "link": "https://zerotomastery.io/courses/excel-projects-retirement-planning-tool/"
+  },
+  {
+    "name": "Build an Instagram Filters App with Vue, TypeScript and WebAssembly",
+    "link": "https://zerotomastery.io/courses/vue-project-instagram-filter-app/"
+  },
+  {
+    "name": "Building AI Apps with the Gemini API",
+    "link": "https://zerotomastery.io/courses/learn-gemini-api/"
+  },
+  {
+    "name": "PHP Development Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-php-bootcamp/"
+  },
+  {
+    "name": "Build a ChatBot with Nuxt, TypeScript and the OpenAI Assistants API",
+    "link": "https://zerotomastery.io/courses/nuxt-project-chatbot-ai/"
+  },
+  {
+    "name": "Prompt Engineering Bootcamp (Working With LLMs): Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/prompt-engineering-bootcamp/"
+  },
+  {
+    "name": "Introduction to ChatGPT Code Interpreter",
+    "link": "https://zerotomastery.io/courses/chatgpt-code-interpreter-guide/"
+  },
+  {
+    "name": "Conquer JavaScript by Building Your Own Framework from Scratch",
+    "link": "https://zerotomastery.io/courses/build-javascript-framework-project/"
+  },
+  {
+    "name": "The Networking Bootcamp (CompTIA Network+ Certification)",
+    "link": "https://zerotomastery.io/courses/networking-bootcamp/"
+  }
+]
