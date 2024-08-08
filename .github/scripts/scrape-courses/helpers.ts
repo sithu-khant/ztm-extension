@@ -25,5 +25,5 @@ export const findMostSimilarName = (name, courseDescriptions) => {
             similarity: calculateSimilarity(name, course.name),
         }))
         .sort((a, b) => b.similarity - a.similarity)[0]
-    return mostLIkely.similarity > 0.7 ? mostLIkely : null
+    return mostLIkely.similarity > 0.51 ? mostLIkely : null
 }
