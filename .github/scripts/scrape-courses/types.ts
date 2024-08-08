@@ -15,12 +15,10 @@ export type CourseListItem = {
 // This is the type for additional details we get from the details page
 // The courses list has more courses on it, but less details
 export type CourseDescriptionItem = {
-    id: string
     level: string
     name: string
     description: string
     detailsLink: string
-    courseLink: string
     length: string
     lessons: number
     instructor: string
