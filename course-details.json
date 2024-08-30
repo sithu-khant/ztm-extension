@@ -60,7 +60,7 @@
     "link": "https://zerotomastery.io/courses/learn-react-native/"
   },
   {
-    "name": "TensorFlow Developer Certificate: Zero to Mastery",
+    "name": "TensorFlow for Deep Learning Bootcamp: Zero to Mastery",
     "link": "https://zerotomastery.io/courses/learn-tensorflow/"
   },
   {
@@ -378,5 +378,21 @@
   {
     "name": "The Networking Bootcamp (CompTIA Network+ Certification)",
     "link": "https://zerotomastery.io/courses/networking-bootcamp/"
+  },
+  {
+    "name": "Introduction to Data Engineering",
+    "link": "https://zerotomastery.io/courses/data-engineering-fundamentals/"
+  },
+  {
+    "name": "Power BI for Beginners",
+    "link": "https://zerotomastery.io/courses/power-bi-for-beginners/"
+  },
+  {
+    "name": "The Automation Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/learn-python-automation/"
+  },
+  {
+    "name": "AI Engineering Bootcamp: Build, Train and Deploy Models with AWS SageMaker",
+    "link": "https://zerotomastery.io/courses/ai-engineer-bootcamp-aws-sagemaker/"
   }
 ]
