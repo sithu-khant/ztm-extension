@@ -301,7 +301,7 @@
   },
   {
     "name": "Future of A.I. & How To Use ChatGPT ",
-    "link": "Youtube version here you can share"
+    "link": "https://zerotomastery.io/courses/future-of-ai/"
   },
   {
     "name": "Introduction to Networking",
@@ -321,7 +321,7 @@
   },
   {
     "name": "Introduction to ChatGPT: A Practical Guide",
-    "link": "https://zerotomastery.io/courses/chatgpt-code-interpreter-guide/"
+    "link": "https://zerotomastery.io/courses/large-language-models/"
   },
   {
     "name": "Build a Notion Clone with React and TypeScript",
@@ -394,5 +394,50 @@
   {
     "name": "AI Engineering Bootcamp: Build, Train & Deploy Models",
     "link": "https://zerotomastery.io/courses/ai-engineer-bootcamp-aws-sagemaker/"
+  },
+  {
+    "name": "Learn Hugging Face by Building a Custom AI Model",
+    "link": "https://zerotomastery.io/courses/hugging-face-text-classification-project/"
+  },
+  {
+    "name": "Data Analysis for Beginners: Excel & Pivot Tables",
+    "link": "https://zerotomastery.io/courses/excel-data-analysis-training/"
+  },
+  {
+    "name": "Build an AI Stock Analyzer using ChatGPT, Python and LangChain",
+    "link": "https://zerotomastery.io/courses/generative-ai-stock-market-analysis/"
+  },
+  {
+    "name": "FAANG Interview Prep 101",
+    "link": "https://zerotomastery.io/courses/faang-interview-prep-101/"
+  },
+  {
+    "name": "Cybersecurity: Personal Online Security",
+    "link": "https://zerotomastery.io/courses/digital-security/"
+  },
+  {
+    "name": "DevOps Mastery: Secure Your Internet Traffic with WireGuard VPN",
+    "link": "https://zerotomastery.io/courses/wireguard-vpn-guide/"
+  },
+  {
+    "name": "Future Proof Yourself: Goal Setting for Your Career",
+    "link": "https://zerotomastery.io/courses/how-to-future-proof-your-career/"
+  },
+  {
+    "name": "Career Advice: Interviews & Getting Hired",
+    "link": "https://zerotomastery.io/courses/career-advice-interview-prep/"
+  },
+  {
+    "name": "Career Advice: Getting Your First Dev Job",
+    "link": "https://zerotomastery.io/courses/career-advice-first-developer-job/"
+  },
+  {
+    "name": "Designer to Developer Handoff: Build a Project from a Design File",
+    "link": "https://zerotomastery.io/courses/designer-to-developer-handoff/"
+  },
+  {
+    "name": "AI for Beginners: Inside Large Language Models",
+    "link": "https://zerotomastery.io/courses/ai-for-beginners-large-language-models/"
   }
+  
 ]
