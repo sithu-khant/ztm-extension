@@ -37,6 +37,7 @@ Official extension for [Zero To Mastery Academy](https://zerotomastery.io/) stud
 
 | Versions      | Chrome | Firefox | Edge | Brave |
 | ------------- | ------ | ------- | ---- | ----- |
+| 2024.10.28    | ✅      | ✅       | ✅    | ✅     |
 | 2024.8.30     | ✅      | ✅       | ✅    | ✅     |
 | 2024.6.19     | ✅      | ✅       | ✅    | ✅     |
 | 2024.6.5      | ✅      | ✅       | ✅    | ✅     |
@@ -59,6 +60,8 @@ WIP - Work in progress
 **Not found your favorite browser?** Feel free to test that, and contribute to this.
 
 ## Version List
+* 2024.10.28
+    * Added newest ZTM courses to the list
 * 2024.8.30
     * Added newest ZTM course to the list
 * 2024.6.19
