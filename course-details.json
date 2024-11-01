@@ -44,10 +44,6 @@
     "link": "https://zerotomastery.io/courses/sql-bootcamp/"
   },
   {
-    "name": "Complete Web & Mobile Designer: UI/UX, Figma + more",
-    "link": "https://zerotomastery.io/courses/learn-web-design/"
-  },
-  {
     "name": "Master the Coding Interview: Big Tech (FAANG) Interviews",
     "link": "https://zerotomastery.io/courses/faang-interview-prep/"
   },
@@ -300,7 +296,7 @@
     "link": "https://zerotomastery.io/courses/learn-jupyter-ai/"
   },
   {
-    "name": "Future of A.I. & How To Use ChatGPT ",
+    "name": "Future of A.I. & How To Use ChatGPT",
     "link": "https://zerotomastery.io/courses/future-of-ai/"
   },
   {
@@ -416,7 +412,7 @@
     "link": "https://zerotomastery.io/courses/digital-security/"
   },
   {
-    "name": "DevOps Mastery: Secure Your Internet Traffic with WireGuard VPN",
+    "name": "DevOps Mastery: Secure Internet Traffic with WireGuard VPN",
     "link": "https://zerotomastery.io/courses/wireguard-vpn-guide/"
   },
   {
@@ -438,6 +434,13 @@
   {
     "name": "AI for Beginners: Inside Large Language Models",
     "link": "https://zerotomastery.io/courses/ai-for-beginners-large-language-models/"
+  },
+  {
+    "name": "Complete UI/UX Product Design Bootcamp: Zero to Mastery",
+    "link": "https://zerotomastery.io/courses/ui-ux-product-design-bootcamp/"
+  },
+  {
+    "name": "Cybersecurity for Beginners",
+    "link": "https://zerotomastery.io/courses/cybersecurity-for-beginners/"
   }
-  
 ]
