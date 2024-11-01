@@ -61,6 +61,8 @@ WIP - Work in progress
 **Not found your favorite browser?** Feel free to test that, and contribute to this.
 
 ## Version List
+* 2024.11.01
+    * Added newest ZTM courses to the list
 * 2024.10.28
     * Added newest ZTM courses to the list
 * 2024.8.30
