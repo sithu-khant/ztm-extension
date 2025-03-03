@@ -420,8 +420,8 @@
     "link": "https://zerotomastery.io/courses/how-to-future-proof-your-career/"
   },
   {
-    "name": "Career Advice: Interviews & Getting Hired",
-    "link": "https://zerotomastery.io/courses/career-advice-interview-prep/"
+    "name": "Career Guide to Your Dream Job: Resumes, Interviews & Promotions",
+    "link": "https://zerotomastery.io/courses/land-your-dream-job/"
   },
   {
     "name": "Career Advice: Getting Your First Dev Job",
@@ -442,5 +442,41 @@
   {
     "name": "Cybersecurity for Beginners",
     "link": "https://zerotomastery.io/courses/cybersecurity-for-beginners/"
+  },
+  {
+    "name": "Introduction to Excel Automation: Excel Macros and VBA",
+    "link": "https://zerotomastery.io/courses/learn-excel-macros/"
+  },
+  {
+    "name": "Build an AI Career Coach using an Open Source LLM",
+    "link": "https://zerotomastery.io/courses/ai-career-coach/"
+  },
+  {
+    "name": "Advanced CSS & JavaScript Projects",
+    "link": "https://zerotomastery.io/courses/front-end-projects/"
+  },
+  {
+    "name": "Supercharge Excel with Dynamic Array Functions & Formulas",
+    "link": "https://zerotomastery.io/courses/dynamic-arrays-excel/"
+  },
+  {
+    "name": "Learning to Make Better Decisions [Decision-Making]",
+    "link": "https://zerotomastery.io/courses/learn-decision-making/"
+  },
+  {
+    "name": "Learning to Think [Cognitive Bias]",
+    "link": "https://zerotomastery.io/courses/learn-cognitive-bias/"
+  },
+  {
+    "name": "AI Engineering Bootcamp: RAG (Retrieval Augmented Generation) for LLMs",
+    "link": "https://zerotomastery.io/courses/ai-engineer-bootcamp-retrieval-augmented-generation/"
+  },
+  {
+    "name": "Linux for Beginners",
+    "link": "https://zerotomastery.io/courses/linux-for-beginners/"
+  },
+  {
+    "name": "The NotebookLM Guide: Your AI-Powered Productivity Assistant",
+    "link": "https://zerotomastery.io/courses/notebooklm-guide/"
   }
 ]
